@@ -1,0 +1,348 @@
+{
+  "id": "variables",
+  "name": "变量、状态与信号",
+  "purpose": "持有实体状态，监听变化，通过信号连接功能。",
+  "aliases": [
+    "状态机",
+    "存储",
+    "计数",
+    "标记",
+    "自定义值",
+    "CustomValue",
+    "通信",
+    "消息"
+  ],
+  "nativeLeaves": [
+    "自定义变量",
+    "预设状态",
+    "信号"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:22",
+      "definitionId": 22,
+      "graphKind": 20000,
+      "name": "设置自定义变量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 22 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:36",
+      "definitionId": 36,
+      "graphKind": 20000,
+      "name": "自定义变量变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 36 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:50",
+      "definitionId": 50,
+      "graphKind": 20000,
+      "name": "获取自定义变量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 50 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:66",
+      "definitionId": 66,
+      "graphKind": 20000,
+      "name": "设置预设状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "预设状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 66 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:67",
+      "definitionId": 67,
+      "graphKind": 20000,
+      "name": "预设状态变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "预设状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 67 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:68",
+      "definitionId": 68,
+      "graphKind": 20000,
+      "name": "获取预设状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "预设状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 68 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:323",
+      "definitionId": 323,
+      "graphKind": 20000,
+      "name": "设置节点图变量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 323 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:337",
+      "definitionId": 337,
+      "graphKind": 20000,
+      "name": "获取节点图变量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 337 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:351",
+      "definitionId": 351,
+      "graphKind": 20000,
+      "name": "节点图变量变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 351 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:428",
+      "definitionId": 428,
+      "graphKind": 20000,
+      "name": "原生CustomValue变化时",
+      "family": "事件节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 428 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:445",
+      "definitionId": 445,
+      "graphKind": 20000,
+      "name": "原生设置CustomValue",
+      "family": "执行节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 445 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:459",
+      "definitionId": 459,
+      "graphKind": 20000,
+      "name": "原生查询CustomValue",
+      "family": "查询节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 459 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:3360",
+      "definitionId": 3360,
+      "graphKind": 20000,
+      "name": "查询自定义变量快照",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 3360 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:300000",
+      "definitionId": 300000,
+      "graphKind": 20000,
+      "name": "发送信号",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "信号"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 300000 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:300001",
+      "definitionId": 300001,
+      "graphKind": 20000,
+      "name": "监听信号",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "信号"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 300001 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200016",
+      "definitionId": 200016,
+      "graphKind": 20001,
+      "name": "获取自定义变量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200016 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200028",
+      "definitionId": 200028,
+      "graphKind": 20001,
+      "name": "获取预设状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "预设状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200028 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200016",
+      "definitionId": 200016,
+      "graphKind": 20002,
+      "name": "获取自定义变量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "自定义变量"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200016 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200028",
+      "definitionId": 200028,
+      "graphKind": 20002,
+      "name": "获取预设状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "预设状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200028 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200124",
+      "definitionId": 200124,
+      "graphKind": 20002,
+      "name": "向服务器节点图发送信号",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "variables"
+      ],
+      "nativeLeaves": [
+        "信号"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200124 --graph-kind 20002"
+    }
+  ],
+  "count": 20,
+  "byFamily": {
+    "执行节点": 6,
+    "事件节点": 5,
+    "查询节点": 9
+  },
+  "byGraphKind": {
+    "20000": 15,
+    "20001": 2,
+    "20002": 3
+  },
+  "runtimeVerified": false
+}

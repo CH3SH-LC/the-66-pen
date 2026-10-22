@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x12b51c50",
+      "head32": "564883ec400f297424300f28f14889ce803dae3cbcf2007572488b8610010000",
+      "functionBytes": 207,
+      "hotfixZeroRvas": [
+        "0x5715915"
+      ]
+    },
+    {
+      "rva": "0x12b526e0",
+      "head32": "56574883ec580f297c24400f297424300f28fa89d64889cf803d2032bcf2000f",
+      "functionBytes": 611,
+      "hotfixZeroRvas": [
+        "0x571591f",
+        "0x5724dbc"
+      ]
+    },
+    {
+      "rva": "0x19dc6600",
+      "head32": "564883ec204889cee853ea68e784c0741e80bec000000000741580beb0000000",
+      "functionBytes": 145,
+      "hotfixZeroRvas": []
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x5715915",
+    "0x571591f",
+    "0x5724dbc"
+  ],
+  "evidence": "Installed PE static extraction; no live process or test execution"
+}

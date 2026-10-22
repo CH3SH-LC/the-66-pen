@@ -1,0 +1,175 @@
+{
+  "id": "interaction",
+  "name": "原生选项与对话交互",
+  "purpose": "原生靠近选项、选中事件、可用状态和气泡。组件配置是节点图之外的前置。",
+  "aliases": [
+    "NPC",
+    "对话",
+    "菜单",
+    "交互",
+    "选项",
+    "按F",
+    "开店",
+    "打开商店",
+    "播种",
+    "收获"
+  ],
+  "nativeLeaves": [
+    "选项卡",
+    "文本气泡",
+    "悬浮交互页"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:306",
+      "definitionId": 306,
+      "graphKind": 20000,
+      "name": "激活/关闭选项卡",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "interaction"
+      ],
+      "nativeLeaves": [
+        "选项卡"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 306 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:307",
+      "definitionId": 307,
+      "graphKind": 20000,
+      "name": "选项卡选中时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "interaction"
+      ],
+      "nativeLeaves": [
+        "选项卡"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 307 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:631",
+      "definitionId": 631,
+      "graphKind": 20000,
+      "name": "切换生效的文本气泡",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "interaction"
+      ],
+      "nativeLeaves": [
+        "文本气泡"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 631 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:679",
+      "definitionId": 679,
+      "graphKind": 20000,
+      "name": "文本气泡完成时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "interaction"
+      ],
+      "nativeLeaves": [
+        "文本气泡"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 679 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:824",
+      "definitionId": 824,
+      "graphKind": 20000,
+      "name": "关闭悬浮交互页",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "interaction"
+      ],
+      "nativeLeaves": [
+        "悬浮交互页"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 824 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:825",
+      "definitionId": 825,
+      "graphKind": 20000,
+      "name": "更新悬浮交互页列表数据",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "interaction"
+      ],
+      "nativeLeaves": [
+        "悬浮交互页"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 825 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:826",
+      "definitionId": 826,
+      "graphKind": 20000,
+      "name": "悬浮交互页操作触发时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "interaction"
+      ],
+      "nativeLeaves": [
+        "悬浮交互页"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 826 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:828",
+      "definitionId": 828,
+      "graphKind": 20000,
+      "name": "唤起悬浮交互页",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "interaction"
+      ],
+      "nativeLeaves": [
+        "悬浮交互页"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 828 --graph-kind 20000"
+    }
+  ],
+  "sequence": [
+    "原生组件：范围、选项索引、文字、初始激活",
+    "307 选中事件 → 核对宿主与索引",
+    "259 角色转所属玩家 → 业务动作",
+    "306 切换播种/收获等选项可用状态"
+  ],
+  "pitfalls": [
+    "事件给出的角色不是玩家；先转换身份。",
+    "商品与选项文字同时全空时，先查自定义外显文本权限；当前安装实读权限4按属性10074判断，要求2，未解锁会统一屏蔽文字。原文、选用语言及运行期屏蔽标记分别核对。"
+  ],
+  "code": [
+    "tools/gameplan/demo/farming_tabs.py",
+    "tools/game-executor/native-options/native_tabs.cpp"
+  ],
+  "count": 8,
+  "byFamily": {
+    "执行节点": 5,
+    "事件节点": 3
+  },
+  "byGraphKind": {
+    "20000": 8
+  },
+  "runtimeVerified": false
+}

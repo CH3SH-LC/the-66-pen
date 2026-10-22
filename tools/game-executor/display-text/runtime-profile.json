@@ -1,0 +1,299 @@
+{
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x524250",
+      "head32": "5541574156415541545657534883ec28488d6c242048c74500feffffff4c8b15",
+      "metadataFlags": [],
+      "guards": []
+    },
+    {
+      "rva": "0x526de0",
+      "head32": "55415741565657534883ec68488d6c246048c74500feffffff4989cf4189d60f",
+      "metadataFlags": [],
+      "guards": []
+    },
+    {
+      "rva": "0x8678480",
+      "head32": "56574883ec2889d64889cf803df45443fd00745e803df91f09fd00756f488b7f",
+      "metadataFlags": [
+        "0x5aad986"
+      ],
+      "guards": [
+        "0x570a494"
+      ]
+    },
+    {
+      "rva": "0x9438510",
+      "head32": "5541565657534883ec70488d6c247048c745f0feffffff4989ce803df4d967fc",
+      "metadataFlags": [
+        "0x5ab5f25"
+      ],
+      "guards": [
+        "0x578253e",
+        "0x572052a",
+        "0x57465be"
+      ]
+    },
+    {
+      "rva": "0x9438b60",
+      "head32": "564883ec204d89c14189d04889ce803dbe9934fc00757c4181f873496ca57437",
+      "metadataFlags": [],
+      "guards": [
+        "0x5782533",
+        "0x578253b",
+        "0x56e964e"
+      ]
+    },
+    {
+      "rva": "0x9c26c70",
+      "head32": "41565657534883ec284989d64889cf803ddfe5e7fb000f84bc000000803d5059",
+      "metadataFlags": [
+        "0x5aa5265"
+      ],
+      "guards": [
+        "0x5759371",
+        "0x574c5e3"
+      ]
+    },
+    {
+      "rva": "0xa4c6790",
+      "head32": "55415741565657534881ec78020000488dac248000000048c78580010000feff",
+      "metadataFlags": [
+        "0x5ab1b68",
+        "0x5a9046a",
+        "0x5a8e72e",
+        "0x5a8e733",
+        "0x5ad05b7",
+        "0x5aa17b9",
+        "0x5a9a157",
+        "0x5a998bf"
+      ],
+      "guards": [
+        "0x5755623",
+        "0x5728410",
+        "0x5756c33",
+        "0x575f9f8",
+        "0x577a5fc",
+        "0x575f9fd"
+      ]
+    },
+    {
+      "rva": "0xa4cb0e0",
+      "head32": "5541574156415541545657534881ecc8000000488dac248000000048c74530fe",
+      "metadataFlags": [
+        "0x5a99ac8",
+        "0x5a8e731",
+        "0x5a99995"
+      ],
+      "guards": [
+        "0x5756c21",
+        "0x5756c63",
+        "0x5756c48",
+        "0x5756c4b",
+        "0x5756c6d",
+        "0x5720b35",
+        "0x575f9f6",
+        "0x574a3bd",
+        "0x5756c5f"
+      ]
+    },
+    {
+      "rva": "0xc7bab90",
+      "head32": "564883ec304889ce803d69aaf5f800488b054292fcf87560488b88d0ec000048",
+      "metadataFlags": [],
+      "guards": [
+        "0x5715608"
+      ]
+    },
+    {
+      "rva": "0xcadbe30",
+      "head32": "5657534883ec204c89c34889d74889ce803d51e7fbf800743c803d4dccc0f800",
+      "metadataFlags": [
+        "0x5a9a598"
+      ],
+      "guards": [
+        "0x56e8a9d"
+      ]
+    },
+    {
+      "rva": "0xe827750",
+      "head32": "4156565755534883ec304489c589d34989ce803d119326f7000f84a500000048",
+      "metadataFlags": [
+        "0x5a90a7a",
+        "0x5aa5237"
+      ],
+      "guards": [
+        "0x5715609",
+        "0x574c5db"
+      ]
+    },
+    {
+      "rva": "0x107abdf0",
+      "head32": "565755534883ec284489c54889d74889ce803d01492ff5000f84dd000000803d",
+      "metadataFlags": [
+        "0x5aa0709"
+      ],
+      "guards": [
+        "0x5761932",
+        "0x575936f"
+      ]
+    },
+    {
+      "rva": "0x11796380",
+      "head32": "4883ec284d89c14189d04889ca803d7c20f9f3000f857f000000488b42184885",
+      "metadataFlags": [],
+      "guards": [
+        "0x5728410"
+      ]
+    },
+    {
+      "rva": "0x11796450",
+      "head32": "415741565657534883ec204d89c689d34989cf803dd27b31f4000f84ad010000",
+      "metadataFlags": [
+        "0x5aae03c"
+      ],
+      "guards": [
+        "0x5728411"
+      ]
+    },
+    {
+      "rva": "0x13d15330",
+      "head32": "5556534883ec50488d6c245048c745f0feffffff89d34889ce803d1ab1d7f100",
+      "metadataFlags": [
+        "0x5a9046a"
+      ],
+      "guards": [
+        "0x577a5fc"
+      ]
+    },
+    {
+      "rva": "0x13d154b0",
+      "head32": "554157415641545657534881ec60010000488dac248000000048c785a8000000",
+      "metadataFlags": [
+        "0x5a9a598",
+        "0x5a8e733",
+        "0x5a90514",
+        "0x5aa6ea5"
+      ],
+      "guards": [
+        "0x5702342",
+        "0x577a603",
+        "0x5704790",
+        "0x571ae73",
+        "0x56e8a9d"
+      ]
+    },
+    {
+      "rva": "0x13d1cb40",
+      "head32": "5541565657534883ec50488d6c245048c745f0feffffff4c89cb4589c689d748",
+      "metadataFlags": [
+        "0x5a9055d"
+      ],
+      "guards": [
+        "0x577a60b",
+        "0x574c8cb"
+      ]
+    },
+    {
+      "rva": "0x13d1cd60",
+      "head32": "4883ec284189d04889ca803da1d8a5f10075424585c07836488b42384885c074",
+      "metadataFlags": [],
+      "guards": [
+        "0x577a612"
+      ]
+    },
+    {
+      "rva": "0x142a0540",
+      "head32": "5657534883ec204c89c689d74889cb803d586781f1000f8488000000488b5b18",
+      "metadataFlags": [
+        "0x5ab6cae"
+      ],
+      "guards": []
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x56e8a9d",
+    "0x56e964e",
+    "0x5702342",
+    "0x5704790",
+    "0x570a494",
+    "0x5715608",
+    "0x5715609",
+    "0x571ae73",
+    "0x572052a",
+    "0x5720b35",
+    "0x5728410",
+    "0x5728411",
+    "0x57465be",
+    "0x574a3bd",
+    "0x574c5db",
+    "0x574c5e3",
+    "0x574c8cb",
+    "0x5755623",
+    "0x5756c21",
+    "0x5756c33",
+    "0x5756c48",
+    "0x5756c4b",
+    "0x5756c5f",
+    "0x5756c63",
+    "0x5756c6d",
+    "0x575936f",
+    "0x5759371",
+    "0x575f9f6",
+    "0x575f9f8",
+    "0x575f9fd",
+    "0x5761932",
+    "0x577a5fc",
+    "0x577a603",
+    "0x577a60b",
+    "0x577a612",
+    "0x5782533",
+    "0x578253b",
+    "0x578253e"
+  ],
+  "usageGroups": [
+    "0x716e",
+    "0x7171",
+    "0x7173",
+    "0x8eaa",
+    "0x8f54",
+    "0x8f9d",
+    "0x94ba",
+    "0xd49f",
+    "0x122ff",
+    "0x123d5",
+    "0x12508",
+    "0x12b97",
+    "0x12fd8",
+    "0x185df",
+    "0x19149",
+    "0x1a1f9",
+    "0x1dc77",
+    "0x1dca5",
+    "0x1f8e5",
+    "0x242f7",
+    "0x263c6",
+    "0x26a7c",
+    "0x2a5a8",
+    "0x2e965",
+    "0x2f6ee",
+    "0x48ff7"
+  ],
+  "component": {
+    "kind": 17,
+    "classDefinition": 84703,
+    "classSlot": "0x57dda60",
+    "optionDefinition": 88069,
+    "optionSlot": "0x57e8910",
+    "colliderDefinition": 40001,
+    "colliderSlot": "0x57b8560",
+    "optionListAddRva": "0x18baf8c0",
+    "optionListAddMethodInfoSlot": "0x58bfe30",
+    "colliderShape": 1,
+    "sphereRadius": 2.0,
+    "initialActiveProperty": "0x3d94f45f",
+    "captionProperty": "0xbde64e3e"
+  }
+}

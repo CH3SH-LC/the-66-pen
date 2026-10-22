@@ -1,0 +1,22 @@
+# The @miliastra/dsh-miliastra bundle patch.
+#
+# A bundle patch is a top-level YAML array of Loader patch entries applied over
+# the profile's empty root entry list. `insert` without `id` appends new rows;
+# a later layer (the profile's own cordis.patch.yml, then --patch overlays)
+# addresses this row by `id: miliastra` and **replaces its whole config**, so an
+# operator overrides the row by restating the fields it wants rather than
+# merging into them.
+#
+# The two paths below have no machine-specific default on purpose. They are read
+# from the operator's environment so no checkout location is baked into the
+# package; when either is unset the row fails its config validation at load with
+# a named error instead of silently pointing the backend at another checkout.
+# Nothing here starts the game, the editor, the elevated helper, or the bridge.
+
+- insert:
+    - id: miliastra
+      name: '@miliastra/dsh-miliastra'
+      config:
+        projectRoot: !!js process.env.MILIASTRA_PROJECT_ROOT
+        pythonExecutable: !!js process.env.MILIASTRA_PYTHON
+        serverName: miliastra

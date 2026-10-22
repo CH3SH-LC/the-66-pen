@@ -1,0 +1,183 @@
+{
+  "id": "farming",
+  "name": "种田经营闭环",
+  "purpose": "从买种、播种、成长、收获到出售的一条完整制作路线。",
+  "aliases": [
+    "种田",
+    "农场",
+    "播种",
+    "种植",
+    "收获",
+    "成熟",
+    "种子",
+    "作物",
+    "卖产品",
+    "farming"
+  ],
+  "related": [
+    "interaction",
+    "shop",
+    "inventory",
+    "variables",
+    "timers",
+    "entities",
+    "dictionaries"
+  ],
+  "sequence": [
+    "靠近选项 → 打开商店 → 购买种子",
+    "选播种 → 核对种子和田地状态 → 扣种",
+    "10 秒定时器 → 成熟模型与收获选项",
+    "选收获 → 入包核验 → 空田",
+    "商店收购条目定价 → 背包出售 → 核对货币增加"
+  ],
+  "pitfalls": [
+    "玩法数值、模型变化和文字显示分开验收。金额结算已确认；2026-10-14文字全空已定位为自定义外显文本权限未解锁（实际判定等级1、要求2），用户经官方升级到Lv.2后已确认文字恢复；不能再用填语言表代替权限检查。"
+  ],
+  "code": [
+    "tools/gameplan/demo/farming_tabs.py",
+    "tools/gameplan/demo/farming_visuals.py",
+    "tools/gameplan/demo/shop_buyback.py"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:307",
+      "definitionId": 307,
+      "graphKind": 20000,
+      "name": "选项卡选中时",
+      "family": "事件节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 307 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:306",
+      "definitionId": 306,
+      "graphKind": 20000,
+      "name": "激活/关闭选项卡",
+      "family": "执行节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 306 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:259",
+      "definitionId": 259,
+      "graphKind": 20000,
+      "name": "获取角色归属的玩家实体",
+      "family": "查询节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 259 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:702",
+      "definitionId": 702,
+      "graphKind": 20000,
+      "name": "打开商店",
+      "family": "执行节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 702 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:707",
+      "definitionId": 707,
+      "graphKind": 20000,
+      "name": "设置物品收购表中道具收购信息",
+      "family": "执行节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 707 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:710",
+      "definitionId": 710,
+      "graphKind": 20000,
+      "name": "向物品收购表中新增物品",
+      "family": "执行节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 710 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:690",
+      "definitionId": 690,
+      "graphKind": 20000,
+      "name": "获取背包道具数量",
+      "family": "查询节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 690 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:686",
+      "definitionId": 686,
+      "graphKind": 20000,
+      "name": "增加背包道具数量",
+      "family": "执行节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 686 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:79",
+      "definitionId": 79,
+      "graphKind": 20000,
+      "name": "启动定时器",
+      "family": "执行节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 79 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:83",
+      "definitionId": 83,
+      "graphKind": 20000,
+      "name": "定时器触发时",
+      "family": "事件节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 83 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:73",
+      "definitionId": 73,
+      "graphKind": 20000,
+      "name": "获取自身实体",
+      "family": "查询节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 73 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:71",
+      "definitionId": 71,
+      "graphKind": 20000,
+      "name": "实体创建时",
+      "family": "事件节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 71 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:14",
+      "definitionId": 14,
+      "graphKind": 20000,
+      "name": "是否相等",
+      "family": "运算节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 14 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:2",
+      "definitionId": 2,
+      "graphKind": 20000,
+      "name": "双分支",
+      "family": "流程控制节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 2 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:308",
+      "definitionId": 308,
+      "graphKind": 20000,
+      "name": "激活/关闭模型显示",
+      "family": "执行节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 308 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1788",
+      "definitionId": 1788,
+      "graphKind": 20000,
+      "name": "拼装字典",
+      "family": "运算节点",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1788 --graph-kind 20000"
+    }
+  ],
+  "runtimeVerified": false,
+  "count": 16,
+  "byFamily": {
+    "事件节点": 3,
+    "执行节点": 7,
+    "查询节点": 3,
+    "运算节点": 2,
+    "流程控制节点": 1
+  },
+  "byGraphKind": {
+    "20000": 16
+  }
+}

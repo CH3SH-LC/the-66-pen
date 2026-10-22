@@ -1,0 +1,207 @@
+{
+  "id": "combat",
+  "name": "战斗、命中与投射物",
+  "purpose": "伤害与治疗、攻击命中事件和投射物。",
+  "aliases": [
+    "伤害",
+    "治疗",
+    "生命",
+    "死亡",
+    "攻击",
+    "子弹",
+    "弹道",
+    "命中"
+  ],
+  "nativeLeaves": [
+    "战斗",
+    "命中判定",
+    "投射物"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:253",
+      "definitionId": 253,
+      "graphKind": 20000,
+      "name": "命中检测触发时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "命中判定"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 253 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:256",
+      "definitionId": 256,
+      "graphKind": 20000,
+      "name": "创建投射物",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "投射物"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 256 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:303",
+      "definitionId": 303,
+      "graphKind": 20000,
+      "name": "发起攻击",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 303 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:304",
+      "definitionId": 304,
+      "graphKind": 20000,
+      "name": "受到攻击时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 304 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:305",
+      "definitionId": 305,
+      "graphKind": 20000,
+      "name": "攻击命中时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 305 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:583",
+      "definitionId": 583,
+      "graphKind": 20000,
+      "name": "恢复生命",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 583 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:584",
+      "definitionId": 584,
+      "graphKind": 20000,
+      "name": "被恢复生命值时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 584 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:585",
+      "definitionId": 585,
+      "graphKind": 20000,
+      "name": "发起恢复生命值时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 585 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:697",
+      "definitionId": 697,
+      "graphKind": 20000,
+      "name": "损失生命",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 697 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:698",
+      "definitionId": 698,
+      "graphKind": 20000,
+      "name": "直接恢复生命",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 698 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:765",
+      "definitionId": 765,
+      "graphKind": 20000,
+      "name": "进入易受打断状态时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "combat"
+      ],
+      "nativeLeaves": [
+        "战斗"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 765 --graph-kind 20000"
+    }
+  ],
+  "count": 11,
+  "byFamily": {
+    "事件节点": 6,
+    "执行节点": 5
+  },
+  "byGraphKind": {
+    "20000": 11
+  },
+  "runtimeVerified": false
+}

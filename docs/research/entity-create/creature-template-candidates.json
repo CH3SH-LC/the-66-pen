@@ -1,0 +1,775 @@
+{
+  "schema": 1,
+  "kind": "creature-template-candidates",
+  "profileId": "genshin-cn-7.1.0-creature-template-candidates-v1",
+  "createdUtc": "2026-10-06T00:00:00Z",
+  "rule": {
+    "predicate": "prefab.iconPath contains '/MonsterIcon/' or '/AnimalIcon/'",
+    "equivalentRegistryIdPredicate": "str(registryId) starts with '3'",
+    "equivalence": "bidirectional, zero exceptions, over all 2722 catalog entries",
+    "monsterIcon": 97,
+    "animalIcon": 18
+  },
+  "total": 115,
+  "sources": [
+    {
+      "path": "historical-local-evidence-not-distributed",
+      "sha256": "46faaa35cdd58c38cb513b865e06e48ef9bc8b865e11927ea5db0ab5698726f3",
+      "total": 2722,
+      "label": "capture-1"
+    },
+    {
+      "path": "historical-local-evidence-not-distributed",
+      "sha256": "46faaa35cdd58c38cb513b865e06e48ef9bc8b865e11927ea5db0ab5698726f3",
+      "total": 2722,
+      "label": "capture-2"
+    },
+    {
+      "path": "docs/research/entity-create/prefab-name-directory.json",
+      "sha256": "44d6afedc4eda2a123cf119b3c9e71fe9d36e794f97d6d6fa5f7ef920f0fefc8",
+      "total": 2722
+    }
+  ],
+  "runs": [
+    {
+      "from": 30001001,
+      "to": 30001016,
+      "count": 16
+    },
+    {
+      "from": 30002001,
+      "to": 30002017,
+      "count": 17
+    },
+    {
+      "from": 30003001,
+      "to": 30003011,
+      "count": 11
+    },
+    {
+      "from": 30004001,
+      "to": 30004001,
+      "count": 1
+    },
+    {
+      "from": 30005001,
+      "to": 30005020,
+      "count": 20
+    },
+    {
+      "from": 30006001,
+      "to": 30006026,
+      "count": 26
+    },
+    {
+      "from": 30007001,
+      "to": 30007013,
+      "count": 13
+    },
+    {
+      "from": 30008001,
+      "to": 30008011,
+      "count": 11
+    }
+  ],
+  "caveats": [
+    "This is the templateId -> name face only. It carries NO 元件ID, NO behaviour mode and NO combat attributes; docs/offline-research/RESOURCE-MAP.md:34 still stands for those.",
+    "Membership is not placement. 115 is the prefab CATALOG, not a proven placeable set. Every id needs native create, save, formal GIL diff and reopen before it counts as supported.",
+    "It is NOT known offline whether the layout factory at tools/game-executor/native/scene_calls.cpp:32 accepts a 3xxxxxxx template at all. It has only ever been driven with 1-/2-prefixed ids.",
+    "Name collisions with scenery: 20XXXXXX entries whose name contains 丘丘 (丘丘石柱 20001665 IS already in the scene whitelist) are NOT creatures. Never classify by name; use the rule above.",
+    "7.1.0 CN only."
+  ],
+  "entries": [
+    {
+      "registryId": 30001001,
+      "name": "遗迹守卫",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Defender_Noner_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001002,
+      "name": "大型草史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Grass_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001003,
+      "name": "大型风史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Wind_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001004,
+      "name": "大型雷史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Electric_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001005,
+      "name": "大型冰史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Ice_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001006,
+      "name": "大型水史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Water_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001007,
+      "name": "大型火史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Fire_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001008,
+      "name": "大型岩史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Rock_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001009,
+      "name": "火斧丘丘暴徒",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Brute_None_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001010,
+      "name": "火深渊法师",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Abyss_Fire_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001011,
+      "name": "遗迹龙兽·空巡",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Gargoyle.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001012,
+      "name": "遗迹重机",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Konungmathr.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001013,
+      "name": "野林猪",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Boar_01.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30001014,
+      "name": "浮流鸟",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Penguin_02.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30001015,
+      "name": "金焰绒翼龙暴君",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Natsaurus_Flamingo_Primo.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30001016,
+      "name": "浮流鸟",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Penguin_02.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30002001,
+      "name": "冰史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Ice_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002002,
+      "name": "丘丘人",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Hili_None_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002003,
+      "name": "打手丘丘人",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Hili_None_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002004,
+      "name": "雷史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Electric_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002005,
+      "name": "风史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Wind_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002006,
+      "name": "水史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Water_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002007,
+      "name": "火史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Fire_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002008,
+      "name": "岩史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Rock_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002009,
+      "name": "草史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Grass_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002010,
+      "name": "水丘丘萨满",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Shaman_Water_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002011,
+      "name": "水深渊法师",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Abyss_Water_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002012,
+      "name": "丘丘雷兜王",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Brute_Electric_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002013,
+      "name": "有翼冰本真蕈",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Fungus_Amanita_Unu_Svarita_Ice.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002014,
+      "name": "丘丘岩盔王",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Brute_Rock_None.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002015,
+      "name": "冰霜骗骗花",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Mimik_Ice.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002016,
+      "name": "炽热骗骗花",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Mimik_Fire.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30002017,
+      "name": "电气骗骗花",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Mimik_Electric.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003001,
+      "name": "冰深渊法师",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Abyss_Ice_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003002,
+      "name": "火箭丘丘人",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Hili_Fire_Range.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003003,
+      "name": "盗宝团·斥候",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Thoarder_Male_Rogue_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003004,
+      "name": "丘丘霜铠王",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Brute_Ice_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003005,
+      "name": "雷深渊法师",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Abyss_Electric_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003006,
+      "name": "木盾丘丘暴徒",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Brute_None_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003007,
+      "name": "浮游水蕈兽",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Fungus_Un_Gamma_Water.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003008,
+      "name": "魔偶剑鬼",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Samurai_Ningyo.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003009,
+      "name": "愚人众先遣队·冰铳重卫士",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Skirmisher_Male_Fat_SprayGun_Ice_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003010,
+      "name": "愚人众先遣队·雷锤前锋军",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Skirmisher_Male_Strong_GreatHammer_Electric_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30003011,
+      "name": "愚人众先遣队·火铳游击兵",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Skirmisher_Male_Standard_Rifle_Fire_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30004001,
+      "name": "盗宝团·海上男儿",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Thoarder_Male_Sailor_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005001,
+      "name": "遗迹守卫",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Defender_Noner_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005002,
+      "name": "火斧丘丘暴徒",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Brute_None_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005003,
+      "name": "大型风史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Wind_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005004,
+      "name": "大型雷史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Electric_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005005,
+      "name": "大型冰史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Ice_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005006,
+      "name": "大型水史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Water_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005007,
+      "name": "大型火史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Fire_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005008,
+      "name": "大型岩史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Rock_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005009,
+      "name": "大型草史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Grass_03.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005010,
+      "name": "金焰绒翼龙暴君",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Natsaurus_Flamingo_Primo.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005011,
+      "name": "遗迹重机",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Konungmathr.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005012,
+      "name": "疾迅勇士·引索客",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Human_Female_Sword_Hookwalker_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005013,
+      "name": "窟岩·大灵显化身",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Wayob_Drillhead.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005014,
+      "name": "溯流·大灵显化身",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Wayob_Mosasaurus.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005015,
+      "name": "野林猪",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Boar_01.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30005016,
+      "name": "浮流鸟",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Penguin_02.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30005017,
+      "name": "凛冽·大灵显化身",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Wayob_Shamansaurus.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005018,
+      "name": "雳震·大灵显化身",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Wayob_Bisonsaurus.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30005019,
+      "name": "淑女犬",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_FontainePoddle_Lady_01.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30005020,
+      "name": "绅士犬",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_FontainePoddle_Gentleman_01.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30006001,
+      "name": "火箭丘丘人",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Hili_Fire_Range.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006002,
+      "name": "丘丘霜铠王",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Brute_Ice_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006003,
+      "name": "雷深渊法师",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Abyss_Electric_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006004,
+      "name": "冰深渊法师",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Abyss_Ice_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006005,
+      "name": "木盾丘丘暴徒",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Brute_None_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006006,
+      "name": "愚人众先遣队·冰铳重卫士",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Skirmisher_Male_Fat_SprayGun_Ice_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006007,
+      "name": "愚人众先遣队·雷锤前锋军",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Skirmisher_Male_Strong_GreatHammer_Electric_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006008,
+      "name": "愚人众先遣队·火铳游击兵",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Skirmisher_Male_Standard_Rifle_Fire_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006009,
+      "name": "盗宝团·斥候",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Thoarder_Male_Rogue_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006010,
+      "name": "魔偶剑鬼",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Samurai_Ningyo.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006011,
+      "name": "镀金旅团·阵前斧手",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Eremite_Female_Hatchet.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006012,
+      "name": "镀金旅团·沙中净水",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Eremite_Female_Slim_PushDagger.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006013,
+      "name": "深渊使徒·霜落",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Invoker_Herald_Ice.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006014,
+      "name": "深渊咏者·紫电",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Invoker_Deacon_Electric_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006015,
+      "name": "深渊使徒·激流",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Invoker_Herald_Water_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006016,
+      "name": "深渊咏者·渊火",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Invoker_Deacon_Fire.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006017,
+      "name": "贪食匿叶龙山王",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Natsaurus_Hookwalker_Primo.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006018,
+      "name": "嵴锋龙武士·破岩锐刃",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Tribalwarrior_Chainsword_Drillhead.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006019,
+      "name": "镀金旅团·灵风猎手",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Eremite_Female_Standard_Longbow.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006020,
+      "name": "厄灵魔鸢",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Vulture_Eremite_Wind.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006021,
+      "name": "浮游水蕈兽",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Fungus_Un_Gamma_Water.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30006022,
+      "name": "北地猫",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Cat_04.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30006023,
+      "name": "警长猫",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Cat_06.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30006024,
+      "name": "黑猫",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Cat_07.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30006025,
+      "name": "雪翅雁",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Swan_01.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30006026,
+      "name": "乌翅雁",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Swan_02.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30007001,
+      "name": "打手丘丘人",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Hili_None_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007002,
+      "name": "水深渊法师",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Abyss_Water_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007003,
+      "name": "风史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Wind_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007004,
+      "name": "雷史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Electric_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007005,
+      "name": "冰史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Ice_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007006,
+      "name": "水史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Water_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007007,
+      "name": "火史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Fire_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007008,
+      "name": "岩史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Rock_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007009,
+      "name": "草史莱姆",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Slime_Grass_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30007010,
+      "name": "深栗猎犬",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Dog_DropEar_01.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30007011,
+      "name": "琥珀猎犬",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Dog_DropEar_03.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30007012,
+      "name": "黑背猎犬",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_DogPrick_03.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30007013,
+      "name": "愚人众特辖队·火刃突击队",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Oprichnik_Male_Strong_LanceArquebus.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30008001,
+      "name": "野伏·阵刀番",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Samurai_Ronin_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30008002,
+      "name": "海乱鬼·雷腾",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Samurai_Kairagi_01.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30008003,
+      "name": "海乱鬼·炎威",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Samurai_Kairagi_02.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30008004,
+      "name": "蔓结·霜夜灵嗣",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Moonbeast_Grass.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30008005,
+      "name": "驰岚·霜夜灵嗣",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Moonbeast_Wind.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30008006,
+      "name": "金礞·霜夜灵嗣",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Moonbeast_Rock.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30008007,
+      "name": "白鸽",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Pigeon_01.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30008008,
+      "name": "璃冠鸽",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Pigeon_02.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30008009,
+      "name": "灰羽鸽",
+      "iconPath": "ART/UI/Atlas/AnimalIcon/UI_AnimalIcon_Pigeon_03.png",
+      "iconFamily": "AnimalIcon"
+    },
+    {
+      "registryId": 30008010,
+      "name": "嗜岩·兽境猎犬",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Hound_Riftstalker_Rock.png",
+      "iconFamily": "MonsterIcon"
+    },
+    {
+      "registryId": 30008011,
+      "name": "嗜雷·兽境猎犬",
+      "iconPath": "ART/UI/Atlas/MonsterIcon/UI_MonsterIcon_Hound_Riftstalker_Electric.png",
+      "iconFamily": "MonsterIcon"
+    }
+  ],
+  "distributionNote": "Historical CN 7.1 factual identifiers and names only; no game assets or live receipts. Not current compatibility or visual acceptance."
+}

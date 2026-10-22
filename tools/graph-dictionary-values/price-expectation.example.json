@@ -1,0 +1,16 @@
+{
+  "graphId": 1073741900,
+  "name": "synthetic-price-dict",
+  "values": [
+    {
+      "nodeId": 7,
+      "definitionId": 708,
+      "portIndex": 3,
+      "keyServerType": 20,
+      "valueServerType": 3,
+      "dict": [
+        {"key": {"uint": 1115684865}, "value": {"int": 12}}
+      ]
+    }
+  ]
+}

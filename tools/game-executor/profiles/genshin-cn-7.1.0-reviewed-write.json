@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "profileId": "genshin-cn-7.1.0-reviewed-write-v1",
+  "activation": "requires-complete-runtime-evidence-and-coordinator-review",
+  "readonlyProfileId": "genshin-cn-7.1.0-7f89938da606-readonly-v1",
+  "allowUnreviewedWrites": false,
+  "levelManagerOffset": "0xa960",
+  "additionalDefaultHotfixByteRvas": ["0x5730794", "0x56fb435"],
+  "maxBatch": 256,
+  "maxEntities": 512,
+  "allowedActions": ["create", "create-batch", "save", "creature-create"],
+  "abi": {
+    "level": "uint32(void* levelManager)",
+    "place": "owner*(context*,uint32,uint8,constVec3*,constVec3*,constVec3*,uint32,uint8,void*,uint8,uint8)",
+    "save": "int32(void* saveManager); success=0"
+  },
+  "evidence": ".runtime/verification/update-repair-20260924/native-port/ASSESSMENT.md"
+}

@@ -1,0 +1,120 @@
+{
+  "consts": [
+    {
+      "alias": "gate",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 20
+    },
+    {
+      "alias": "warn",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "背包快满了"
+    },
+    {
+      "alias": "grow",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 10
+    }
+  ],
+  "edges": [
+    {
+      "from": "enter",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "gate_cap",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate_cap",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "gate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "enter",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "branch",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "gate",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "branch",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "branch",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "warn",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "enter",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "grow",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "enter",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "grow",
+      "toIndex": 0,
+      "toKind": 3
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_FARM_M4",
+  "nodes": [
+    {
+      "alias": "enter",
+      "definitionId": 92,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "gate_cap",
+      "definitionId": 689,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "gate",
+      "definitionId": 230,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "branch",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "warn",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "grow",
+      "definitionId": 685,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

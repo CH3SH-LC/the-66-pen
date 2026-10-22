@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "profileId": "genshin-cn-7.1.0-7f89938da606-readonly-v1",
+  "evidenceState": "static-mapped-runtime-unverified",
+  "allowWrites": false,
+  "image": {
+    "sha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+    "fileBytes": 445006744,
+    "timestamp": 1788945104,
+    "sizeOfImage": 453693440,
+    "machine": 34404,
+    "optionalMagic": 523
+  },
+  "anchors": {
+    "CONTEXT": {"rva": "0xec63ab0", "bytes": "56574883ec284889ce803d4374e3f6007445803d1f5fadf6007556488b7e1048"},
+    "LEVEL": {"rva": "0x13568db0", "bytes": "56574883ec284889ce803d4dbc18f200488b0521b021f27565488b8830a40000"},
+    "PLACE": {"rva": "0x106df3c0", "bytes": "41574156565755534881ecc80000004c89cf4489c389d04889ce440fb68c2450"},
+    "SAVE": {"rva": "0x11fe2f00", "bytes": "555657534883ec68488d6c246048c745f8feffffff4889cb803d2ab6aaf3000f"}
+  },
+  "layout": {
+    "GS_GLOBAL_SLOT_RVA": "0x5783de8",
+    "GS_CONTEXT_MANAGER_OFFSET": "0xc210",
+    "GS_SAVE_MANAGER_OFFSET": "0xdb50",
+    "GS_MANAGER_KEY_OFFSET": "0x38",
+    "GS_MANAGER_DICTIONARY_OFFSET": "0x10",
+    "GS_CONTEXT_BUCKETS_OFFSET": "0x28",
+    "GS_CONTEXT_ENTRIES_OFFSET": "0x30",
+    "GS_CONTEXT_VERSION_OFFSET": "0x38",
+    "GS_CONTEXT_ORIGIN_OFFSET": "0x38",
+    "GS_ENTITY_DICTIONARY_OFFSET": "0x18",
+    "GS_ENTITY_BUCKETS_OFFSET": "0x20",
+    "GS_ENTITY_ENTRIES_OFFSET": "0x28",
+    "GS_ENTITY_VERSION_OFFSET": "0x3c",
+    "GS_OWNER_ID_OFFSET": "0x1c",
+    "GS_OWNER_CONTEXT_OFFSET": "0xa0",
+    "GS_OWNER_CONFIG_OFFSET": "0xb8",
+    "GS_CONFIG_ID_OFFSET": "0x1c"
+  },
+  "callbackStackRvas": ["0xabaa78", "0xac18fa"],
+  "defaultHotfixByteRvas": ["0x57399e8", "0x56f4a0d", "0x57372d8", "0x574f96c"],
+  "evidence": [
+    ".runtime/verification/update-repair-20260924/native-port/ASSESSMENT.md",
+    ".runtime/verification/update-repair-20260924/native-port/config-serializer-match.json",
+    ".runtime/verification/update-repair-20260924/native-port/message-stack-candidates.json",
+    ".runtime/verification/update-repair-20260924/native-port/dep-160dedc0.asm"
+  ]
+}

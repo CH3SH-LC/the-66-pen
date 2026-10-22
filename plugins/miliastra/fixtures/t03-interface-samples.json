@@ -1,0 +1,291 @@
+{
+  "$comment": [
+    "T03 / DS-07 frozen interface samples, delivered BEFORE the implementation so that",
+    "DS-06 (src/backend.ts) and DS-08 (backend/operation_state.py) can code against the",
+    "shapes without waiting for this module. Every object below is a literal sample of a",
+    "value the implementation returns; it is not a schema and not an execution record.",
+    "Producer: plugins/miliastra/src/lifecycle.ts. Consumer tests: plugins/miliastra/tests/lifecycle.spec.ts.",
+    "The enum values are quoted from plugins/miliastra/contracts/contract.json and must not be widened here."
+  ],
+  "taskId": "T03",
+  "owner": "DS-07",
+  "contractVersion": "1",
+  "schemaVersion": 1,
+  "generatedUtc": "2026-10-02T00:00:00Z",
+  "layer": "offline-fixture",
+  "signatures": [
+    {
+      "symbol": "createMiliastraLifecycle",
+      "signature": "createMiliastraLifecycle(options: MiliastraLifecycleOptions): MiliastraLifecycleController",
+      "note": "options = { ledger: MiliastraBusinessLedgerPort, serverName?: string|null, now?: () => Date, releaseTimeoutMs?: number }"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.phase",
+      "signature": "phase(): 'starting' | 'ready' | 'draining' | 'disposed'"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.transition",
+      "signature": "transition(to: MiliastraLifecyclePhase): void",
+      "throws": "LIFECYCLE_ILLEGAL_TRANSITION"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.markReady",
+      "signature": "markReady(detail: string | null): void",
+      "note": "only starting -> ready is legal; a placeholder call is a contract break"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.registerResource",
+      "signature": "registerResource(resource: MiliastraResource): void",
+      "throws": "LIFECYCLE_RESOURCE_MISDECLARED"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.beginOperation",
+      "signature": "beginOperation(request: { operationId: string; capabilityId: string; caseId?: string | null }): Promise<MiliastraDispatchAdmission>",
+      "note": "the ONLY way to obtain a dispatch permit"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.settleOperation",
+      "signature": "settleOperation(operationId: string): void"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.cancel",
+      "signature": "cancel(operationId: string): Promise<MiliastraCancellationOutcome>",
+      "note": "never dispatches and never rolls back"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.deliverReceipt",
+      "signature": "deliverReceipt(observation: MiliastraOperationObservation): Promise<MiliastraLateReceiptOutcome>",
+      "note": "never activates a disposed instance"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.pendingOperations",
+      "signature": "pendingOperations(): Promise<readonly MiliastraOpenOperation[]>"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.resourceTable",
+      "signature": "resourceTable(): readonly MiliastraResourceRow[]"
+    },
+    {
+      "symbol": "MiliastraLifecycleController.dispose",
+      "signature": "dispose(options?: { reason?: string; releaseTimeoutMs?: number; beforeRelease?: () => void | Promise<void> }): Promise<MiliastraDisposeReport>",
+      "note": "idempotent; a second call returns the first report with alreadyDisposed true"
+    }
+  ],
+  "legalTransitions": {
+    "starting": ["ready", "draining", "disposed"],
+    "ready": ["draining"],
+    "draining": ["disposed"],
+    "disposed": []
+  },
+  "projections": {
+    "businessStateByOperationState": {
+      "never-claimed": "rejected",
+      "claimed": "pending",
+      "dispatched": "pending",
+      "known-complete": "completed",
+      "known-failed": "failed",
+      "outcome-unknown": "unknown"
+    },
+    "reconcileStateByOperationState": {
+      "never-claimed": "never-claimed",
+      "claimed": "unknown",
+      "dispatched": "unknown",
+      "known-complete": "known-success",
+      "known-failed": "known-failure",
+      "outcome-unknown": "unknown"
+    }
+  },
+  "samples": {
+    "admissionGranted": {
+      "kind": "granted",
+      "operationId": "op-create-0001",
+      "capabilityId": "entity.create",
+      "phase": "ready",
+      "operationState": "never-claimed",
+      "writeExecuted": false,
+      "dispatchEvidence": [],
+      "retryAttempted": false,
+      "grantedUtc": "2026-10-02T00:00:00Z"
+    },
+    "admissionExisting": {
+      "kind": "existing",
+      "operationId": "op-create-0001",
+      "capabilityId": "entity.create",
+      "phase": "ready",
+      "operationState": "dispatched",
+      "state": "pending",
+      "reconcileState": "unknown",
+      "outcomeKnown": false,
+      "writeExecuted": true,
+      "dispatchEvidence": ["direct-launch-intent.json"],
+      "retryAttempted": false,
+      "replayed": false,
+      "nextAction": "poll-same-operation",
+      "reconcile": {
+        "operationId": "op-create-0001",
+        "ledgerRef": "ledger/op-create-0001",
+        "requestId": "req-op-create-0001",
+        "journalRef": "journal/op-create-0001"
+      },
+      "reason": "the business ledger already carries this operationId as dispatched; report it instead of dispatching"
+    },
+    "admissionRefusedWhileDraining": {
+      "kind": "refused",
+      "operationId": "op-create-0002",
+      "capabilityId": "entity.create",
+      "phase": "draining",
+      "code": "LIFECYCLE_WRITE_REFUSED_DRAINING",
+      "state": "rejected",
+      "reconcileState": "never-claimed",
+      "outcomeKnown": true,
+      "writeExecuted": false,
+      "dispatchEvidence": [],
+      "retryAttempted": false,
+      "nextAction": "fix-input",
+      "reconcile": null,
+      "reason": "the instance is draining and no longer dispatches writes"
+    },
+    "cancelBeforeDispatch": {
+      "operationId": "op-create-0003",
+      "phase": "ready",
+      "operationState": "never-claimed",
+      "state": "rejected",
+      "reconcileState": "never-claimed",
+      "outcomeKnown": true,
+      "writeExecuted": false,
+      "dispatchEvidence": [],
+      "dispatched": false,
+      "error": {
+        "code": "CANCELLED_BEFORE_DISPATCH",
+        "disposition": "refusal-before-dispatch",
+        "phase": "before-dispatch",
+        "sideEffect": "none",
+        "message": "cancelled before any dispatch; nothing was written and there is nothing to reconcile",
+        "operationId": "op-create-0003",
+        "reconcile": null
+      },
+      "reconcile": null,
+      "nextAction": "fix-input",
+      "retryAttempted": false,
+      "reason": "the ledger shows no claim for this operationId, so no write can have started"
+    },
+    "cancelAfterDispatch": {
+      "operationId": "op-create-0004",
+      "phase": "draining",
+      "operationState": "dispatched",
+      "state": "pending",
+      "reconcileState": "unknown",
+      "outcomeKnown": false,
+      "writeExecuted": true,
+      "dispatchEvidence": ["direct-launch-intent.json"],
+      "dispatched": false,
+      "error": null,
+      "reconcile": {
+        "operationId": "op-create-0004",
+        "ledgerRef": "ledger/op-create-0004",
+        "requestId": "req-op-create-0004",
+        "journalRef": "journal/op-create-0004"
+      },
+      "nextAction": "poll-same-operation",
+      "retryAttempted": false,
+      "reason": "the operation is dispatched; cancelling a wait does not roll it back - reconcile instead of re-sending"
+    },
+    "lateReceiptRecorded": {
+      "operationId": "op-create-0004",
+      "phaseAtReceipt": "disposed",
+      "recorded": true,
+      "activated": false,
+      "dispatched": false,
+      "operation": {
+        "operationId": "op-create-0004",
+        "operationState": "outcome-unknown",
+        "state": "unknown",
+        "reconcileState": "unknown",
+        "outcomeKnown": false,
+        "writeExecuted": true,
+        "dispatchEvidence": ["direct-launch-intent.json"],
+        "requestId": "req-op-create-0004",
+        "journalRef": "journal/op-create-0004",
+        "ledgerRef": "ledger/op-create-0004",
+        "nextAction": "reconcile",
+        "reconcile": {
+          "operationId": "op-create-0004",
+          "ledgerRef": "ledger/op-create-0004",
+          "requestId": "req-op-create-0004",
+          "journalRef": "journal/op-create-0004"
+        },
+        "retryAttempted": false
+      },
+      "reason": null,
+      "code": null
+    },
+    "dispatchReport": {
+      "phase": "disposed",
+      "alreadyDisposed": false,
+      "drainReason": "unload",
+      "startedUtc": "2026-10-02T00:00:00Z",
+      "finishedUtc": "2026-10-02T00:00:00Z",
+      "elapsedMs": 1,
+      "released": [{"id": "namespace:miliastra", "kind": "namespace-reservation", "releasedUtc": "2026-10-02T00:00:00Z"}],
+      "unreleased": [
+        {
+          "id": "mcp-connection:stdio",
+          "kind": "mcp-connection",
+          "createdBy": "mcp-client:transport",
+          "reason": "release() did not settle within 0 ms; left alive for the mainline to handle",
+          "attemptedUtc": "2026-10-02T00:00:00Z"
+        }
+      ],
+      "retained": [
+        {"id": "game-process", "kind": "editor-process", "reason": "external resource: this plugin does not stop, restart or disconnect the game, the editor or the resident helper"}
+      ],
+      "openOperations": [],
+      "unresolvedAdmissions": [],
+      "rollbackPerformed": false,
+      "retryAttempted": false
+    }
+  },
+  "refusalSemantics": [
+    {
+      "case": "cancel before submit",
+      "precondition": "ledger row absent or operationState === 'never-claimed'",
+      "returned": {"state": "rejected", "error.code": "CANCELLED_BEFORE_DISPATCH", "writeExecuted": false, "dispatched": false},
+      "forbidden": ["any dispatch", "any journal or ledger write by this module"]
+    },
+    {
+      "case": "cancel after submit",
+      "precondition": "operationState in {claimed, dispatched}",
+      "returned": {"state": "pending", "outcomeKnown": false, "error": null, "nextAction": "poll-same-operation"},
+      "forbidden": ["state rejected", "writeExecuted false", "rollback claim", "re-send"]
+    },
+    {
+      "case": "cancel after unknown outcome",
+      "precondition": "operationState === 'outcome-unknown'",
+      "returned": {"state": "unknown", "outcomeKnown": false, "nextAction": "reconcile", "reconcile": "present"},
+      "forbidden": ["state completed", "state rejected", "re-send"]
+    },
+    {
+      "case": "write after begin-drain",
+      "precondition": "phase in {starting, draining, disposed}",
+      "returned": {"kind": "refused", "state": "rejected", "writeExecuted": false, "code": "LIFECYCLE_NOT_READY | LIFECYCLE_WRITE_REFUSED_DRAINING"},
+      "forbidden": ["reading the ledger", "dispatching", "creating a ledger row"]
+    },
+    {
+      "case": "late receipt after dispose",
+      "precondition": "phase === 'disposed'",
+      "returned": {"recorded": true, "activated": false, "phaseAtReceipt": "disposed"},
+      "forbidden": ["phase change", "relaunching the instance", "creating an operation the ledger does not know"]
+    },
+    {
+      "case": "illegal phase move",
+      "precondition": "any move not listed in legalTransitions",
+      "returned": "throws MiliastraLifecycleError code LIFECYCLE_ILLEGAL_TRANSITION",
+      "forbidden": ["silently ignoring the move", "re-entering started/ready after draining"]
+    }
+  ],
+  "notClaimed": [
+    "No real MCP server, tool registry, game, editor, elevated helper or bridge was contacted.",
+    "The ledger row shapes are a fixture; DS-08 owns the persisted row, the storage and the claimed/dispatched discrimination.",
+    "Nothing here is evidence that a tool call reached the game; this is an offline interface freeze."
+  ]
+}

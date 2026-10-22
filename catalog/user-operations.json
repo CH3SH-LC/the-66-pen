@@ -1,0 +1,1754 @@
+{
+  "operations": [
+    {
+      "op_id": "entity.rename",
+      "name_zh": "重命名（实体/元件）",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 3",
+      "trigger_kind": "context_menu",
+      "backend_command": "ModifyEditObjName",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:1170",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "重命名（实体/元件）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.delete",
+      "name_zh": "删除（实体/元件）",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 7",
+      "trigger_kind": "context_menu",
+      "backend_command": "DeleteEditObj",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:1211",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "删除（实体/元件）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.focus_in_game",
+      "name_zh": "在局内查看（聚焦）",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 1",
+      "trigger_kind": "context_menu",
+      "backend_command": "FocusEditObj",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:1206",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "在局内查看（聚焦）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.change_faction",
+      "name_zh": "更改阵营",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 15",
+      "trigger_kind": "context_menu",
+      "backend_command": "ModifyFactionForEditObj",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:组15分支（入口 :1493 同族 APPLY 对照；命令宿主 kg9jHSKBgsfObR2IXdPf.cs）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "更改阵营",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.export",
+      "name_zh": "导出（选中对象 → .gia）",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 12",
+      "trigger_kind": "context_menu",
+      "backend_command": "DoExport",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:1199 / :1281（handler DpCK2pe73NJ → kg9jHSKBgsfObR2IXdPf.cs:1311 C6xKBZLdA0J()，过滤器 :1321，发送 :1348）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "导出（选中对象 → .gia）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.import",
+      "name_zh": "导入（把 .gia 导回选中对象）",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 13",
+      "trigger_kind": "context_menu",
+      "backend_command": "DoImport",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:1462（handler UhKK2cTgTHp → kg9jHSKBgsfObR2IXdPf.cs:2035）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "导入（把 .gia 导回选中对象）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.open",
+      "name_zh": "打开（打开对象挂载的节点图 / 在局内查看）",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 0",
+      "trigger_kind": "context_menu",
+      "backend_command": "FocusEditObj / FocusPrefabInstance / RequestPrefabInstance",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:1206 CHECK_FOCUS 与组0 OPEN **反编译体逐字节相同**，同走处理器 sM5KBF555gu",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开（打开对象挂载的节点图 / 在局内查看）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.apply",
+      "name_zh": "应用",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 9",
+      "trigger_kind": "context_menu",
+      "backend_command": "ApplyPrefabInstanceChange",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:1493（handler X2vK26gAC51 → 命令宿主 kg9jHSKBgsfObR2IXdPf.cs:1673）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "应用",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.check_reference",
+      "name_zh": "查看引用关系",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 8",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "同上（组 8 分支）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "查看引用关系",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.copy_bp_id",
+      "name_zh": "复制节点图ID",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 14",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "同上（组 14 分支）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "复制节点图ID",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.duplicate",
+      "name_zh": "复制（对象）",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象右键菜单 · 组 6",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "同上（组 6 分支）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "复制（对象）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "resource.focus_in_game",
+      "name_zh": "在局内查看（资源条目）",
+      "area": "资源与文件夹（右键菜单）",
+      "where_ui": "资源列表右键菜单 · 组 1",
+      "trigger_kind": "context_menu",
+      "backend_command": "FocusEditObj",
+      "frontend_class": "uFMyy7Kw7Pe8xVfHEqF7",
+      "frontend_code": "uFMyy7Kw7Pe8xVfHEqF7.cs handler iw6KwysDqIk（发送点同 tC38a9uZumHDvhgFUCLl.cs:2203 一带）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "在局内查看（资源条目）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "resource.rename",
+      "name_zh": "重命名（资源/文件夹）",
+      "area": "资源与文件夹（右键菜单）",
+      "where_ui": "资源列表右键菜单 · 组 3",
+      "trigger_kind": "context_menu",
+      "backend_command": "modifyname / ModifyEditObjName / ModifyPrefabName",
+      "frontend_class": "uFMyy7Kw7Pe8xVfHEqF7",
+      "frontend_code": "Oe5aspiVGooyp47o5s0q.cs:12150/:12548/:12566（发送点 :12463/:12552/:12570）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "重命名（资源/文件夹）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "resource.delete",
+      "name_zh": "删除（资源/文件夹）",
+      "area": "资源与文件夹（右键菜单）",
+      "where_ui": "资源列表右键菜单 · 组 7",
+      "trigger_kind": "context_menu",
+      "backend_command": "delete / DeleteEditObj / DeletePrefab",
+      "frontend_class": "uFMyy7Kw7Pe8xVfHEqF7",
+      "frontend_code": "Oe5aspiVGooyp47o5s0q.cs 删除发送点（同文件改名发送点 :12463/:12552/:12570；行号未逐一定位）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "删除（资源/文件夹）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "resource.new_folder",
+      "name_zh": "新建文件夹",
+      "area": "资源与文件夹（右键菜单）",
+      "where_ui": "资源列表 / 资源树右键菜单 · 组 4",
+      "trigger_kind": "context_menu",
+      "backend_command": "create",
+      "frontend_class": "uFMyy7Kw7Pe8xVfHEqF7 / ghF1sQKBbpMCTbDkMGOr / vmP8csKVlXGk9dUGe1iY",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "新建文件夹",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "resource.check_reference",
+      "name_zh": "查看引用关系（资源）",
+      "area": "资源与文件夹（右键菜单）",
+      "where_ui": "资源列表右键菜单 · 组 8",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "uFMyy7Kw7Pe8xVfHEqF7",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "查看引用关系（资源）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "resource.the_placement_question",
+      "name_zh": "把资源条目拖到编辑器里",
+      "area": "资源与文件夹（右键菜单）",
+      "where_ui": "资源管理器列表（起拖 → 拖影 Popup → 放下）",
+      "trigger_kind": "drag_drop",
+      "backend_command": "AddInstructionGraphForEditObj / AddInstructionGraphForPrefab / RequestPrefabInstance / FocusPrefabInstance",
+      "frontend_class": "uFMyy7Kw7Pe8xVfHEqF7 / kg9jHSKBgsfObR2IXdPf",
+      "frontend_code": "uFMyy7Kw7Pe8xVfHEqF7.cs:2203 起拖 fweKwc4dG8L / :2234 canDrop PbpKwVvBfxU / :2292 drop BecKwZAS1Lj / kg9jHSKBgsfObR2IXdPf.cs:2035 BlKKB2np35C",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "把资源条目拖到编辑器里",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "resource.tag_size",
+      "name_zh": "单位标签 / 实体布设组",
+      "area": "资源与文件夹（右键菜单）",
+      "where_ui": "资源条目属性（vmTags / vmSuites）",
+      "trigger_kind": "click",
+      "backend_command": "ModifyEditobjTag / ModifyPrefabTag / ModifySuite",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kJ49ujK21bL1R4fN9jpN.NNwa8GK28oPifmneADs0.cs:264 vmTags（vmSuites 同族）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "单位标签 / 实体布设组",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "resource.attach_graph",
+      "name_zh": "给对象挂节点图",
+      "area": "资源与文件夹（右键菜单）",
+      "where_ui": "资源条目操作",
+      "trigger_kind": "click",
+      "backend_command": "AddInstructionGraphForEditObj / AddInstructionGraphForPrefab",
+      "frontend_class": "NNwa8GK28oPifmneADs0",
+      "frontend_code": "kg9jHSKBgsfObR2IXdPf.cs:2035 BlKKB2np35C 按资源种类分支（:2101 AddInstructionGraphForPrefab / :2118 AddInstructionGraphForEditObj / :2094 attachInstructionGraph）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "给对象挂节点图",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "window.open_resource_manager",
+      "name_zh": "打开资源管理器",
+      "area": "窗口与面板（主菜单）",
+      "where_ui": "窗口菜单 · 组 1",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "u4vgh9uebiscBdHWcnLi",
+      "frontend_code": "u4vgh9uebiscBdHWcnLi.cs",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开资源管理器",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "window.open_client_bp_manager",
+      "name_zh": "打开客户端节点图资源管理器",
+      "area": "窗口与面板（主菜单）",
+      "where_ui": "窗口菜单 · 组 2",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "u4vgh9uebiscBdHWcnLi",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开客户端节点图资源管理器",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "window.open_node_manager",
+      "name_zh": "打开节点管理器",
+      "area": "窗口与面板（主菜单）",
+      "where_ui": "窗口菜单 · 组 3",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "u4vgh9uebiscBdHWcnLi",
+      "frontend_code": "同上（handler cBVYLdhAhVY）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开节点管理器",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "window.open_debug_log",
+      "name_zh": "打开日志",
+      "area": "窗口与面板（主菜单）",
+      "where_ui": "窗口菜单 · 组 4",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "u4vgh9uebiscBdHWcnLi",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开日志",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "window.open_signal_manager",
+      "name_zh": "打开服务器信号管理器",
+      "area": "窗口与面板（主菜单）",
+      "where_ui": "窗口菜单 · 组 5",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "u4vgh9uebiscBdHWcnLi",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开服务器信号管理器",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "window.open_cost_load",
+      "name_zh": "打开负载检测",
+      "area": "窗口与面板（主菜单）",
+      "where_ui": "窗口菜单 · 组 6",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "u4vgh9uebiscBdHWcnLi",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开负载检测",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "window.help",
+      "name_zh": "帮助",
+      "area": "窗口与面板（主菜单）",
+      "where_ui": "窗口菜单 · 组 7",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "u4vgh9uebiscBdHWcnLi",
+      "frontend_code": "同上（handler COaue14gkSr）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "帮助",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.new_bp",
+      "name_zh": "创建节点图",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 1",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "M2bF6wKCnSaAHlvJtY0X.cs（handler YvvKSogoHHX）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "创建节点图",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.new_composite",
+      "name_zh": "创建复合节点",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 1",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "创建复合节点",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.new_folder",
+      "name_zh": "新建文件夹（蓝图）",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 0",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "新建文件夹（蓝图）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.rename_name",
+      "name_zh": "改名（蓝图/名称）",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 0",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "改名（蓝图/名称）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.set_type",
+      "name_zh": "设置类型",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 1",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "设置类型",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.set_faction",
+      "name_zh": "设置阵营（蓝图）",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 3",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "设置阵营（蓝图）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.increase",
+      "name_zh": "递增",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 7",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "递增",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.decrease",
+      "name_zh": "递减",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 8",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "递减",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.reference",
+      "name_zh": "引用关系",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 5",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "引用关系",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "bp.order",
+      "name_zh": "排序",
+      "area": "蓝图管理（右键菜单）",
+      "where_ui": "蓝图管理树右键菜单 · 组 2",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "M2bF6wKCnSaAHlvJtY0X",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "排序",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "node.cut",
+      "name_zh": "剪切节点",
+      "area": "节点图-节点（右键菜单）",
+      "where_ui": "节点右键菜单 · 组 2",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "bNlSoNu95jI7CWfQ4yiK.cs（handler KQHuoilNdNo）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "剪切节点",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "node.duplicate",
+      "name_zh": "复制节点",
+      "area": "节点图-节点（右键菜单）",
+      "where_ui": "节点右键菜单 · 组 3",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "复制节点",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "node.delete",
+      "name_zh": "删除节点",
+      "area": "节点图-节点（右键菜单）",
+      "where_ui": "节点右键菜单 · 组 1",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "删除节点",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "node.disconnect",
+      "name_zh": "断开节点连线",
+      "area": "节点图-节点（右键菜单）",
+      "where_ui": "节点右键菜单 · 组 4",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "断开节点连线",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "node.expand_composite",
+      "name_zh": "展开复合节点",
+      "area": "节点图-节点（右键菜单）",
+      "where_ui": "节点右键菜单 · 组 8",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "展开复合节点",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "node.generate_composite",
+      "name_zh": "生成复合节点",
+      "area": "节点图-节点（右键菜单）",
+      "where_ui": "节点右键菜单 · 组 7",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "生成复合节点",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "node.annotate",
+      "name_zh": "加注释",
+      "area": "节点图-节点（右键菜单）",
+      "where_ui": "节点右键菜单 · 组 6",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "加注释",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.disconnect_one",
+      "name_zh": "断开此连接",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 8",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP",
+      "frontend_code": "IKba7HuQCJ1iWcNf1BVP.cs（handler hReuTOJyrgM）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "断开此连接",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.disconnect_all",
+      "name_zh": "断开全部连线",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 9",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "断开全部连线",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.disconnect_next",
+      "name_zh": "断开到下个节点连线",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 6",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "断开到下个节点连线",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.jump_next",
+      "name_zh": "跳转到下个节点",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 4/5",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "跳转到下个节点",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.merge",
+      "name_zh": "合并引脚",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 14",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP / TqJtgQux2ah7aVABw1pB",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "合并引脚",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.cancel_composite",
+      "name_zh": "取消在复合节点上显示",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 16",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP / TqJtgQux2ah7aVABw1pB",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "取消在复合节点上显示",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.move_up",
+      "name_zh": "向上移动（引脚/连线）",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 12",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP / TqJtgQux2ah7aVABw1pB",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "向上移动（引脚/连线）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.move_down",
+      "name_zh": "向下移动（引脚/连线）",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 13",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP / TqJtgQux2ah7aVABw1pB",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "向下移动（引脚/连线）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.insert_up",
+      "name_zh": "向上插入",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 2",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "向上插入",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.insert_down",
+      "name_zh": "向下插入",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 3",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "向下插入",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.delete_component",
+      "name_zh": "删除组件",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象操作",
+      "trigger_kind": "context_menu",
+      "backend_command": "DeleteComponentForEditObj / DeleteComponentForPrefab",
+      "frontend_class": "yn34VuuuO5tEgsICYDBW",
+      "frontend_code": "yn34VuuuO5tEgsICYDBW.cs（命令宿主；行号未逐一定位）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "删除组件",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "entity.jump_combat_setting",
+      "name_zh": "跳转到战斗设置",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "场景对象操作",
+      "trigger_kind": "click",
+      "backend_command": "JumpCombatSetting",
+      "frontend_class": "VaR86gKerBXhRbru9366",
+      "frontend_code": "VaR86gKerBXhRbru9366.cs（命令宿主；行号未逐一定位）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "跳转到战斗设置",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pcg.instance_ops",
+      "name_zh": "PCG 实例操作（改名 / 删除 / 聚焦）",
+      "area": "场景实体（右键菜单）",
+      "where_ui": "**界面入口未找到**（前端派发点确在）",
+      "trigger_kind": "context_menu",
+      "backend_command": "ModifyPCGInstanceName / DeletePCGInstance / FocusPCGInstance",
+      "frontend_class": "Oe5aspiVGooyp47o5s0q",
+      "frontend_code": "Oe5aspiVGooyp47o5s0q.cs:12596 / 12601 / 12606",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "PCG 实例操作（改名 / 删除 / 聚焦）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "pin.focus_in_bp",
+      "name_zh": "在节点图中查看",
+      "area": "节点图-引脚与连线（右键菜单）",
+      "where_ui": "引脚/连线右键菜单 · 组 11",
+      "trigger_kind": "context_menu",
+      "backend_command": null,
+      "frontend_class": "IKba7HuQCJ1iWcNf1BVP / TqJtgQux2ah7aVABw1pB",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "在节点图中查看",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.blueprint_save",
+      "name_zh": "保存（节点图）",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "节点图编辑器工具栏按钮 vmBtnSave",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "tZQX5gunPwuVevTR3HUI.PLKaYuunsDIIyd0vEowZ.cs",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "保存（节点图）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.blueprint_save_as",
+      "name_zh": "另存为（节点图）",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "节点图编辑器工具栏按钮 vmBtnSaveAs",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "另存为（节点图）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.undo",
+      "name_zh": "撤销",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "节点图编辑器工具栏按钮 vmBtnUndo",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "撤销",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.redo",
+      "name_zh": "重做",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "节点图编辑器工具栏按钮 vmBtnRedo",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "重做",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.annotation",
+      "name_zh": "注释",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "工具栏按钮 vmBtnComment",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "注释",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.variables",
+      "name_zh": "变量面板",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "工具栏按钮 vmBtnVar",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "变量面板",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.zoom",
+      "name_zh": "画布缩放（50% / 100% / 150% / 200% / 放大 / 缩小）",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "工具栏按钮 vmBtnScale",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "画布缩放（50% / 100% / 150% / 200% / 放大 / 缩小）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.signal_panel",
+      "name_zh": "打开信号管理界面",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "工具栏按钮 vmBtnSignal",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开信号管理界面",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.search",
+      "name_zh": "搜索/过滤",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "工具栏按钮 vmBtnSearch",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "搜索/过滤",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.fold",
+      "name_zh": "折叠",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "工具栏按钮 vmBtnFold",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "PLKaYuunsDIIyd0vEowZ",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "折叠",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.window_controls",
+      "name_zh": "窗口控制（最小化/最大化/还原/手动布局/关闭）",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "窗口标题栏按钮 vmBtnMin / vmBtnMax / vmBtnMini / vmBtnManual / vmBtnClose",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "vt6a0yK9yJ7wlX5pTwvx / w33MCYK9af5cV00WXWnn",
+      "frontend_code": "对应 .cs",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "窗口控制（最小化/最大化/还原/手动布局/关闭）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "toolbar.scene_switch_category",
+      "name_zh": "切换资源分类（上一个/下一个）",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "资源面板按钮 vmBtnToPrevCategory / vmBtnToNextCategory",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "MLx0fWKyr4g90EjGRFNN",
+      "frontend_code": "对应 .cs",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "切换资源分类（上一个/下一个）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "debuglog.import_log",
+      "name_zh": "导入调试日志",
+      "area": "调试与负载",
+      "where_ui": "日志面板按钮 vmBtnImportLog（打开 OpenFileDialog）",
+      "trigger_kind": "click",
+      "backend_command": "ImportDebugLog",
+      "frontend_class": "C9ev3quv9MKMEBmJNJDj",
+      "frontend_code": "C9ev3quv9MKMEBmJNJDj.cs:1280 BsRuvcQUlcA",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "导入调试日志",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "debuglog.import_all",
+      "name_zh": "导入全部调试日志",
+      "area": "调试与负载",
+      "where_ui": "日志面板",
+      "trigger_kind": "click",
+      "backend_command": "ImportAllDebugLog",
+      "frontend_class": "C9ev3quv9MKMEBmJNJDj",
+      "frontend_code": "C9ev3quv9MKMEBmJNJDj.cs:1338 XlouvVFL1Yn（调用点 :755，**开窗时自动触发**）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "导入全部调试日志",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "debuglog.delete",
+      "name_zh": "删除调试日志",
+      "area": "调试与负载",
+      "where_ui": "日志面板",
+      "trigger_kind": "click",
+      "backend_command": "DeleteDebugLog",
+      "frontend_class": "C9ev3quv9MKMEBmJNJDj",
+      "frontend_code": "C9ev3quv9MKMEBmJNJDj.cs:10512 juJuAbk86YC（单条）/ :1567 IOauvnoNptd（批量）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "删除调试日志",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "debuglog.refresh_report",
+      "name_zh": "刷新已存在的调试日志报告",
+      "area": "调试与负载",
+      "where_ui": "日志面板",
+      "trigger_kind": "click",
+      "backend_command": "RefreshExistDebugLogReport",
+      "frontend_class": "C9ev3quv9MKMEBmJNJDj",
+      "frontend_code": "C9ev3quv9MKMEBmJNJDj.cs:10318 li9uAm8IgOq → :10354（**由入站消息子类型 3 触发**）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "刷新已存在的调试日志报告",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "debuglog.clear",
+      "name_zh": "清空日志",
+      "area": "调试与负载",
+      "where_ui": "面板按钮 vmBtnClearLog",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "C9ev3quv9MKMEBmJNJDj",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "清空日志",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "debuglog.log_switch",
+      "name_zh": "日志开关",
+      "area": "调试与负载",
+      "where_ui": "日志面板按钮 vmBtnLogSwitch",
+      "trigger_kind": "click",
+      "backend_command": "（1018 消息 3001，不是命令名）",
+      "frontend_class": "C9ev3quv9MKMEBmJNJDj",
+      "frontend_code": "C9ev3quv9MKMEBmJNJDj.cs:1231 rKguvffMJQa(bool)",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "日志开关",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "debuglog.exit_debug",
+      "name_zh": "退出调试",
+      "area": "调试与负载",
+      "where_ui": "**节点图编辑窗口**（不是日志窗口）· vmBtnExitDebug",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "H4ENZduPkaQ5CTaa2ENJ",
+      "frontend_code": "SEBGj6uPIYTjcxgTBeC8.H4ENZduPkaQ5CTaa2ENJ::KIVuMG9CuBB @4785 → 本地消息 19",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "退出调试",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "debuglog.open_panel",
+      "name_zh": "打开调试日志",
+      "area": "调试与负载",
+      "where_ui": "窗口菜单 · 组 4（窗口 kind GraphLog=5）",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "C9ev3quv9MKMEBmJNJDj",
+      "frontend_code": "C9ev3quv9MKMEBmJNJDj.cs",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "打开调试日志",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "cost.enter",
+      "name_zh": "进入负载检测",
+      "area": "调试与负载",
+      "where_ui": "窗口菜单 · 组 6 / 按钮 vmBtnLoad",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "DDfsTbumioP8OeS9Kv6f",
+      "frontend_code": "DDfsTbumioP8OeS9Kv6f.cs",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "进入负载检测",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "cost.import_performance_report",
+      "name_zh": "导入性能报告",
+      "area": "调试与负载",
+      "where_ui": "负载面板按钮（OpenFileDialog）",
+      "trigger_kind": "click",
+      "backend_command": "ImportPerformanceReport",
+      "frontend_class": "DDfsTbumioP8OeS9Kv6f",
+      "frontend_code": "DDfsTbumioP8OeS9Kv6f.cs:802 HBiumx5JFjF()（选 *.gia）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "导入性能报告",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "cost.dynamic_switch",
+      "name_zh": "动态负载统计开关",
+      "area": "调试与负载",
+      "where_ui": "负载面板按钮 vmBtnEnableDynamicCostLoadSwitch",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "DDfsTbumioP8OeS9Kv6f",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "动态负载统计开关",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "cost.snapshot",
+      "name_zh": "负载快照",
+      "area": "调试与负载",
+      "where_ui": "负载详情面板按钮 vmBtnSnapShot",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "B0gUrpKkSiTGJr81KypF",
+      "frontend_code": "B0gUrpKkSiTGJr81KypF.cs",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "负载快照",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "cost.focus_entity",
+      "name_zh": "从负载列表跳到实体（在局内查看）",
+      "area": "调试与负载",
+      "where_ui": "负载详情面板按钮 vmBtnFocusImage（模板 FocusScreenshot）",
+      "trigger_kind": "click",
+      "backend_command": "FocusCharacter / FocusDropGather / FocusEsp / FocusLight / FocusLocalBullet / FocusPrefabInstance / FocusBeyondTileMap",
+      "frontend_class": "B0gUrpKkSiTGJr81KypF",
+      "frontend_code": "B0gUrpKkSiTGJr81KypF 由 DDfsTbumioP8OeS9Kv6f.cs:1186/:1201/:1298 `new B0gUrpKkSiTGJr81KypF(this, current)` 逐行创建",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "从负载列表跳到实体（在局内查看）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "cost.focus_screenshot",
+      "name_zh": "聚焦截图（6 个 float 位置）",
+      "area": "调试与负载",
+      "where_ui": "负载面板（模板 Template_FocusScreenshot）",
+      "trigger_kind": "click",
+      "backend_command": "FocusScreenshot",
+      "frontend_class": "B0gUrpKkSiTGJr81KypF",
+      "frontend_code": "DDfsTbumioP8OeS9Kv6f.cs:1186/:1201/:1298 创建 B0gUrpKkSiTGJr81KypF 行项（同 cost.focus_entity）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "聚焦截图（6 个 float 位置）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "audio.preview_music",
+      "name_zh": "试听音乐",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "节点图右键按钮 vmBtnPlayAudio",
+      "trigger_kind": "click",
+      "backend_command": "PlayMusic",
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "bNlSoNu95jI7CWfQ4yiK.cs",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "试听音乐",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "audio.preview_sfx",
+      "name_zh": "试听音效",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "同上（私有实现 ymCuByWOsnZ）",
+      "trigger_kind": "click",
+      "backend_command": "PlaySoundEffect",
+      "frontend_class": "bNlSoNu95jI7CWfQ4yiK",
+      "frontend_code": "同上",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "试听音效",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "io.export_gia",
+      "name_zh": "导出为 .gia 文件",
+      "area": "导入导出",
+      "where_ui": "命令宿主入口（SaveFileDialog，*.gia 过滤）",
+      "trigger_kind": "dialog",
+      "backend_command": "DoExport",
+      "frontend_class": "kg9jHSKBgsfObR2IXdPf",
+      "frontend_code": "kg9jHSKBgsfObR2IXdPf.cs:1311 C6xKBZLdA0J()（SaveFileDialog；过滤器 :1321；发送 :1348）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "导出为 .gia 文件",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "io.transfer_assets",
+      "name_zh": "转存资产（把外部资产转存进项目）",
+      "area": "导入导出",
+      "where_ui": "对象右键「导入」→ 弹出「转存资产」对话框 → 确认",
+      "trigger_kind": "dialog",
+      "backend_command": "DoImport",
+      "frontend_class": "EC9LaXKCud5dn7MZnrgl / JF6Ljpuy45HONelMUiPn",
+      "frontend_code": "EC9LaXKCud5dn7MZnrgl.cs:111 JkEKCYF8yFN → :445 UnsKCd4OYY3() → :486/:490 DoImport（入口 UhKK2cTgTHp :1629 → CxUKBrUoC4X :1415）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "转存资产（把外部资产转存进项目）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "io.import_gia",
+      "name_zh": "导入 .gia 文件",
+      "area": "导入导出",
+      "where_ui": "资源管理器右键 · 组 13（**只在选中项类型 == 15 时注册**）",
+      "trigger_kind": "context_menu",
+      "backend_command": "DoImport",
+      "frontend_class": "EC9LaXKCud5dn7MZnrgl",
+      "frontend_code": "XTIMALKC7WrrvhklkdIs.EC9LaXKCud5dn7MZnrgl.cs:486,490",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "导入 .gia 文件",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "io.blueprint_import",
+      "name_zh": "从 .gia 导入节点图/蓝图",
+      "area": "导入导出",
+      "where_ui": "**界面路径不存在**",
+      "trigger_kind": "not_applicable",
+      "backend_command": null,
+      "frontend_class": "没有",
+      "frontend_code": "not_found",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "从 .gia 导入节点图/蓝图",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "ui.shortcut_dictionary",
+      "name_zh": "查看快捷键字典",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "帮助菜单（主窗口顶栏第 8 项）",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "YgcFfXu7N28jKxr9O5dO",
+      "frontend_code": "u4vgh9uebiscBdHWcnLi.KNcueYistoh()(:526)",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "查看快捷键字典",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "ui.vector3_input",
+      "name_zh": "编辑三维向量（位置/旋转/缩放）",
+      "area": "编辑器通用（按钮/工具栏）",
+      "where_ui": "属性行控件（节点参数 / 元件属性 / 结构体字段共用）",
+      "trigger_kind": "click",
+      "backend_command": null,
+      "frontend_class": "UhbhJaK66RZ4wbVkn8IJ（Vector3 值 VM 为 vS6LBmKZsxTHb6T4oDaP）",
+      "frontend_code": "pcOabjK6fXvjdoPZ7auD.UhbhJaK66RZ4wbVkn8IJ.zSnK6pEwqZi(属性, 属性描述)（属性行工厂，按类型选模板：7=Vector3 / 5=TextBox / 3=CheckBox）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "编辑三维向量（位置/旋转/缩放）",
+        "--static"
+      ]
+    },
+    {
+      "op_id": "cost.enable_load_test",
+      "name_zh": "开启负载测试开关",
+      "area": "调试与负载",
+      "where_ui": "负载检测窗口（含确认弹窗）",
+      "trigger_kind": "click",
+      "backend_command": "（1018 消息 1025，不是命令名）",
+      "frontend_class": "DDfsTbumioP8OeS9Kv6f",
+      "frontend_code": "DDfsTbumioP8OeS9Kv6f.cs:859 tMNumdmuR5a(bool)（确认弹窗 u86umsNPDUW :959）",
+      "evidence": "static-candidate",
+      "callable": false,
+      "caution": "类级共现不能证明控件绑定；需独立追踪。历史 vmBtnImportLog/DeleteDebugLog 等误绑定不可当真。",
+      "tool": "pen.py",
+      "args": [
+        "catalog",
+        "开启负载测试开关",
+        "--static"
+      ]
+    }
+  ],
+  "source": "docs/research/beyondeditor-user-operations/db/operations.json",
+  "sourceSha256": "c26b984021484477d7a986d2493c22770fbdecd78fb2dcce890be7b85a883a1b"
+}

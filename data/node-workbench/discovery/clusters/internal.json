@@ -1,0 +1,52 @@
+{
+  "id": "internal",
+  "name": "内部与未公开入口",
+  "purpose": "资源已注册但菜单未公开的内部入口；仅供定位，不作为普通制作入口。",
+  "aliases": [
+    "GM",
+    "内部",
+    "测试",
+    "不外放"
+  ],
+  "nativeLeaves": [],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:100000",
+      "definitionId": 100000,
+      "graphKind": 20000,
+      "name": "调用GM时（此节点不外放）",
+      "family": "事件节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "internal"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 100000 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20002:22000:0:200117",
+      "definitionId": 200117,
+      "graphKind": 20002,
+      "name": "（测试）发送客户端信号",
+      "family": "执行节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "internal"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200117 --graph-kind 20002"
+    }
+  ],
+  "count": 2,
+  "byFamily": {
+    "事件节点": 1,
+    "执行节点": 1
+  },
+  "byGraphKind": {
+    "20000": 1,
+    "20002": 1
+  },
+  "runtimeVerified": false
+}

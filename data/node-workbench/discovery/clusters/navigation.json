@@ -1,0 +1,141 @@
+{
+  "id": "navigation",
+  "name": "巡逻、路径与寻路",
+  "purpose": "巡逻路线、路径信息和寻路阻挡。",
+  "aliases": [
+    "巡逻",
+    "寻路",
+    "路点",
+    "障碍",
+    "路径"
+  ],
+  "nativeLeaves": [
+    "造物巡逻",
+    "路径",
+    "寻路阻挡"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:618",
+      "definitionId": 618,
+      "graphKind": 20000,
+      "name": "切换造物巡逻模板",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "navigation"
+      ],
+      "nativeLeaves": [
+        "造物巡逻"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 618 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:619",
+      "definitionId": 619,
+      "graphKind": 20000,
+      "name": "获取当前造物的巡逻模板",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "navigation"
+      ],
+      "nativeLeaves": [
+        "造物巡逻"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 619 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:620",
+      "definitionId": 620,
+      "graphKind": 20000,
+      "name": "造物抵达巡逻路点时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "navigation"
+      ],
+      "nativeLeaves": [
+        "造物巡逻"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 620 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:621",
+      "definitionId": 621,
+      "graphKind": 20000,
+      "name": "获取指定路径点信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "navigation"
+      ],
+      "nativeLeaves": [
+        "路径"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 621 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:787",
+      "definitionId": 787,
+      "graphKind": 20000,
+      "name": "获得全局路径的路点个数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "navigation"
+      ],
+      "nativeLeaves": [
+        "路径"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 787 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:789",
+      "definitionId": 789,
+      "graphKind": 20000,
+      "name": "激活/关闭寻路阻挡功能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "navigation"
+      ],
+      "nativeLeaves": [
+        "寻路阻挡"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 789 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:790",
+      "definitionId": 790,
+      "graphKind": 20000,
+      "name": "激活/关闭寻路阻挡",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "navigation"
+      ],
+      "nativeLeaves": [
+        "寻路阻挡"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 790 --graph-kind 20000"
+    }
+  ],
+  "count": 7,
+  "byFamily": {
+    "执行节点": 3,
+    "查询节点": 3,
+    "事件节点": 1
+  },
+  "byGraphKind": {
+    "20000": 7
+  },
+  "runtimeVerified": false
+}

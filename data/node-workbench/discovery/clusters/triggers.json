@@ -1,0 +1,294 @@
+{
+  "id": "triggers",
+  "name": "范围、碰撞与射线",
+  "purpose": "碰撞范围与触发事件、射线检测；靠近选项菜单另见 interaction。",
+  "aliases": [
+    "靠近",
+    "范围",
+    "进入",
+    "离开",
+    "检测",
+    "接触",
+    "点击",
+    "射线命中"
+  ],
+  "nativeLeaves": [
+    "碰撞",
+    "碰撞触发器",
+    "碰撞触发源",
+    "触发器",
+    "射线",
+    "光标碰撞盒组件"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:90",
+      "definitionId": 90,
+      "graphKind": 20000,
+      "name": "激活/关闭碰撞触发器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞触发器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 90 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:91",
+      "definitionId": 91,
+      "graphKind": 20000,
+      "name": "离开碰撞触发器时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞触发器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 91 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:92",
+      "definitionId": 92,
+      "graphKind": 20000,
+      "name": "进入碰撞触发器时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞触发器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 92 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:240",
+      "definitionId": 240,
+      "graphKind": 20000,
+      "name": "激活/关闭原生碰撞",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 240 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:241",
+      "definitionId": 241,
+      "graphKind": 20000,
+      "name": "激活/关闭原生碰撞可攀爬性",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 241 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:242",
+      "definitionId": 242,
+      "graphKind": 20000,
+      "name": "激活/关闭额外碰撞",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 242 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:243",
+      "definitionId": 243,
+      "graphKind": 20000,
+      "name": "激活/关闭额外碰撞可攀爬性",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 243 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:367",
+      "definitionId": 367,
+      "graphKind": 20000,
+      "name": "激活/关闭碰撞触发源",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞触发源"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 367 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:669",
+      "definitionId": 669,
+      "graphKind": 20000,
+      "name": "获取碰撞触发器内所有实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "碰撞触发器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 669 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:854",
+      "definitionId": 854,
+      "graphKind": 20000,
+      "name": "激活/关闭光标碰撞盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "光标碰撞盒组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 854 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200107",
+      "definitionId": 200107,
+      "graphKind": 20001,
+      "name": "获取碰撞触发器内所有实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "触发器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200107 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200109",
+      "definitionId": 200109,
+      "graphKind": 20001,
+      "name": "获取射线检测结果",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "射线"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200109 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200107",
+      "definitionId": 200107,
+      "graphKind": 20002,
+      "name": "获取碰撞触发器内所有实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "触发器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200107 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200109",
+      "definitionId": 200109,
+      "graphKind": 20002,
+      "name": "获取射线检测结果",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "射线"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200109 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20007:22000:0:200301",
+      "definitionId": 200301,
+      "graphKind": 20007,
+      "name": "获取射线检测结果",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "射线"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200301 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200302",
+      "definitionId": 200302,
+      "graphKind": 20007,
+      "name": "获取射线筛选类型列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "triggers"
+      ],
+      "nativeLeaves": [
+        "射线"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200302 --graph-kind 20007"
+    }
+  ],
+  "count": 16,
+  "byFamily": {
+    "执行节点": 7,
+    "事件节点": 2,
+    "查询节点": 7
+  },
+  "byGraphKind": {
+    "20000": 10,
+    "20001": 2,
+    "20002": 2,
+    "20007": 2
+  },
+  "runtimeVerified": false
+}

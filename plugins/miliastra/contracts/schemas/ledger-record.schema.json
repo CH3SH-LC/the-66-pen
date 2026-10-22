@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://miliastra.local/contracts/schemas/ledger-record.schema.json",
+  "title": "Miliastra business operation ledger record, contractVersion 1",
+  "description": "The minimum a business ledger row must carry so that an operation can be reconciled without dispatching anything. Field shape only - T06 owns the implementation, the journal layout and the recovery of a crashed instance. The ledger is the only writer of operationId; tools/authoring/author.py remains the bottom-layer truth for the native requestId, and the two are bound once and immutably.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "contractVersion",
+    "operationId",
+    "capabilityId",
+    "targetHandle",
+    "state",
+    "writeExecuted",
+    "createdUtc",
+    "updatedUtc"
+  ],
+  "properties": {
+    "schemaVersion": {"type": "integer", "const": 1, "description": "Integer, on persisted records. Distinct from the string contractVersion."},
+    "contractVersion": {"type": "string", "const": "1"},
+    "operationId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"},
+    "caseId": {"type": ["string", "null"]},
+    "capabilityId": {"type": "string"},
+    "targetHandle": {"type": ["string", "null"]},
+    "targetBinding": {"type": ["object", "null"]},
+    "expectedRevision": {"type": ["string", "null"]},
+    "payloadDigest": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "Digest of the business payload as this server canonicalised it, not of what the caller sent."
+    },
+    "state": {
+      "enum": ["never-claimed", "claimed", "dispatched", "known-complete", "known-failed", "outcome-unknown"],
+      "description": "The authoritative lifecycle state. reconcileState is derived, never stored as the truth."
+    },
+    "writeExecuted": {"type": ["boolean", "null"]},
+    "dispatchEvidence": {
+      "type": "array",
+      "items": {"enum": ["direct-launch-intent.json", "launch.claim", "attempt.used", "helper-request.json", "bridge-request.json"]},
+      "description": "The named files whose presence moved the state from claimed to dispatched. Empty means claimed. This array is the discriminator, quoted from tools/game-executor/scene_cli.py:685-694."
+    },
+    "requestId": {
+      "type": ["string", "null"],
+      "description": "The bottom-layer requestId once it exists. Bound once; a later attempt must never write a second value here."
+    },
+    "claimSha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "journalRef": {"type": ["string", "null"]},
+    "resultRef": {"type": ["string", "null"]},
+    "replayed": {"type": "boolean"},
+    "retryAttempted": {"type": "boolean", "const": false},
+    "terminalReason": {"type": ["string", "null"]},
+    "createdUtc": {"type": "string", "format": "date-time"},
+    "updatedUtc": {"type": "string", "format": "date-time"},
+    "owner": {"type": ["string", "null"], "description": "The single claim holder. Atomic claim, one owner, at most one side effect."}
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "$comment": "OPS-4: dispatched requires evidence. A row may not claim dispatched without naming the file that proved it, and may not omit the array.",
+      "if": {"properties": {"state": {"const": "dispatched"}}, "required": ["state"]},
+      "then": {"required": ["dispatchEvidence"], "properties": {"dispatchEvidence": {"minItems": 1}}}
+    },
+    {
+      "$comment": "claimed means explicitly that no dispatch evidence was found - not that nobody looked. The array must be present and empty, so 'not checked' cannot be written as 'claimed'.",
+      "if": {"properties": {"state": {"const": "claimed"}}, "required": ["state"]},
+      "then": {"required": ["dispatchEvidence"], "properties": {"dispatchEvidence": {"maxItems": 0}, "writeExecuted": {"const": false}}}
+    },
+    {
+      "$comment": "OPS-3: a never-claimed row is the only state from which rejected may be produced.",
+      "if": {"properties": {"state": {"const": "never-claimed"}}, "required": ["state"]},
+      "then": {"required": ["dispatchEvidence"], "properties": {"writeExecuted": {"const": false}, "dispatchEvidence": {"maxItems": 0}, "requestId": {"type": "null"}}}
+    },
+    {
+      "$comment": "A terminal state must explain itself.",
+      "if": {"properties": {"state": {"enum": ["known-complete", "known-failed"]}}, "required": ["state"]},
+      "then": {"properties": {"requestId": {"type": "string"}, "resultRef": {"type": "string"}}}
+    }
+  ]
+}

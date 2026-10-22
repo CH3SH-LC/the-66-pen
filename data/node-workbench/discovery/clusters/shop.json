@@ -1,0 +1,366 @@
+{
+  "id": "shop",
+  "name": "商店、价格与买卖",
+  "purpose": "打开商店、维护出售/收购条目、设置价格和处理交易事件。",
+  "aliases": [
+    "买种子",
+    "购买",
+    "出售",
+    "售卖",
+    "收购",
+    "商城",
+    "价格",
+    "货币",
+    "交易",
+    "金币"
+  ],
+  "nativeLeaves": [
+    "商店"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:700",
+      "definitionId": 700,
+      "graphKind": 20000,
+      "name": "商店出售自定义商品时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 700 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:701",
+      "definitionId": 701,
+      "graphKind": 20000,
+      "name": "商店出售背包物品时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 701 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:702",
+      "definitionId": 702,
+      "graphKind": 20000,
+      "name": "打开商店",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 702 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:703",
+      "definitionId": 703,
+      "graphKind": 20000,
+      "name": "关闭商店",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 703 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:704",
+      "definitionId": 704,
+      "graphKind": 20000,
+      "name": "设置自定义商店商品出售信息",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 704 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:705",
+      "definitionId": 705,
+      "graphKind": 20000,
+      "name": "商店收购道具时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 705 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:706",
+      "definitionId": 706,
+      "graphKind": 20000,
+      "name": "设置背包商店商品出售信息",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 706 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:707",
+      "definitionId": 707,
+      "graphKind": 20000,
+      "name": "设置物品收购表中道具收购信息",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 707 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:708",
+      "definitionId": 708,
+      "graphKind": 20000,
+      "name": "向自定义商店出售表中新增商品",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 708 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:709",
+      "definitionId": 709,
+      "graphKind": 20000,
+      "name": "向背包商店出售表中新增商品",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 709 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:710",
+      "definitionId": 710,
+      "graphKind": 20000,
+      "name": "向物品收购表中新增物品",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 710 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:711",
+      "definitionId": 711,
+      "graphKind": 20000,
+      "name": "从自定义商店出售表中移除商品",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 711 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:712",
+      "definitionId": 712,
+      "graphKind": 20000,
+      "name": "从背包商店出售表中移除商品",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 712 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:713",
+      "definitionId": 713,
+      "graphKind": 20000,
+      "name": "从物品收购表中移除物品",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 713 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:714",
+      "definitionId": 714,
+      "graphKind": 20000,
+      "name": "查询自定义商店商品出售列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 714 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:715",
+      "definitionId": 715,
+      "graphKind": 20000,
+      "name": "查询背包商店物品出售列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 715 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:716",
+      "definitionId": 716,
+      "graphKind": 20000,
+      "name": "查询商店收购物品列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 716 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:717",
+      "definitionId": 717,
+      "graphKind": 20000,
+      "name": "查询自定义商店商品出售信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 717 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:718",
+      "definitionId": 718,
+      "graphKind": 20000,
+      "name": "查询背包商店商品出售信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 718 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:719",
+      "definitionId": 719,
+      "graphKind": 20000,
+      "name": "查询商店物品收购信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "shop"
+      ],
+      "nativeLeaves": [
+        "商店"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 719 --graph-kind 20000"
+    }
+  ],
+  "sequence": [
+    "配置商品、背包货币、商店模板及宿主组件",
+    "702 打开商店",
+    "707 设置已有收购条目的价格；710 添加新的收购条目",
+    "确认购买入包、出售扣物品并增加指定货币"
+  ],
+  "pitfalls": [
+    "710 不会替换已存在条目的价格；本 Demo 曾因此出现出售无收益。",
+    "价格是具体键值对字典，1788 需正确内核与动态端口计数；不能把已连线输入再填空字典。"
+  ],
+  "code": [
+    "tools/gameplan/demo/shop_buyback.py",
+    "tools/gameplan/modules/runtime_prices.py"
+  ],
+  "count": 20,
+  "byFamily": {
+    "事件节点": 3,
+    "执行节点": 11,
+    "查询节点": 6
+  },
+  "byGraphKind": {
+    "20000": 20
+  },
+  "runtimeVerified": false
+}

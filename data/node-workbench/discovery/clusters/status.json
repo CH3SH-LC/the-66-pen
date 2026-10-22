@@ -1,0 +1,386 @@
+{
+  "id": "status",
+  "name": "单位状态与标签",
+  "purpose": "添加、移除和读取单位状态/标签及变化事件。",
+  "aliases": [
+    "Buff",
+    "增益",
+    "减益",
+    "状态",
+    "标签",
+    "标记",
+    "筛选"
+  ],
+  "nativeLeaves": [
+    "单位状态",
+    "单位标签",
+    "标签",
+    "扫描标签"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:297",
+      "definitionId": 297,
+      "graphKind": 20000,
+      "name": "添加单位状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 297 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:299",
+      "definitionId": 299,
+      "graphKind": 20000,
+      "name": "单位状态结束时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 299 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:300",
+      "definitionId": 300,
+      "graphKind": 20000,
+      "name": "单位状态变更时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 300 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:301",
+      "definitionId": 301,
+      "graphKind": 20000,
+      "name": "移除单位状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 301 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:508",
+      "definitionId": 508,
+      "graphKind": 20000,
+      "name": "查询实体是否具有单位状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 508 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:586",
+      "definitionId": 586,
+      "graphKind": 20000,
+      "name": "实体添加单位标签",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 586 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:587",
+      "definitionId": 587,
+      "graphKind": 20000,
+      "name": "实体移除单位标签",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 587 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:588",
+      "definitionId": 588,
+      "graphKind": 20000,
+      "name": "实体清空单位标签",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 588 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:589",
+      "definitionId": 589,
+      "graphKind": 20000,
+      "name": "获取实体单位标签列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 589 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:590",
+      "definitionId": 590,
+      "graphKind": 20000,
+      "name": "获取单位标签的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 590 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:642",
+      "definitionId": 642,
+      "graphKind": 20000,
+      "name": "发生元素反应事件时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 642 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:643",
+      "definitionId": 643,
+      "graphKind": 20000,
+      "name": "护盾受到攻击时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 643 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:735",
+      "definitionId": 735,
+      "graphKind": 20000,
+      "name": "设置扫描标签的规则",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "扫描标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 735 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:736",
+      "definitionId": 736,
+      "graphKind": 20000,
+      "name": "设置扫描组件的生效扫描标签序号",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "扫描标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 736 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:737",
+      "definitionId": 737,
+      "graphKind": 20000,
+      "name": "获取当前生效的扫描标签配置ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "扫描标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 737 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:746",
+      "definitionId": 746,
+      "graphKind": 20000,
+      "name": "根据槽位序号查询单位状态层数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 746 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:747",
+      "definitionId": 747,
+      "graphKind": 20000,
+      "name": "根据槽位序号查询单位状态施加者",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 747 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:748",
+      "definitionId": 748,
+      "graphKind": 20000,
+      "name": "查询单位状态的槽位序号列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 748 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200243",
+      "definitionId": 200243,
+      "graphKind": 20001,
+      "name": "实体是否携带指定单位状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200243 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200077",
+      "definitionId": 200077,
+      "graphKind": 20002,
+      "name": "获取实体的单位标签列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200077 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200078",
+      "definitionId": 200078,
+      "graphKind": 20002,
+      "name": "获取单位标签的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "标签"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200078 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200243",
+      "definitionId": 200243,
+      "graphKind": 20002,
+      "name": "实体是否携带指定单位状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "status"
+      ],
+      "nativeLeaves": [
+        "单位状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200243 --graph-kind 20002"
+    }
+  ],
+  "count": 22,
+  "byFamily": {
+    "执行节点": 7,
+    "事件节点": 4,
+    "查询节点": 11
+  },
+  "byGraphKind": {
+    "20000": 18,
+    "20001": 1,
+    "20002": 3
+  },
+  "runtimeVerified": false
+}

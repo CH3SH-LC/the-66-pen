@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "colliderDefinition": 2873,
+  "colliderClassSlot": "0x57a1da0",
+  "colliderUsage": "0x4c1b1",
+  "functions": [
+    {
+      "rva": "0x19cbcac0",
+      "head32": "56534883ec384489c34889d6e88f7179e74885c0742b885c242048c744243000"
+    },
+    {
+      "rva": "0x1453c60",
+      "head32": "40534883ec20488bd94885c9744ae84d71ffff4885c0744048897c2438488b78"
+    },
+    {
+      "rva": "0x1453c10",
+      "head32": "40534883ec20488bd94885c97426e89d71ffff4885c0741c488b50404885d274"
+    },
+    {
+      "rva": "0x1452b80",
+      "head32": "48895c240848896c24104889742418574883ec50410fb6f9410fb6f0488bea48"
+    },
+    {
+      "rva": "0x14cdc50",
+      "head32": "44884c24205553565741544155488bec4883ec68488b5a084c8d6a08410fb6f1"
+    },
+    {
+      "rva": "0x19d071c0",
+      "head32": "e9ab7c3de766662e0f1f840000000000e9db7c3de766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19d071f0",
+      "head32": "e9eb0b5ce766662e0f1f840000000000e91b0c5ce766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19d07210",
+      "head32": "e95b0c5ce766662e0f1f840000000000e98b0c5ce766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19c9b820",
+      "head32": "e98b767be766662e0f1f840000000000e9eb767be766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19d07370",
+      "head32": "e99b0f5ce766662e0f1f840000000000e9eb0f5ce766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19d07450",
+      "head32": "4883ec48488b421048894424400f10020f29442430c644242800c64424200048"
+    },
+    {
+      "rva": "0x12c8370",
+      "head32": "488bc44889580848897010574881ec900000000f2970e8498bf00f2978d8488b"
+    },
+    {
+      "rva": "0x154c7a0",
+      "head32": "488bc448895820f30f1150185557415441564157488da8d8feffff4881ec0002"
+    },
+    {
+      "rva": "0x152dbf0",
+      "head32": "48895c2408574883ec20488bfa488bd9e8fbfeffff8b433889472c8b433c488b"
+    },
+    {
+      "rva": "0x152db00",
+      "head32": "48895c2418574883ec50488b4108488bfa488bd94885c00f84c1000000488b40"
+    },
+    {
+      "rva": "0x1437760",
+      "head32": "48895c2408574883ec60488bfa488bd94885c97440e8463601004885c0743648"
+    },
+    {
+      "rva": "0x14377c0",
+      "head32": "48895c2408574883ec60488bfa488bd94885c97440e8e63501004885c0743648"
+    },
+    {
+      "rva": "0x19cb6e70",
+      "head32": "e95b0078e766662e0f1f840000000000e94b0378e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x1447b00",
+      "head32": "40534883ec30488bda41b804000000488bd1488d4c2420e8c45529000f10000f"
+    }
+  ],
+  "raycastHit": {
+    "bufferBytes": 80,
+    "observedWrittenBytes": 56,
+    "colliderOffset": 0,
+    "pointOffset": 8,
+    "normalOffset": 20,
+    "distanceOffset": 40,
+    "instanceIdOffset": 52,
+    "tagAndLayerPopulated": false
+  },
+  "evidence": {
+    "classSlot": [
+      {
+        "pair": 702497,
+        "usage": 311729,
+        "usageHex": "0x4c1b1",
+        "kind": 1,
+        "source": 4191,
+        "slot": "0x57a1da0"
+      }
+    ],
+    "componentEnumeration": "physics-research/function-19cbcac0.asm",
+    "rawClassContract": "terrain/render-collision classptr wrappers 19caf140 and 19caf150",
+    "raycastWriter": ".runtime/map-foundation-20261015/terrain/render-collision/raycast-hit-writer-full.asm",
+    "matrix": "physics-research/function-19cb7100.asm"
+  },
+  "runtimeVerified": false
+}

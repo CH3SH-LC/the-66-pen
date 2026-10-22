@@ -1,0 +1,117 @@
+{
+  "_comment": "Exact-line allowlist for test_dict_nodes_not_absent.py.  A hit is waived ONLY when its (file, whitespace-normalised line sha256) matches an entry here.  These are the lines that quote the retracted 'no dictionary node' claim in order to refute it.  A NEW quote-to-refute line FIRES until a human adds it here with a reason.  Keep 'line' and 'excerpt' in sync; the guard test verifies sha256 still matches a real line.",
+  "allow": [
+    {
+      "file": "CLAUDE.md",
+      "line": 124,
+      "sha256": "c117e4bdadab426df3c38b1ceb701c66276c48cf39d677f07e777c438f324c16",
+      "excerpt": "- **写字典常量**（contract 类型 27）——**字典节点其实存在*",
+      "reason": "the correction itself: 旧句「...没有一条构造字典」 prefixed by 字典节点其实存在"
+    },
+    {
+      "file": "PROGRESS-LITE.md",
+      "line": 1174,
+      "sha256": "ec5acc9a76c9a759f9ce38b9f48b080817db4fe42e59d51f8105eeeac60c109b",
+      "excerpt": "**两处真机硬墙（如实记）**：① **M5 创建商品撞字典**——`出售货币字",
+      "reason": "records the old claim inside a 【更正 2026-10-12】 bracket calling it 过度概括"
+    },
+    {
+      "file": "PROGRESS.md",
+      "line": 1507,
+      "sha256": "34e98f412d499dc13d8ea01579332a4241d7b420293b1b13af213164cbc914a1",
+      "excerpt": "1. **M5 创建商品撞到字典**：`出售货币字典` 是契约 **类型 27（",
+      "reason": "records the old claim inside a 【更正 2026-10-12】 bracket calling it 过度概括"
+    },
+    {
+      "file": "docs/gameplan/DEMO-GAP.md",
+      "line": 176,
+      "sha256": "c1a94cf3d07265f869174c8c680fcc6fcb49e5166e260e83450b66b15749b800",
+      "excerpt": "| 500 条定义 **0 条构造**字典 | **有** —— `1088`/",
+      "reason": "comparison-table row: the left cell is the old claim, the right cell refutes it ('**有** —— `1088`/`1788`')"
+    },
+    {
+      "file": "docs/gameplan/README.md",
+      "line": 109,
+      "sha256": "4622cc0ad08e87f575bf5bd7fee3c285a76bd15ff6736df2774211a43d13f5bd",
+      "excerpt": "| **M4 背包** | ① 类型 11 `道具背包` 模板 + `689/6",
+      "reason": "M4 module row: quotes 旧说法「0 条构造或取元素」 and calls it **过度概括**"
+    },
+    {
+      "file": "docs/gameplan/README.md",
+      "line": 121,
+      "sha256": "04243f2ab48b83e76c2a3b75f2b8e8b182bcac678a82714313f04ce2a062df6b",
+      "excerpt": "> **字典口径更正（2026-10-10）**：旧文案「500 条定义里没有一",
+      "reason": "the 「字典口径更正」 block quote retracting 旧文案「...没有一条构造字典...」 as 过度概括"
+    },
+    {
+      "file": "docs/gameplan/SIX-MODULE-FUNCTION-LEDGER.md",
+      "line": 189,
+      "sha256": "0df7f18e90c1f69eb1076c92db5785fb624ca7c172bd788e599ab0a2c8e77dc7",
+      "excerpt": "| \"no dict-access node is declared in the server set\" | ",
+      "reason": "comparison-table row (claim-vs-code), same idiom as DEMO-GAP.md:176: the left cell is the OLD claim in quotes, the middle cell refutes it (**FALSE** — 1158 以键查询字典值 IS declared)"
+    },
+    {
+      "file": "docs/gameplan/STATUS-AUDIT.md",
+      "line": 186,
+      "sha256": "8f59a91e454ae37eac7e12f8cfbde18df3f8b0d1461c5bb91365c6aa10deb053",
+      "excerpt": "| CLAUDE.md | 124 | 「500 条定义里没有一条构造字典，只有",
+      "reason": "audit row quoting the stale CLAUDE.md:124 sentence and marking it STALE (已在树内自我更正)"
+    },
+    {
+      "file": "docs/research/reverse-eng-20261010/DICT-CONSTRUCT-SEARCH.md",
+      "line": 36,
+      "sha256": "377c6474933d2ee2eec9da17a67639bde36ec079c417a0e9d87db24d43679de9",
+      "excerpt": "「写字典常量（contract 类型 27）——500 条定义里没有一条构造字典",
+      "reason": "the retraction: the quoted sentence is called **过度概括**"
+    },
+    {
+      "file": "docs/research/reverse-eng-20261010/DICT-CONSTRUCT-SEARCH.md",
+      "line": 38,
+      "sha256": "fbdd8fc6a8f22f73fd3a8e744b2e500af45b9bf0b9dc5d01d2a77ee4ca13a708",
+      "excerpt": "但作为\"没有构造字典的节点\"这一泛命题**是错的**：",
+      "reason": "the retraction: quotes 没有构造字典的节点 to call that universal proposition 是错的"
+    },
+    {
+      "file": "docs/research/reverse-eng-20261010/DICT-CONSTRUCT-SEARCH.md",
+      "line": 225,
+      "sha256": "ebe66bcd104ea4c14a2e29afaa66aa87a2e7ced0e0c0d945f5e69131405cfa30",
+      "excerpt": "1. `CLAUDE.md:74`「写字典常量（contract 类型 27）—",
+      "reason": "evidence list quoting the old CLAUDE.md:74 sentence being refuted"
+    },
+    {
+      "file": "docs/research/reverse-eng-20261010/DICT-WRITE-PROBE.md",
+      "line": 231,
+      "sha256": "5fa103f7eabafe6290ff67ce5e6e394f7ba2db2327cafc7272695079f9e68ad0",
+      "excerpt": "\"no server node constructs a dict either",
+      "reason": "refutation: quotes the old English sentence and marks it 是错的"
+    },
+    {
+      "file": "docs/research/reverse-eng-20261010/DICT-WRITE-PROBE.md",
+      "line": 232,
+      "sha256": "0054614db2e1fb45d59cd2b8edb02f1bbcfc247e4401508a10470a1e8bd99325",
+      "excerpt": "2. `tools/gameplan/modules/inventory.py:",
+      "reason": "refutation: quotes the old inventory.py:140-141 sentence for correction"
+    },
+    {
+      "file": "docs/research/reverse-eng-20261010/INDEX.md",
+      "line": 285,
+      "sha256": "cb275d5fbafa07c399600d313c2126fd8dd4a72fb6373b6c5ba4dfd3c9333cc3",
+      "excerpt": "> - `DICT-CONSTRUCT-SEARCH.md`/`DICT-WRI",
+      "reason": "index: says DICT-*.md 推翻 the CLAUDE.md:74 over-generalisation"
+    },
+    {
+      "file": "docs/research/reverse-eng-20261010/MINED-INTERFACES.md",
+      "line": 248,
+      "sha256": "5d787066aa39d40dc57bc611917782cfa1f2060dd05f5aefb50d70618ee74f86",
+      "excerpt": "| **写字典常量**（contract 类型 27）无原语——但**字典节点存",
+      "reason": "matrix row quoting 原句「没有一条构造字典」 as 过度概括, with the truth beside it"
+    },
+    {
+      "file": "tools/gameplan/modules/shop.py",
+      "line": 43,
+      "sha256": "48ebcdd68c2171952cf5ee44ccab941d691b7aa0b6d44424b9053d9ef49b50fc",
+      "excerpt": "server side had no dict constructor at a",
+      "reason": "docstring of DictPinUnsupported: quotes the retracted English sentence to label it a **false negative** (the correction itself)"
+    }
+  ]
+}

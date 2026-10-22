@@ -1,0 +1,105 @@
+{
+ "schemaVersion": 1,
+ "note": "questions T15 cannot answer from the recordings. Each carries its own evidence pointer and is left open; nothing downstream should treat an unanswered entry as decided.",
+ "questions": [
+  {
+   "id": "G04-Q1",
+   "topic": "pin value-type code names",
+   "question": "what does each numeric valueTypeValue mean, and is the historical 推断 table correct for the 7.1 build?",
+   "recordedFacts": "the live read carries both a numeric code and, for some codes, a name ('Generics'=10000, 'List'=10002, and codes 1/2/4/5/6/7/10003 equal their own name)",
+   "whatIsMissing": "no recording maps the numeric codes to Chinese type names for the 7.1 build",
+   "evidence": [
+    {
+     "source": "docs/editor-catalog/NODE-CATALOG.md",
+     "sha256": "239361be5209583ae39cf6fb646981f41e0341d9b95d502667dac2358e913c75",
+     "locator": "docs/editor-catalog/NODE-CATALOG.md §4.3 type_kind table"
+    },
+    {
+     "source": ".runtime/verification/interface-experiments-20260926/live-node-schema.json",
+     "sha256": "41b5e423dedd809edec3e5b5b2763523bc27f80ce73ae52b66244996421508fb",
+     "locator": "$.nodes[*].definition.pins[*]"
+    }
+   ]
+  },
+  {
+   "id": "G04-Q2",
+   "topic": "generic binding",
+   "question": "which concrete types may bind to a Generics pin, and is that binding recorded anywhere?",
+   "recordedFacts": "829 pin records across 929 variants carry valueTypeName 'Generics'",
+   "whatIsMissing": "no binding constraint is recorded; the contract marks genericBinding unknown",
+   "evidence": [
+    {
+     "source": ".runtime/verification/interface-experiments-20260926/live-node-schema.json",
+     "sha256": "41b5e423dedd809edec3e5b5b2763523bc27f80ce73ae52b66244996421508fb",
+     "locator": "$.nodes[*].definition.pins[*]"
+    }
+   ]
+  },
+  {
+   "id": "G04-Q3",
+   "topic": "list element type",
+   "question": "what is the element type of a List pin?",
+   "recordedFacts": "144 pin records carry valueTypeName 'List'",
+   "whatIsMissing": "no element type is recorded; the contract marks elementType unknown",
+   "evidence": [
+    {
+     "source": ".runtime/verification/interface-experiments-20260926/live-node-schema.json",
+     "sha256": "41b5e423dedd809edec3e5b5b2763523bc27f80ce73ae52b66244996421508fb",
+     "locator": "$.nodes[*].definition.pins[*]"
+    }
+   ]
+  },
+  {
+   "id": "G04-Q4",
+   "topic": "graph side of category kinds 20001/20002/20007",
+   "question": "which official graph type does each of these kinds correspond to?",
+   "recordedFacts": "the official taxonomy names 9 graph types; the recordings carry 4 category kinds",
+   "whatIsMissing": "no recording maps one list onto the other; sides are recorded as the project's own classification only",
+   "evidence": [
+    {
+     "source": "docs/research/7.1-experiment-plan/EXECUTION.md",
+     "sha256": "9c8ec02d45501da0081a1039114fa6f6354a88120a166b2b8ef3dcec47e19e42",
+     "locator": "docs/research/7.1-experiment-plan/EXECUTION.md:45"
+    },
+    {
+     "source": "docs/official-docs/SANDBOX-PANELS-AND-GRAPH-TYPES.json",
+     "sha256": "4f0354c180a452f4c227d0a4c264bb588811185eb8f30dbf10f6e2c727dcc597",
+     "locator": "$.theGraphTypeTaxonomy"
+    }
+   ]
+  },
+  {
+   "id": "G04-Q5",
+   "topic": "mode dimension",
+   "question": "which modes (if any) change a node's port set?",
+   "recordedFacts": "for all 119 definitions carrying more than one category variant, the pin set is identical across those variants",
+   "whatIsMissing": "no recording carries a mode for a node definition or a category variant",
+   "evidence": [
+    {
+     "source": ".runtime/verification/interface-experiments-20260926/live-node-schema.json",
+     "sha256": "41b5e423dedd809edec3e5b5b2763523bc27f80ce73ae52b66244996421508fb",
+     "locator": "$.nodes[*].definition.pins"
+    }
+   ]
+  },
+  {
+   "id": "G04-Q6",
+   "topic": "resource field 107",
+   "question": "what is the resource field-107 message, and why does the live read not report it as a pin?",
+   "recordedFacts": "31 definitions carry such a message; the decoder ignores its sub-fields 1 and 103",
+   "whatIsMissing": "no recording states its meaning",
+   "evidence": [
+    {
+     "source": ".runtime/verification/update-repair-20260925/catalog/decoded-7.1",
+     "sha256": "1b338b4bf442e25c3f74c4a59fad26fb0ab0848d730584ebdd6f4aaa806a74de",
+     "locator": "Beyond__Node__*.mihoyobin.json field 107"
+    },
+    {
+     "source": "docs/editor-catalog/NODE-CATALOG.md",
+     "sha256": "239361be5209583ae39cf6fb646981f41e0341d9b95d502667dac2358e913c75",
+     "locator": "chapter 6 field 107"
+    }
+   ]
+  }
+ ]
+}

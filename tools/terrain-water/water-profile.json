@@ -1,0 +1,127 @@
+{
+  "schema": "native-terrain-water-profile-v1",
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0xba4c420",
+      "head32": "5657534883ec204c89c689d74889cb803dc25904fa00745e803d2d07d2f90075",
+      "evidence": ".runtime\\terrain-water-20261017\\function-ba4c420.asm",
+      "sha256": "c062f33bb56711873480057d615ed44d8991045ad6c5acc727acd8ac458f3e47"
+    },
+    {
+      "rva": "0xba4b8f0",
+      "head32": "554157415641545657534881ec90000000488dac248000000048c745f0feffff",
+      "evidence": ".runtime\\terrain-water-20261017\\function-ba4b8f0.asm",
+      "sha256": "694bbe2ccd30cf98aaf51513e9b4ae71f9b40cf2e351cd03dac4229dca5ae54a"
+    },
+    {
+      "rva": "0x10d641a0",
+      "head32": "5657534883ec304489c789d34889ce803d1bc5d2f4000f849700000048c74424",
+      "evidence": ".runtime\\terrain-water-20261017\\function-10d641a0.asm",
+      "sha256": "37e8521a46827a7c1324df191a28e48226558997fb9e185bfa83a69759b24295"
+    },
+    {
+      "rva": "0x10d642e0",
+      "head32": "554157415641545657534881ecd0000000488dac2480000000440f294d40440f",
+      "evidence": ".runtime\\terrain-water-20261017\\function-10d642e0.asm",
+      "sha256": "feb97420e3c5613c8a09090a84ad7af49daa1c06c3993e174f5911204663096b"
+    },
+    {
+      "rva": "0xe5f55d0",
+      "head32": "56574883ec284889d74889ce803df82317f70075514885ff7477488b4f204885",
+      "evidence": ".runtime\\terrain-water-20261017\\function-e5f55d0.asm",
+      "sha256": "a9bcbddf0e8bfa1c08a38f5c93df83d94e1515b61d56b929438fbd5ce95aa1cf"
+    },
+    {
+      "rva": "0xe5f56b0",
+      "head32": "4883ec284189d04889ca803d1b2317f7007515488b4a184885c9742f4489c248",
+      "evidence": ".runtime\\terrain-water-20261017\\function-e5f56b0.asm",
+      "sha256": "371e306f7a09434f296d9d1dd8a23c2242a94a8bc998c484fbf75e8e8e3d3464"
+    },
+    {
+      "rva": "0x133f4ce0",
+      "head32": "5657534883ec404489cf4c89c64989d04889ca48c744243800000000803df57c",
+      "evidence": ".runtime\\terrain-water-20261017\\function-133f4ce0.asm",
+      "sha256": "661ed2609598454f659dd5981a0d427bbce9e8013881c566655bccf4b8454a23"
+    },
+    {
+      "rva": "0x133f4e30",
+      "head32": "56574883ec484c89c64989d04889ca48c744244000000000803daa7b37f2000f",
+      "evidence": ".runtime\\terrain-water-20261017\\function-133f4e30.asm",
+      "sha256": "ceba0d9e8238db16901dce54f55038c8e94296323fa6c0233cd41b39fbe66ce6"
+    },
+    {
+      "rva": "0xafb89e0",
+      "head32": "5541574156415541545657534881ec88000000488dac2480000000660f7f75f0",
+      "evidence": ".runtime\\terrain-water-20261017\\function-afb89e0.asm",
+      "sha256": "c83d187436e4f19313373baf06ff6ea9e24b7afdbe6b9ab90956c39a35e0d021"
+    },
+    {
+      "rva": "0xba53650",
+      "head32": "4157415641554154565755534883ec484589ce4489c34889d74889ce448bac24",
+      "evidence": ".runtime\\terrain-water-20261017\\function-ba53650.asm",
+      "sha256": "4ec5c58984689c7252659116260b5cbcddf903044c28a4e50d97c5e512c6f947"
+    },
+    {
+      "rva": "0x14377c0",
+      "head32": "48895c2408574883ec60488bfa488bd94885c97440e8e63501004885c0743648",
+      "evidence": ".runtime\\terrain-water-20261017\\function-14377c0.asm",
+      "sha256": "3df4df3f49be711ffe7996386976d6803bb549ebf7c6149247caac9700333403"
+    },
+    {
+      "rva": "0x7d22a90",
+      "head32": "4883ec280f2805d57650fa0f1105b6aba6fd0f2805d77650fa0f1105b8aba6fd",
+      "evidence": ".runtime\\terrain-water-20261017\\function-7d22a90.asm",
+      "sha256": "2a10f8c014832494ec5401a47b21c1cd270152b30b2f55f89aabb9dd1d828f2b"
+    }
+  ],
+  "guardClassifier": "branch-body-v1",
+  "hotfixZeroRvas": [
+    "0x57679db",
+    "0x57679dc",
+    "0x576c72c",
+    "0x576c804",
+    "0x576c85d",
+    "0x576c869",
+    "0x576c86b",
+    "0x576c870",
+    "0x576c90f",
+    "0x576c9f8",
+    "0x576c9f9",
+    "0x576cac2",
+    "0x576cac4",
+    "0x576cac5",
+    "0x576cb69",
+    "0x576cb6c",
+    "0x576cb74",
+    "0x576cb90",
+    "0x576cbb1"
+  ],
+  "initializationBooleanRvas": [
+    "0x5a906d1",
+    "0x5a906e0",
+    "0x5a91df0",
+    "0x5a91df8",
+    "0x5a92034",
+    "0x5a935a0",
+    "0x5a935c4"
+  ],
+  "sources": {
+    "cellWaterField": 4,
+    "cellModelOffset": "0x20",
+    "waterStyleOffset": "0x30",
+    "typeListOffset": "0x10",
+    "typeIdOffset": "0x10",
+    "prefabOffset": "0x18",
+    "prefabScaleYOffset": "0x20",
+    "nativeWaterBlockTypeDefinition": 75042
+  },
+  "semantics": {
+    "createWater": "dry height decreases by one and waterType becomes explicit loaded type",
+    "deleteWater": "water becomes zero and height increases by one",
+    "waterOnly": "height0, waterType>0 is nonempty; no inferred lakebed",
+    "waterTransformBase": "height * 2.5 under owner matrix; prefab actual surface is not inferred"
+  },
+  "gameAccepted": false
+}

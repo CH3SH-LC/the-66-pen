@@ -1,0 +1,5 @@
+# backend/ 运行时依赖 —— 固定为当前本机已安装的官方 Python MCP SDK 版本。
+# 安装位置：<工程根>/.runtime/mcp-venv
+#   python -m venv .runtime/mcp-venv
+#   .runtime/mcp-venv/Scripts/python -m pip install -r backend/requirements.txt
+mcp==1.27.0

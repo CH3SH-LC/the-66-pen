@@ -1,0 +1,219 @@
+{
+  "id": "progression",
+  "name": "成就、段位与排行",
+  "purpose": "更新和查询成就、段位、榜单。",
+  "aliases": [
+    "成就",
+    "排名",
+    "分数",
+    "段位",
+    "排行",
+    "积分"
+  ],
+  "nativeLeaves": [
+    "成就",
+    "段位",
+    "排行榜"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:644",
+      "definitionId": 644,
+      "graphKind": 20000,
+      "name": "查询成就是否完成",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "成就"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 644 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:645",
+      "definitionId": 645,
+      "graphKind": 20000,
+      "name": "设置成就进度计数",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "成就"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 645 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:646",
+      "definitionId": 646,
+      "graphKind": 20000,
+      "name": "增加成就进度计数",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "成就"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 646 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:658",
+      "definitionId": 658,
+      "graphKind": 20000,
+      "name": "获取玩家段位信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "段位"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 658 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:659",
+      "definitionId": 659,
+      "graphKind": 20000,
+      "name": "设置玩家段位变化分数",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "段位"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 659 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:660",
+      "definitionId": 660,
+      "graphKind": 20000,
+      "name": "获取玩家段位变化分数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "段位"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 660 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:661",
+      "definitionId": 661,
+      "graphKind": 20000,
+      "name": "设置玩家逃跑合法性",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "段位"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 661 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:662",
+      "definitionId": 662,
+      "graphKind": 20000,
+      "name": "获取玩家逃跑合法性",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "段位"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 662 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:663",
+      "definitionId": 663,
+      "graphKind": 20000,
+      "name": "切换玩家竞技段位生效的计分组",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "段位"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 663 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:678",
+      "definitionId": 678,
+      "graphKind": 20000,
+      "name": "更新玩家排行榜分数",
+      "family": "执行节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 678 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:761",
+      "definitionId": 761,
+      "graphKind": 20000,
+      "name": "以整数设置玩家排行榜分数",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "排行榜"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 761 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:762",
+      "definitionId": 762,
+      "graphKind": 20000,
+      "name": "以浮点数设置玩家排行榜分数",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "progression"
+      ],
+      "nativeLeaves": [
+        "排行榜"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 762 --graph-kind 20000"
+    }
+  ],
+  "count": 12,
+  "byFamily": {
+    "查询节点": 4,
+    "执行节点": 8
+  },
+  "byGraphKind": {
+    "20000": 12
+  },
+  "runtimeVerified": false
+}

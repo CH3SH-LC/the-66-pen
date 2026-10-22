@@ -1,0 +1,4 @@
+{
+  "_comment": "Exact-line allowlist for test_repo_consistency.py's DocSaveFactsMatchDisk. A save fact (an 'N entries, M defect(s)' pair) that no held save can corroborate is WAIVED only when its (file, whitespace-normalised line) sha256 matches an entry here. EMPTY by construction: as of 2026-10-12 every save fact in docs/**/*.md and *.md is produced by a held save (live, or a frozen copy in _FROZEN_DOC_SAVES), so none needs a waiver. A NEW fact that no held save can produce FIRES until a human adds it here with a reason -- that is the point.",
+  "allow": []
+}

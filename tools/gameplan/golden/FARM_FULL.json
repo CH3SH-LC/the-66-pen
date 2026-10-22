@@ -1,0 +1,315 @@
+{
+  "$comment": "Canonical frozen SHAPE of the default-config six-module farming demo graph (tools/gameplan/demo/farming_full.py, name MW_API_FARM_FULL, graph kind 20000): the ordered node list (every alias + definitionId + xy), every edge (both execution 2->1 and data 4->3), and every const. The demo has been rebuilt several times and its shape is only described in prose across several docs; this file makes that shape ONE machine-checked artefact. Frozen with tools.gameplan.golden.freeze at FarmFullConfig(currency_id=1115684864, crop_id=1120000001, food_id=1120000002) with harvest_bonus=0 (the default config). Its graph payload is proven byte-equal to a fresh build AND to tools/gameplan/golden/farming_full.json by tools/gameplan/tests/test_farm_full_frozen.py, so the two files cannot silently diverge. DO NOT HAND-EDIT the numbers. WHEN IT LEGITIMATELY CHANGES (a node added/removed/retyped/re-wired or a const retyped because a MODULE genuinely changed): re-derive with `python -c \"from tools.gameplan.golden import *; from tools.gameplan.demo.farming_full import FarmFullConfig, build_plan; write_golden('FARM_FULL', {'$comment': read_golden('FARM_FULL', directory=COMMITTED_DIR)['$comment'], **freeze(build_plan(FarmFullConfig(currency_id=1115684864, crop_id=1120000001, food_id=1120000002)))}, directory=COMMITTED_DIR)\"`, review the resulting one-entry-per-change diff, and commit it TOGETHER WITH THE REASON (which leg changed and why the shape had to move). A shape change with no stated reason is a bug, not an update.",
+  "consts": [
+    {
+      "alias": "harvest",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "crop_count",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "enough",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "consume",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "consume",
+      "portIndex": 2,
+      "slot": "int",
+      "value": -2
+    },
+    {
+      "alias": "bake",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000002
+    },
+    {
+      "alias": "bake",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "short",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "材料不足"
+    },
+    {
+      "alias": "open_shop",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "sold_pay",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1115684864
+    },
+    {
+      "alias": "sold_pay",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 10
+    },
+    {
+      "alias": "money_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "货币发生变化"
+    }
+  ],
+  "edges": [
+    {
+      "from": "plot_enter",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "plot_enter",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "crop_used",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "crop_count",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "crop_count",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "enough",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "crop_used",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "gate",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "enough",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "gate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "consume",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "crop_used",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "consume",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "consume",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "bake",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "crop_used",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "bake",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "short",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "stall_enter",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "open_shop",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "stall_enter",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "open_shop",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "stall_enter",
+      "fromIndex": 2,
+      "fromKind": 4,
+      "to": "open_shop",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "sold",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sold_pay",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "sold",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sold_pay",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "money_changed",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "money_note",
+      "toIndex": 0,
+      "toKind": 1
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_FARM_FULL",
+  "nodes": [
+    {
+      "alias": "plot_enter",
+      "definitionId": 92,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "harvest",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "crop_used",
+      "definitionId": 733,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "crop_count",
+      "definitionId": 690,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "enough",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "gate",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "consume",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "bake",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "short",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "stall_enter",
+      "definitionId": 92,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "open_shop",
+      "definitionId": 702,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sold",
+      "definitionId": 701,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sold_pay",
+      "definitionId": 688,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "money_changed",
+      "definitionId": 684,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "money_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

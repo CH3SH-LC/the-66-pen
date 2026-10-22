@@ -1,0 +1,53 @@
+{
+ "schemaVersion": 1,
+ "officialStatement": {
+  "definition": "节点图变量是一种生命周期跟随节点图的变量（仅在_服务端节点图_中可用）",
+  "hardRestriction": "SERVER-SIDE NODE GRAPHS ONLY. Client and skill graphs cannot carry them.",
+  "scope": "节点图变量仅在节点图变量所在的节点图内可以进行访问（设置、获取以及监听事件）",
+  "entityOverride": "when a graph is mounted on an entity the entity holds these variables, but they can only be set/read/listened from INSIDE that same graph. Level-level involvement is limited to OVERRIDING values, not accessing them.",
+  "types": "所有基础和列表数据类型 - identical to custom variables. No size or nesting constraint stated.",
+  "editorEntry": "the 节点图变量 tab, opened from 在节点图编辑页面-快捷菜单栏",
+  "operationsDocumented": [
+   "新增",
+   "修改已配置的节点图变量",
+   "drag a variable into the edit area for a quick-create menu offering set and get nodes",
+   "设置值、获取值、监听变化"
+  ],
+  "namingRule": "同节点图内不可重名",
+  "theExposureMechanism": "点击节点图变量前的对外暴露按钮后保存节点图 - a 对外暴露 (expose-externally) toggle must be turned on and the graph SAVED before the variable can be overridden on an entity",
+  "whatIsNOTDocumented": [
+   "an explicit DELETE/remove operation for a graph variable",
+   "whether values persist across sessions - the only lifecycle statement is that it follows the graph",
+   "anything about archived runtime data"
+  ],
+  "theComparisonTable": {
+   "节点图变量": {
+    "生命周期": "生命周期跟随节点图",
+    "定义域": "仅在定义该变量的节点图内可访问",
+    "命名": "同节点图内不可重名",
+    "实体覆写": "可以，但需要手动将其对外暴露"
+   },
+   "自定义变量": {
+    "生命周期": "跟随实体",
+    "定义域": "全局可访问，需要指明访问的实体",
+    "命名": "同组件（实体）内不可重名",
+    "实体覆写": "可以，遵循通用的组件参数覆写规则"
+   },
+   "typesAndOperations": "identical between the two"
+  },
+  "statedAdvantages": [
+   "lighter weight",
+   "defined and used inside 千星沙箱",
+   "same-named ones may coexist on one entity if they sit in different graphs",
+   "graph-specific data stays unexposed, reducing reading difficulty",
+   "lets a creator encapsulate graph functionality without knowing which entity it will mount on"
+  ],
+  "recommendedUsage": "entity-level globally-readable data (e.g. a mechanism's hit count) goes in 自定义变量; graph-local temporary data (e.g. a cached player list) goes in 节点图变量"
+ },
+ "source": {
+  "source": "docs/official-docs/GRAPH-VARIABLES.json",
+  "sha256": "74cea9d259a626561e21b94aac6d21f1e6d71c159ab26a9fd83557d683319543",
+  "locator": "$.forGraphVariables"
+ },
+ "note": "recorded only to state which graph sides a graph variable can exist on"
+}

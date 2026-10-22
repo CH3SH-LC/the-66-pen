@@ -1,0 +1,322 @@
+{
+  "consts": [
+    {
+      "alias": "print_entry",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "W29AI模块探针入口已触发"
+    },
+    {
+      "alias": "m4_grow",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 10
+    },
+    {
+      "alias": "print_m4",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "W29AI-M4-背包容量已扩容"
+    },
+    {
+      "alias": "m3_grant",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "m3_grant",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "print_m3",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "W29AI-M3-道具已发放"
+    },
+    {
+      "alias": "m2_grant",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1115684864
+    },
+    {
+      "alias": "m2_grant",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 10
+    },
+    {
+      "alias": "print_m2",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "W29AI-M2-货币已发放"
+    },
+    {
+      "alias": "m1_activate",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "m1_activate",
+      "portIndex": 2,
+      "slot": "bool",
+      "value": true
+    },
+    {
+      "alias": "print_m1",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "W29AI-M1-碰撞触发器已激活"
+    },
+    {
+      "alias": "m5_open",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "print_m5",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "W29AI-M5-商店已打开"
+    },
+    {
+      "alias": "print_end",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "W29AI模块探针结束"
+    }
+  ],
+  "edges": [
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_entry",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "print_entry",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "m4_grow",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "m4_grow",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "m4_grow",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_m4",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "print_m4",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "m3_grant",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "m3_grant",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "m3_grant",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_m3",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "print_m3",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "m2_grant",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "m2_grant",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "m2_grant",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_m2",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "print_m2",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "m1_activate",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "m1_activate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "m1_activate",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_m1",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "print_m1",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "m5_open",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "m5_open",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "m5_open",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "m5_open",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_m5",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "print_m5",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_end",
+      "toIndex": 0,
+      "toKind": 1
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_MODPROBE",
+  "nodes": [
+    {
+      "alias": "on_create",
+      "definitionId": 71,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_entry",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "m4_grow",
+      "definitionId": 685,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_m4",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "m3_grant",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_m3",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "m2_grant",
+      "definitionId": 688,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_m2",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "m1_activate",
+      "definitionId": 90,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_m1",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "m5_open",
+      "definitionId": 702,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_m5",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_end",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

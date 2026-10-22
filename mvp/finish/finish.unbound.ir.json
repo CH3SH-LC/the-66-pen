@@ -1,0 +1,11 @@
+{
+  "ir_version": 1,
+  "ir_type": "node_graph",
+  "graph": {"name": "MVP_Finish_UNBOUND", "type": "server", "sub_type": "entity"},
+  "nodes": [
+    {"id": 1, "type": "when_entering_collision_trigger", "args": [], "next": [{"node_id": 3, "source_index": 0, "target_index": 0}]},
+    {"id": 2, "type": "get_player_entity_to_which_the_character_belongs", "args": [{"type": "conn", "value": {"node_id": 1, "index": 0, "type": "entity"}}]},
+    {"id": 3, "type": "set_player_settlement_success_status", "args": [{"type": "conn", "value": {"node_id": 2, "index": 0, "type": "entity"}}, {"type": "enum", "value": "settlement_status_victory"}], "next": [{"node_id": 4, "source_index": 0, "target_index": 0}]},
+    {"id": 4, "type": "settle_stage", "args": [{"type": "bool", "value": true}]}
+  ]
+}

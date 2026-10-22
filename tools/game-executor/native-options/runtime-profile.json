@@ -1,0 +1,579 @@
+{
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x524250",
+      "head32": "5541574156415541545657534883ec28488d6c242048c74500feffffff4c8b15",
+      "metadataFlags": [],
+      "guards": []
+    },
+    {
+      "rva": "0x526de0",
+      "head32": "55415741565657534883ec68488d6c246048c74500feffffff4989cf4189d60f",
+      "metadataFlags": [],
+      "guards": []
+    },
+    {
+      "rva": "0x8250bf0",
+      "head32": "41565657534883ec284989ce803d870585fd000f840d010000803da31e52fd00",
+      "metadataFlags": [
+        "0x5aa118a"
+      ],
+      "guards": [
+        "0x5772ab3"
+      ]
+    },
+    {
+      "rva": "0x82514f0",
+      "head32": "55415741565657534883ec48488d6c244048c745f8feffffff89d34889cf803d",
+      "metadataFlags": [
+        "0x5aa11a1"
+      ],
+      "guards": [
+        "0x5772ab8",
+        "0x571aaa3"
+      ]
+    },
+    {
+      "rva": "0x867c610",
+      "head32": "565755534883ec2889d54889ce803d4f1443fd000f848a010000803da1de08fd",
+      "metadataFlags": [
+        "0x5aada73"
+      ],
+      "guards": [
+        "0x570a4d2",
+        "0x56f5882"
+      ]
+    },
+    {
+      "rva": "0x8a3a760",
+      "head32": "5657534883ec204c89c689d34889cf803dd91b05fd000f84ed000000803d1c7c",
+      "metadataFlags": [
+        "0x5a8c34f"
+      ],
+      "guards": [
+        "0x578238f",
+        "0x56e9657",
+        "0x578239f"
+      ]
+    },
+    {
+      "rva": "0x9438200",
+      "head32": "895140c36666662e0f1f8400000000004883ec284189d04889ca803d0fa334fc",
+      "metadataFlags": [],
+      "guards": [
+        "0x5782530"
+      ]
+    },
+    {
+      "rva": "0x94382b0",
+      "head32": "56574883ec284889ce803d61dc67fc000f84cd000000803d64a234fc000f85de",
+      "metadataFlags": [
+        "0x5ab5f21"
+      ],
+      "guards": [
+        "0x5782531",
+        "0x572052a",
+        "0x578253b",
+        "0x56e966e"
+      ]
+    },
+    {
+      "rva": "0x9438510",
+      "head32": "5541565657534883ec70488d6c247048c745f0feffffff4989ce803df4d967fc",
+      "metadataFlags": [
+        "0x5ab5f25"
+      ],
+      "guards": [
+        "0x578253e",
+        "0x572052a",
+        "0x57465be"
+      ]
+    },
+    {
+      "rva": "0x9438b60",
+      "head32": "564883ec204d89c14189d04889ce803dbe9934fc00757c4181f873496ca57437",
+      "metadataFlags": [],
+      "guards": [
+        "0x5782533",
+        "0x578253b",
+        "0x56e964e"
+      ]
+    },
+    {
+      "rva": "0x9439240",
+      "head32": "4883ec284589c14189d04889ca803dec9234fc00754c4181f8f9444018741241",
+      "metadataFlags": [],
+      "guards": [
+        "0x5782540",
+        "0x56e9602"
+      ]
+    },
+    {
+      "rva": "0x94392d0",
+      "head32": "56574883ec284889ce803d46cc67fc000f8495000000488b0d939f37fce80e17",
+      "metadataFlags": [
+        "0x5ab3082",
+        "0x5ab5f26"
+      ],
+      "guards": []
+    },
+    {
+      "rva": "0x94393d0",
+      "head32": "4883ec284589c14189d04889ca803d5e9134fc00754c4181f8aba90a09741241",
+      "metadataFlags": [],
+      "guards": [
+        "0x5782542",
+        "0x56e967d"
+      ]
+    },
+    {
+      "rva": "0x95f6410",
+      "head32": "41565657534883ec284989ce803d3ce649fc000f84bd970000803d414a12fc00",
+      "metadataFlags": [
+        "0x5a94a5f"
+      ],
+      "guards": [
+        "0x571ae71"
+      ]
+    },
+    {
+      "rva": "0x9c257e0",
+      "head32": "5657534881ec800000004489c34889d64889cf803d19fae7fb000f84c9010000",
+      "metadataFlags": [
+        "0x5aa5213"
+      ],
+      "guards": [
+        "0x574c5d4"
+      ]
+    },
+    {
+      "rva": "0x9c26c70",
+      "head32": "41565657534883ec284989d64889cf803ddfe5e7fb000f84bc000000803d5059",
+      "metadataFlags": [
+        "0x5aa5265"
+      ],
+      "guards": [
+        "0x5759371",
+        "0x574c5e3"
+      ]
+    },
+    {
+      "rva": "0x9c26fa0",
+      "head32": "41565657534883ec284989d64889cf803dbce2e7fb000f848b000000803d2256",
+      "metadataFlags": [
+        "0x5aa5272"
+      ],
+      "guards": [
+        "0x574c5e5"
+      ]
+    },
+    {
+      "rva": "0x9c270a0",
+      "head32": "4157415641554154565755534881ec880000004c89cb4489c689d74989cd8954",
+      "metadataFlags": [
+        "0x5aa527e"
+      ],
+      "guards": [
+        "0x574c5e2",
+        "0x574c5e6",
+        "0x574c5d2",
+        "0x574c5d6",
+        "0x5769638"
+      ]
+    },
+    {
+      "rva": "0xb613ce0",
+      "head32": "4883ec28803db06d10fa0075054883c428c34189d04889ca488b05e90017fa48",
+      "metadataFlags": [],
+      "guards": [
+        "0x571aa9b"
+      ]
+    },
+    {
+      "rva": "0xb613ff0",
+      "head32": "4883ec28803da86a10fa0075054883c428c34189d04889ca488b05d9fd16fa48",
+      "metadataFlags": [],
+      "guards": [
+        "0x571aaa3"
+      ]
+    },
+    {
+      "rva": "0xc7bab90",
+      "head32": "564883ec304889ce803d69aaf5f800488b054292fcf87560488b88d0ec000048",
+      "metadataFlags": [],
+      "guards": [
+        "0x5715608"
+      ]
+    },
+    {
+      "rva": "0xd4f51f0",
+      "head32": "41574156565755534883ec284589c14889d64989ce803d9a3a1ff8000f85a300",
+      "metadataFlags": [],
+      "guards": [
+        "0x5702622",
+        "0x56e8ca5",
+        "0x56e8ca6"
+      ]
+    },
+    {
+      "rva": "0xe80b1b0",
+      "head32": "4883ec284189d04889ca803dec7df6f600751e4181f8b34cba0d7507f30f1152",
+      "metadataFlags": [],
+      "guards": [
+        "0x5772fad",
+        "0x56e9637"
+      ]
+    },
+    {
+      "rva": "0xe80b4b0",
+      "head32": "564883ec304889ce803df27af6f600754f803da6e1edf600756d488b56184885",
+      "metadataFlags": [],
+      "guards": [
+        "0x5772fb1",
+        "0x5735184",
+        "0x56e966e"
+      ]
+    },
+    {
+      "rva": "0xe80b990",
+      "head32": "56574883ec284889ce803d5aa82af700745a488b0ddfabfaf6e852f0d1f14889",
+      "metadataFlags": [
+        "0x5aa21a0",
+        "0x5ab61fa"
+      ],
+      "guards": []
+    },
+    {
+      "rva": "0xe827750",
+      "head32": "4156565755534883ec304489c589d34989ce803d119326f7000f84a500000048",
+      "metadataFlags": [
+        "0x5a90a7a",
+        "0x5aa5237"
+      ],
+      "guards": [
+        "0x5715609",
+        "0x574c5db"
+      ]
+    },
+    {
+      "rva": "0xea07cd0",
+      "head32": "564883ec2089ce803d2fd208f7000f8463080000803d3f5ad6f6000f85740800",
+      "metadataFlags": [
+        "0x5a94f0d"
+      ],
+      "guards": [
+        "0x576d72a"
+      ]
+    },
+    {
+      "rva": "0x1013f680",
+      "head32": "56574883ec2889ce803dfc3997f5000f84a400000048c744242000000000803d",
+      "metadataFlags": [
+        "0x5ab308b"
+      ],
+      "guards": [
+        "0x5742f1e"
+      ]
+    },
+    {
+      "rva": "0x106dfc20",
+      "head32": "4157415641554154565755534883ec384589c64889d64989cf803df9df3bf500",
+      "metadataFlags": [
+        "0x5a9dc39",
+        "0x5aada67"
+      ],
+      "guards": [
+        "0x57358b8",
+        "0x57372e7"
+      ]
+    },
+    {
+      "rva": "0x106ff110",
+      "head32": "56534883ec284889ce803dd3f139f5000f8497000000803d5067fff4000f85a8",
+      "metadataFlags": [
+        "0x5a9e2f3"
+      ],
+      "guards": [
+        "0x56f587d",
+        "0x570a4d5"
+      ]
+    },
+    {
+      "rva": "0x106ff240",
+      "head32": "56574883ec284889ce803d80f039f5000f8492000000803d0f66fff4000f85a3",
+      "metadataFlags": [
+        "0x5a9e2d0"
+      ],
+      "guards": [
+        "0x56f586c"
+      ]
+    },
+    {
+      "rva": "0x106ffc40",
+      "head32": "56574883ec3889d64889cf803d295cfff4000f85a90000004889f9e8b0f4ffff",
+      "metadataFlags": [],
+      "guards": [
+        "0x5769638",
+        "0x56f587b"
+      ]
+    },
+    {
+      "rva": "0x1076d050",
+      "head32": "b811000000c3662e0f1f8400000000004883ec284189d04889ca803dcde600f5",
+      "metadataFlags": [],
+      "guards": [
+        "0x577b73e"
+      ]
+    },
+    {
+      "rva": "0x1076d2c0",
+      "head32": "5541565657534883ec50488d6c245048c745e8feffffff4889ce803dbe2833f5",
+      "metadataFlags": [
+        "0x5a9fb9f"
+      ],
+      "guards": [
+        "0x577b741",
+        "0x56e966e"
+      ]
+    },
+    {
+      "rva": "0x1076d9f0",
+      "head32": "56574883ec284889ce803d43dd00f500752731ff6666662e0f1f840000000000",
+      "metadataFlags": [],
+      "guards": [
+        "0x577b743"
+      ]
+    },
+    {
+      "rva": "0x107abdf0",
+      "head32": "565755534883ec284489c54889d74889ce803d01492ff5000f84dd000000803d",
+      "metadataFlags": [
+        "0x5aa0709"
+      ],
+      "guards": [
+        "0x5761932",
+        "0x575936f"
+      ]
+    },
+    {
+      "rva": "0x10ed3110",
+      "head32": "5657534883ec204c89c689d34889cf803d981ebcf4000f849c000000803def05",
+      "metadataFlags": [
+        "0x5a94fbe"
+      ],
+      "guards": [
+        "0x5763722",
+        "0x56e9657"
+      ]
+    },
+    {
+      "rva": "0x10ed3250",
+      "head32": "55415741565657534883ec48488d6c244048c745f8feffffff89d34889cf803d",
+      "metadataFlags": [
+        "0x5a94fc6"
+      ],
+      "guards": [
+        "0x571aaa3",
+        "0x5763724"
+      ]
+    },
+    {
+      "rva": "0x112386f0",
+      "head32": "564883ec204589c14989d04889ce803df12c51f40075614889f14c89c24589c8",
+      "metadataFlags": [],
+      "guards": [
+        "0x574b3e3",
+        "0x574b3f6"
+      ]
+    },
+    {
+      "rva": "0x1123a310",
+      "head32": "4883ec284889ca803df91051f400488b05c39a54f4751b488b8800b400004885",
+      "metadataFlags": [],
+      "guards": [
+        "0x574b417"
+      ]
+    },
+    {
+      "rva": "0x11c15380",
+      "head32": "565755534881eca8000000660f7fb424900000004889d74889ce803d6228e8f3",
+      "metadataFlags": [
+        "0x5a97c03"
+      ],
+      "guards": [
+        "0x5770222",
+        "0x570bee5",
+        "0x5770226"
+      ]
+    },
+    {
+      "rva": "0x12ce1710",
+      "head32": "56574883ec284889ce803d5453dcf2000f84a5000000488b0de36fb0f2e8ce92",
+      "metadataFlags": [
+        "0x5aa6a74"
+      ],
+      "guards": []
+    },
+    {
+      "rva": "0x12ce1880",
+      "head32": "564883ec204889ce803d33cda3f200756b803dd67da0f2000f858500000066c7",
+      "metadataFlags": [],
+      "guards": [
+        "0x571e5c2",
+        "0x56e966e"
+      ]
+    },
+    {
+      "rva": "0x12ce23f0",
+      "head32": "4883ec284589c14189d04889ca803dccc1a3f200754c4181f8aba90a09741241",
+      "metadataFlags": [],
+      "guards": [
+        "0x571e5d0",
+        "0x56e967d"
+      ]
+    },
+    {
+      "rva": "0x13dddca0",
+      "head32": "56574883ec7889ce894c2450803d3242cdf1000f84e2060000803d88f392f100",
+      "metadataFlags": [
+        "0x5ab1ee5"
+      ],
+      "guards": [
+        "0x570d048",
+        "0x56e964f"
+      ]
+    },
+    {
+      "rva": "0x18baf8c0",
+      "head32": "56574883ec28ff411c488b41104885c074454889cf4889d6486349183b481873",
+      "metadataFlags": [],
+      "guards": []
+    },
+    {
+      "rva": "0x18bb2810",
+      "head32": "41574156565755534883ec284989d64889cf4c637918498b08488b8198000000",
+      "metadataFlags": [],
+      "guards": []
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x56e8ca5",
+    "0x56e8ca6",
+    "0x56e9602",
+    "0x56e9637",
+    "0x56e964e",
+    "0x56e964f",
+    "0x56e9657",
+    "0x56e966e",
+    "0x56e967d",
+    "0x56f586c",
+    "0x56f587b",
+    "0x56f587d",
+    "0x56f5882",
+    "0x5702622",
+    "0x570a4d2",
+    "0x570a4d5",
+    "0x570bee5",
+    "0x570d048",
+    "0x5715608",
+    "0x5715609",
+    "0x571aa9b",
+    "0x571aaa3",
+    "0x571ae71",
+    "0x571e5c2",
+    "0x571e5d0",
+    "0x572052a",
+    "0x5735184",
+    "0x57358b8",
+    "0x57372e7",
+    "0x5742f1e",
+    "0x57465be",
+    "0x574b3e3",
+    "0x574b3f6",
+    "0x574b417",
+    "0x574c5d2",
+    "0x574c5d4",
+    "0x574c5d6",
+    "0x574c5db",
+    "0x574c5e2",
+    "0x574c5e3",
+    "0x574c5e5",
+    "0x574c5e6",
+    "0x575936f",
+    "0x5759371",
+    "0x5761932",
+    "0x5763722",
+    "0x5763724",
+    "0x5769638",
+    "0x576d72a",
+    "0x5770222",
+    "0x5770226",
+    "0x5772ab3",
+    "0x5772ab8",
+    "0x5772fad",
+    "0x5772fb1",
+    "0x577b73e",
+    "0x577b741",
+    "0x577b743",
+    "0x578238f",
+    "0x578239f",
+    "0x5782530",
+    "0x5782531",
+    "0x5782533",
+    "0x578253b",
+    "0x578253e",
+    "0x5782540",
+    "0x5782542"
+  ],
+  "usageGroups": [
+    "0x4d8f",
+    "0x94ba",
+    "0xd49f",
+    "0xd94d",
+    "0xd9fe",
+    "0xda06",
+    "0x10643",
+    "0x12096",
+    "0x16679",
+    "0x16d10",
+    "0x16d33",
+    "0x185df",
+    "0x19149",
+    "0x19bca",
+    "0x19be1",
+    "0x1abe0",
+    "0x1dc53",
+    "0x1dc77",
+    "0x1dca5",
+    "0x1dcb2",
+    "0x1dcbe",
+    "0x1f4b4",
+    "0x220a9",
+    "0x264a7",
+    "0x264b3",
+    "0x2a925",
+    "0x2bac2",
+    "0x2bacb",
+    "0x2e961",
+    "0x2e965",
+    "0x2e966",
+    "0x2ec3a"
+  ],
+  "component": {
+    "kind": 17,
+    "classDefinition": 84703,
+    "classSlot": "0x57dda60",
+    "optionDefinition": 88069,
+    "optionSlot": "0x57e8910",
+    "colliderDefinition": 40001,
+    "colliderSlot": "0x57b8560",
+    "optionListAddRva": "0x18baf8c0",
+    "optionListAddMethodInfoSlot": "0x58bfe30",
+    "colliderShape": 1,
+    "sphereRadius": 2.0,
+    "initialActiveProperty": "0x3d94f45f",
+    "captionProperty": "0xbde64e3e"
+  }
+}

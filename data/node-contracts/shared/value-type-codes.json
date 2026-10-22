@@ -1,0 +1,234 @@
+{
+ "schemaVersion": 1,
+ "note": "the recording carries a NUMERIC type code. The only place the project names those codes is the historical inference table below; no contract field is filled from it.",
+ "codesObservedInThisRead": [
+  {
+   "valueTypeName": "None",
+   "valueTypeValue": 0,
+   "pinRecords": 1206,
+   "nameAndCodeAgree": "not-applicable"
+  },
+  {
+   "valueTypeName": "Generics",
+   "valueTypeValue": 10000,
+   "pinRecords": 829,
+   "nameAndCodeAgree": "not-applicable"
+  },
+  {
+   "valueTypeName": "6",
+   "valueTypeValue": 6,
+   "pinRecords": 712,
+   "nameAndCodeAgree": true
+  },
+  {
+   "valueTypeName": "4",
+   "valueTypeValue": 4,
+   "pinRecords": 563,
+   "nameAndCodeAgree": true
+  },
+  {
+   "valueTypeName": "2",
+   "valueTypeValue": 2,
+   "pinRecords": 508,
+   "nameAndCodeAgree": true
+  },
+  {
+   "valueTypeName": "7",
+   "valueTypeValue": 7,
+   "pinRecords": 287,
+   "nameAndCodeAgree": true
+  },
+  {
+   "valueTypeName": "1",
+   "valueTypeValue": 1,
+   "pinRecords": 265,
+   "nameAndCodeAgree": true
+  },
+  {
+   "valueTypeName": "List",
+   "valueTypeValue": 10002,
+   "pinRecords": 144,
+   "nameAndCodeAgree": "not-applicable"
+  },
+  {
+   "valueTypeName": "5",
+   "valueTypeValue": 5,
+   "pinRecords": 105,
+   "nameAndCodeAgree": true
+  },
+  {
+   "valueTypeName": "10003",
+   "valueTypeValue": 10003,
+   "pinRecords": 18,
+   "nameAndCodeAgree": true
+  }
+ ],
+ "historicalInferredNames": {
+  "source": {
+   "source": "docs/editor-catalog/NODE-CATALOG.md",
+   "sha256": "239361be5209583ae39cf6fb646981f41e0341d9b95d502667dac2358e913c75",
+   "locator": "docs/editor-catalog/NODE-CATALOG.md §4.3 type_kind table"
+  },
+  "layer": "project-inference, 7.0-era 799-node decode",
+  "rows": [
+   {
+    "code": 1,
+    "pinsInTheHistoricalBuild": 247,
+    "samplePinNames": [
+     "GUID",
+     "技能配置ID",
+     "道具持有者GUID",
+     "事件源实体",
+     "恢复目标实体",
+     "单位状态配置ID",
+     "configReference",
+     "entityReference "
+    ],
+    "inferredType": "实体/配置引用（GUID 类）",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   },
+   {
+    "code": 2,
+    "pinsInTheHistoricalBuild": 471,
+    "samplePinNames": [
+     "碰撞盒序号",
+     "时间戳",
+     "星期",
+     "技能序号",
+     "角色编号",
+     "失去数量",
+     "长度",
+     "排行榜分数",
+     "进度计数 "
+    ],
+    "inferredType": "整数",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   },
+   {
+    "code": 4,
+    "pinsInTheHistoricalBuild": 448,
+    "samplePinNames": [
+     "对峙距离内圈半径",
+     "改变方向时间间隔",
+     "休息间隔时间最小值",
+     "移动取消触发权重",
+     "前进加速度",
+     "转向速率 "
+    ],
+    "inferredType": "浮点数",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   },
+   {
+    "code": 5,
+    "pinsInTheHistoricalBuild": 96,
+    "samplePinNames": [
+     "战术上下文",
+     "挂接点名称",
+     "计时器名称",
+     "信号名",
+     "变量名",
+     "string",
+     "能力单元 "
+    ],
+    "inferredType": "字符串/名称",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   },
+   {
+    "code": 6,
+    "pinsInTheHistoricalBuild": 590,
+    "samplePinNames": [
+     "是否激活",
+     "是否执行",
+     "是否成功",
+     "组件类型",
+     "实体类型",
+     "扰动装置类型",
+     "结果 "
+    ],
+    "inferredType": "布尔/枚举/类型",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   },
+   {
+    "code": 7,
+    "pinsInTheHistoricalBuild": 240,
+    "samplePinNames": [
+     "三维向量1",
+     "三维向量2",
+     "计算结果",
+     "目标点位置",
+     "挂接点偏移",
+     "挂接点旋转",
+     "vector3 "
+    ],
+    "inferredType": "三维向量",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   },
+   {
+    "code": 10000,
+    "pinsInTheHistoricalBuild": 660,
+    "samplePinNames": [
+     "输入",
+     "输出",
+     "值",
+     "列表",
+     "左值",
+     "右值",
+     "字典",
+     "变量值",
+     "迭代列表 "
+    ],
+    "inferredType": "泛型 T（任意类型）",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   },
+   {
+    "code": 10002,
+    "pinsInTheHistoricalBuild": 123,
+    "samplePinNames": [
+     "玩家索引列表",
+     "entityList",
+     "intList",
+     "boolList",
+     "vector3List",
+     "guidList",
+     "合法目标列表 "
+    ],
+    "inferredType": "列表（泛型数组）",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   },
+   {
+    "code": 10003,
+    "pinsInTheHistoricalBuild": 18,
+    "samplePinNames": [
+     "道具字典",
+     "货币字典",
+     "道具掉落字典",
+     "收购物品字典",
+     "单位状态参数字典 "
+    ],
+    "inferredType": "字典",
+    "layer": "project-inference (the table's own header labels these names 推断)",
+    "build": "7.0-era 799-node decode, not this artifact's 810-node 7.1 read"
+   }
+  ],
+  "codesTheHistoricalTableNames": [
+   1,
+   2,
+   4,
+   5,
+   6,
+   7,
+   10000,
+   10002,
+   10003
+  ],
+  "codesThisReadCarriesThatTheTableDoesNotName": []
+ }
+}

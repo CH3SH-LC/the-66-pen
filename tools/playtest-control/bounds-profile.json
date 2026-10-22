@@ -1,0 +1,45 @@
+{
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x1083b150",
+      "head32": "4883ec384989c9803d26a0eff400751df30f1002f3410f114120f20f1042040f"
+    },
+    {
+      "rva": "0x7c0d840",
+      "head32": "4157415641545657534883ec384989ce803d056ceafd000f849d020000803d77"
+    },
+    {
+      "rva": "0x8a3d510",
+      "head32": "56574883ec284889ce803d51bfccfc00757b803d2bbfccfc000f859a00000048"
+    },
+    {
+      "rva": "0x7c0a760",
+      "head32": "5541574156415541545657534881ece8000000488dac24800000000f297d500f"
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x5735184"
+  ],
+  "evidence": {
+    "saveHandler": "0x7c0d840",
+    "primaryOffset": "0x18",
+    "cachedOffset": "0x38",
+    "vectorStorage": "z,y,x",
+    "officialAxisClamp": [
+      50,
+      1000
+    ],
+    "worldCenter": [
+      0,
+      0,
+      0
+    ],
+    "fullSize": [
+      800,
+      300,
+      800
+    ]
+  }
+}

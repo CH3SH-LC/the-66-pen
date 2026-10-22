@@ -1,0 +1,315 @@
+{
+  "id": "equipment",
+  "name": "装备与装备栏",
+  "purpose": "装备创建、穿脱、属性查询及装备事件。",
+  "aliases": [
+    "武器",
+    "防具",
+    "穿戴",
+    "卸下",
+    "装备属性"
+  ],
+  "nativeLeaves": [
+    "装备"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:672",
+      "definitionId": 672,
+      "graphKind": 20000,
+      "name": "装备添加词条",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 672 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:673",
+      "definitionId": 673,
+      "graphKind": 20000,
+      "name": "移除装备词条",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 673 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:674",
+      "definitionId": 674,
+      "graphKind": 20000,
+      "name": "设置装备词条值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 674 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:675",
+      "definitionId": 675,
+      "graphKind": 20000,
+      "name": "获取装备词条列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 675 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:676",
+      "definitionId": 676,
+      "graphKind": 20000,
+      "name": "获取装备词条配置ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 676 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:677",
+      "definitionId": 677,
+      "graphKind": 20000,
+      "name": "获取装备词条数值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 677 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:680",
+      "definitionId": 680,
+      "graphKind": 20000,
+      "name": "装备的词条数值改变时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 680 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:694",
+      "definitionId": 694,
+      "graphKind": 20000,
+      "name": "装备初始化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 694 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:695",
+      "definitionId": 695,
+      "graphKind": 20000,
+      "name": "装备被穿戴时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 695 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:696",
+      "definitionId": 696,
+      "graphKind": 20000,
+      "name": "装备被卸下时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 696 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:734",
+      "definitionId": 734,
+      "graphKind": 20000,
+      "name": "查询装备标签列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 734 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:742",
+      "definitionId": 742,
+      "graphKind": 20000,
+      "name": "装备指定序号添加词条",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 742 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:749",
+      "definitionId": 749,
+      "graphKind": 20000,
+      "name": "根据装备索引查询装备配置ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 749 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:791",
+      "definitionId": 791,
+      "graphKind": 20000,
+      "name": "替换装备到指定栏位",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 791 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:792",
+      "definitionId": 792,
+      "graphKind": 20000,
+      "name": "获取指定装备栏位的装备索引",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 792 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:820",
+      "definitionId": 820,
+      "graphKind": 20000,
+      "name": "装备买入时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 820 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:821",
+      "definitionId": 821,
+      "graphKind": 20000,
+      "name": "装备卖出时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 821 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:822",
+      "definitionId": 822,
+      "graphKind": 20000,
+      "name": "卸下指定槽位装备",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "equipment"
+      ],
+      "nativeLeaves": [
+        "装备"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 822 --graph-kind 20000"
+    }
+  ],
+  "count": 18,
+  "byFamily": {
+    "执行节点": 6,
+    "查询节点": 6,
+    "事件节点": 6
+  },
+  "byGraphKind": {
+    "20000": 18
+  },
+  "runtimeVerified": false
+}

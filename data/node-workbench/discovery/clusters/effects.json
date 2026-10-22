@@ -1,0 +1,237 @@
+{
+  "id": "effects",
+  "name": "特效、音效与光源",
+  "purpose": "播放和控制特效、音效、光源。",
+  "aliases": [
+    "声音",
+    "音乐",
+    "粒子",
+    "光照",
+    "视觉",
+    "播放",
+    "效果"
+  ],
+  "nativeLeaves": [
+    "特效",
+    "音效",
+    "光源组件"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:93",
+      "definitionId": 93,
+      "graphKind": 20000,
+      "name": "播放限时特效",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "特效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 93 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:94",
+      "definitionId": 94,
+      "graphKind": 20000,
+      "name": "挂载循环特效",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "特效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 94 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:95",
+      "definitionId": 95,
+      "graphKind": 20000,
+      "name": "清除循环特效",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "特效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 95 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:473",
+      "definitionId": 473,
+      "graphKind": 20000,
+      "name": "根据特效资产清除特效",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "特效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 473 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:591",
+      "definitionId": 591,
+      "graphKind": 20000,
+      "name": "关闭指定音效播放器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "音效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 591 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:592",
+      "definitionId": 592,
+      "graphKind": 20000,
+      "name": "启动/暂停指定音效播放器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "音效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 592 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:593",
+      "definitionId": 593,
+      "graphKind": 20000,
+      "name": "调整指定音效播放器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "音效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 593 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:594",
+      "definitionId": 594,
+      "graphKind": 20000,
+      "name": "添加音效播放器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "音效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 594 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:595",
+      "definitionId": 595,
+      "graphKind": 20000,
+      "name": "启动/暂停玩家背景音乐",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "音效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 595 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:596",
+      "definitionId": 596,
+      "graphKind": 20000,
+      "name": "调整玩家背景音乐音量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "音效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 596 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:597",
+      "definitionId": 597,
+      "graphKind": 20000,
+      "name": "设置玩家背景音乐",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "音效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 597 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:598",
+      "definitionId": 598,
+      "graphKind": 20000,
+      "name": "玩家播放单次2D音效",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "音效"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 598 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:667",
+      "definitionId": 667,
+      "graphKind": 20000,
+      "name": "开关实体光源",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "effects"
+      ],
+      "nativeLeaves": [
+        "光源组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 667 --graph-kind 20000"
+    }
+  ],
+  "count": 13,
+  "byFamily": {
+    "执行节点": 13
+  },
+  "byGraphKind": {
+    "20000": 13
+  },
+  "runtimeVerified": false
+}

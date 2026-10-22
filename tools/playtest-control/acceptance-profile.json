@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x19d141e0",
+      "name": "ScreenCapture.CaptureScreenshotAsTexture",
+      "head32": "e9dbaac5e6ccccccccccccccccccccccc36666666666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x96ecc0",
+      "name": "capture managed wrapper",
+      "head32": "4883ec28e857c32400488bd0488d4c2438e84aa0b500488b004883c428c3cccc"
+    },
+    {
+      "rva": "0xbbb020",
+      "name": "capture Texture2D allocation",
+      "head32": "40574883ec50e895080000488bf84885c0753c884424404c8d0508d4eb024889"
+    },
+    {
+      "rva": "0xbbb8c0",
+      "name": "game backbuffer readback; superSize1 excludes rerender branch",
+      "head32": "405553565741564157488d6c24d14881ecf80000000f29b424d00000004863f1"
+    },
+    {
+      "rva": "0x19cd3610",
+      "name": "ImageConversion.EncodeToPNG",
+      "head32": "e9eb3e08e766662e0f1f840000000000e96b4008e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0xd57500",
+      "name": "PNG encoder owned-array return",
+      "head32": "40534883ec4048894c2450488bd94885c90f8435010000e8a4386f004885c00f"
+    },
+    {
+      "rva": "0x19cb2dd0",
+      "name": "Object.DestroyImmediate",
+      "head32": "e9cb5a78e766662e0f1f84000000000031d2e9b95a78e7660f1f840000000000"
+    },
+    {
+      "rva": "0x14388a0",
+      "name": "DestroyImmediate native wrapper",
+      "head32": "40534883ec200fb6da4885c9751333c084d28bc80f95c24883c4205be9affb08"
+    },
+    {
+      "rva": "0x19cae530",
+      "name": "Texture.width",
+      "head32": "e99bc378e766662e0f1f8400000000004883ec28803ded99ddeb00743d488b0d"
+    },
+    {
+      "rva": "0x19cae5a0",
+      "name": "Texture.height",
+      "head32": "e96bc378e766662e0f1f8400000000004883ec28803d7f99ddeb00743d488b0d"
+    },
+    {
+      "rva": "0x19c9de20",
+      "name": "Time.frameCount",
+      "head32": "e9fb8d79e766662e0f1f840000000000e90b8e79e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19c9de30",
+      "name": "Time.renderedFrameCount",
+      "head32": "e90b8e79e766662e0f1f840000000000e91b8e79e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19cc2fd0",
+      "name": "Screen.width",
+      "head32": "e9dba8cbe666662e0f1f840000000000e9eba8cbe666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19cc2fe0",
+      "name": "Screen.height",
+      "head32": "e9eba8cbe666662e0f1f840000000000e9fba8cbe666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19c9b820",
+      "name": "GameObject.activeInHierarchy",
+      "head32": "e98b767be766662e0f1f840000000000e9eb767be766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x18e06d30",
+      "name": "UInt32 object dictionary enumerator; count38 version3c entries28",
+      "head32": "564883ec20488b014885c00f849e0000008b51083b503c0f859c000000448b40"
+    },
+    {
+      "rva": "0x13560870",
+      "name": "editor trial task getter +90",
+      "head32": "4883ec284889ca803d504119f200750c488b82900000004883c428c3488b0555"
+    },
+    {
+      "rva": "0x81c0ed0",
+      "name": "SetCurLevelData +68; guid38 version34 isTrial30",
+      "head32": "41565657534883ec584889d64989ce803dd5e38dfd000f84d8000000803dbb9f"
+    },
+    {
+      "rva": "0xa2fd240",
+      "name": "BeyondLevelManager global+a150 current level caller",
+      "head32": "5541565657534881ec90000000488dac248000000048c74500feffffff4989d6"
+    },
+    {
+      "rva": "0x9a7acd0",
+      "name": "Entity transform world position",
+      "head32": "56574883ec680f297c24500f297424404889d74889ce803df771c8fb000f85e8"
+    },
+    {
+      "rva": "0x9a84cd0",
+      "name": "Entity GameObject +38",
+      "head32": "488b4138c366662e0f1f84000000000041565657534883ec284889ce803d4fd2"
+    },
+    {
+      "rva": "0x9a96970",
+      "name": "Entity transform +1e8",
+      "head32": "488b81e8010000c30f1f840000000000564883ec204889ce803d55b6c6fb0075"
+    },
+    {
+      "rva": "0x173770b0",
+      "name": "UInt32 dictionary lookup",
+      "head32": "4157415641554154565755534883ec4889542424488b71204885f6747d4c8b61"
+    },
+    {
+      "rva": "0xe96b300",
+      "name": "EntityManager EntityMap diagnostic +1e8",
+      "head32": "555657534883ec78488d6c247048c745f8feffffff4889ce803ddf8012f7000f"
+    },
+    {
+      "rva": "0xe987ec0",
+      "name": "EntityMap runtime ID match +3a8",
+      "head32": "565755534883ec784489c54889d64889cf803da9b610f7000f84b2010000803d"
+    },
+    {
+      "rva": "0x9a9c0c0",
+      "name": "BaseEntity runtimeID/configID/tickable/ready/type/loaded diagnostic",
+      "head32": "41565657534883ec284889ce803dee5800fc000f8436020000803db360c6fb00"
+    }
+  ],
+  "capture": {
+    "superSize": 1,
+    "maxDimension": 4096,
+    "maxEncodedBytes": 8388608,
+    "source": "Unity game backbuffer",
+    "freshFrameGuaranteed": false
+  },
+  "remainingPrimitives": [
+    "trial task enum and editor-data source binding at 1355dba0",
+    "positive playable scene phase with active level identity",
+    "exit destination and asynchronous completion contract",
+    "monster runtime class, health and AI field semantics"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "consts": [
+    {
+      "alias": "regrow",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "regrow",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "use_crop",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "regrow",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "use_crop",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "regrow",
+      "toIndex": 0,
+      "toKind": 3
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_MIN_PLAYABLE",
+  "nodes": [
+    {
+      "alias": "use_crop",
+      "definitionId": 733,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "regrow",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

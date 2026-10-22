@@ -1,0 +1,77 @@
+{
+  "name": "@miliastra/dsh-miliastra",
+  "description": "Cordis plugin package that gives a dsh profile the Miliastra (千星奇域) authoring tools over this project's existing business backend",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./config": {
+      "types": "./lib/config.d.ts",
+      "default": "./lib/config.js"
+    },
+    "./composition": {
+      "types": "./lib/composition.d.ts",
+      "default": "./lib/composition.js"
+    },
+    "./backend": {
+      "types": "./lib/backend.d.ts",
+      "default": "./lib/backend.js"
+    },
+    "./lifecycle": {
+      "types": "./lib/lifecycle.d.ts",
+      "default": "./lib/lifecycle.js"
+    },
+    "./ledger-port": {
+      "types": "./lib/ledger-port.d.ts",
+      "default": "./lib/ledger-port.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/config.js",
+    "lib/composition.js",
+    "lib/backend.js",
+    "lib/lifecycle.js",
+    "lib/ledger-port.js",
+    "lib/**/*.d.ts",
+    "src",
+    "contracts",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "typecheck": "node node_modules/typescript/lib/tsc.js -p tsconfig.json --noEmit && node node_modules/typescript/lib/tsc.js -p tsconfig.test.json",
+    "build": "node node_modules/typescript/lib/tsc.js -p tsconfig.json",
+    "check-build": "node scripts/check-build.mjs",
+    "check-files": "node scripts/check-package-files.mjs",
+    "pretest": "npm run build && npm run check-build && npm run check-files",
+    "test": "node scripts/run-tests.mjs"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-mcp-client": "0.1.5-rc.2",
+    "@deepseek-ai/schemastery": "^3.18.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis-plugin-include": "^1.0.7",
+    "@deepseek-ai/dsh-app-boot": "0.1.5-rc.2",
+    "@types/node": "^22.20.0",
+    "typescript": "^6.0.3"
+  }
+}

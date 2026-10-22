@@ -1,0 +1,79 @@
+{
+ "schemaVersion": 1,
+ "note": "the four category kinds the recordings carry; only the first is named in repo code",
+ "kinds": [
+  {
+   "graphKind": 20000,
+   "variants": 500,
+   "side": "server",
+   "sideConfidence": "stated-in-repo-code",
+   "sideEvidence": {
+    "statement": "serverNodeDefinitions=resources.Where(r=>r.Kind==6 && r.Category[1]==20000)",
+    "pointer": {
+     "source": "tools/editor-bridge/Adapter/EditorAdapter.cs",
+     "sha256": "9b94feaa5caa1b12944bdd1e38c9560acb6c8f5a2f81aee109b977194f5c2693",
+     "locator": "tools/editor-bridge/Adapter/EditorAdapter.cs:194"
+    }
+   }
+  },
+  {
+   "graphKind": 20001,
+   "variants": 122,
+   "side": "client",
+   "sideConfidence": "recorded-classification-not-independently-confirmed",
+   "sideEvidence": {
+    "statement": "得到929个分类变体：服务器500，客户端分类20001有122、20002有197、20007有110",
+    "pointer": {
+     "source": "docs/research/7.1-experiment-plan/EXECUTION.md",
+     "sha256": "9c8ec02d45501da0081a1039114fa6f6354a88120a166b2b8ef3dcec47e19e42",
+     "locator": "docs/research/7.1-experiment-plan/EXECUTION.md:45"
+    }
+   }
+  },
+  {
+   "graphKind": 20002,
+   "variants": 197,
+   "side": "client",
+   "sideConfidence": "recorded-classification-not-independently-confirmed",
+   "sideEvidence": {
+    "statement": "得到929个分类变体：服务器500，客户端分类20001有122、20002有197、20007有110",
+    "pointer": {
+     "source": "docs/research/7.1-experiment-plan/EXECUTION.md",
+     "sha256": "9c8ec02d45501da0081a1039114fa6f6354a88120a166b2b8ef3dcec47e19e42",
+     "locator": "docs/research/7.1-experiment-plan/EXECUTION.md:45"
+    }
+   }
+  },
+  {
+   "graphKind": 20007,
+   "variants": 110,
+   "side": "client",
+   "sideConfidence": "recorded-classification-not-independently-confirmed",
+   "sideEvidence": {
+    "statement": "得到929个分类变体：服务器500，客户端分类20001有122、20002有197、20007有110",
+    "pointer": {
+     "source": "docs/research/7.1-experiment-plan/EXECUTION.md",
+     "sha256": "9c8ec02d45501da0081a1039114fa6f6354a88120a166b2b8ef3dcec47e19e42",
+     "locator": "docs/research/7.1-experiment-plan/EXECUTION.md:45"
+    }
+   }
+  }
+ ],
+ "officialGraphTypeTaxonomy": {
+  "source": "docs/official-docs/SANDBOX-PANELS-AND-GRAPH-TYPES.json",
+  "server": [
+   "实体节点图",
+   "状态节点图",
+   "职业节点图",
+   "道具节点图"
+  ],
+  "client": [
+   "角色技能节点图",
+   "造物技能节点图",
+   "造物状态节点图",
+   "造物状态决策节点图",
+   "本地过滤器节点图"
+  ],
+  "note": "the official taxonomy names nine graph types; the recordings carry four category kinds. No recording maps one list onto the other, so no mapping is asserted here."
+ }
+}

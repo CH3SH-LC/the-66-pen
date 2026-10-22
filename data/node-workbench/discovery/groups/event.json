@@ -1,0 +1,130 @@
+{
+  "id": "event",
+  "name": "事件节点",
+  "purpose": "从实际发生的事件开始",
+  "builtin": true,
+  "clusters": [
+    {
+      "id": "farming",
+      "name": "种田经营闭环",
+      "count": 3,
+      "purpose": "从买种、播种、成长、收获到出售的一条完整制作路线。",
+      "crossClusterRecipe": true
+    },
+    {
+      "id": "flow",
+      "name": "执行流与通用控制",
+      "count": 2,
+      "purpose": "选择执行分支、输出调试信息、控制图开始和结束。"
+    },
+    {
+      "id": "variables",
+      "name": "变量、状态与信号",
+      "count": 5,
+      "purpose": "持有实体状态，监听变化，通过信号连接功能。"
+    },
+    {
+      "id": "entities",
+      "name": "实体创建、查询与布设",
+      "count": 4,
+      "purpose": "寻找、创建、布设和管理实体；区分实体实例与模板。"
+    },
+    {
+      "id": "players",
+      "name": "玩家、角色与阵营",
+      "count": 8,
+      "purpose": "转换玩家/角色身份，处理出生、离开、复活和队伍。"
+    },
+    {
+      "id": "timers",
+      "name": "定时、延时与全局计时",
+      "count": 2,
+      "purpose": "启动、停止定时器，接收到期事件和读取计时。"
+    },
+    {
+      "id": "movement",
+      "name": "运动、跟随与操控",
+      "count": 5,
+      "purpose": "配置实体运动和操控，监听运动状态。"
+    },
+    {
+      "id": "triggers",
+      "name": "范围、碰撞与射线",
+      "count": 2,
+      "purpose": "碰撞范围与触发事件、射线检测；靠近选项菜单另见 interaction。"
+    },
+    {
+      "id": "interaction",
+      "name": "原生选项与对话交互",
+      "count": 3,
+      "purpose": "原生靠近选项、选中事件、可用状态和气泡。组件配置是节点图之外的前置。"
+    },
+    {
+      "id": "shop",
+      "name": "商店、价格与买卖",
+      "count": 3,
+      "purpose": "打开商店、维护出售/收购条目、设置价格和处理交易事件。"
+    },
+    {
+      "id": "inventory",
+      "name": "道具、背包与货币数量",
+      "count": 5,
+      "purpose": "读取与改变道具/货币数量，接收背包事件；交易价格另见 shop。"
+    },
+    {
+      "id": "equipment",
+      "name": "装备与装备栏",
+      "count": 6,
+      "purpose": "装备创建、穿脱、属性查询及装备事件。"
+    },
+    {
+      "id": "skills",
+      "name": "职业与技能能力",
+      "count": 4,
+      "purpose": "职业、技能配置和施放；客户端技能图与服务端管理图不可混用。"
+    },
+    {
+      "id": "combat",
+      "name": "战斗、命中与投射物",
+      "count": 6,
+      "purpose": "伤害与治疗、攻击命中事件和投射物。"
+    },
+    {
+      "id": "status",
+      "name": "单位状态与标签",
+      "count": 4,
+      "purpose": "添加、移除和读取单位状态/标签及变化事件。"
+    },
+    {
+      "id": "ai",
+      "name": "造物、仇恨与战术",
+      "count": 6,
+      "purpose": "造物目标、仇恨、预设状态与 AI 战术。"
+    },
+    {
+      "id": "navigation",
+      "name": "巡逻、路径与寻路",
+      "count": 1,
+      "purpose": "巡逻路线、路径信息和寻路阻挡。"
+    },
+    {
+      "id": "ui",
+      "name": "界面控件与铭牌",
+      "count": 1,
+      "purpose": "控制已配置的界面控件组/铭牌；创建控件和文字属于独立配置步骤。"
+    },
+    {
+      "id": "cards",
+      "name": "卡牌选择",
+      "count": 1,
+      "purpose": "显示卡牌选择器并处理选择结果。"
+    },
+    {
+      "id": "internal",
+      "name": "内部与未公开入口",
+      "count": 1,
+      "purpose": "资源已注册但菜单未公开的内部入口；仅供定位，不作为普通制作入口。"
+    }
+  ],
+  "count": 69
+}

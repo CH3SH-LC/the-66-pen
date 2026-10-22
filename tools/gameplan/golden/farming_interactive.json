@@ -1,0 +1,1268 @@
+{
+  "consts": [
+    {
+      "alias": "initialize_value",
+      "portIndex": 0,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "initialize_value",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "initialize",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "mw_farm_stage"
+    },
+    {
+      "alias": "initialize",
+      "portIndex": 3,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "initialize",
+      "portIndex": 4,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "initialized_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "FARM_READY"
+    },
+    {
+      "alias": "farm_route_equal",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "sell_route_equal",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "plot_state",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "mw_farm_stage"
+    },
+    {
+      "alias": "plot_state",
+      "portIndex": 2,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "is_empty_value",
+      "portIndex": 0,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "is_empty_value",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "have_seeds_read",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000003
+    },
+    {
+      "alias": "have_seeds",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "consume_seeds",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000003
+    },
+    {
+      "alias": "consume_seeds",
+      "portIndex": 2,
+      "slot": "int",
+      "value": -1
+    },
+    {
+      "alias": "mark_growing_value",
+      "portIndex": 0,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "mark_growing_value",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "mark_growing",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "mw_farm_stage"
+    },
+    {
+      "alias": "mark_growing",
+      "portIndex": 3,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "mark_growing",
+      "portIndex": 4,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "growth_timer",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "mw_farm_growth"
+    },
+    {
+      "alias": "growth_timer",
+      "portIndex": 2,
+      "slot": "enum",
+      "value": 0
+    },
+    {
+      "alias": "growth_timer",
+      "portIndex": 3,
+      "slot": "auto",
+      "value": {
+        "list": [
+          {
+            "float": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "alias": "planted_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "FARM_PLANTED"
+    },
+    {
+      "alias": "no_seed_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "FARM_NO_SEEDS"
+    },
+    {
+      "alias": "is_ripe_value",
+      "portIndex": 0,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "is_ripe_value",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "mark_empty_value",
+      "portIndex": 0,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "mark_empty_value",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "mark_empty",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "mw_farm_stage"
+    },
+    {
+      "alias": "mark_empty",
+      "portIndex": 3,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "mark_empty",
+      "portIndex": 4,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "harvest_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "FARM_HARVESTED"
+    },
+    {
+      "alias": "growing_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "FARM_NOT_RIPE"
+    },
+    {
+      "alias": "timer_name_equal",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "mw_farm_growth"
+    },
+    {
+      "alias": "tick_state",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "mw_farm_stage"
+    },
+    {
+      "alias": "tick_state",
+      "portIndex": 2,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "timer_is_growing_value",
+      "portIndex": 0,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "timer_is_growing_value",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "mark_ripe_value",
+      "portIndex": 0,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "mark_ripe_value",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "mark_ripe",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "mw_farm_stage"
+    },
+    {
+      "alias": "mark_ripe",
+      "portIndex": 3,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "mark_ripe",
+      "portIndex": 4,
+      "slot": "bool",
+      "value": false
+    },
+    {
+      "alias": "ripe_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "FARM_RIPE"
+    },
+    {
+      "alias": "sell_enough_read",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "sell_enough",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "sell_consume",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "sell_consume",
+      "portIndex": 2,
+      "slot": "int",
+      "value": -1
+    },
+    {
+      "alias": "sell_reward",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1115684864
+    },
+    {
+      "alias": "sell_reward",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 10
+    },
+    {
+      "alias": "sold_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "FARM_SOLD"
+    },
+    {
+      "alias": "no_crop_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "FARM_NO_CROPS"
+    }
+  ],
+  "edges": [
+    {
+      "from": "created",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "init_owner_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "init_owner_equal",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "created",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "init_owner",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "init_owner_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "init_owner",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "init_owner",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "initialize",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "initialize",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "initialize_value",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "initialize",
+      "toIndex": 2,
+      "toKind": 3
+    },
+    {
+      "from": "initialize",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "initialized_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "interact",
+      "fromIndex": 2,
+      "fromKind": 4,
+      "to": "interaction_owner_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "interaction_owner_equal",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "interact",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "interaction_owner",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "interaction_owner_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "interaction_owner",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "interact",
+      "fromIndex": 4,
+      "fromKind": 4,
+      "to": "farm_route_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "interaction_owner",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "farm_route",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "farm_route_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "farm_route",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "interact",
+      "fromIndex": 4,
+      "fromKind": 4,
+      "to": "sell_route_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "farm_route",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "sell_route",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "sell_route_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_route",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "plot_state",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "is_empty_value",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "is_empty_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "plot_state",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "is_empty_equal",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "farm_route",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "is_empty",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "is_empty_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "is_empty",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "interact",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "have_seeds_read",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "have_seeds_read",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "have_seeds",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "is_empty",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "can_plant",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "have_seeds",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "can_plant",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "can_plant",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "consume_seeds",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "interact",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "consume_seeds",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "consume_seeds",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "mark_growing",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "mark_growing",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "mark_growing_value",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "mark_growing",
+      "toIndex": 2,
+      "toKind": 3
+    },
+    {
+      "from": "mark_growing",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "growth_timer",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "growth_timer",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "interact",
+      "fromIndex": 1,
+      "fromKind": 4,
+      "to": "growth_timer",
+      "toIndex": 4,
+      "toKind": 3
+    },
+    {
+      "from": "growth_timer",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "planted_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "can_plant",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "no_seed_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "is_ripe_value",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "is_ripe_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "plot_state",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "is_ripe_equal",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "is_empty",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "is_ripe",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "is_ripe_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "is_ripe",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "is_ripe",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "mark_empty",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "mark_empty",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "mark_empty_value",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "mark_empty",
+      "toIndex": 2,
+      "toKind": 3
+    },
+    {
+      "from": "mark_empty",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "interact",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "harvest",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "harvest_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "is_ripe",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "growing_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "growth_tick",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "timer_owner_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "timer_owner_equal",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "growth_tick",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "timer_owner",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "timer_owner_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "timer_owner",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "growth_tick",
+      "fromIndex": 2,
+      "fromKind": 4,
+      "to": "timer_name_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "timer_owner",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "timer_name",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "timer_name_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "timer_name",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "tick_state",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "timer_is_growing_value",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "timer_is_growing_equal",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "tick_state",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "timer_is_growing_equal",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "timer_name",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "timer_is_growing",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "timer_is_growing_equal",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "timer_is_growing",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "timer_is_growing",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "mark_ripe",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "self",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "mark_ripe",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "mark_ripe_value",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "mark_ripe",
+      "toIndex": 2,
+      "toKind": 3
+    },
+    {
+      "from": "mark_ripe",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "ripe_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "interact",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_enough_read",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_enough_read",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_enough",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_route",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sell_gate",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "sell_enough",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_gate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_gate",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sell_consume",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "interact",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_consume",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_consume",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sell_reward",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "interact",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_reward",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_reward",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sold_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "sell_gate",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "no_crop_note",
+      "toIndex": 0,
+      "toKind": 1
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_FARM_INTERACTIVE",
+  "nodes": [
+    {
+      "alias": "self",
+      "definitionId": 73,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "created",
+      "definitionId": 71,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "init_owner_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "init_owner",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "initialize_value",
+      "definitionId": 257,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "initialize",
+      "definitionId": 22,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "initialized_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "interact",
+      "definitionId": 92,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "interaction_owner_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "interaction_owner",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "farm_route_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "farm_route",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_route_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_route",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "plot_state",
+      "definitionId": 50,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "is_empty_value",
+      "definitionId": 257,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "is_empty_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "is_empty",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "have_seeds_read",
+      "definitionId": 690,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "have_seeds",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "can_plant",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "consume_seeds",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "mark_growing_value",
+      "definitionId": 257,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "mark_growing",
+      "definitionId": 22,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "growth_timer",
+      "definitionId": 79,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "planted_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "no_seed_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "is_ripe_value",
+      "definitionId": 257,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "is_ripe_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "is_ripe",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "mark_empty_value",
+      "definitionId": 257,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "mark_empty",
+      "definitionId": 22,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "harvest",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "harvest_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "growing_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "growth_tick",
+      "definitionId": 83,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "timer_owner_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "timer_owner",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "timer_name_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "timer_name",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "tick_state",
+      "definitionId": 50,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "timer_is_growing_value",
+      "definitionId": 257,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "timer_is_growing_equal",
+      "definitionId": 14,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "timer_is_growing",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "mark_ripe_value",
+      "definitionId": 257,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "mark_ripe",
+      "definitionId": 22,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "ripe_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_enough_read",
+      "definitionId": 690,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_enough",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_gate",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_consume",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_reward",
+      "definitionId": 688,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sold_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "no_crop_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

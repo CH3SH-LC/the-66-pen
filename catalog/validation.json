@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "scope": "clean independent source export; offline only",
+  "copiedFiles": 1519,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "doctor"
+      ],
+      "exitCode": 0,
+      "seconds": 0.86,
+      "outputSha256": "f769647ce2864badaa4a1ec00da69b49dc62a3dd31967776c0bb16ce80f47fd9"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "catalog",
+        "entity",
+        "--limit",
+        "10"
+      ],
+      "exitCode": 0,
+      "seconds": 0.43,
+      "outputSha256": "c545dd1a6201a615130a3f0ba4b043a482fd4f39cfb54b00e672463b938b3241"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "nodes",
+        "groups"
+      ],
+      "exitCode": 0,
+      "seconds": 0.92,
+      "outputSha256": "176be40381c8c99bd66af4e77caf5b3e72d5e8043c671ca9acb8262fc1f6ae3e"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "nodes",
+        "explain",
+        "307",
+        "--graph-kind",
+        "20000"
+      ],
+      "exitCode": 0,
+      "seconds": 1.06,
+      "outputSha256": "f1bd6689555d02dc0ee19cab93aa17bfcadbd2e242e024cf674303c6aff6e071"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "nodes",
+        "recipe",
+        "307",
+        "--graph-kind",
+        "20000"
+      ],
+      "exitCode": 0,
+      "seconds": 1.16,
+      "outputSha256": "465fcdee6a4b31d3fbc5f14d1682cb838c468a1a907392a0e2216accf23631c8"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "nodes",
+        "route",
+        "靠近 NPC 打开商店"
+      ],
+      "exitCode": 0,
+      "seconds": 0.98,
+      "outputSha256": "800ff918b5875c9c37e1a3599fb740bcecc6b0aa4a2631592e00d59de5aff149"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "nodes",
+        "enum",
+        "2"
+      ],
+      "exitCode": 0,
+      "seconds": 1.11,
+      "outputSha256": "1fb2fddf2e147a9b9c063aa1febec7d2741b5dc7d179cb1db22133612050faa8"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "demo",
+        "--out",
+        "<clean-check>\\.runtime\\example"
+      ],
+      "exitCode": 0,
+      "seconds": 0.61,
+      "outputSha256": "78d58be6c57a07c3a7d70a591defdad1c911a254e0b139889a205673d520ec80"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "inspect",
+        "<clean-check>\\.runtime\\example\\before.gil"
+      ],
+      "exitCode": 0,
+      "seconds": 0.59,
+      "outputSha256": "0d161b2f914016893f52f5395022004844e7d7dcd57467053623f33cca7c31a9"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "pen.py",
+        "diff",
+        "<clean-check>\\.runtime\\example\\before.gil",
+        "<clean-check>\\.runtime\\example\\after.gil"
+      ],
+      "exitCode": 0,
+      "seconds": 0.58,
+      "outputSha256": "9ca6a5e32568c7faf8f0a41bf358cd09b678c98975bd95ab978b1dd4b8bb16e0"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "scripts/audit.py"
+      ],
+      "exitCode": 0,
+      "seconds": 5.15,
+      "outputSha256": "13b514049bf51206cec8dc310cba94979414e02f00ea191f63ca588a6702f975"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "<clean-check>\\tests",
+        "-v"
+      ],
+      "exitCode": 0,
+      "seconds": 15.41,
+      "outputSha256": "f1b0d7c3cd262219487e69114c223f1a0a59840be3aef2de579c7f482f03915a"
+    }
+  ],
+  "allPassed": true,
+  "interfaceSourceHashesChecked": 375,
+  "privateIdentifierFindings": 0,
+  "gameContacted": false,
+  "build": {
+    "command": "python -X utf8 -B scripts/build.py --native",
+    "exitCode": 0,
+    "targets": [
+      "Bootstrap",
+      "ManagedBridge",
+      "TestHost",
+      "game_executor",
+      "native_test_host"
+    ],
+    "warnings": [
+      "NU1900: vulnerability feed unreachable in restricted network",
+      "CS8600: existing nullable warning"
+    ]
+  },
+  "nativeSyntheticHost": {
+    "checks": 566,
+    "failures": 0,
+    "exitCode": 0
+  },
+  "optionalBackendImports": {
+    "count": 4,
+    "exitCode": 0,
+    "gameContacted": false
+  },
+  "excludedValidation": [
+    "actual game/editor bridge loading",
+    "real save/reopen/playtest",
+    "DSH plugin npm build and runtime",
+    "clean-machine installation"
+  ],
+  "supplementalChecks": [
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools/game-executor/entity_name_rule.py",
+        "search",
+        "石",
+        "--limit",
+        "3"
+      ],
+      "exitCode": 0,
+      "outputSha256": "e907373a8d7038fb1fa7fdc185ff77da4d3a2f98f51fa0eb2a3e126f006d4686",
+      "context": "clean independent export; 2722 frozen template names"
+    },
+    {
+      "command": [
+        "dotnet",
+        "build",
+        "tools/editor-bridge/ManagedBridge/Miliastra.EditorBridge.csproj",
+        "-c",
+        "Release",
+        "--no-restore",
+        "--nologo"
+      ],
+      "exitCode": 0,
+      "errors": 0,
+      "warnings": [
+        "NU1900",
+        "CS8600"
+      ],
+      "context": "rebuild after exclusion of private one-time recovery code"
+    }
+  ],
+  "finalAudit": {
+    "exitCode": 0,
+    "filesBeforeManifest": 1522,
+    "pythonFiles": 766,
+    "syntaxAndLinksErrors": 0,
+    "privateIdentifierFindings": 0,
+    "nonUtf8Files": 0,
+    "gameContacted": false
+  }
+}

@@ -1,0 +1,4 @@
+# Optional native/save verification backend. Basic pen.py needs none.
+mcp==1.27.0
+protobuf>=6.33.5,<8
+pydantic>=2.0,<3

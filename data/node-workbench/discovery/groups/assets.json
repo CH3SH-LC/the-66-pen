@@ -1,0 +1,24 @@
+{
+  "id": "assets",
+  "name": "节点外部资产",
+  "purpose": "引用独立的外部资产",
+  "builtin": false,
+  "clusters": [],
+  "count": 0,
+  "mechanism": {
+    "status": "native-model-located-no-import-adapter-or-runtime-acceptance",
+    "model": {
+      "path": "local-evidence-not-distributed",
+      "line": 33,
+      "sha256": "679edb511ea143be7cb4c98ecee9d26706480edc8ee3287986aea9be99c56544",
+      "symbol": "resourceItemTextType"
+    },
+    "kinds": [
+      "EXTERNAL_ASSETS_PACKAGE",
+      "EXTERNAL_ASSETS_BP",
+      "EXTERNAL_ASSETS_NODE"
+    ],
+    "constraint": "资源引用类别；资源身份、依赖和导入流程须成立。不是第六种内置节点算法。"
+  },
+  "limitation": "不是内置节点定义；自动创建/导入尚未完成，不能虚构 definitionId。"
+}

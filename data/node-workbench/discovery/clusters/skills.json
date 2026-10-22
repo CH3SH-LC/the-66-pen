@@ -1,0 +1,1256 @@
+{
+  "id": "skills",
+  "name": "职业与技能能力",
+  "purpose": "职业、技能配置和施放；客户端技能图与服务端管理图不可混用。",
+  "aliases": [
+    "玩家能力",
+    "创建能力",
+    "施放",
+    "释放",
+    "攻击技能",
+    "技能槽",
+    "冷却",
+    "职业切换"
+  ],
+  "nativeLeaves": [
+    "职业",
+    "技能",
+    "角色技能"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:385",
+      "definitionId": 385,
+      "graphKind": 20000,
+      "name": "玩家职业更改时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "职业"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 385 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:386",
+      "definitionId": 386,
+      "graphKind": 20000,
+      "name": "玩家职业等级变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "职业"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 386 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:387",
+      "definitionId": 387,
+      "graphKind": 20000,
+      "name": "查询玩家职业",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "职业"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 387 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:388",
+      "definitionId": 388,
+      "graphKind": 20000,
+      "name": "查询玩家职业的等级",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "职业"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 388 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:389",
+      "definitionId": 389,
+      "graphKind": 20000,
+      "name": "更改玩家职业",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "职业"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 389 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:390",
+      "definitionId": 390,
+      "graphKind": 20000,
+      "name": "提升玩家当前职业经验",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "职业"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 390 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:391",
+      "definitionId": 391,
+      "graphKind": 20000,
+      "name": "更改玩家当前职业等级",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "职业"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 391 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:392",
+      "definitionId": 392,
+      "graphKind": 20000,
+      "name": "技能节点调用时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 392 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:393",
+      "definitionId": 393,
+      "graphKind": 20000,
+      "name": "增加技能资源量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 393 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:394",
+      "definitionId": 394,
+      "graphKind": 20000,
+      "name": "设置技能资源量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 394 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:395",
+      "definitionId": 395,
+      "graphKind": 20000,
+      "name": "添加角色技能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 395 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:396",
+      "definitionId": 396,
+      "graphKind": 20000,
+      "name": "以ID删除角色技能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 396 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:397",
+      "definitionId": 397,
+      "graphKind": 20000,
+      "name": "初始化角色技能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 397 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:398",
+      "definitionId": 398,
+      "graphKind": 20000,
+      "name": "查询角色技能",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 398 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:399",
+      "definitionId": 399,
+      "graphKind": 20000,
+      "name": "以槽位删除角色技能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 399 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:739",
+      "definitionId": 739,
+      "graphKind": 20000,
+      "name": "设置角色技能冷却",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 739 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:740",
+      "definitionId": 740,
+      "graphKind": 20000,
+      "name": "增加角色技能冷却",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 740 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:741",
+      "definitionId": 741,
+      "graphKind": 20000,
+      "name": "按最大冷却时间比例设置技能冷却",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 741 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:764",
+      "definitionId": 764,
+      "graphKind": 20000,
+      "name": "玩家职业解除时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "职业"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 764 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:806",
+      "definitionId": 806,
+      "graphKind": 20000,
+      "name": "绑定自定义技能实例到指定槽位",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 806 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:807",
+      "definitionId": 807,
+      "graphKind": 20000,
+      "name": "解绑技能实例",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 807 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:808",
+      "definitionId": 808,
+      "graphKind": 20000,
+      "name": "解绑槽位上的所有技能实例",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 808 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:809",
+      "definitionId": 809,
+      "graphKind": 20000,
+      "name": "创建自定义技能实例",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 809 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:810",
+      "definitionId": 810,
+      "graphKind": 20000,
+      "name": "销毁自定义技能实例",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 810 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:811",
+      "definitionId": 811,
+      "graphKind": 20000,
+      "name": "以技能实例ID查询技能配置ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 811 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:812",
+      "definitionId": 812,
+      "graphKind": 20000,
+      "name": "以技能配置ID查询所有技能实例ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 812 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:813",
+      "definitionId": 813,
+      "graphKind": 20000,
+      "name": "以技能槽位查询所有技能实例ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 813 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:814",
+      "definitionId": 814,
+      "graphKind": 20000,
+      "name": "以技能槽位和技能配置ID查询技能实例ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 814 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:815",
+      "definitionId": 815,
+      "graphKind": 20000,
+      "name": "查询技能属性组值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 815 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:816",
+      "definitionId": 816,
+      "graphKind": 20000,
+      "name": "施放指定槽位面板技能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 816 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:817",
+      "definitionId": 817,
+      "graphKind": 20000,
+      "name": "施放指定技能实例",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 817 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20002:22000:0:200038",
+      "definitionId": 200038,
+      "graphKind": 20002,
+      "name": "播放限时特效",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200038 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200039",
+      "definitionId": 200039,
+      "graphKind": 20002,
+      "name": "通知服务器节点图",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow",
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能",
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200039 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200040",
+      "definitionId": 200040,
+      "graphKind": 20002,
+      "name": "玩家转向",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200040 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200041",
+      "definitionId": 200041,
+      "graphKind": 20002,
+      "name": "设置自身攻击目标",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200041 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200051",
+      "definitionId": 200051,
+      "graphKind": 20002,
+      "name": "特定位置打攻击盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200051 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200052",
+      "definitionId": 200052,
+      "graphKind": 20002,
+      "name": "定点发射投射物",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200052 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200053",
+      "definitionId": 200053,
+      "graphKind": 20002,
+      "name": "定点位移",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200053 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200055",
+      "definitionId": 200055,
+      "graphKind": 20002,
+      "name": "遍历实体列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200055 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200057",
+      "definitionId": 200057,
+      "graphKind": 20002,
+      "name": "添加单位状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200057 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200058",
+      "definitionId": 200058,
+      "graphKind": 20002,
+      "name": "移除单位状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200058 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200059",
+      "definitionId": 200059,
+      "graphKind": 20002,
+      "name": "指定挂接点打攻击盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200059 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200060",
+      "definitionId": 200060,
+      "graphKind": 20002,
+      "name": "移除指定角色扰动装置",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200060 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200061",
+      "definitionId": 200061,
+      "graphKind": 20002,
+      "name": "设置攻击权重",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200061 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200062",
+      "definitionId": 200062,
+      "graphKind": 20002,
+      "name": "镜头朝向检测数据",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200062 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200075",
+      "definitionId": 200075,
+      "graphKind": 20002,
+      "name": "角色恢复生命值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200075 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200105",
+      "definitionId": 200105,
+      "graphKind": 20002,
+      "name": "玩家转向指定朝向",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200105 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200106",
+      "definitionId": 200106,
+      "graphKind": 20002,
+      "name": "重置技能目标",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200106 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200108",
+      "definitionId": 200108,
+      "graphKind": 20002,
+      "name": "强制退出瞄准状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200108 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200111",
+      "definitionId": 200111,
+      "graphKind": 20002,
+      "name": "特定位置打球形攻击盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200111 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200112",
+      "definitionId": 200112,
+      "graphKind": 20002,
+      "name": "特定位置打矩形攻击盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200112 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200113",
+      "definitionId": 200113,
+      "graphKind": 20002,
+      "name": "特定位置打扇形攻击盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200113 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200114",
+      "definitionId": 200114,
+      "graphKind": 20002,
+      "name": "指定挂接点打球形攻击盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200114 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200115",
+      "definitionId": 200115,
+      "graphKind": 20002,
+      "name": "指定挂接点打矩形攻击盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200115 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200116",
+      "definitionId": 200116,
+      "graphKind": 20002,
+      "name": "指定挂接点打扇形攻击盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200116 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200213",
+      "definitionId": 200213,
+      "graphKind": 20002,
+      "name": "获取复杂造物当前施放的技能",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200213 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200215",
+      "definitionId": 200215,
+      "graphKind": 20002,
+      "name": "造物的技能冷却清零",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200215 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200216",
+      "definitionId": 200216,
+      "graphKind": 20002,
+      "name": "设置造物技能的当前冷却时间",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200216 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200217",
+      "definitionId": 200217,
+      "graphKind": 20002,
+      "name": "设置造物技能的冷却时间",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200217 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200218",
+      "definitionId": 200218,
+      "graphKind": 20002,
+      "name": "设置造物冷却组的当前时间",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200218 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200219",
+      "definitionId": 200219,
+      "graphKind": 20002,
+      "name": "设置造物冷却组的时间",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200219 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200220",
+      "definitionId": 200220,
+      "graphKind": 20002,
+      "name": "设置造物的公共冷却时间",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200220 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200245",
+      "definitionId": 200245,
+      "graphKind": 20002,
+      "name": "造物转向指定朝向",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200245 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200247",
+      "definitionId": 200247,
+      "graphKind": 20002,
+      "name": "复杂造物瞬移",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200247 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200248",
+      "definitionId": 200248,
+      "graphKind": 20002,
+      "name": "复杂造物定点位移",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200248 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200249",
+      "definitionId": 200249,
+      "graphKind": 20002,
+      "name": "造物恢复生命值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200249 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200256",
+      "definitionId": 200256,
+      "graphKind": 20002,
+      "name": "打断当前技能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200256 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200257",
+      "definitionId": 200257,
+      "graphKind": 20002,
+      "name": "设置技能变量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200257 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200258",
+      "definitionId": 200258,
+      "graphKind": 20002,
+      "name": "增加技能变量值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200258 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200259",
+      "definitionId": 200259,
+      "graphKind": 20002,
+      "name": "查询技能变量对应值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players",
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200259 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200261",
+      "definitionId": 200261,
+      "graphKind": 20002,
+      "name": "角色闪现",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200261 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200262",
+      "definitionId": 200262,
+      "graphKind": 20002,
+      "name": "添加关键行为",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200262 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200263",
+      "definitionId": 200263,
+      "graphKind": 20002,
+      "name": "清空关键行为记录板",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200263 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200265",
+      "definitionId": 200265,
+      "graphKind": 20002,
+      "name": "施放指定技能实例",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200265 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200266",
+      "definitionId": 200266,
+      "graphKind": 20002,
+      "name": "施放指定槽位的技能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200266 --graph-kind 20002"
+    }
+  ],
+  "pitfalls": [
+    "先选 graphKind 和原生菜单上下文；客户端技能节点不能直接放进服务端图。技能/职业资产创建和节点连线是两个步骤。"
+  ],
+  "count": 75,
+  "byFamily": {
+    "事件节点": 4,
+    "查询节点": 10,
+    "执行节点": 61
+  },
+  "byGraphKind": {
+    "20000": 31,
+    "20002": 44
+  },
+  "runtimeVerified": false
+}

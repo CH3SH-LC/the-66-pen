@@ -1,0 +1,629 @@
+{
+  "id": "dictionaries",
+  "name": "字典与键值对",
+  "purpose": "字典构造和查改；泛型、键值结构与动态端口需要具体化。",
+  "aliases": [
+    "字典",
+    "键值对",
+    "映射",
+    "价格表",
+    "Dictionary",
+    "map"
+  ],
+  "nativeLeaves": [
+    "字典"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:948",
+      "definitionId": 948,
+      "graphKind": 20000,
+      "name": "对字典设置或新增键值对",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 948 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1088",
+      "definitionId": 1088,
+      "graphKind": 20000,
+      "name": "建立字典",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1088 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1158",
+      "definitionId": 1158,
+      "graphKind": 20000,
+      "name": "以键查询字典值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1158 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1298",
+      "definitionId": 1298,
+      "graphKind": 20000,
+      "name": "以键对字典移除键值对",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1298 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1368",
+      "definitionId": 1368,
+      "graphKind": 20000,
+      "name": "查询字典是否包含特定键",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1368 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1438",
+      "definitionId": 1438,
+      "graphKind": 20000,
+      "name": "查询字典是否包含特定值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1438 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1508",
+      "definitionId": 1508,
+      "graphKind": 20000,
+      "name": "获取字典中键组成的列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1508 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1578",
+      "definitionId": 1578,
+      "graphKind": 20000,
+      "name": "获取字典中值组成的列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1578 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1648",
+      "definitionId": 1648,
+      "graphKind": 20000,
+      "name": "查询字典长度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1648 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1718",
+      "definitionId": 1718,
+      "graphKind": 20000,
+      "name": "清空字典",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1718 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1788",
+      "definitionId": 1788,
+      "graphKind": 20000,
+      "name": "拼装字典",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1788 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1928",
+      "definitionId": 1928,
+      "graphKind": 20000,
+      "name": "对字典按键排序",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1928 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:1938",
+      "definitionId": 1938,
+      "graphKind": 20000,
+      "name": "对字典按值排序",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1938 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200152",
+      "definitionId": 200152,
+      "graphKind": 20001,
+      "name": "拼装字典",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200152 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200153",
+      "definitionId": 200153,
+      "graphKind": 20001,
+      "name": "建立字典",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200153 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200154",
+      "definitionId": 200154,
+      "graphKind": 20001,
+      "name": "以键查询字典值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200154 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200155",
+      "definitionId": 200155,
+      "graphKind": 20001,
+      "name": "查询字典是否包含特定键",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200155 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200156",
+      "definitionId": 200156,
+      "graphKind": 20001,
+      "name": "查询字典是否包含特定值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200156 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200157",
+      "definitionId": 200157,
+      "graphKind": 20001,
+      "name": "查询字典长度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200157 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200158",
+      "definitionId": 200158,
+      "graphKind": 20001,
+      "name": "获取字典中值组成的列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200158 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200159",
+      "definitionId": 200159,
+      "graphKind": 20001,
+      "name": "获取字典中键组成的列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200159 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200152",
+      "definitionId": 200152,
+      "graphKind": 20002,
+      "name": "拼装字典",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200152 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200153",
+      "definitionId": 200153,
+      "graphKind": 20002,
+      "name": "建立字典",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200153 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200154",
+      "definitionId": 200154,
+      "graphKind": 20002,
+      "name": "以键查询字典值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200154 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200155",
+      "definitionId": 200155,
+      "graphKind": 20002,
+      "name": "查询字典是否包含特定键",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200155 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200156",
+      "definitionId": 200156,
+      "graphKind": 20002,
+      "name": "查询字典是否包含特定值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200156 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200157",
+      "definitionId": 200157,
+      "graphKind": 20002,
+      "name": "查询字典长度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200157 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200158",
+      "definitionId": 200158,
+      "graphKind": 20002,
+      "name": "获取字典中值组成的列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200158 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200159",
+      "definitionId": 200159,
+      "graphKind": 20002,
+      "name": "获取字典中键组成的列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200159 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20007:22000:0:200228",
+      "definitionId": 200228,
+      "graphKind": 20007,
+      "name": "拼装字典",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200228 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200229",
+      "definitionId": 200229,
+      "graphKind": 20007,
+      "name": "建立字典",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200229 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200230",
+      "definitionId": 200230,
+      "graphKind": 20007,
+      "name": "以键查询字典值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200230 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200231",
+      "definitionId": 200231,
+      "graphKind": 20007,
+      "name": "查询字典是否包含特定键",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200231 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200232",
+      "definitionId": 200232,
+      "graphKind": 20007,
+      "name": "查询字典是否包含特定值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200232 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200233",
+      "definitionId": 200233,
+      "graphKind": 20007,
+      "name": "查询字典长度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200233 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200234",
+      "definitionId": 200234,
+      "graphKind": 20007,
+      "name": "获取字典中值组成的列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200234 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200235",
+      "definitionId": 200235,
+      "graphKind": 20007,
+      "name": "获取字典中键组成的列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "dictionaries"
+      ],
+      "nativeLeaves": [
+        "字典"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200235 --graph-kind 20007"
+    }
+  ],
+  "pitfalls": [
+    "节点定义的模板端口不是任意可扩写的实例端口。先物化泛型并读回 slots；价格构造参考已部署写法。"
+  ],
+  "code": [
+    "tools/gameplan/modules/runtime_prices.py"
+  ],
+  "count": 37,
+  "byFamily": {
+    "执行节点": 5,
+    "运算节点": 8,
+    "查询节点": 24
+  },
+  "byGraphKind": {
+    "20000": 13,
+    "20001": 8,
+    "20002": 8,
+    "20007": 8
+  },
+  "runtimeVerified": false
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "kind": "mondstadt-statue-material-candidate-v1",
+  "target": "city statue's 17 existing primitive entity IDs from actual deployment receipt",
+  "levelId": 1073741843,
+  "primitiveConfigIds": [
+    10009002,
+    10009003,
+    10009008,
+    10009009
+  ],
+  "expectedEntityCount": 17,
+  "patch": {
+    "enableColor": true,
+    "coverDecorationColor": false,
+    "rgba": [
+      232,
+      228,
+      218,
+      255
+    ],
+    "blendMode": 6700,
+    "enableMaterial": true,
+    "coverDecorationMaterial": false,
+    "material": 6711
+  },
+  "argbHex": "0xFFE8E4DA",
+  "preconditions": [
+    "All 17 IDs independently observed with current session and authorized level",
+    "Each current template returns nativeBlocked=0 from 123beb10; static enum membership is insufficient",
+    "Each current template explicitly permits material 6711 and color mode 6700",
+    "No group inheritance and all actual renderer/material slots captured",
+    "Original per-entity scalar material states bound from inspect receipt; no fabricated white defaults"
+  ],
+  "acceptance": [
+    "New post-write inspect confirms exact 24-byte material state",
+    "Renderer custom block RGBA and blend independently match request",
+    "Each actual shared material enables petrified and disables frozen",
+    "All non-target entity material state and renderer signatures remain unchanged",
+    "Unified actual scene image confirms no primitive grid and acceptable statue appearance"
+  ],
+  "implemented": true,
+  "nativeDispatched": false,
+  "visuallyAccepted": false,
+  "gridRemovalClaim": false,
+  "sourceColor": "Preserves city material-evidence.sidecar.json #E8E4DA; 6711 is a new explicit native material candidate, not a proven grid remover"
+}

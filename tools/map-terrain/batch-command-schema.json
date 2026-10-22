@@ -1,0 +1,26 @@
+{
+  "schema": "terrain-batch-cli-contract-v1",
+  "entry": "tools/map-terrain/terrain_cli.py",
+  "encoding": "UTF-8 JSON; one final stdout object",
+  "commands": {
+    "batch-create": {"required": {"--save": "formal-level-gil-path", "--terrain-id": "integer", "--edits": "json-array-path"}, "optional": {"--chunk-size": {"type": "integer", "default": 4096, "minimum": 1, "maximum": 4096}}},
+    "batch-prepare": {"required": {"--batch": "batch-directory", "--inspection": "successful-native-terrain-inspect-run", "--baseline": "newer-fresh-readonly-scene-run"}, "optional": {}},
+    "batch-accept": {"required": {"--batch": "batch-directory", "--run": "successful-terrain-write-run"}, "optional": {}},
+    "batch-status": {"required": {"--batch": "batch-directory"}, "optional": {}},
+    "batch-abandon": {"required": {"--batch": "batch-directory"}, "optional": {}},
+    "batch-verify-save": {"required": {"--batch": "batch-directory", "--save-run": "completed-native-save-run"}, "optional": {}}
+  },
+  "perCardSequence": [
+    {"step": 1, "action": "Obtain a new ordinary scene inspect run A through the existing scene-cli coordinator", "output": "A"},
+    {"step": 2, "argv": ["prepare", "--baseline", "A", "--inspect-only", "--terrain-id", "TERRAIN_ID"], "output": "TERRAIN_INSPECT_CARD"},
+    {"step": 3, "argv": ["execute", "--run", "TERRAIN_INSPECT_CARD", "--elevated-queue", "QUEUE"], "output": "I; successful complete terrain before/after receipt"},
+    {"step": 4, "action": "Obtain a different new ordinary scene inspect run B after I finishes", "output": "B"},
+    {"step": 5, "argv": ["batch-prepare", "--batch", "BATCH", "--inspection", "I", "--baseline", "B"], "output": "W"},
+    {"step": 6, "argv": ["execute", "--run", "W", "--elevated-queue", "QUEUE"]},
+    {"step": 7, "argv": ["batch-accept", "--batch", "BATCH", "--run", "W"]}
+  ],
+  "ordering": "Previous accepted write finished <= I started <= I finished <= B finished; inspection and B each younger than 900 seconds. I/B must describe the same complete scene and session. Next card uses a newly executed I and a different new B.",
+  "finalSave": "After all cards are independently accepted, coordinator invokes original native scene save once, then batch-verify-save with that save run.",
+  "protectedLimits": {"perCardEdits": 4096, "wholeTerrainCells": 65536},
+  "compileOrPrepareIsLiveAcceptance": false
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "native-terrain-catalog-profile-v1",
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0xe4d4c80",
+      "name": "native terrain category list: global+33db0, kind2",
+      "head32": "555657534883ec68488d6c246048c745f8feffffff803d93e05df7000f845d01",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-e4d4c80.asm",
+      "sha256": "de20c6c845f2436bf5f3a68ff6ffedcb8c71fb0d643ff3cf79fd7f6aa5f45f80"
+    },
+    {
+      "rva": "0xe4d4b00",
+      "name": "material ID lookup via encoded record+24",
+      "head32": "554157415641545657534883ec40488d6c244048c745f0feffffff89cb803dfb",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-e4d4b00.asm",
+      "sha256": "d4a67abd3b4eae1eeb9299024f9d9f4de516aa77580ff2d58c13c72fd6f625eb"
+    },
+    {
+      "rva": "0xbb2c5e0",
+      "name": "UInt32 encoded key read",
+      "head32": "56534883ec28488b05fb77c5f94c8b8820f600004d85c90f84810000008b1d4d",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-bb2c5e0.asm",
+      "sha256": "99ccd960f642b21b7435a2401581a4ecef7cba51dfa41c551879f650c95c616a"
+    },
+    {
+      "rva": "0xba4b8f0",
+      "name": "render style dictionary build from style+10",
+      "head32": "554157415641545657534881ec90000000488dac248000000048c745f0feffff",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-ba4b8f0.asm",
+      "sha256": "096315baaca1602a9bad95e75f3056ca09d0240c9a3368b148e9667baca8a659"
+    },
+    {
+      "rva": "0x8b02b40",
+      "name": "inspector material ID and label hash binding",
+      "head32": "41574156565755534883ec284489c54889d74889ce803d5a40f9fc000f842b03",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-8b02b40.asm",
+      "sha256": "7946ead4827dd13f438bbc11ec6170143a8c99c318896787c9704fb032645c7e"
+    },
+    {
+      "rva": "0x14377c0",
+      "name": "Transform localToWorldMatrix native getter",
+      "head32": "48895c2408574883ec60488bfa488bd94885c97440e8e63501004885c0743648",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-14377c0.asm",
+      "sha256": "de0a015ff2b37ffab879057f69e0b353aaa1b722ba0840e79d7dd98d04ef1157"
+    },
+    {
+      "rva": "0x7d22a90",
+      "name": "terrain grid constants",
+      "head32": "4883ec280f2805d57650fa0f1105b6aba6fd0f2805d77650fa0f1105b8aba6fd",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-7d22a90.asm",
+      "sha256": "cbed2c0aaf5f9f81eda8f2c466d54099f4dc670de06975bc00ec017ac7824b9a"
+    },
+    {
+      "rva": "0xba517b0",
+      "name": "logical bounds height and grid scaling",
+      "head32": "5556574881ec80000000488dac248000000048c745f0feffffff4889d648894d",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-ba517b0.asm",
+      "sha256": "71cc56b9c8cc752984c202585ed484aadc2ce5a82d6eacd956fb4ee1cc87cf9c"
+    },
+    {
+      "rva": "0x133f3340",
+      "name": "native saved terrain transform export",
+      "head32": "5541565657534881eca0000000488dac24800000000f29751048c74500feffff",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-catalog\\function-133f3340.asm",
+      "sha256": "39cdcff90b0a1e9d46f1188efc4afd81e52bc0e4bced3048ccc496dfdf4ef9ed"
+    }
+  ],
+  "guardClassifier": "branch-body-v1",
+  "hotfixZeroRvas": [
+    "0x5763672",
+    "0x5763676",
+    "0x576c727",
+    "0x576c7e6",
+    "0x576c85b",
+    "0x576cb69"
+  ],
+  "initializationBooleanRvas": [
+    "0x5a91df0",
+    "0x5a91f28",
+    "0x5a95565",
+    "0x5ab2d1f",
+    "0x5ab2d2f"
+  ],
+  "sources": {
+    "configDictionaryGlobalOffset": "0x33db0",
+    "recordMaterialEncodedOffset": "0x24",
+    "recordNameHashOffset": "0x2c",
+    "recordCategoryOffset": "0x34",
+    "terrainCategory": 2,
+    "decoderTableGlobalOffset": "0xf620",
+    "decoderKeyRva": "0x578bd50",
+    "renderPaletteManagerOffset": "0x10",
+    "renderStyleDictionaryOffset": "0x18",
+    "root": "owner+c0 -> +18",
+    "gridVectorRva": "0x578d658",
+    "grid": [
+      5,
+      2.5,
+      5
+    ]
+  },
+  "scope": "current installed code; runtime catalog required for IDs, labels and actual world matrix",
+  "nativeCalled": false
+}

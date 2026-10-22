@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0xcf86ad0",
+      "head32": "564883ec500f2974244089d64889c8803d36367ff800488b0dfbd27ff80f85b0",
+      "functionBytes": 297,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0xcf86c00",
+      "head32": "564883ec204889ce803d0e357ff800752a4889f1baf2030000e8b2fefffff30f",
+      "functionBytes": 104,
+      "hotfixZeroRvas": [
+        "0x577a11d"
+      ]
+    },
+    {
+      "rva": "0x9391b70",
+      "head32": "56534883ec384989c8488b194885db750b49837808000f8420030000c7442428",
+      "functionBytes": 870,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x1433bb30",
+      "head32": "56574883ec2889d64889cf498b4010488b48104885c9745c488b87d002000048",
+      "functionBytes": 184,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0xe983110",
+      "head32": "565755534883ec284489c589d64889cf803da840dff6000f85b0000000488b9f",
+      "functionBytes": 274,
+      "hotfixZeroRvas": [
+        "0x57771cf"
+      ]
+    },
+    {
+      "rva": "0x9a96f70",
+      "head32": "8b8158040000c3660f1f840000000000564883ec204889ce803d5eb0c6fb0075",
+      "functionBytes": 32,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x9a78f70",
+      "head32": "8b81dc040000c3660f1f840000000000889121030000c3660f1f840000000000",
+      "functionBytes": 32,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x9aab770",
+      "head32": "8b81a8030000c3660f1f840000000000564883ec204889ce803dab69c5fb0075",
+      "functionBytes": 32,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x9a93a20",
+      "head32": "0fb6819b040000c30f1f8400000000005657534883ec304889cf803d63d900fc",
+      "functionBytes": 32,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x9a9bad0",
+      "head32": "41574156565755534883ec780f297424604889ce803d945a00fc000f84b10400",
+      "functionBytes": 1519,
+      "hotfixZeroRvas": [
+        "0x5702033",
+        "0x5701f2f",
+        "0x5702208"
+      ]
+    },
+    {
+      "rva": "0x9a9c0c0",
+      "head32": "41565657534883ec284889ce803dee5800fc000f8436020000803db360c6fb00",
+      "functionBytes": 806,
+      "hotfixZeroRvas": [
+        "0x5702193",
+        "0x5702171",
+        "0x5702123",
+        "0x570207d"
+      ]
+    },
+    {
+      "rva": "0xa791ce0",
+      "head32": "4156565755534883ec204989d64889cb803d2fc52ffb000f84920d00004885db",
+      "functionBytes": 3534,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x7af7f00",
+      "head32": "488b8138010000c30f1f8400000000005657534883ec204889d64889cf803d32",
+      "functionBytes": 32,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x7af6900",
+      "head32": "b800d00001c3662e0f1f840000000000564883ec600f297c24500f297424400f",
+      "functionBytes": 32,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x88da410",
+      "head32": "41574156415541545657534881ec400100004889d64989ce803d2303e8fc000f",
+      "functionBytes": 9949,
+      "hotfixZeroRvas": [
+        "0x575a752",
+        "0x5762350",
+        "0x57074a2",
+        "0x570215c",
+        "0x575a732"
+      ]
+    },
+    {
+      "rva": "0x92b4c30",
+      "head32": "415741565657534881eca00000004889d74989cf803d2ffc7ffc000f84cb0c00",
+      "functionBytes": 3606,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x9aab8e0",
+      "head32": "5657534883ec2089d34889ce803d5068c5fb000f85c9000000389e9b04000074",
+      "functionBytes": 433,
+      "hotfixZeroRvas": [
+        "0x5702143",
+        "0x56edefb",
+        "0x56ec1f6",
+        "0x57020da"
+      ]
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x56ec1f6",
+    "0x56edefb",
+    "0x5701f2f",
+    "0x5702033",
+    "0x570207d",
+    "0x57020da",
+    "0x5702123",
+    "0x5702143",
+    "0x570215c",
+    "0x5702171",
+    "0x5702193",
+    "0x5702208",
+    "0x57074a2",
+    "0x575a732",
+    "0x575a752",
+    "0x5762350",
+    "0x57771cf",
+    "0x577a11d"
+  ],
+  "evidence": "Installed PE static extraction; no live process or test execution"
+}

@@ -1,0 +1,236 @@
+{
+  "schema": "native-terrain-shapes-profile-v3",
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0xba56790",
+      "name": "slope set full cell; packed type/direction and clear water/path",
+      "head32": "41565657534883ec484489cf4d89c64989d04889ce48c744244000000000803d",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-ba56790.asm",
+      "sha256": "67f6916befaeb1f8d1a855e11dd9c070f2dc7494895659373cef9e0c4344b088"
+    },
+    {
+      "rva": "0xba56930",
+      "name": "slope removal; clear water/path/slope, preserve height/material",
+      "head32": "56574883ec484c89c64989d04889ca48c744244000000000803d6c60d1f9000f",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-ba56930.asm",
+      "sha256": "e158e5af6d1b796b31cc182b3665f5f1dbfe1828e943c8b8253221d8399cb14b"
+    },
+    {
+      "rva": "0xf5c88e0",
+      "name": "path set; rejects water, preserves height/material/slope",
+      "head32": "5657534883ec404489ce4c89c74989d04889ca48c744243800000000803d1940",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-f5c88e0.asm",
+      "sha256": "f35f89c62742378037324f49003a20eee853f6671740acc83a82283137a1cab8"
+    },
+    {
+      "rva": "0xf5c8a20",
+      "name": "path remove; preserves height/material/water/slope",
+      "head32": "56574883ec484c89c64989d04889ca48c744244000000000803dde3e1af6000f",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-f5c8a20.asm",
+      "sha256": "e1276c052ffc0e26e0247c6ee3569d017d8844a4554bf53086d120a3ce01445b"
+    },
+    {
+      "rva": "0xf5c8b60",
+      "name": "path UI create passes explicit integer one",
+      "head32": "4883ec284c89c04989d04889ca803da73d1af600753a8b4a2883f901742085c9",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-f5c8b60.asm",
+      "sha256": "a6af2e4d1d488f977f4ae33d63843d1d9be427ba03436a96c036cfac3213fc1f"
+    },
+    {
+      "rva": "0xf5c8360",
+      "name": "path brush closure captures fixed one",
+      "head32": "41574156565755534883ec384d89cf4d89c64889d34889cf8bac249000000080",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-f5c8360.asm",
+      "sha256": "3277e4738472ccbbb311604e5290284f437360226fca0e90434278b67f4179b1"
+    },
+    {
+      "rva": "0x9520360",
+      "name": "slope pack direction low nibble type high bits",
+      "head32": "4883ec2889d089ca803d43c724fc00750d83e20fc1e00409d04883c428c3488b",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-9520360.asm",
+      "sha256": "ac848bf8ea5f91e046cdc34712aa2aed2cec053484dc112996bc8ac35af1e323"
+    },
+    {
+      "rva": "0x9520300",
+      "name": "slope unpack",
+      "head32": "4883ec284d89c14989d089ca803d9ec724fc00751389d083e00f418900c1ea04",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-9520300.asm",
+      "sha256": "88f10c97fc7ccf799703b29ec7769b2a34a96a39723f61f14fa954461660cd85"
+    },
+    {
+      "rva": "0x95203b0",
+      "name": "direction 0/1/2/3 yaw 0/pi2/pi/minuspi2",
+      "head32": "564883ec404189d04889ce803df1c624fc000f85860000004183f80377254489",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-95203b0.asm",
+      "sha256": "5efd50e3abad0982cb23e71bbc533ab7fce1f750083b40ac82673612a33de924"
+    },
+    {
+      "rva": "0xba56f40",
+      "name": "normal axis direction mapping Z+/X+/Z-/X-",
+      "head32": "41565657534883ec384c89cb4d89c64889d74889ce803d21b103fa000f84a201",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-ba56f40.asm",
+      "sha256": "e91471aa3efda27a3fabc26426d6b1295306d9c8cde021f648958e5992292685"
+    },
+    {
+      "rva": "0xba56b10",
+      "name": "type 1/2/3 previews 9/11/13 create, 10/12/14 remove",
+      "head32": "41574156565755534881ec880000004489cf4c89c64189d04889cb488bac24f8",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-ba56b10.asm",
+      "sha256": "726f82a0d4329992fa719548450923cef630de83afe70384e1f2d4fcf26420f8"
+    },
+    {
+      "rva": "0x9520490",
+      "name": "slope type lookup and create",
+      "head32": "565755534883ec384489c789d64889cb803d8a1757fc000f84da000000c74424",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-9520490.asm",
+      "sha256": "94b84626b1fc2299b479094198219d1d5b7a41e14710281aa4c56c3ad581e7ef"
+    },
+    {
+      "rva": "0x9520650",
+      "name": "actual slope prefab parent/placement/collider",
+      "head32": "4156565755534883ec600f297424504489c74889d34889ce803dcd1557fc000f",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-9520650.asm",
+      "sha256": "4ffeabd60332a8c58702b635a9f0af3949bd2d9c02a3cf818a1a3ded69b1b173"
+    },
+    {
+      "rva": "0xba4c850",
+      "name": "material style+10 slope prefab dictionary",
+      "head32": "565755534883ec284c89ce4489c589d34889cf803da55504fa000f84b0000000",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-ba4c850.asm",
+      "sha256": "eb71977a4aef0b2346263759b5db212bc030f24f88216b2e088f7e480b7acbc2"
+    },
+    {
+      "rva": "0xba4c1a0",
+      "name": "material style+38 base corner config dictionary",
+      "head32": "565755534883ec284c89ce4489c589d34889cf803d385c04fa000f84b0000000",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-ba4c1a0.asm",
+      "sha256": "a24f813ed9d7631b2c7fedea77a0e5fbe83337a44b401f59da7b736719bfdfcb"
+    },
+    {
+      "rva": "0xba4c2e0",
+      "name": "material style+20 rule config dictionary",
+      "head32": "565755534883ec284c89ce4489c589d34889cf803dfa5a04fa000f84b0000000",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-ba4c2e0.asm",
+      "sha256": "ceddc853346401c94625789c29bd1ccc8436f6bcd8d395e360635392027ad0ca"
+    },
+    {
+      "rva": "0x119dfb20",
+      "name": "rule prefab or base-corner fallback creation",
+      "head32": "4156565755534883ec304589c689d34889cf803d4f240bf4000f84e800000048",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-119dfb20.asm",
+      "sha256": "343274838dd08fe1514d689480a9de02168b70bf4519750e8d3eaf2791bbd657"
+    },
+    {
+      "rva": "0xf5c9000",
+      "name": "all corner types 0..7 and prefab+18",
+      "head32": "4157415641554154565755534881ecb8000000440f298c24a0000000440f2984",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-f5c9000.asm",
+      "sha256": "4567b55db9f59eb9312648798a8bbc488b863f861209543d083a8900e44b00b0"
+    },
+    {
+      "rva": "0xba4b8f0",
+      "name": "style dictionaries initialized from actual material config",
+      "head32": "554157415641545657534881ec90000000488dac248000000048c745f0feffff",
+      "evidence": ".runtime\\map-foundation-20261017\\terrain-shapes\\shape-evidence-ba4b8f0.asm",
+      "sha256": "365bd250ea9ef2ca142d3f371441674d6cc2913312622d93e6ebafdf636e6f39"
+    }
+  ],
+  "guardClassifier": "branch-body-v1",
+  "hotfixZeroRvas": [
+    "0x576c75d",
+    "0x576c86b",
+    "0x576c90f",
+    "0x576c917",
+    "0x576c91b",
+    "0x576c91c",
+    "0x576c91d",
+    "0x576c9ba",
+    "0x576c9bb",
+    "0x576c9be",
+    "0x576c9c0",
+    "0x576ca0d",
+    "0x576ca96",
+    "0x576ca9c",
+    "0x576ca9f",
+    "0x576caaf",
+    "0x576cab1",
+    "0x576cab2",
+    "0x576cab3",
+    "0x576cab4",
+    "0x576cab5",
+    "0x576cb69",
+    "0x576cb6a",
+    "0x576cb6b",
+    "0x576cb70",
+    "0x576cb74",
+    "0x576cbb5"
+  ],
+  "initializationBooleanRvas": [
+    "0x5a910f2",
+    "0x5a91125",
+    "0x5a91c31",
+    "0x5a91c3c",
+    "0x5a91df0",
+    "0x5a91df2",
+    "0x5a91df4",
+    "0x5a91e0f",
+    "0x5a91f88",
+    "0x5a9207d",
+    "0x5a935a0"
+  ],
+  "semantics": {
+    "pathField": 5,
+    "pathStateOffset": "0x28",
+    "pathSetValue": 1,
+    "pathRemoveValue": 0,
+    "slopeField": 6,
+    "slopeStateOffset": "0x10",
+    "slopeTypeShift": 4,
+    "slopeDirectionMask": 15,
+    "types": [
+      1,
+      2,
+      3
+    ],
+    "directionIds": {
+      "z+": 0,
+      "x+": 1,
+      "z-": 2,
+      "x-": 3
+    },
+    "previewCreateCodes": {
+      "1": 9,
+      "2": 11,
+      "3": 13
+    },
+    "previewRemoveCodes": {
+      "1": 10,
+      "2": 12,
+      "3": 14
+    },
+    "symbolicTypeLabelsVerified": false,
+    "unverifiedUiLabels": [
+      "front",
+      "left90",
+      "right90"
+    ],
+    "heightModifiedByShapeBrush": false,
+    "slopeClearsWaterAndPath": true,
+    "pathCreateRejectsWater": true,
+    "pathPreservesSlope": true,
+    "slopePrefabDictionaryOffset": "0x10",
+    "baseCornerDictionaryOffset": "0x38",
+    "ruleDictionaryOffset": "0x20",
+    "baseConfigPrefabOffset": "0x18",
+    "localGridSteps": [
+      5.0,
+      2.5,
+      5.0
+    ],
+    "arbitraryContinuousSurfaceUnsupported": true
+  },
+  "nativeCalled": false,
+  "gameConnected": false
+}

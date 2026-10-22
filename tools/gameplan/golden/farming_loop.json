@@ -1,0 +1,402 @@
+{
+  "consts": [
+    {
+      "alias": "harvest",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "crop_count",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "enough",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "consume",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "consume",
+      "portIndex": 2,
+      "slot": "int",
+      "value": -2
+    },
+    {
+      "alias": "bake",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000002
+    },
+    {
+      "alias": "bake",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "short",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "材料不足"
+    },
+    {
+      "alias": "open_shop",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 0
+    },
+    {
+      "alias": "sold_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "商店交易完成"
+    },
+    {
+      "alias": "money_note",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "货币发生变化"
+    },
+    {
+      "alias": "ter_read",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1115684864
+    },
+    {
+      "alias": "ter_cmp",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 100
+    },
+    {
+      "alias": "win",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "通关"
+    },
+    {
+      "alias": "keep",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "继续加油"
+    }
+  ],
+  "edges": [
+    {
+      "from": "plot_enter",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "plot_enter",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "crop_used",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "crop_count",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "crop_count",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "enough",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "crop_used",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "gate",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "enough",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "gate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "consume",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "crop_used",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "consume",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "consume",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "bake",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "crop_used",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "bake",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "short",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "stall_enter",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "open_shop",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "stall_enter",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "open_shop",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "stall_enter",
+      "fromIndex": 2,
+      "fromKind": 4,
+      "to": "open_shop",
+      "toIndex": 1,
+      "toKind": 3
+    },
+    {
+      "from": "sold",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sold_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "money_changed",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "money_note",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "money_changed",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "ter_read",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "ter_read",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "ter_cmp",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "money_changed",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "ter_gate",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "ter_cmp",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "ter_gate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "ter_gate",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "win",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "ter_gate",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "keep",
+      "toIndex": 0,
+      "toKind": 1
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_FARM_LOOP",
+  "nodes": [
+    {
+      "alias": "plot_enter",
+      "definitionId": 92,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "harvest",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "crop_used",
+      "definitionId": 733,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "crop_count",
+      "definitionId": 690,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "enough",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "gate",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "consume",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "bake",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "short",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "stall_enter",
+      "definitionId": 92,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "open_shop",
+      "definitionId": 702,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sold",
+      "definitionId": 701,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sold_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "money_changed",
+      "definitionId": 684,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "money_note",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "ter_read",
+      "definitionId": 691,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "ter_cmp",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "ter_gate",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "win",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "keep",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

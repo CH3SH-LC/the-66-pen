@@ -1,0 +1,753 @@
+{
+  "$comment": "G01 tool/state contract. Normative machine-readable source of truth for the Miliastra business tool surface. Downstream implementers (T03, T05, T06, T08, and through T05/T06 also T09, T10) MUST implement these enums verbatim. Validated by ./validate.py.",
+  "contractName": "miliastra-tool-state",
+  "contractVersion": "1",
+  "schemaVersion": 1,
+  "taskId": "G01",
+  "owner": "GPT-6",
+  "state": "design-delivered",
+  "authority": {
+    "note": "Every value below is derived from a file that exists on disk. Nothing here is invented; where the plan text and the code disagree, the disagreement is recorded under conflicts[] and resolved explicitly.",
+    "sources": [
+      "backend/entity_server.py",
+      "tools/authoring/author.py",
+      "tools/game-executor/scene_cli.py",
+      "tools/game-executor/native_write_review.py",
+      "tools/game-executor/orchestrate_write_review.py",
+      "tools/game-executor/cleanup_owned_entities.py",
+      "tools/game-executor/build_scene_profile.py",
+      "tools/editor-bridge/elevated-request.py",
+      "tools/editor-bridge/elevated-runner.ps1",
+      "tools/editor-bridge/compatibility-guard.ps1",
+      "docs/entity-create/MCP-BUSINESS-CONTRACT.md",
+      "docs/cordis-plan/TOOL-CONTRACT.md",
+      "docs/cordis-plan/EXECUTION-CONTRACT.md",
+      "docs/cordis-plan/templates/RESULT.json",
+      "docs/cordis-plan/templates/CASE.json",
+      "docs/cordis-plan/tasks/T03.md",
+      "docs/cordis-plan/tasks/T05.md",
+      "docs/cordis-plan/tasks/T06.md",
+      "docs/cordis-plan/tasks/T08.md",
+      "docs/cordis-plan/tasks/T09.md",
+      "docs/cordis-plan/tasks/T10.md",
+      "vendor/deepseek-harness/packages/mcp/mcp-client/src/index.ts",
+      "vendor/deepseek-harness/packages/core/tools/src/index.ts"
+    ]
+  },
+
+  "operationState": {
+    "closed": true,
+    "description": "Lifecycle state of ONE business operation, identified by operationId, as observable on disk. This is the vocabulary T06's business ledger stores.",
+    "values": [
+      "never-claimed",
+      "claimed",
+      "dispatched",
+      "known-complete",
+      "known-failed",
+      "outcome-unknown"
+    ],
+    "terminal": ["never-claimed", "known-complete", "known-failed"],
+    "resumableOnlyByQuery": ["claimed", "dispatched", "outcome-unknown"],
+    "discriminator": {
+      "description": "The single rule that separates claimed from dispatched. It is already implemented by the native CLI and is quoted verbatim: scene_cli.py:685-694 computes possibly_started = bool(run_path and any((Path(run_path)/name).exists() for name in ('direct-launch-intent.json', 'launch.claim', 'attempt.used'))) and then result['outcomeUncertain'] |= possibly_started. The business layer must use the same three file names plus two journal-level names, and must never infer 'claimed' from the absence of a reply.",
+      "dispatchEvidenceFiles": [
+        "<nativeRun>/direct-launch-intent.json",
+        "<nativeRun>/launch.claim",
+        "<nativeRun>/attempt.used",
+        "<journal>/<operationId>/helper-request.json",
+        "<journal>/<operationId>/bridge-request.json"
+      ],
+      "rule": "evidence present -> dispatched; evidence absent AND a claim exists -> claimed; no claim at all -> never-claimed"
+    },
+    "rules": [
+      {
+        "id": "OPS-1",
+        "rule": "A claim is written before any dispatch, atomically, and is never deleted. Evidence: author.py:229-241 (directory.mkdir() is the atomic claim, exclusive_json writes claim.json with the command fingerprint)."
+      },
+      {
+        "id": "OPS-2",
+        "rule": "A mutation whose state is claimed, dispatched or outcome-unknown is NEVER re-dispatched, neither with the same operationId nor with a new one, until it has been reconciled from the original receipt. Evidence: author.py:238 raises 'REQUEST_OUTCOME_UNKNOWN; inspect evidence; no retry'; T06.md:64 '不换 ID 重试'."
+      },
+      {
+        "id": "OPS-3",
+        "rule": "rejected may only be produced while no dispatch evidence exists. A refusal after the dispatch boundary is a contract violation. Evidence: author.py:74-83 refusal() pins outcomeUncertain=False and is only reachable before the journal directory exists; author.py:213-223 comment 'a rejected build must leave no trace to reconcile later'."
+      },
+      {
+        "id": "OPS-4",
+        "rule": "outcome-unknown is never a euphemism for claimed. If the system cannot tell whether the request left the process, the honest value is dispatched/outcome-unknown, never claimed. Anti-pattern on disk: entity_server.py:568-578 maps 'a claim exists' and 'no claim exists' onto two different labels, but maps 'claim exists without result' onto a single hard-coded string and never checks the dispatch evidence."
+      },
+      {
+        "id": "OPS-5",
+        "rule": "The transition to a terminal state happens exactly once, when result.json is published. A late receipt attaches to the operation that produced it, never to a newer one. Evidence: author.py:261 exclusive_json(directory/'result.json', ...) - the exclusive create is the publication event; T03.md:75 '迟到回执 ... 写入原 operation 证据，不激活旧实例'."
+      }
+    ],
+    "aliasesOnDisk": {
+      "never-claimed": ["never-claimed"],
+      "claimed": [],
+      "dispatched": [],
+      "known-complete": ["complete"],
+      "known-failed": [],
+      "outcome-unknown": ["claimed-without-result"]
+    }
+  },
+
+  "reconcileState": {
+    "closed": true,
+    "description": "T06.md:42 uses known-success/known-failure/unknown. That is a PROJECTION of operationState, not a second truth. Implement it as a total function so the two can never disagree.",
+    "projection": {
+      "known-success": ["known-complete"],
+      "known-failure": ["known-failed"],
+      "unknown": ["claimed", "dispatched", "outcome-unknown"],
+      "never-claimed": ["never-claimed"]
+    },
+    "rule": "The projection is many-to-one and lossy in one direction only: reconcileState must never be persisted as the authoritative value; operationState is. Evidence: T06.md:42 (never infer never-written from not-seen)."
+  },
+
+  "businessState": {
+    "closed": true,
+    "description": "The model-facing verdict. This is the field named state in the tool result. Closed set fixed by TOOL-CONTRACT.md:48-52 and T05.md:37.",
+    "values": ["rejected", "pending", "unknown", "failed", "completed"],
+    "projection": {
+      "rejected": ["never-claimed"],
+      "pending": ["claimed", "dispatched"],
+      "unknown": ["outcome-unknown"],
+      "failed": ["known-failed"],
+      "completed": ["known-complete"]
+    },
+    "nextActionFor": {
+      "rejected": "fix-input",
+      "pending": "poll-same-operation",
+      "unknown": "reconcile",
+      "failed": "report-and-repair",
+      "completed": "none"
+    },
+    "rules": [
+      {
+        "id": "STATE-1",
+        "rule": "state is the only business verdict. ok and isError are transport-level. Required: ok === (state === 'completed') and result.isError === (state !== 'completed'). Generator counterexample on disk: entity_server.py:487-495 returns _ok(...) with isError false, created false and liveReadback fail, i.e. a transport success carrying a business failure. G01.md:46 names this exact case."
+      },
+      {
+        "id": "STATE-2",
+        "rule": "Any success-shaped boolean the tool returns (created, saved, deleted, placed) is derived from state and from counted evidence, never computed independently. created === true requires state === 'completed'."
+      },
+      {
+        "id": "STATE-3",
+        "rule": "T06.md:42's known-success/known-failure/unknown is reconcileState, not state. Do not emit three vocabularies in one object."
+      }
+    ]
+  },
+
+  "stages": {
+    "closed": true,
+    "description": "Per-tool-call stage reporting. Separately resolved, separately reported. The set is fixed by TOOL-CONTRACT.md:32-37 and T05.md:38.",
+    "values": ["liveReadback", "saveDiff", "reopen", "runtime", "cleanup"],
+    "statusValues": ["not-run", "pass", "fail", "blocked", "unknown", "not-applicable"],
+    "statusValueNotes": {
+      "not-run": "this tool call does not perform this stage. MUST carry a reason. NEVER means fail.",
+      "pass": "the stage completed and is backed by at least one evidenceRef.",
+      "fail": "the stage ran and did not meet its own criterion. MUST carry at least one evidenceRef and a reason.",
+      "blocked": "the stage cannot proceed for a named external reason. MUST carry reason.",
+      "unknown": "the stage was attempted and its outcome could not be established. MUST carry reason. This is the correct value when the evidence is unreadable, not not-run.",
+      "not-applicable": "the stage can never apply to this capability. MUST carry reason, and is forbidden for any item the 07 checklist marks required."
+    },
+    "aliasesAcceptedOnInput": {
+      "persistence": "saveDiff",
+      "failed": "fail"
+    },
+    "emittableNames": ["saveDiff"],
+    "aliasRule": "persistence is accepted as an input alias for one contract version and MUST NOT be emitted: TOOL-CONTRACT.md:55 '新接口统一使用 stages.saveDiff；旧 persistence 只在 T05 兼容迁移层映射，不并行维护成功真相'. The literal token 'failed' is never a valid status; the token is 'fail'.",
+    "stageLocality": {
+      "id": "STAGE-1",
+      "rule": "A pass in one stage is evidence for that stage only and for no other. liveReadback pass never implies saveDiff pass; saveDiff pass never implies reopen pass; reopen pass never implies runtime pass. Evidence: entity_server.py:22-27 docstring states this as the reason the five fields exist separately; TOOL-CONTRACT.md:57 '创建数量+1不等于模板/属性验收'.",
+      "enforcement": "Each stage object MUST carry its own evidenceRef array. A result with stages.<x>.status === 'pass' and an empty evidenceRef is invalid and must be refused before publication (T05.md:43, T05.md:76 '缺字段 ... 拒绝发布结果')."
+    },
+    "stageApplicability": {
+      "note": "Which tool may assert which stage, given the layer it actually drives. Anything else is not-run with a reason.",
+      "entity.discover": ["liveReadback"],
+      "entity.read": ["liveReadback"],
+      "entity.create": ["liveReadback"],
+      "entity.save": ["liveReadback", "saveDiff"],
+      "entity.cleanup": ["liveReadback", "cleanup"],
+      "graph.*": ["liveReadback"],
+      "reopen": ["liveReadback", "reopen"],
+      "runtime.observe": ["liveReadback", "runtime"]
+    },
+    "saveDiffDetailKeys": ["saveInvocation", "savedContent", "allowedDelta", "unrelatedUnchanged"],
+    "saveDiffRule": {
+      "id": "STAGE-2",
+      "rule": "nativeStatus === 0 is an execution fact, not a saveDiff pass. Required: saveDiff.status === 'pass' only when the formal-file differential meets the G02 rule set. Counterexample on disk: .runtime/authoring/requests/mcpsave1790669923/result.json has backend.nativeStatus 0, backend.persistenceVerified false and backend.gilChanged {'1073741839': true}, while backend/entity_server.py:549-551 reports persistence status 'pass' with detail 'native save status 0 on the target level'. G01.md:47 names this exact case."
+    }
+  },
+
+  "taskStages": {
+    "closed": true,
+    "description": "The task-run-record stage set, distinct from the tool-call stage set. Used by .runtime/cordis-plan-work/<taskId>/<run>/result.json.",
+    "values": ["source", "offline", "loader", "mcp", "aiToolCall", "liveReadback", "saveDiff", "reopen", "runtime", "cleanup"],
+    "authority": "docs/cordis-plan/templates/RESULT.json:11-50, which docs/cordis-plan/support/validate_plan.py validates.",
+    "relationship": "stages (tool) is a strict subset of taskStages (task). source/offline/loader/mcp/aiToolCall are pipeline stages that no single business tool call can assert; a tool must never claim them.",
+    "entryShape": {"status": "one of stages.statusValues", "evidence": "array of project-relative path strings"}
+  },
+
+  "nextAction": {
+    "closed": true,
+    "values": ["none", "fix-input", "poll-same-operation", "reconcile", "report-and-repair", "await-human"],
+    "notes": {
+      "none": "state completed; nothing further for this operation",
+      "fix-input": "a pre-dispatch refusal; correct the input or the prerequisite and submit a NEW operationId",
+      "poll-same-operation": "state pending; query the SAME operationId; never dispatch",
+      "reconcile": "state unknown; read the original receipt; never dispatch",
+      "report-and-repair": "state failed; use changed[] and failedItems[] to plan a bounded repair",
+      "await-human": "the execution layer is unavailable or blocked; a human must act. This is the only value a tool may use to ask for elevation."
+    },
+    "freeTextRule": "nextAction MUST be one of these tokens. Free-text guidance goes to nextActionDetail. Counterexample on disk: .runtime/cordis-plan-work/G01/20260929T154241270706Z-0f8890b09662400eaa225cbda072402d/result.json carries nextAction 'Read dispatch.md and verify prerequisites with the coordinator.'"
+  },
+
+  "idempotency": {
+    "description": "The exact rules implemented by tools/authoring/author.py:209-262, verified offline by the G01 harness (see the decision record). The business layer must not weaken or duplicate them.",
+    "keyField": "operationId",
+    "aliasesAcceptedOnInput": {"requestId": "operationId"},
+    "keyShape": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$",
+    "keyShapeSource": "author.py:211 and author.py:432; backend/entity_server.py:156-159 checks the same shape with a 1..80 bound.",
+    "fingerprint": {
+      "definition": "sha256 over the canonical JSON encoding of the WHOLE bound command, not over business parameters alone.",
+      "encoding": "json.dumps(value, ensure_ascii=False, sort_keys=True, allow_nan=False)",
+      "source": "author.py:90-92 (encoded), author.py:227 (fingerprint)",
+      "boundFields": ["backend", "action", "levelId", "mutating", "session", "review", "baseline", "elevatedQueue", "templateId", "position", "rotation", "scale"],
+      "boundFieldsSource": "author.py:343-359 and author.py:385-387; PATH_FIELDS = ('session', 'review', 'baseline')",
+      "consequence": "Replaying an operation with a freshly derived review produces a different review path, therefore a different fingerprint, therefore REQUEST_ID_CONFLICT instead of a replay."
+    },
+    "rules": [
+      {
+        "id": "IDEM-1",
+        "rule": "same operationId + same bound command -> replay the original receipt, dispatch nothing.",
+        "observed": "author.py:236-239 returns dict(read_json(receipt), replayed=True)",
+        "output": {"replayed": true, "retryAttempted": false}
+      },
+      {
+        "id": "IDEM-2",
+        "rule": "same operationId + different bound command -> refuse, dispatch nothing.",
+        "observed": "author.py:234-235 raises ValueError('REQUEST_ID_CONFLICT')",
+        "output": {"error": "REQUEST_ID_CONFLICT", "replayed": false, "retryAttempted": false}
+      },
+      {
+        "id": "IDEM-3",
+        "rule": "claim present, result absent -> outcome unknown, dispatch nothing, retry forbidden.",
+        "observed": "author.py:236-238 raises ValueError('REQUEST_OUTCOME_UNKNOWN; inspect evidence; no retry')"
+      },
+      {
+        "id": "IDEM-4",
+        "rule": "journal directory present, claim absent -> REQUEST_INCOMPLETE_CLAIM; no retry.",
+        "observed": "author.py:231-233"
+      },
+      {
+        "id": "IDEM-5",
+        "rule": "The business layer MUST resolve idempotency BEFORE deriving any baseline, backup or review. Order: (1) look up the business ledger by operationId; (2) if a claim exists, return its state and dispatch nothing; (3) only if the id was never claimed may baseline/backup/review be produced and a dispatch be attempted. Deriving a review before the lookup turns a legitimate replay into REQUEST_ID_CONFLICT.",
+        "evidence": "author.py:227-239 combined with author.py:347-349 ('Supplied paths are part of the command, so the journal fingerprint binds them: replaying the same request id with a different session, review or baseline is a conflict, not a replay').",
+        "defectOnDisk": "backend/entity_server.py:480-486 calls derive_review() before dispatch_write(); a second identical call therefore derives a second review and is refused instead of replaying. T05/T06 must fix the order."
+      },
+      {
+        "id": "IDEM-6",
+        "rule": "Non-finite numbers are rejected before the fingerprint is even computable (allow_nan=False). NaN and Infinity can never reach the native layer through this path.",
+        "observed": "author.py:92 and author.py:415-417 (scale must be strictly positive); backend/entity_server.py:211-216 rejects non-finite components as TRANSFORM_INVALID"
+      },
+      {
+        "id": "IDEM-7",
+        "rule": "A read (mutating false) that fails never enters the mutation lane: outcomeUncertain is computed as `command['mutating'] and backend.outcomeUncertain` and is therefore false for a read even when the transport died. Verified offline, and cross-checked against .runtime/authoring/requests/author-live-lookup-01/result.json which reads '\"ok\": false, \"outcomeUncertain\": false' at top level while its backend carries 'BRIDGE_TRANSPORT_FAILED'.",
+        "observed": "author.py:252-253 and author.py:258-260"
+      },
+      {
+        "id": "IDEM-8",
+        "rule": "retryAttempted is always reported and is always false. No layer in this project retries automatically. Evidence: every result.json in .runtime/authoring/requests/ carries retryAttempted false; author.py:250, author.py:259, elevated-request.py:89, elevated-request.py:96, elevated-runner check comments."
+      },
+      {
+        "id": "IDEM-9",
+        "rule": "The queue has a SECOND, independent idempotency key one layer down: the 32-hex queueRequestId. Its permanent marker <rid>.submission.json is never deleted, so a re-send with identical bytes only polls and a re-send with different bytes raises QUEUE_REQUEST_ID_PAYLOAD_MISMATCH. That key is execution-layer and must never appear in a tool argument.",
+        "observed": "elevated-request.py:103-122; comment at :106-107 'Reusing an ID with different contents is an error, never a second dispatch.'"
+      }
+    ]
+  },
+
+  "boundary": {
+    "description": "What a tool call may carry and what it must never carry, because the helper owns execution.",
+    "principle": "The model supplies business parameters and opaque handles that this project minted. Everything that selects WHAT RUNS belongs to the execution layer. Evidence: backend/entity_server.py:14-20 and :113-114; docs/entity-create/MCP-BUSINESS-CONTRACT.md:19-23.",
+    "allowedInToolCall": [
+      {"name": "targetHandle", "kind": "opaque token minted by mw.scene.discoverLevel", "aliasOnDisk": "levelHandle"},
+      {"name": "operationId", "kind": "business idempotency key", "aliasOnDisk": "requestId"},
+      {"name": "caseId", "kind": "optional case binding"},
+      {"name": "contractVersion", "kind": "string, e.g. \"1\""},
+      {"name": "expectedRevision", "kind": "opaque revision token previously returned by this server; never a caller-computed digest"},
+      {"name": "capabilityId", "kind": "stable business capability id"},
+      {"name": "templateId", "kind": "integer from the supported set"},
+      {"name": "position / rotation / scale", "kind": "three finite float32 each"},
+      {"name": "entityIds / objectIds", "kind": "positive uint32 ids that came from this run's own receipts"},
+      {"name": "createdByRequestIds", "kind": "operationIds of this run's own creates"},
+      {"name": "dryRun", "kind": "boolean"}
+    ],
+    "forbiddenInToolCall": [
+      {"name": "scriptPath", "why": "a request field may not select code to run", "enforcedBy": "elevated-runner.ps1:529 'Fixed-entry dispatch functions. No request field selects an executable or script.'"},
+      {"name": "executable / interpreter", "why": "same", "enforcedBy": "elevated-runner.ps1:737-738 uses two fixed literal paths"},
+      {"name": "argv / shell / cwd", "why": "the transport is not a shell", "enforcedBy": "elevated-runner.ps1:684 and :723 build the argument vector from validated data only; backend/entity_server.py:176 passes a list to subprocess.run with no shell"},
+      {"name": "plan (file path)", "why": "a caller-supplied file whose contents define a batch write is a passthrough of the write itself", "enforcedBy": "orchestrate_write_review.py:134-144 reads --plan and turns it into placements; scene_cli.py accepts --plan only for create-batch. The tool surface must offer batch placements as inline structured parameters, or not at all.", "status": "create-batch is NOT offered on the current tool surface; T14 must not add a path-shaped plan"},
+      {"name": "hash to compare", "why": "the server recomputes every digest it trusts; accepting a caller digest would let the caller declare a pass", "enforcedBy": "native_write_review.py:36 and :68 recompute sha256 and refuse with BASELINE_ARTIFACT_CHANGED:<name> / REVIEW_EVIDENCE_CHANGED:<name>; compatibility-guard.ps1:12-18 'There is deliberately no parameter that accepts a caller-supplied hash and no bypass switch'"},
+      {"name": "pid / tid", "why": "process identity is observed, not asserted", "enforcedBy": "load_handle re-hashes the discovery receipt and refuses with LEVEL_HANDLE_RECEIPT_CHANGED; validate_review compares SESSION_FIELDS field by field"},
+      {"name": "timeout", "why": "waiting is the caller's business; the dispatch timeout is a server constant", "enforcedBy": "backend/entity_server.py:168 sets timeout=420 and :249 timeout=120, :424 timeout=600; elevated-runner.ps1 contains no request field named timeout at all"},
+      {"name": "elevatedQueue / queueDir", "why": "resolved from the project pointer and re-proved against the helper's own status reply", "enforcedBy": "backend/entity_server.py:224-270 with ELEVATED_QUEUE_OUTSIDE_PROJECT_OR_MISSING"},
+      {"name": "sessionPath", "why": "a fresh discovered session record; the model must not build one", "enforcedBy": "elevated-request.py:368-408 Resolve-NativeJsonPath confines it to an existing ordinary .json under <project>/.runtime"},
+      {"name": "reviewPath / baselineRun / recoveryDir", "why": "review, baseline and recovery are produced by the execution layer from raw materials", "enforcedBy": "orchestrate_write_review.py:20-24 'There is no --reviewed, --state or --approve flag: the verdict is computed here'; backend/entity_server.py:343-363"},
+      {"name": "bridge runId", "why": "an execution-layer handle", "enforcedBy": "G01.md:25 '不让模型拼 PID 或 bridge runId'; owned by the removal in decisions[] below"},
+      {"name": "helperPid / pinsDigest / deadlineUtc", "why": "read from the helper status reply, never supplied", "enforcedBy": "backend/entity_server.py:249-270"},
+      {"name": "path of any evidence artifact", "why": "returning a raw file path as the result would invite a file tool to bypass the projection", "enforcedBy": "G01.md:51; T04 owns the business projection"}
+    ],
+    "closedSchemaIsTheMechanism": {
+      "nativeSceneFields": ["kind", "action", "sessionPath", "levelId", "reviewPath (non-inspect)", "templateId+position+rotation+scale (create)", "placements (create-batch)"],
+      "source": "elevated-request.py:285-293 (validate_native_scene_request) and elevated-runner.ps1:412-418 and :457-462",
+      "rejectionCodes": ["NATIVE_SCENE_FIELDS_INVALID", "NATIVE_SCENE_FIELD_NOT_ALLOWED:<name>", "NATIVE_SCENE_FIELD_MISSING:<name>", "CALL_FIELD_NOT_ALLOWED:<name>", "AUTHOR_GRAPH_FIELDS_INVALID"],
+      "runnerComment": "elevated-runner.ps1:410-411 'Closed schema. The action selects exactly which fields exist, so hash, exe, run, wrapper, plan and baseline paths are not merely unused but unrepresentable.'"
+    },
+    "knownGaps": [
+      "The runner's `fs`, `load` and `status` request kinds have NO closed field set: extra keys are accepted and silently ignored (elevated-runner.ps1:783-802, :804-816; elevated-fs-ops.ps1:83-285). No business tool reaches those kinds today; if one ever does, a closed schema must be added first.",
+      "Grep shows no mutex or single-instance lock in elevated-runner.ps1. Two helpers against one queue directory are not prevented by the runner. The queue carries no `timeout` field at any point.",
+      "The runner's native-scene action set is a FOURTH copy of a whitelist (with elevated-request.py:238, build_scene_profile.py TEMPLATES and OwnedEntityDelete.cs), and all of them are compared as exact sets. A tool that advertises a capability must not be the authority for whether the native layer will accept it."
+    ]
+  },
+
+  "errorTaxonomy": {
+    "description": "Closed taxonomy of the codes this tool surface may emit, each with the phase in which it may be produced. A code that appears outside this table is a contract violation.",
+    "disposition": {
+      "closed": true,
+      "values": ["refusal-before-dispatch", "version-gate", "failure-after-dispatch", "unknown-after-dispatch"],
+      "sideEffect": {
+        "refusal-before-dispatch": "none",
+        "version-gate": "none",
+        "failure-after-dispatch": "observed",
+        "unknown-after-dispatch": "possible"
+      },
+      "rule": "disposition is determined by WHERE the code is raised, not by the code alone. A code whose disposition is context-dependent MUST be resolved by its emitting call site; the emitter supplies phase explicitly. This is the rule that a single catch-all code cannot satisfy.",
+      "contextDependentRows": "Exactly three codes in codes[] have disposition null and contextDependent true, and they are the only three allowed to appear on both sides of the boundary: READBACK_FAILED, READBACK_WRONG_LEVEL and READBACK_NOT_ACCEPTED. A contextDependent row lists its permitted values in allowedDispositions, and the emitter must pick one of them and report the phase. Every other row's disposition is fixed and may not be overridden by an emitter.",
+      "antiPattern": "backend/entity_server.py:138-149 _fail() produces one shape with every stage not-run and no phase, for both pre-dispatch and post-dispatch failures. A post-write readback failure (entity_server.py:497) is therefore reported as if nothing had happened. _fail() must be split into _refuse() and _unknown()."
+    },
+    "upstreamPassthrough": {
+      "rule": "Codes from the ledger, queue, runner and native layers are carried inside error.upstream = {layer, code, message}, and are NEVER the top-level error.code. The top-level code is always from the table below.",
+      "layers": ["business", "ledger", "queue-client", "queue-runner", "native-cli", "native-probe", "bridge"]
+    },
+    "codes": [
+      {"code": "REQUEST_ID_INVALID", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:162-165; author.py:211-212"},
+      {"code": "REQUEST_ID_CONFLICT", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "author.py:234-235"},
+      {"code": "REQUEST_INCOMPLETE_CLAIM", "disposition": "refusal-before-dispatch", "nextAction": "reconcile", "source": "author.py:232-233"},
+      {"code": "REQUEST_OUTCOME_UNKNOWN", "disposition": "unknown-after-dispatch", "nextAction": "reconcile", "source": "author.py:237-238", "note": "the canonical unknown. Never retried with the same or a new id."},
+      {"code": "NATIVE_WRITE_REVIEW_REQUIRED", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "author.py:53-57 and :213-217; scene_cli.py:269; native_write_review.py:54"},
+      {"code": "CAPABILITY_NOT_ENABLED", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "new in v1: the business layer must refuse a capabilityId outside the profile's supported set before touching the execution layer"},
+      {"code": "CONTRACT_VERSION_UNSUPPORTED", "disposition": "version-gate", "nextAction": "fix-input", "source": "TOOL-CONTRACT.md:15 '不兼容拒绝而非猜测'"},
+      {"code": "INCOMPATIBLE_VERSION", "disposition": "version-gate", "nextAction": "await-human", "source": "author.py:220-223, :448-449; orchestrate_write_review.py:395-396; compatibility-guard.ps1 EDITOR_VERSION_UNSUPPORTED"},
+      {"code": "TARGET_HANDLE_INVALID", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:280-281 as LEVEL_HANDLE_INVALID"},
+      {"code": "TARGET_HANDLE_UNKNOWN", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:283-284 as LEVEL_HANDLE_UNKNOWN"},
+      {"code": "TARGET_HANDLE_RECEIPT_CHANGED", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:289-290 as LEVEL_HANDLE_RECEIPT_CHANGED"},
+      {"code": "TARGET_HANDLE_UNVERIFIED", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:291-292 as LEVEL_HANDLE_UNVERIFIED"},
+      {"code": "TARGET_STALE_REVISION", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "new in v1 for TOOL-CONTRACT.md:12 expectedRevision; the same idea is already enforced as REVIEW_EVIDENCE_CHANGED / BASELINE_SESSION_MISMATCH:<key> in native_write_review.py:61,68-70"},
+      {"code": "TEMPLATE_ID_NOT_AN_INTEGER", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:464-465"},
+      {"code": "TEMPLATE_NOT_SUPPORTED", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:466-470; the native layer refuses independently with NATIVE_SCENE_TEMPLATE_NOT_ALLOWED:<id>"},
+      {"code": "TRANSFORM_INVALID", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:207-217"},
+      {"code": "SCALE_NOT_POSITIVE", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:218-220"},
+      {"code": "LEVEL_AT_CAPACITY", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:482-483; build_scene_profile.py MAX_ENTITIES = 512"},
+      {"code": "EXECUTION_LAYER_UNAVAILABLE", "disposition": "refusal-before-dispatch", "nextAction": "await-human", "source": "merges backend/entity_server.py ELEVATED_POINTER_MISSING :238-239, ELEVATED_HEARTBEAT_ABSENT :245-248, ELEVATED_HELPER_NOT_USABLE :254-256, ELEVATED_HELPER_DEADLINE_PASSED :261-265, SCOPE_EXPIRED_OR_CLOSED author.py:116; the specific cause is carried in error.upstream.code"},
+      {"code": "EXECUTION_LAYER_BLOCKED", "disposition": "refusal-before-dispatch", "nextAction": "await-human", "source": "backend/entity_server.py:257-260 as ELEVATED_HELPER_BLOCKED; upstream NATIVE_SCENE_PREVIOUS_OUTCOME_UNRESOLVED elevated-runner.ps1:653-654"},
+      {"code": "EXECUTION_LAYER_BUSY", "disposition": "refusal-before-dispatch", "nextAction": "reconcile", "source": "elevated-runner.ps1:653-654 NATIVE_SCENE_PREVIOUS_OUTCOME_UNRESOLVED, :661 NATIVE_SCENE_ALREADY_ATTEMPTED, :615 AUTHOR_GRAPH_ALREADY_ATTEMPTED, reopen-lifecycle.ps1:55 REOPEN_ALREADY_CLAIMED_NO_REPLAY, :781 REOPEN_PENDING_WRITE_BLOCKED"},
+      {"code": "EVIDENCE_INTEGRITY_FAILED", "disposition": "refusal-before-dispatch", "nextAction": "await-human", "source": "native_write_review.py BASELINE_ARTIFACT_CHANGED:<name>, REVIEW_EVIDENCE_CHANGED:<name>, RECOVERY_COPY_OR_FORMAL_GIL_CHANGED, WRITE_PROFILE_SOURCE_HASH_MISMATCH; orchestrate_write_review.py ACCOUNT_BACKUP_DISAGREES_WITH_FORMAL_GIL, EXISTING_RECOVERY_COPY_DIFFERS_FROM_FORMAL_GIL; elevated-runner.ps1 DISPATCH_PIN_CHANGED:<path>, DISPATCH_SOURCE_SET_CHANGED"},
+      {"code": "UPSTREAM_RECEIPT_UNREADABLE", "disposition": "unknown-after-dispatch", "nextAction": "reconcile", "source": "author.py:127-133 BACKEND_NO_JSON_RECEIPT / BACKEND_INVALID_RECEIPT / BACKEND_NONZERO_EXIT; elevated-request.py:88 QUEUE_RESPONSE_NOT_OBJECT; scene_cli.py 'Elevated helper reply was not a JSON object'"},
+      {"code": "UPSTREAM_PENDING", "disposition": "unknown-after-dispatch", "nextAction": "poll-same-operation", "source": "author.py:186-190 ELEVATED_GRAPH_PENDING; elevated-request.py:94-96 'timeout waiting for the elevated runner'; scene_cli.py '90-second wait elapsed; outcome uncertain, no automatic retry'"},
+      {"code": "READBACK_FAILED", "disposition": null, "contextDependent": true, "allowedDispositions": ["refusal-before-dispatch", "unknown-after-dispatch"], "nextAction": "reconcile", "source": "backend/entity_server.py:326-327; pre-write baseline inspect = refusal, post-write verification inspect = unknown-after-dispatch"},
+      {"code": "READBACK_WRONG_LEVEL", "disposition": null, "contextDependent": true, "allowedDispositions": ["refusal-before-dispatch", "unknown-after-dispatch"], "nextAction": "reconcile", "source": "backend/entity_server.py:329-332"},
+      {"code": "READBACK_NOT_ACCEPTED", "disposition": null, "contextDependent": true, "allowedDispositions": ["refusal-before-dispatch", "unknown-after-dispatch"], "nextAction": "await-human", "source": "backend/entity_server.py:333-335 vs readonly-acceptance.json"},
+      {"code": "CREATE_EFFECT_NOT_AS_REQUESTED", "disposition": "failure-after-dispatch", "nextAction": "report-and-repair", "source": "backend/entity_server.py:498-501 as CREATE_DID_NOT_ADD_EXACTLY_ONE_ENTITY; scene_cli.py:561 'Batch receipt did not resolve every placement'"},
+      {"code": "SAVE_STATUS_NOT_SUCCESS", "disposition": "failure-after-dispatch", "nextAction": "report-and-repair", "source": "scene_cli.py:586 'Native save status was not success'"},
+      {"code": "SAVE_TOUCHED_PROTECTED_TARGET", "disposition": "failure-after-dispatch", "nextAction": "report-and-repair", "source": "backend/entity_server.py:539-541 as SAVE_TOUCHED_ANOTHER_LEVEL; scene_cli.py:588 'Protected non-target GIL changed'"},
+      {"code": "CLEANUP_IDS_EMPTY", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:590-591"},
+      {"code": "CLEANUP_IDS_OVER_LIMIT", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:592-594; MAX_CLEANUP_IDS 64, matched by cleanup_owned_entities.py:118 MAX_IDS_PER_CALL and OwnedEntityDelete.cs"},
+      {"code": "CLEANUP_IDS_DUPLICATED", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:595-596; cleanup_owned_entities.py ID_DUPLICATE :510-511"},
+      {"code": "CLEANUP_IDS_NOT_UINT32", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:597-598"},
+      {"code": "CLEANUP_REQUEST_NOT_COMPLETE", "disposition": "refusal-before-dispatch", "nextAction": "reconcile", "source": "backend/entity_server.py:607-609"},
+      {"code": "CLEANUP_REQUEST_NOT_A_CREATE", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:612-614"},
+      {"code": "CLEANUP_ID_NOT_OWNED_BY_THIS_RUN", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "backend/entity_server.py:617-620; cleanup_owned_entities.py prove_ownership :432-498 A and B and C, with NO_UNIQUE_ADDITION_PROOF :499-496 for a missing leg"},
+      {"code": "CLEANUP_BRIDGE_UNAVAILABLE", "disposition": "refusal-before-dispatch", "nextAction": "await-human", "source": "T10.md:36 names this token; replaces backend/entity_server.py:623-627 CLEANUP_BRIDGE_RUN_REQUIRED"},
+      {"code": "CANCELLED_BEFORE_DISPATCH", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "T03.md:40 - exact token, kept verbatim"},
+      {"code": "TOOL_UNAVAILABLE_IN_PROFILE", "disposition": "refusal-before-dispatch", "nextAction": "fix-input", "source": "new in v1: the business layer refuses a capability the active creation profile does not expose"}
+    ],
+    "removed": [
+      {"code": "BUSINESS_ERROR", "why": "backend/entity_server.py:142 and :143-149 - a catch-all that erases the phase and reports every stage as not-run. It is the single largest source of pre/post-dispatch confusion at this boundary."},
+      {"code": "BACKEND_NO_JSON_RECEIPT (as a top-level code)", "why": "replaced by UPSTREAM_RECEIPT_UNREADABLE with error.upstream.code = BACKEND_NO_JSON_RECEIPT"}
+    ]
+  },
+
+  "honestyRules": [
+    {
+      "id": "HONEST-1",
+      "rule": "A value the system did not measure is null or the token unknown/not-run, never a plausible default. A default that can be mistaken for a measurement is a defect.",
+      "evidence": [
+        ".runtime/game-executor/scene-cli/20260928-192358-create-e78fbbfb/before-context.json entities[].position is null - the field is listed and explicitly not known",
+        "backend/entity_server.py:531-535 nativeStatus is None for a create and :533-536 nativeStatus is only an execution fact",
+        "scene_cli.py:578-580 persistenceVerified is pinned False for every non-inspect action",
+        "author.py:251 persistenceVerified false and officialPlaytestVerified false on every result",
+        ".runtime/game-executor/scene-cli/20260928-192358-create-e78fbbfb/prepared.json callbackObserved false",
+        "T08.md:45 canonicalBusinessApiTotal null and denominatorSealed false"
+      ]
+    },
+    {
+      "id": "HONEST-2",
+      "rule": "A boolean that could be read as 'verified' must end in Verified or Observed and must default to false; an absent measurement is null, distinct from false.",
+      "evidence": "author.py:250-260; scene_cli.py:578-580; native_write_review.py:85 claim text 'single-compiled-attempt; never auto-replayed'"
+    },
+    {
+      "id": "HONEST-3",
+      "rule": "Every pass carries at least one evidenceRef. Every status other than not-run carries a reason. A stage that was attempted and could not be established is unknown, not not-run.",
+      "evidence": "T05.md:41 '证据不足时 unknown，不把异常统统写 not-run'; T05.md:43"
+    },
+    {
+      "id": "HONEST-4",
+      "rule": "not-applicable requires a reason and may never be used for an item the 07 checklist marks required.",
+      "evidence": "TOOL-CONTRACT.md:54"
+    },
+    {
+      "id": "HONEST-5",
+      "rule": "No percentage or completion ratio may be derived from an unsealed denominator. canonicalBusinessApiTotal stays null until it has an independent source.",
+      "evidence": "T08.md:45; PROGRESS-LITE.md on 218 as a self-referential denominator"
+    },
+    {
+      "id": "HONEST-6",
+      "rule": "A stage status must not be upgraded by an inference the system did not make. Specifically: a native exit status of 0, a tool-call transport success, and a reply object that merely arrives are none of them evidence for any stage.",
+      "evidence": "TOOL-CONTRACT.md:57 'native status0仅记执行事实'; entity_server.py:22-27; PROGRESS-LITE.md '两次工具假通过'"
+    },
+    {
+      "id": "HONEST-7",
+      "rule": "Internal technical evidence is reached through a controlled reference (evidenceRef), not by handing the model an arbitrary file path. The tool must not return a raw snapshot path as the business answer.",
+      "evidence": "G01.md:51 '结果只给 snapshotPath | T04补业务投影，不开放任意文件工具绕过'; TOOL-CONTRACT.md:83-86"
+    }
+  ],
+
+  "registration": {
+    "description": "Who registers what, and where the refusal happens. G01.md:24 step 7 and step 8.",
+    "mcpPassthrough": {
+      "registrar": "@deepseek-ai/dsh-mcp-client (vendor/deepseek-harness/packages/mcp/mcp-client/src/index.ts)",
+      "publicNamePattern": "mcp__<serverName>__<rawName>",
+      "serverName": "miliastra",
+      "serverNamePattern": "^[A-Za-z0-9_-]{1,32}$",
+      "uniqueness": "unique across live mcp-client instances inside one registration scope",
+      "pluginKind": "namespace plugin, named exports, no default export",
+      "consequence": "The Miliastra Cordis plugin MUST NOT re-register any mw_* tool. Doing so either collides on the public name or produces a second, drifting description of the same capability. The seven current tools publish as mcp__miliastra__mw_scene_<name>.",
+      "reservedPrefix": "^mcp__ is reserved by the client; a plugin-owned tool must not use it."
+    },
+    "pluginOwnTools": {
+      "registry": "ctx.tools (vendor/deepseek-harness/packages/core/tools/src/index.ts, class ToolRuntime)",
+      "inject": ["tools"],
+      "rule": "If the plugin registers its own tools, they carry a distinct prefix and are registered exactly once, on the same registry, through an effect so that unload removes them. Duplicate names are rejected by ToolLayer's NamedEntries ('tool \"<name>\" is already registered')."
+    },
+    "creationProfile": {
+      "allow": [
+        "mcp__miliastra__mw_scene_capabilities",
+        "mcp__miliastra__mw_scene_discover_level",
+        "mcp__miliastra__mw_scene_read_entities",
+        "mcp__miliastra__mw_scene_operation_status"
+      ],
+      "allowForWriteScope": [
+        "mcp__miliastra__mw_scene_create_entity",
+        "mcp__miliastra__mw_scene_save_level",
+        "mcp__miliastra__mw_scene_cleanup_owned"
+      ],
+      "mechanism": "ToolRestriction { allow: [...] } per registration scope; ToolGuard returns a denial reason after every pre-execute listener. The prompt is never the enforcement point.",
+      "evidence": "vendor/deepseek-harness/packages/core/tools/src/index.ts:673-704 (ToolRestriction) and :704 (ToolGuard, 'Because guards have no allow result, listener ordering cannot turn a denial back into permission')",
+      "forbiddenAlways": ["any fs/read/write file tool", "any shell or process tool", "any raw MCP passthrough of a non-miliastra server in the same scope"]
+    },
+    "refusalPointsInDepth": [
+      {"layer": "tool registry", "what": "the tool is not offered at all", "enforcedBy": "ToolRestriction.allow"},
+      {"layer": "business", "what": "capability not exposed by the active profile, bad shape, bad target, unsupported contract version", "enforcedBy": "backend/entity_server.py pre-dispatch checks; codes CAPABILITY_NOT_ENABLED / TOOL_UNAVAILABLE_IN_PROFILE / CONTRACT_VERSION_UNSUPPORTED"},
+      {"layer": "review gate", "what": "a mutation with no coordinator review, a review bound to another action, level, session or request hash", "enforcedBy": "native_write_review.validate_review, reached through author.py:213-217 and scene_cli.py:269"},
+      {"layer": "queue", "what": "a field outside the closed action schema, an action outside the closed set, a non-data value", "enforcedBy": "elevated-runner.ps1:410-462 and :449; scene_cli.py 'Elevated queue accepts data only; rejected key %r in %s'"}
+    ]
+  },
+
+  "lifecycle": {
+    "description": "Plugin unload, cancellation and in-flight operations. G01.md:23 step 6.",
+    "rules": [
+      {"id": "LIFE-1", "rule": "Unloading the plugin removes tools, listeners and its own MCP child process. It never stops, restarts or disconnects the game, the editor or the resident helper. Evidence: EXECUTION-CONTRACT.md:49."},
+      {"id": "LIFE-2", "rule": "Cancelling a wait is not a rollback. The operation keeps its state and its ledger. A cancelled operation with no dispatch evidence may be reported rejected/CANCELLED_BEFORE_DISPATCH; with dispatch evidence it is pending or unknown. Evidence: T03.md:40, :74; EXECUTION-CONTRACT.md:50."},
+      {"id": "LIFE-3", "rule": "A new plugin instance never re-dispatches a request left over from a previous instance, and never reuses an old request as if it were a new call. It queries the original operation. Evidence: T03.md:76; EXECUTION-CONTRACT.md:50."},
+      {"id": "LIFE-4", "rule": "Unload leaves operationId, caseId and the ledger location for reconciliation. Journals, evidence and recovery copies are never deleted. Evidence: T03.md:42."},
+      {"id": "LIFE-5", "rule": "The tool must never claim a rollback it did not perform, and must never report a reduction in side effect because the caller stopped waiting."}
+    ]
+  },
+
+  "citationChecks": {
+    "description": "Machine-verifiable traceability. Each entry asserts that the literal string appears in the named file. validate.py --citations recomputes this against the working tree; a failure means a decision in this contract has lost its evidence and must be re-derived, not re-asserted.",
+    "entries": [
+      {
+        "claim": "the business MCP reuses the same execution layer and does not widen it",
+        "file": "backend/entity_server.py",
+        "mustContain": ["It reuses the SAME", "WHAT THE MODEL SUPPLIES", "EVERY TOOL RESOLVES ITS STAGE INDEPENDENTLY"]
+      },
+      {
+        "claim": "stage statuses are declared separately and not-run is never a pass",
+        "file": "backend/entity_server.py",
+        "mustContain": ["reported ``not-run`` with a reason -- never as ``pass``", "'liveReadback': _stage('not-run'),"]
+      },
+      {
+        "claim": "the phase-losing catch-all and the pre/post-dispatch emitter that must be split",
+        "file": "backend/entity_server.py",
+        "mustContain": ["class BusinessError(RuntimeError)", "def _fail(method, exc)", "'BUSINESS_ERROR'"]
+      },
+      {
+        "claim": "save reports persistence pass from native status 0 alone",
+        "file": "backend/entity_server.py",
+        "mustContain": ["persistence=_stage('pass' if persisted else 'fail',", "detail='native save status 0 on the target level' if persisted"]
+      },
+      {
+        "claim": "the post-dispatch failures that are currently emitted refusal-shaped",
+        "file": "backend/entity_server.py",
+        "mustContain": ["'CREATE_DID_NOT_ADD_EXACTLY_ONE_ENTITY'", "'SAVE_TOUCHED_ANOTHER_LEVEL'"]
+      },
+      {
+        "claim": "the bridge runId is a caller-supplied parameter and the model must not supply it",
+        "file": "backend/entity_server.py",
+        "mustContain": ["'CLEANUP_BRIDGE_RUN_REQUIRED'", "runId: str, dryRun: bool = True", "MAX_CLEANUP_IDS = 64"]
+      },
+      {
+        "claim": "operation-status emits two state names and never inspects the dispatch evidence",
+        "file": "backend/entity_server.py",
+        "mustContain": ["state='complete' if record else 'claimed-without-result'", "no claim was ever written for this requestId"]
+      },
+      {
+        "claim": "claim before dispatch, atomic, and never deleted",
+        "file": "tools/authoring/author.py",
+        "mustContain": ["def exclusive_json(path, value):", "directory.mkdir()", "claim = directory / 'claim.json'"]
+      },
+      {
+        "claim": "the three idempotency refusals, verbatim",
+        "file": "tools/authoring/author.py",
+        "mustContain": ["REQUEST_ID_CONFLICT", "REQUEST_OUTCOME_UNKNOWN; inspect evidence; no retry", "REQUEST_INCOMPLETE_CLAIM; no retry", "replayed=True"]
+      },
+      {
+        "claim": "a refusal is deterministic and never an uncertain outcome",
+        "file": "tools/authoring/author.py",
+        "mustContain": ["a rejected build must never look like an uncertain one", "outcomeUncertain=False,"]
+      },
+      {
+        "claim": "the fingerprint encodes the whole bound command with allow_nan=False",
+        "file": "tools/authoring/author.py",
+        "mustContain": ["allow_nan=False", "fingerprint = hashlib.sha256(encoded(command).encode('utf-8')).hexdigest()"]
+      },
+      {
+        "claim": "paths are part of the command, so a new review turns a replay into a conflict",
+        "file": "tools/authoring/author.py",
+        "mustContain": ["PATH_FIELDS = ('session', 'review', 'baseline')", "is a conflict, not a replay"]
+      },
+      {
+        "claim": "retries never happen automatically",
+        "file": "tools/authoring/author.py",
+        "mustContain": ["retryAttempted=False", "do not retry"]
+      },
+      {
+        "claim": "the dispatch-evidence discriminator already exists in the native CLI",
+        "file": "tools/game-executor/scene_cli.py",
+        "mustContain": ["possibly_started = bool(run_path and any((Path(run_path)/name).exists() for name in", "('direct-launch-intent.json', 'launch.claim', 'attempt.used')", "result['outcomeUncertain'] |= possibly_started"]
+      },
+      {
+        "claim": "the queue path is closed to non-data values",
+        "file": "tools/game-executor/scene_cli.py",
+        "mustContain": ["Elevated queue accepts data only; rejected key %r in %s", "Elevated queue rejects non-finite numbers in "]
+      },
+      {
+        "claim": "persistenceVerified is pinned false on every non-inspect native action",
+        "file": "tools/game-executor/scene_cli.py",
+        "mustContain": ["persistenceVerified=False", "cleanupVerified=True, nativeStarted=True"]
+      },
+      {
+        "claim": "the review gate binds request hash, session identity, evidence hashes and the recovery copy",
+        "file": "tools/game-executor/native_write_review.py",
+        "mustContain": ["'REVIEW_REQUEST_MISMATCH'", "'REVIEW_SESSION_MISMATCH:'+key", "'REVIEW_EVIDENCE_CHANGED:'+name", "'RECOVERY_COPY_OR_FORMAL_GIL_CHANGED'", "'COORDINATOR_REVIEW_REQUIRED'"]
+      },
+      {
+        "claim": "a review is a single compiled attempt and is never auto-replayed",
+        "file": "tools/game-executor/native_write_review.py",
+        "mustContain": ["single-compiled-attempt; never auto-replayed"]
+      },
+      {
+        "claim": "the coordinator derives the review and there is no approve flag",
+        "file": "tools/game-executor/orchestrate_write_review.py",
+        "mustContain": ["no ``--reviewed``, ``--state`` or ``--approve`` flag: the verdict is computed here", "PRODUCTION_VALIDATOR_REJECTED", "validatedBy"]
+      },
+      {
+        "claim": "the plan file is a caller-supplied write definition on the internal path",
+        "file": "tools/game-executor/orchestrate_write_review.py",
+        "mustContain": ["'PLAN_REQUIRED_FOR_CREATE_BATCH'", "spec = read_json(plan)"]
+      },
+      {
+        "claim": "cleanup proves ownership on three legs and refuses a missing one",
+        "file": "tools/game-executor/cleanup_owned_entities.py",
+        "mustContain": ["NO_UNIQUE_ADDITION_PROOF", "NOT_NEWLY_ADDED", "ID_NOT_IN_BASELINE", "MAX_IDS_PER_CALL = 64"]
+      },
+      {
+        "claim": "cleanup never re-sends a dispatched batch and treats an unreadable reply as unknown",
+        "file": "tools/game-executor/cleanup_owned_entities.py",
+        "mustContain": ["EXECUTE_BATCH_ALREADY_DISPATCHED", "not-attempted:prior-unknown-outcome", "EXECUTE_REFUSED_UNRESOLVED"]
+      },
+      {
+        "claim": "cleanup exit codes are a closed set, distinct from per-id outcomes",
+        "file": "tools/game-executor/cleanup_owned_entities.py",
+        "mustContain": ["EXIT_CLEAN = 0", "EXIT_PARTIAL = 2", "EXIT_UNKNOWN = 4", "EXIT_EVIDENCE_UNWRITTEN = 5"]
+      },
+      {
+        "claim": "the queue has a second idempotency key whose marker is permanent",
+        "file": "tools/editor-bridge/elevated-request.py",
+        "mustContain": ["QUEUE_REQUEST_ID_PAYLOAD_MISMATCH", "QUEUE_REQUEST_ID_ALREADY_EXISTS", "Reusing an ID with different contents is an error, never a second dispatch."]
+      },
+      {
+        "claim": "the queue request has no timeout field and the action set is a client-side closed set",
+        "file": "tools/editor-bridge/elevated-request.py",
+        "mustContain": ["NATIVE_ACTIONS = (\"inspect\", \"create\", \"save\", \"create-batch\", \"reopen-current\", \"creature-create\")", "timeout waiting for the elevated runner; outcome pending; poll request "]
+      },
+      {
+        "claim": "the runner rejects any request field outside the closed action schema",
+        "file": "tools/editor-bridge/elevated-runner.ps1",
+        "mustContain": ["Closed schema. The action selects exactly which fields exist, so hash, exe,", "NATIVE_SCENE_FIELD_NOT_ALLOWED:", "Fixed-entry dispatch functions. No request field selects an executable or script."]
+      },
+      {
+        "claim": "the native-scene action set is closed and advertised verbatim by the helper",
+        "file": "tools/editor-bridge/elevated-runner.ps1",
+        "mustContain": ["actions=@('inspect','create','save','create-batch','reopen-current','creature-create')", "It accepts six closed request kinds; no caller selects a command or script"]
+      },
+      {
+        "claim": "one attempt per request id, and a previous unresolved outcome blocks the next write",
+        "file": "tools/editor-bridge/elevated-runner.ps1",
+        "mustContain": ["NATIVE_SCENE_ALREADY_ATTEMPTED", "NATIVE_SCENE_PREVIOUS_OUTCOME_UNRESOLVED", "REOPEN_PENDING_WRITE_BLOCKED"]
+      },
+      {
+        "claim": "pinned sources are hashed at every dispatch and a change refuses the request",
+        "file": "tools/editor-bridge/elevated-runner.ps1",
+        "mustContain": ["DISPATCH_PIN_CHANGED:", "DISPATCH_SOURCE_SET_CHANGED"]
+      },
+      {
+        "claim": "there is no caller-supplied hash parameter and no bypass switch in the compatibility gate",
+        "file": "tools/editor-bridge/compatibility-guard.ps1",
+        "mustContain": ["There is deliberately no parameter", "EDITOR_VERSION_UNSUPPORTED", "COMPATIBILITY_PIN_INVALID"]
+      },
+      {
+        "claim": "the MCP client is the sole registrar of the mw_* tools and mints the public name",
+        "file": "vendor/deepseek-harness/packages/mcp/mcp-client/src/index.ts",
+        "mustContain": ["mcp__<serverName>__<rawName>", "export const name = 'mcp-client'", "export const inject = ['tools']"]
+      },
+      {
+        "claim": "restriction and guard are the enforcement points, not the prompt",
+        "file": "vendor/deepseek-harness/packages/core/tools/src/index.ts",
+        "mustContain": ["export interface ToolRestriction", "export type ToolGuard", "listener ordering cannot turn a denial back into permission"]
+      },
+      {
+        "claim": "the task-run stage set is validated by the plan tooling",
+        "file": "docs/cordis-plan/templates/RESULT.json",
+        "mustContain": ["\"saveDiff\"", "\"aiToolCall\"", "\"not-run\""]
+      },
+      {
+        "claim": "the plan fixes saveDiff as the new stage name and persistence as a compatibility mapping only",
+        "file": "docs/cordis-plan/TOOL-CONTRACT.md",
+        "mustContain": ["新接口统一使用 stages.saveDiff", "not-run/pass/fail/blocked/unknown/not-applicable", "不能用于绕开07必选项"]
+      },
+      {
+        "claim": "T05 must not rename states and must carry evidenceRef on a pass",
+        "file": "docs/cordis-plan/tasks/T05.md",
+        "mustContain": ["worker 不自行更换状态名", "不允许只有布尔值、过期结果或错案例证据"]
+      },
+      {
+        "claim": "T06 may not infer never-written from not-seen, and may not change the id on retry",
+        "file": "docs/cordis-plan/tasks/T06.md",
+        "mustContain": ["known-success/known-failure/unknown", "不得根据", "不换 ID 重试"]
+      },
+      {
+        "claim": "T10 names the bridge-unavailable code and the per-id outcome vocabulary",
+        "file": "docs/cordis-plan/tasks/T10.md",
+        "mustContain": ["CLEANUP_BRIDGE_UNAVAILABLE", "deleted/refused/not-attempted/unknown"]
+      },
+      {
+        "claim": "T09 requires blocked, not pass, when a change has no governing rule",
+        "file": "docs/cordis-plan/tasks/T09.md",
+        "mustContain": ["stages.saveDiff.status=blocked", "evidence-insufficient"]
+      },
+      {
+        "claim": "T03's cancellation code and the commit boundary",
+        "file": "docs/cordis-plan/tasks/T03.md",
+        "mustContain": ["CANCELLED_BEFORE_DISPATCH", "不能报回滚"]
+      },
+      {
+        "claim": "the execution contract forbids the plugin from cleaning up the game, editor or helper, and forbids automatic rollback",
+        "file": "docs/cordis-plan/EXECUTION-CONTRACT.md",
+        "mustContain": ["游戏、编辑器和既有 helper 不归插件清理", "取消模型等待不等于撤销游戏变更"]
+      },
+      {
+        "claim": "the task-run record uses the key `evidence`, not `evidenceRef`, and must start each stage not-run with an empty array",
+        "file": "docs/cordis-plan/support/validate_plan.py",
+        "mustContain": ["\"requiredStages\", \"evidence\", \"verdict\"", "stages start not-run with empty evidence"]
+      },
+      {
+        "claim": "the plan tooling writes its own state vocabulary into a key named state, which is the fourth namespace C-5 forbids for a business operation",
+        "file": "docs/cordis-plan/support/prepare_task.py",
+        "mustContain": ["state=\"prepared\"", "taskId=args.task, owner=args.owner, state=\"prepared\""]
+      },
+      {
+        "claim": "the business boundary document states what the model may and may not supply",
+        "file": "docs/entity-create/MCP-BUSINESS-CONTRACT.md",
+        "mustContain": ["**模型给**", "**留在执行层**", "队列**每次从本工程自己的指针解析并重新校验**"]
+      }
+    ]
+  },
+
+  "conflicts": [
+    {
+      "id": "C-1",
+      "topic": "stage name",
+      "planText": "The G01 brief and backend/entity_server.py:145-147 use persistence.",
+      "otherText": "TOOL-CONTRACT.md:55 and T05.md:38 and T09.md:40 and docs/cordis-plan/templates/RESULT.json:27 all use saveDiff.",
+      "resolution": "Canonical key is saveDiff; persistence is an accepted INPUT alias for one contract version and is never emitted."
+    },
+    {
+      "id": "C-2",
+      "topic": "stage status token",
+      "planText": "The G01 brief lists failed.",
+      "otherText": "TOOL-CONTRACT.md:54 and T05.md:38 list fail (plus blocked and not-applicable).",
+      "resolution": "Closed set is not-run/pass/fail/blocked/unknown/not-applicable. The token failed is invalid; it is accepted as an input alias only."
+    },
+    {
+      "id": "C-3",
+      "topic": "evidence key",
+      "planText": "T05.md:43 and T08.md:38 say evidenceRef / evidenceRefs.",
+      "otherText": "docs/cordis-plan/templates/RESULT.json and CASE.json use evidence.",
+      "resolution": "Different artifacts. A tool-result stage carries evidenceRef (plus evidenceSha256); a task run record keeps the plan template's evidence array, which validate_plan.py reads. Mapping: taskRecord.stages[x].evidence is the union of the toolResult evidenceRef values for that stage."
+    },
+    {
+      "id": "C-4",
+      "topic": "stage set size",
+      "planText": "T05/TOOL-CONTRACT define 5 stages.",
+      "otherText": "T08.md:39 lists 11 (5 plus source/offline/loader/cli/mcp/aiToolCall); RESULT.json defines 10 with no cli.",
+      "resolution": "Two sets by design: tool-call stages (5) and task-run stages (10, from RESULT.json which validate_plan.py validates). cli has no counterpart in the validated template and is an open item owned by T08 - see openItems."
+    },
+    {
+      "id": "C-5",
+      "topic": "state vocabulary",
+      "planText": "T05/TOOL-CONTRACT define rejected/pending/unknown/failed/completed.",
+      "otherText": "T06.md:42 defines known-success/known-failure/unknown; prepare_task.py writes state 'prepared' into the same-named key; CASE.json uses verdict.",
+      "resolution": "Three namespaces, one truth. operationState is authoritative and persisted; businessState is the model-facing projection; reconcileState is T06's read-time projection. The task run record's state/verdict is a FOURTH namespace belonging to the plan tooling and must not be reused for a business operation."
+    },
+    {
+      "id": "C-6",
+      "topic": "version field type",
+      "planText": "TOOL-CONTRACT.md:15 and :22 use the string \"1\".",
+      "otherText": "registry.json, RESULT.json, CASE.json and native review records use the integer schemaVersion 1.",
+      "resolution": "contractVersion is a string (\"1\"); schemaVersion is an integer (1). They version different things and must not be conflated. A tool result carries contractVersion; a persisted record carries schemaVersion."
+    }
+  ],
+
+  "openItems": [
+    {"id": "O-1", "topic": "cli task stage", "detail": "T08.md:39 lists an 11th task stage cli that docs/cordis-plan/templates/RESULT.json does not define. Owner: T08. Resolution: either emit the RESULT.json ten and file CLI-level evidence under offline, or raise a plan change against the template. Do not silently add an eleventh key, because validate_plan.py validates the template rather than the instance."},
+    {"id": "O-2", "topic": "levelHandle vs targetHandle rename", "detail": "The on-disk parameter name is levelHandle (backend/entity_server.py:440,459,522,587). G01.md:25 and TOOL-CONTRACT.md:11 name the concept targetHandle. Owner: T05. The rename must ship with an accepted input alias so the existing tools/entity-create/mcp_drive.py keeps working for one contract version."},
+    {"id": "O-3", "topic": "runId removal from mw_scene_cleanup_owned", "detail": "backend/entity_server.py:587 requires the caller to supply a bridge runId. G01.md:25 forbids the model from assembling a bridge runId. Owner: T10 with T06. The server must resolve the current bridge run the same way it resolves the elevated queue, and return CLEANUP_BRIDGE_UNAVAILABLE when none is live."},
+    {"id": "O-4", "topic": "session identity is not in the tool result", "detail": "load_handle verifies the discovery receipt but the tool result does not expose which session it was bound to. Owner: T04. A result should carry targetBinding.sessionProcessCreation so a consumer can see that a stale handle was not silently rebound."},
+    {"id": "O-5", "topic": "helper action set has no discovery verb", "detail": "docs/entity-create/MCP-BUSINESS-CONTRACT.md:49 records that mw.scene.discoverLevel needs one UAC because the closed action set is inspect|create|save|create-batch|reopen-current. Unchanged by this contract, and not fixable without editing four pinned files and restarting the helper. Recorded so a later reader does not mistake it for a defect introduced here."},
+    {"id": "O-6", "topic": "fs/load/status queue kinds have no closed schema", "detail": "See boundary.knownGaps. No business tool reaches those kinds today."},
+    {"id": "O-7", "topic": "the package manifest does not ship this directory", "detail": "plugins/miliastra/package.json declares files: ['lib/index.js','lib/config.js','lib/composition.js','lib/**/*.d.ts','cordis.patch.yml','README.md'] - plugins/miliastra/contracts/ is not in the list, so a packed tarball would omit the contract artifacts and the validator. Owner: T21 with T01. Fix by adding 'contracts/**' to the files list, or by declaring the contract a source-of-truth document that is deliberately not shipped. Either way it must be a decision, not an omission."}
+  ]
+}

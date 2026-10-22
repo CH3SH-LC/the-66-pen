@@ -1,0 +1,22 @@
+{
+  "id": "flow",
+  "name": "流程控制节点",
+  "purpose": "决定执行顺序与分支",
+  "builtin": true,
+  "clusters": [
+    {
+      "id": "farming",
+      "name": "种田经营闭环",
+      "count": 1,
+      "purpose": "从买种、播种、成长、收获到出售的一条完整制作路线。",
+      "crossClusterRecipe": true
+    },
+    {
+      "id": "flow",
+      "name": "执行流与通用控制",
+      "count": 9,
+      "purpose": "选择执行分支、输出调试信息、控制图开始和结束。"
+    }
+  ],
+  "count": 9
+}

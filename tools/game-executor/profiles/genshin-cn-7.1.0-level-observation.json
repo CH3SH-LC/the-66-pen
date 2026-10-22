@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "profileId": "genshin-cn-7.1.0-level-observation-v1",
+  "readonlyProfileId": "genshin-cn-7.1.0-7f89938da606-readonly-v1",
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "method": "bounded-memory-only-no-game-method",
+  "layout": {
+    "GS_LEVEL_GATE_MANAGER_OFFSET": "0xa430",
+    "GS_LEVEL_GATE_OBJECT_OFFSET": "0x50",
+    "GS_LEVEL_MODE_MANAGER_OFFSET": "0xa440",
+    "GS_LEVEL_MODE_OFFSET": "0x1cc",
+    "GS_LEVEL_MODE_REQUIRED": "0xb993",
+    "GS_LEVEL_MANAGER_OFFSET": "0xa960",
+    "GS_LEVEL_EDITING_OFFSET": "0xc9",
+    "GS_LEVEL_ID_OFFSET": "0x98"
+  },
+  "additionalDefaultHotfixByteRvas": [
+    "0x5730794",
+    "0x56fb435"
+  ],
+  "evidence": ".runtime/verification/update-repair-20260924/native-port/LEVEL-1-13568db0.asm"
+}

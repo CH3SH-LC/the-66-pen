@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://miliastra.local/contracts/schemas/operation-request.schema.json",
+  "title": "Miliastra business tool call arguments, contractVersion 1",
+  "description": "The complete set of arguments any Miliastra business tool may accept. This schema IS the forbidden-passthrough boundary: every field that would let the caller select what runs is absent, and additionalProperties is false so it cannot be smuggled in under another name. A request that fails this schema must be refused before the execution layer is touched, with disposition refusal-before-dispatch.",
+  "$comment": "Names that must never appear as a tool argument, and the reason, live in plugins/miliastra/contracts/contract.json boundary.forbiddenInToolCall. Because additionalProperties is false, every one of them is rejected structurally, not by a blocklist.",
+  "type": "object",
+  "required": ["capabilityId", "operationId", "contractVersion"],
+  "properties": {
+    "capabilityId": {
+      "type": "string",
+      "enum": [
+        "scene.capabilities",
+        "entity.discoverLevel",
+        "entity.read",
+        "entity.create",
+        "entity.save",
+        "entity.cleanupOwned",
+        "operation.status"
+      ]
+    },
+    "operationId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$",
+      "description": "Business idempotency key. Accepted input alias: requestId."
+    },
+    "caseId": {"type": ["string", "null"], "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"},
+    "contractVersion": {"type": "string", "const": "1"},
+    "targetHandle": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$",
+      "description": "Opaque token minted by this project's own discovery step. Accepted input alias: levelHandle. May not contain / \\ or :, because a handle is never a path."
+    },
+    "expectedRevision": {
+      "type": ["string", "null"],
+      "description": "An opaque revision token this server returned earlier, never a caller-computed digest. The server recomputes its own revision and compares."
+    },
+    "templateId": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+    "position": {"$ref": "#/$defs/vector"},
+    "rotation": {"$ref": "#/$defs/vector"},
+    "scale": {
+      "allOf": [{"$ref": "#/$defs/vector"}, {"$comment": "every component strictly positive; SCALE_NOT_POSITIVE"}]
+    },
+    "objectIds": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+      "description": "Ids that must already appear in this run's own receipts. maxItems matches MAX_CLEANUP_IDS 64, MAX_IDS_PER_CALL 64 and the adapter's OWNED_DELETE_TOO_MANY_IDS."
+    },
+    "createdByOperationIds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"},
+      "description": "On-disk name: createdByRequestIds. Ownership proof leg A."
+    },
+    "dryRun": {"type": "boolean", "default": true}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "vector": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number",
+        "description": "Finite. JSON has no NaN or Infinity literal, and the ledger fingerprint is computed with allow_nan=False, so a non-finite value cannot survive either layer."
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "create and save are mutations and therefore require an operationId; the read-only capabilities do not.",
+      "if": {"properties": {"capabilityId": {"enum": ["entity.create", "entity.save", "entity.cleanupOwned"]}}, "required": ["capabilityId"]},
+      "then": {"required": ["targetHandle"]}
+    },
+    {
+      "if": {"properties": {"capabilityId": {"const": "entity.create"}}, "required": ["capabilityId"]},
+      "then": {"required": ["templateId", "position"]}
+    }
+  ]
+}

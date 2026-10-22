@@ -1,0 +1,2930 @@
+{
+  "id": "math",
+  "name": "数值、逻辑与向量",
+  "purpose": "数值运算、布尔判断、向量和空间计算。",
+  "aliases": [
+    "计算",
+    "比较",
+    "加减",
+    "乘除",
+    "随机",
+    "坐标",
+    "距离",
+    "方向",
+    "旋转",
+    "概率"
+  ],
+  "nativeLeaves": [
+    "数学"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:7",
+      "definitionId": 7,
+      "graphKind": 20000,
+      "name": "获取随机浮点数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 7 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:8",
+      "definitionId": 8,
+      "graphKind": 20000,
+      "name": "权重随机",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 8 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:9",
+      "definitionId": 9,
+      "graphKind": 20000,
+      "name": "拆分三维向量",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 9 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:10",
+      "definitionId": 10,
+      "graphKind": 20000,
+      "name": "三维向量加法",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 10 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:11",
+      "definitionId": 11,
+      "graphKind": 20000,
+      "name": "三维向量减法",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 11 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:12",
+      "definitionId": 12,
+      "graphKind": 20000,
+      "name": "三维向量缩放",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 12 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:13",
+      "definitionId": 13,
+      "graphKind": 20000,
+      "name": "三维向量夹角",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 13 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:74",
+      "definitionId": 74,
+      "graphKind": 20000,
+      "name": "三维向量归一化",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 74 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:191",
+      "definitionId": 191,
+      "graphKind": 20000,
+      "name": "圆周率",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 191 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:192",
+      "definitionId": 192,
+      "graphKind": 20000,
+      "name": "三维向量：零向量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 192 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:193",
+      "definitionId": 193,
+      "graphKind": 20000,
+      "name": "三维向量：上方",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 193 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:194",
+      "definitionId": 194,
+      "graphKind": 20000,
+      "name": "三维向量：下方",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 194 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:195",
+      "definitionId": 195,
+      "graphKind": 20000,
+      "name": "三维向量：左侧",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 195 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:196",
+      "definitionId": 196,
+      "graphKind": 20000,
+      "name": "三维向量：右侧",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 196 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:197",
+      "definitionId": 197,
+      "graphKind": 20000,
+      "name": "三维向量：前方",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 197 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:198",
+      "definitionId": 198,
+      "graphKind": 20000,
+      "name": "三维向量：后方",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 198 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:200",
+      "definitionId": 200,
+      "graphKind": 20000,
+      "name": "加法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:202",
+      "definitionId": 202,
+      "graphKind": 20000,
+      "name": "减法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 202 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:204",
+      "definitionId": 204,
+      "graphKind": 20000,
+      "name": "乘法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 204 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:206",
+      "definitionId": 206,
+      "graphKind": 20000,
+      "name": "除法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 206 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:208",
+      "definitionId": 208,
+      "graphKind": 20000,
+      "name": "模运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 208 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:209",
+      "definitionId": 209,
+      "graphKind": 20000,
+      "name": "幂运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 209 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:211",
+      "definitionId": 211,
+      "graphKind": 20000,
+      "name": "取较大值",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 211 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:213",
+      "definitionId": 213,
+      "graphKind": 20000,
+      "name": "取较小值",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 213 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:215",
+      "definitionId": 215,
+      "graphKind": 20000,
+      "name": "对数运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 215 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:216",
+      "definitionId": 216,
+      "graphKind": 20000,
+      "name": "绝对值运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 216 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:218",
+      "definitionId": 218,
+      "graphKind": 20000,
+      "name": "取符号运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 218 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:220",
+      "definitionId": 220,
+      "graphKind": 20000,
+      "name": "三维向量模运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 220 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:221",
+      "definitionId": 221,
+      "graphKind": 20000,
+      "name": "算术平方根运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 221 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:222",
+      "definitionId": 222,
+      "graphKind": 20000,
+      "name": "范围限制运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 222 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:224",
+      "definitionId": 224,
+      "graphKind": 20000,
+      "name": "取整数运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 224 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:225",
+      "definitionId": 225,
+      "graphKind": 20000,
+      "name": "创建三维向量",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 225 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:226",
+      "definitionId": 226,
+      "graphKind": 20000,
+      "name": "逻辑与运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 226 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:227",
+      "definitionId": 227,
+      "graphKind": 20000,
+      "name": "逻辑或运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 227 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:228",
+      "definitionId": 228,
+      "graphKind": 20000,
+      "name": "逻辑异或运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 228 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:229",
+      "definitionId": 229,
+      "graphKind": 20000,
+      "name": "逻辑非运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 229 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:230",
+      "definitionId": 230,
+      "graphKind": 20000,
+      "name": "数值小于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 230 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:231",
+      "definitionId": 231,
+      "graphKind": 20000,
+      "name": "数值小于等于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 231 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:232",
+      "definitionId": 232,
+      "graphKind": 20000,
+      "name": "数值大于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 232 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:233",
+      "definitionId": 233,
+      "graphKind": 20000,
+      "name": "数值大于等于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 233 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:244",
+      "definitionId": 244,
+      "graphKind": 20000,
+      "name": "两坐标点距离",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 244 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:257",
+      "definitionId": 257,
+      "graphKind": 20000,
+      "name": "获取随机整数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 257 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:291",
+      "definitionId": 291,
+      "graphKind": 20000,
+      "name": "正弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 291 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:292",
+      "definitionId": 292,
+      "graphKind": 20000,
+      "name": "余弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 292 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:293",
+      "definitionId": 293,
+      "graphKind": 20000,
+      "name": "正切函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 293 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:294",
+      "definitionId": 294,
+      "graphKind": 20000,
+      "name": "反正弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 294 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:295",
+      "definitionId": 295,
+      "graphKind": 20000,
+      "name": "反余弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 295 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:296",
+      "definitionId": 296,
+      "graphKind": 20000,
+      "name": "反正切函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 296 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:321",
+      "definitionId": 321,
+      "graphKind": 20000,
+      "name": "弧度转角度",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 321 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:322",
+      "definitionId": 322,
+      "graphKind": 20000,
+      "name": "角度转弧度",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 322 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:474",
+      "definitionId": 474,
+      "graphKind": 20000,
+      "name": "三维向量旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 474 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:505",
+      "definitionId": 505,
+      "graphKind": 20000,
+      "name": "三维向量内积",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 505 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:506",
+      "definitionId": 506,
+      "graphKind": 20000,
+      "name": "三维向量外积",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 506 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:519",
+      "definitionId": 519,
+      "graphKind": 20000,
+      "name": "方向向量转旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 519 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:752",
+      "definitionId": 752,
+      "graphKind": 20000,
+      "name": "根据时间戳计算格式化时间",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 752 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:753",
+      "definitionId": 753,
+      "graphKind": 20000,
+      "name": "根据格式化时间计算时间戳",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 753 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:754",
+      "definitionId": 754,
+      "graphKind": 20000,
+      "name": "根据时间戳计算星期几",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 754 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:755",
+      "definitionId": 755,
+      "graphKind": 20000,
+      "name": "查询时间戳（UTC+0时区）",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 755 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:756",
+      "definitionId": 756,
+      "graphKind": 20000,
+      "name": "查询服务器时区",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 756 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:778",
+      "definitionId": 778,
+      "graphKind": 20000,
+      "name": "左移运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 778 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:779",
+      "definitionId": 779,
+      "graphKind": 20000,
+      "name": "右移运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 779 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:780",
+      "definitionId": 780,
+      "graphKind": 20000,
+      "name": "按位与",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 780 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:781",
+      "definitionId": 781,
+      "graphKind": 20000,
+      "name": "按位或",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 781 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:782",
+      "definitionId": 782,
+      "graphKind": 20000,
+      "name": "按位异或",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 782 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:783",
+      "definitionId": 783,
+      "graphKind": 20000,
+      "name": "按位取补",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 783 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:784",
+      "definitionId": 784,
+      "graphKind": 20000,
+      "name": "按位写入",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 784 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:785",
+      "definitionId": 785,
+      "graphKind": 20000,
+      "name": "按位读出",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 785 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200001",
+      "definitionId": 200001,
+      "graphKind": 20001,
+      "name": "逻辑与运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200001 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200002",
+      "definitionId": 200002,
+      "graphKind": 20001,
+      "name": "逻辑或运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200002 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200003",
+      "definitionId": 200003,
+      "graphKind": 20001,
+      "name": "逻辑非运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200003 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200004",
+      "definitionId": 200004,
+      "graphKind": 20001,
+      "name": "逻辑异或运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200004 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200007",
+      "definitionId": 200007,
+      "graphKind": 20001,
+      "name": "是否大于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200007 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200008",
+      "definitionId": 200008,
+      "graphKind": 20001,
+      "name": "是否小于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200008 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200009",
+      "definitionId": 200009,
+      "graphKind": 20001,
+      "name": "是否小于等于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200009 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200010",
+      "definitionId": 200010,
+      "graphKind": 20001,
+      "name": "是否大于等于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200010 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200011",
+      "definitionId": 200011,
+      "graphKind": 20001,
+      "name": "加法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200011 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200012",
+      "definitionId": 200012,
+      "graphKind": 20001,
+      "name": "减法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200012 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200013",
+      "definitionId": 200013,
+      "graphKind": 20001,
+      "name": "乘法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200013 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200014",
+      "definitionId": 200014,
+      "graphKind": 20001,
+      "name": "除法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200014 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200015",
+      "definitionId": 200015,
+      "graphKind": 20001,
+      "name": "绝对值运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200015 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200032",
+      "definitionId": 200032,
+      "graphKind": 20001,
+      "name": "获取随机数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200032 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200063",
+      "definitionId": 200063,
+      "graphKind": 20001,
+      "name": "三维向量内积",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200063 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200064",
+      "definitionId": 200064,
+      "graphKind": 20001,
+      "name": "三维向量外积",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200064 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200065",
+      "definitionId": 200065,
+      "graphKind": 20001,
+      "name": "拆分三维向量",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200065 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200066",
+      "definitionId": 200066,
+      "graphKind": 20001,
+      "name": "三维向量缩放",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200066 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200067",
+      "definitionId": 200067,
+      "graphKind": 20001,
+      "name": "三维向量夹角",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200067 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200068",
+      "definitionId": 200068,
+      "graphKind": 20001,
+      "name": "三维向量旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200068 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200069",
+      "definitionId": 200069,
+      "graphKind": 20001,
+      "name": "三维向量模运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200069 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200070",
+      "definitionId": 200070,
+      "graphKind": 20001,
+      "name": "创建三维向量",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200070 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200071",
+      "definitionId": 200071,
+      "graphKind": 20001,
+      "name": "三维向量加法",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200071 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200072",
+      "definitionId": 200072,
+      "graphKind": 20001,
+      "name": "三维向量减法",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200072 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200073",
+      "definitionId": 200073,
+      "graphKind": 20001,
+      "name": "方向向量转旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200073 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200074",
+      "definitionId": 200074,
+      "graphKind": 20001,
+      "name": "朝向转旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200074 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200094",
+      "definitionId": 200094,
+      "graphKind": 20001,
+      "name": "正弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200094 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200095",
+      "definitionId": 200095,
+      "graphKind": 20001,
+      "name": "余弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200095 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200096",
+      "definitionId": 200096,
+      "graphKind": 20001,
+      "name": "正切函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200096 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200097",
+      "definitionId": 200097,
+      "graphKind": 20001,
+      "name": "反正弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200097 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200098",
+      "definitionId": 200098,
+      "graphKind": 20001,
+      "name": "反余弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200098 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200099",
+      "definitionId": 200099,
+      "graphKind": 20001,
+      "name": "反正切函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200099 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200100",
+      "definitionId": 200100,
+      "graphKind": 20001,
+      "name": "三维向量归一化",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200100 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200101",
+      "definitionId": 200101,
+      "graphKind": 20001,
+      "name": "弧度转角度",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200101 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200102",
+      "definitionId": 200102,
+      "graphKind": 20001,
+      "name": "角度转弧度",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200102 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200290",
+      "definitionId": 200290,
+      "graphKind": 20001,
+      "name": "屏幕坐标转视口坐标",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200290 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200291",
+      "definitionId": 200291,
+      "graphKind": 20001,
+      "name": "视口坐标转屏幕坐标",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200291 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200292",
+      "definitionId": 200292,
+      "graphKind": 20001,
+      "name": "屏幕坐标转世界坐标",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200292 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200293",
+      "definitionId": 200293,
+      "graphKind": 20001,
+      "name": "世界坐标转屏幕坐标",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200293 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200001",
+      "definitionId": 200001,
+      "graphKind": 20002,
+      "name": "逻辑与运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200001 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200002",
+      "definitionId": 200002,
+      "graphKind": 20002,
+      "name": "逻辑或运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200002 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200003",
+      "definitionId": 200003,
+      "graphKind": 20002,
+      "name": "逻辑非运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200003 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200004",
+      "definitionId": 200004,
+      "graphKind": 20002,
+      "name": "逻辑异或运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200004 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200007",
+      "definitionId": 200007,
+      "graphKind": 20002,
+      "name": "是否大于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200007 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200008",
+      "definitionId": 200008,
+      "graphKind": 20002,
+      "name": "是否小于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200008 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200009",
+      "definitionId": 200009,
+      "graphKind": 20002,
+      "name": "是否小于等于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200009 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200010",
+      "definitionId": 200010,
+      "graphKind": 20002,
+      "name": "是否大于等于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200010 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200011",
+      "definitionId": 200011,
+      "graphKind": 20002,
+      "name": "加法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200011 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200012",
+      "definitionId": 200012,
+      "graphKind": 20002,
+      "name": "减法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200012 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200013",
+      "definitionId": 200013,
+      "graphKind": 20002,
+      "name": "乘法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200013 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200014",
+      "definitionId": 200014,
+      "graphKind": 20002,
+      "name": "除法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200014 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200015",
+      "definitionId": 200015,
+      "graphKind": 20002,
+      "name": "绝对值运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200015 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200032",
+      "definitionId": 200032,
+      "graphKind": 20002,
+      "name": "获取随机数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200032 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200063",
+      "definitionId": 200063,
+      "graphKind": 20002,
+      "name": "三维向量内积",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200063 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200064",
+      "definitionId": 200064,
+      "graphKind": 20002,
+      "name": "三维向量外积",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200064 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200065",
+      "definitionId": 200065,
+      "graphKind": 20002,
+      "name": "拆分三维向量",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200065 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200066",
+      "definitionId": 200066,
+      "graphKind": 20002,
+      "name": "三维向量缩放",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200066 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200067",
+      "definitionId": 200067,
+      "graphKind": 20002,
+      "name": "三维向量夹角",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200067 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200068",
+      "definitionId": 200068,
+      "graphKind": 20002,
+      "name": "三维向量旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200068 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200069",
+      "definitionId": 200069,
+      "graphKind": 20002,
+      "name": "三维向量模运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200069 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200070",
+      "definitionId": 200070,
+      "graphKind": 20002,
+      "name": "创建三维向量",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200070 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200071",
+      "definitionId": 200071,
+      "graphKind": 20002,
+      "name": "三维向量加法",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200071 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200072",
+      "definitionId": 200072,
+      "graphKind": 20002,
+      "name": "三维向量减法",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200072 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200073",
+      "definitionId": 200073,
+      "graphKind": 20002,
+      "name": "方向向量转旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200073 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200074",
+      "definitionId": 200074,
+      "graphKind": 20002,
+      "name": "朝向转旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200074 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200094",
+      "definitionId": 200094,
+      "graphKind": 20002,
+      "name": "正弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200094 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200095",
+      "definitionId": 200095,
+      "graphKind": 20002,
+      "name": "余弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200095 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200096",
+      "definitionId": 200096,
+      "graphKind": 20002,
+      "name": "正切函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200096 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200097",
+      "definitionId": 200097,
+      "graphKind": 20002,
+      "name": "反正弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200097 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200098",
+      "definitionId": 200098,
+      "graphKind": 20002,
+      "name": "反余弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200098 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200099",
+      "definitionId": 200099,
+      "graphKind": 20002,
+      "name": "反正切函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200099 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200100",
+      "definitionId": 200100,
+      "graphKind": 20002,
+      "name": "三维向量归一化",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200100 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200101",
+      "definitionId": 200101,
+      "graphKind": 20002,
+      "name": "弧度转角度",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200101 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200102",
+      "definitionId": 200102,
+      "graphKind": 20002,
+      "name": "角度转弧度",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200102 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200290",
+      "definitionId": 200290,
+      "graphKind": 20002,
+      "name": "屏幕坐标转视口坐标",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200290 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200291",
+      "definitionId": 200291,
+      "graphKind": 20002,
+      "name": "视口坐标转屏幕坐标",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200291 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200292",
+      "definitionId": 200292,
+      "graphKind": 20002,
+      "name": "屏幕坐标转世界坐标",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200292 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200293",
+      "definitionId": 200293,
+      "graphKind": 20002,
+      "name": "世界坐标转屏幕坐标",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200293 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20007:22000:0:200174",
+      "definitionId": 200174,
+      "graphKind": 20007,
+      "name": "逻辑与运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200174 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200175",
+      "definitionId": 200175,
+      "graphKind": 20007,
+      "name": "逻辑或运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200175 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200176",
+      "definitionId": 200176,
+      "graphKind": 20007,
+      "name": "逻辑非运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200176 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200177",
+      "definitionId": 200177,
+      "graphKind": 20007,
+      "name": "逻辑异或运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200177 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200180",
+      "definitionId": 200180,
+      "graphKind": 20007,
+      "name": "是否大于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200180 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200181",
+      "definitionId": 200181,
+      "graphKind": 20007,
+      "name": "是否小于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200181 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200182",
+      "definitionId": 200182,
+      "graphKind": 20007,
+      "name": "是否小于等于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200182 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200183",
+      "definitionId": 200183,
+      "graphKind": 20007,
+      "name": "是否大于等于",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200183 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200184",
+      "definitionId": 200184,
+      "graphKind": 20007,
+      "name": "加法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200184 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200185",
+      "definitionId": 200185,
+      "graphKind": 20007,
+      "name": "减法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200185 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200186",
+      "definitionId": 200186,
+      "graphKind": 20007,
+      "name": "乘法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200186 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200187",
+      "definitionId": 200187,
+      "graphKind": 20007,
+      "name": "除法运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200187 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200188",
+      "definitionId": 200188,
+      "graphKind": 20007,
+      "name": "绝对值运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200188 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200190",
+      "definitionId": 200190,
+      "graphKind": 20007,
+      "name": "获取随机数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200190 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200191",
+      "definitionId": 200191,
+      "graphKind": 20007,
+      "name": "拼装列表",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200191 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200192",
+      "definitionId": 200192,
+      "graphKind": 20007,
+      "name": "三维向量内积",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200192 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200193",
+      "definitionId": 200193,
+      "graphKind": 20007,
+      "name": "三维向量外积",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200193 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200194",
+      "definitionId": 200194,
+      "graphKind": 20007,
+      "name": "拆分三维向量",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200194 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200195",
+      "definitionId": 200195,
+      "graphKind": 20007,
+      "name": "三维向量缩放",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200195 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200196",
+      "definitionId": 200196,
+      "graphKind": 20007,
+      "name": "三维向量夹角",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200196 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200197",
+      "definitionId": 200197,
+      "graphKind": 20007,
+      "name": "三维向量旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200197 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200198",
+      "definitionId": 200198,
+      "graphKind": 20007,
+      "name": "三维向量模运算",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200198 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200199",
+      "definitionId": 200199,
+      "graphKind": 20007,
+      "name": "创建三维向量",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200199 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200200",
+      "definitionId": 200200,
+      "graphKind": 20007,
+      "name": "三维向量加法",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200200 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200201",
+      "definitionId": 200201,
+      "graphKind": 20007,
+      "name": "三维向量减法",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200201 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200202",
+      "definitionId": 200202,
+      "graphKind": 20007,
+      "name": "方向向量转旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200202 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200203",
+      "definitionId": 200203,
+      "graphKind": 20007,
+      "name": "朝向转旋转",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200203 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200204",
+      "definitionId": 200204,
+      "graphKind": 20007,
+      "name": "正弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200204 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200205",
+      "definitionId": 200205,
+      "graphKind": 20007,
+      "name": "余弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200205 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200206",
+      "definitionId": 200206,
+      "graphKind": 20007,
+      "name": "正切函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200206 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200207",
+      "definitionId": 200207,
+      "graphKind": 20007,
+      "name": "反正弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200207 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200208",
+      "definitionId": 200208,
+      "graphKind": 20007,
+      "name": "反余弦函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200208 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200209",
+      "definitionId": 200209,
+      "graphKind": 20007,
+      "name": "反正切函数",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200209 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200210",
+      "definitionId": 200210,
+      "graphKind": 20007,
+      "name": "三维向量归一化",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200210 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200211",
+      "definitionId": 200211,
+      "graphKind": 20007,
+      "name": "弧度转角度",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200211 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200212",
+      "definitionId": 200212,
+      "graphKind": 20007,
+      "name": "角度转弧度",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "math"
+      ],
+      "nativeLeaves": [
+        "数学"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200212 --graph-kind 20007"
+    }
+  ],
+  "count": 181,
+  "byFamily": {
+    "查询节点": 13,
+    "运算节点": 168
+  },
+  "byGraphKind": {
+    "20000": 67,
+    "20001": 39,
+    "20002": 39,
+    "20007": 36
+  },
+  "runtimeVerified": false
+}

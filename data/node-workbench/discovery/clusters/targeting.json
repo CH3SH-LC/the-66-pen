@@ -1,0 +1,624 @@
+{
+  "id": "targeting",
+  "name": "扫描、预瞄准与光标",
+  "purpose": "客户端目标选择、预瞄准和光标信息。",
+  "aliases": [
+    "瞄准",
+    "锁定",
+    "光标",
+    "鼠标",
+    "指向",
+    "扫描",
+    "搜索目标"
+  ],
+  "nativeLeaves": [
+    "扫描",
+    "预瞄准",
+    "光标"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:846",
+      "definitionId": 846,
+      "graphKind": 20000,
+      "name": "设置玩家光标是否常驻",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 846 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:847",
+      "definitionId": 847,
+      "graphKind": 20000,
+      "name": "设置玩家光标点击可选取目标",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 847 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:848",
+      "definitionId": 848,
+      "graphKind": 20000,
+      "name": "设置玩家光标是否穿透UI控件",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 848 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:849",
+      "definitionId": 849,
+      "graphKind": 20000,
+      "name": "查询玩家光标是否激活",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 849 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200118",
+      "definitionId": 200118,
+      "graphKind": 20001,
+      "name": "获取扫描组件当前扫描到的实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "扫描"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200118 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200119",
+      "definitionId": 200119,
+      "graphKind": 20001,
+      "name": "获取扫描组件可扫描的所有合法对象",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "扫描"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200119 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200120",
+      "definitionId": 200120,
+      "graphKind": 20001,
+      "name": "获取实体扫描状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "扫描"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200120 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200121",
+      "definitionId": 200121,
+      "graphKind": 20001,
+      "name": "获取实体当前生效的扫描标签",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "扫描"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200121 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200276",
+      "definitionId": 200276,
+      "graphKind": 20001,
+      "name": "获取指定预瞄准的基准对象",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200276 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200277",
+      "definitionId": 200277,
+      "graphKind": 20001,
+      "name": "获取预瞄结果",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200277 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200278",
+      "definitionId": 200278,
+      "graphKind": 20001,
+      "name": "获取预瞄持续时长",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200278 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200279",
+      "definitionId": 200279,
+      "graphKind": 20001,
+      "name": "获取当前生效的预瞄准序号",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200279 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200280",
+      "definitionId": 200280,
+      "graphKind": 20001,
+      "name": "获取预瞄碰撞检测结果数量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200280 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200281",
+      "definitionId": 200281,
+      "graphKind": 20001,
+      "name": "获取预瞄射线命中信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200281 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200282",
+      "definitionId": 200282,
+      "graphKind": 20001,
+      "name": "获取预瞄准摇杆是否处于死区",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200282 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200283",
+      "definitionId": 200283,
+      "graphKind": 20001,
+      "name": "查询预瞄准结束原因",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200283 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200284",
+      "definitionId": 200284,
+      "graphKind": 20001,
+      "name": "获取光标是否激活",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200284 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200285",
+      "definitionId": 200285,
+      "graphKind": 20001,
+      "name": "获取光标命中结果",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200285 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200286",
+      "definitionId": 200286,
+      "graphKind": 20001,
+      "name": "获取光标屏幕坐标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200286 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200287",
+      "definitionId": 200287,
+      "graphKind": 20001,
+      "name": "获取光标视口坐标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200287 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200118",
+      "definitionId": 200118,
+      "graphKind": 20002,
+      "name": "获取扫描组件当前扫描到的实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "扫描"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200118 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200119",
+      "definitionId": 200119,
+      "graphKind": 20002,
+      "name": "获取扫描组件可扫描的所有合法对象",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "扫描"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200119 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200120",
+      "definitionId": 200120,
+      "graphKind": 20002,
+      "name": "获取实体扫描状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "扫描"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200120 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200121",
+      "definitionId": 200121,
+      "graphKind": 20002,
+      "name": "获取实体当前生效的扫描标签",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "扫描"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200121 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200276",
+      "definitionId": 200276,
+      "graphKind": 20002,
+      "name": "获取指定预瞄准的基准对象",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200276 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200277",
+      "definitionId": 200277,
+      "graphKind": 20002,
+      "name": "获取预瞄结果",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200277 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200278",
+      "definitionId": 200278,
+      "graphKind": 20002,
+      "name": "获取预瞄持续时长",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200278 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200279",
+      "definitionId": 200279,
+      "graphKind": 20002,
+      "name": "获取当前生效的预瞄准序号",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200279 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200280",
+      "definitionId": 200280,
+      "graphKind": 20002,
+      "name": "获取预瞄碰撞检测结果数量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200280 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200281",
+      "definitionId": 200281,
+      "graphKind": 20002,
+      "name": "获取预瞄射线命中信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200281 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200282",
+      "definitionId": 200282,
+      "graphKind": 20002,
+      "name": "获取预瞄准摇杆是否处于死区",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200282 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200283",
+      "definitionId": 200283,
+      "graphKind": 20002,
+      "name": "查询预瞄准结束原因",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200283 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200284",
+      "definitionId": 200284,
+      "graphKind": 20002,
+      "name": "获取光标是否激活",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200284 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200285",
+      "definitionId": 200285,
+      "graphKind": 20002,
+      "name": "获取光标命中结果",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200285 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200286",
+      "definitionId": 200286,
+      "graphKind": 20002,
+      "name": "获取光标屏幕坐标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200286 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200287",
+      "definitionId": 200287,
+      "graphKind": 20002,
+      "name": "获取光标视口坐标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "光标"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200287 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200288",
+      "definitionId": 200288,
+      "graphKind": 20002,
+      "name": "完成当前预瞄准",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "targeting"
+      ],
+      "nativeLeaves": [
+        "预瞄准"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200288 --graph-kind 20002"
+    }
+  ],
+  "count": 37,
+  "byFamily": {
+    "执行节点": 4,
+    "查询节点": 33
+  },
+  "byGraphKind": {
+    "20000": 4,
+    "20001": 16,
+    "20002": 17
+  },
+  "runtimeVerified": false
+}

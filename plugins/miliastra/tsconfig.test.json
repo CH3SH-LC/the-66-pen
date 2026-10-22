@@ -1,0 +1,12 @@
+{
+  // Type-check project for everything the package ships plus the suites that
+  // exercise it. `noEmit` keeps `lib/` a pure build of `src/`; the tests run
+  // straight from source through Node's type stripping, so nothing here is
+  // compiled into the published package.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "."
+  },
+  "include": ["src", "tests"]
+}

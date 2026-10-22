@@ -1,0 +1,36 @@
+{
+  "schema": "terrain-shapes-cli-contract-v3",
+  "entry": "tools/map-terrain/terrain_cli.py",
+  "transport": {"tool": "terrain", "action": 14, "writeReceiptVersion": 18, "geometryReceiptVersion": 20, "preparedRoot": ".runtime/map-foundation-20261015/terrain/prepared"},
+  "commands": {
+    "surfaces": {"optional": {"--save": "GIL input, paired with --terrain-id; exclusive with --run", "--terrain-id": "integer terrain ID; required for --save, optional check for --run", "--run": "successful original terrain receipt; independently decoded full after, not an unchecked sidecar"}},
+    "surface-edits": {"required": {"--spec": "JSON object with cells array", "--output": "new .runtime JSON path containing the generated edits array"}},
+    "compile-check": {"newOptional": {"--shapes-guard": "boolean; expired write fixture containing all three slope types plus path; excludes inspect/runtime/catalog-probe/refresh"}},
+    "plan": {"compatible": "--edits may contain op=surface; outputs native-terrain-plan-v3 when present; --catalog-run remains available"},
+    "batch-create": {"compatible": "--edits may contain op=surface; each card carries shapeSemantics and uses original accepted after as next before"}
+  },
+  "cellSchema": {
+    "required": ["x", "z"],
+    "atLeastOne": ["slope", "path"],
+    "slope": "null removes slope; object {type:1|2|3,direction:'z+'|'x+'|'z-'|'x-'} sets native shape",
+    "path": "boolean creates/removes native path; no arbitrary integer accepted",
+    "height": "optional native integer code; omitted preserves existing height",
+    "material": "optional observed/catalogued material ID; slope shares base material"
+  },
+  "pythonConsumer": {"generate": "terrain_shapes_v3.generate({'cells':[...]})->ordinary edits array", "decode": "terrain_shapes_v3.describe(rows)", "encode": "terrain_shapes_v3.encode_slope({'type':1,'direction':'z+'})", "plan": "terrain_model.make_plan(...)", "batch": "terrain_batch.compile_plan(...)"},
+  "workflow": [
+    "surface-edits emits op=surface; it neither edits a GIL nor accesses the game.",
+    "Use plan --save FORMAL --terrain-id ID --edits FILE --output PLAN; use batch-create for many cards. New cells require height and material; existing unspecified fields are retained.",
+    "Single plan: fresh scene inspect -> prepare --baseline FRESH --plan PLAN -> execute. Multi-card: fresh scene baseline A -> prepare --baseline A --inspect-only --terrain-id ID -> execute inspect -> later fresh scene baseline B -> batch-prepare --baseline B --inspection INSPECT_RUN -> execute -> batch-accept. Repeat with fresh cards; accepted original full after supplies next before.",
+    "Before any transaction, the native card verifies complete cells, exact shape code/guards and actual material style/prefab resources. The normal snapshot/SetCell/notify/close/owner-rebuild chain runs, then resources and full after are checked again.",
+    "Explicit native save and verify-save --save-run (or batch-verify-save) prove persistence. --after remains content-only. Runtime Renderer/ray queries and player traversal are separate acceptance layers."
+  ],
+  "boundaries": [
+    "Native types1/2/3 and their preview codes are verified; front/left/right label-to-ID correspondence remains unverified, and no label alias is guessed.",
+    "Directions use local terrain axes, not assumed world axes; use the existing catalog/calibration matrix for world conversion.",
+    "Shape brushes retain height. Prefabs provide slopes, not arbitrary continuous heights or custom vertices.",
+    "Water is never silently cleared: slope operations and path creation reject water. Path removal preserves it.",
+    "Changing/removing a slope on a path requires explicit path:false. Creating a path over an existing slope is a separate accepted card, matching native path preservation.",
+    "Loaded path resource directories are checked; this alone does not prove every rendered mask, pixels, player traversal or reopen."
+  ]
+}

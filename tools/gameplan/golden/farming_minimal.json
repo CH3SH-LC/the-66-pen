@@ -1,0 +1,50 @@
+{
+  "consts": [
+    {
+      "alias": "harvest",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "plot_created",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "plot_created",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 3
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_FARM_MINIMAL",
+  "nodes": [
+    {
+      "alias": "plot_created",
+      "definitionId": 71,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "harvest",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

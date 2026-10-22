@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x13721870",
+      "head32": "564883ec30803d4dbd37f2000f84f300000048c744242800000000803d5cb001",
+      "functionBytes": 560,
+      "hotfixZeroRvas": [
+        "0x573c8ee",
+        "0x572052a"
+      ]
+    },
+    {
+      "rva": "0x13726d20",
+      "head32": "4883ec28803df35b01f200753fe8ee5db8f7e85949b8f7488b0df23009f280b9",
+      "functionBytes": 146,
+      "hotfixZeroRvas": [
+        "0x573c91e"
+      ]
+    },
+    {
+      "rva": "0x13724240",
+      "head32": "56574883ec28803db48601f2000f85fa000000488b0da6af08f280b9c7000000",
+      "functionBytes": 415,
+      "hotfixZeroRvas": [
+        "0x573c901",
+        "0x574f8f8",
+        "0x571bd0d"
+      ]
+    },
+    {
+      "rva": "0x138cbaf0",
+      "head32": "56574883ec384889cf803dd9cbe5f1000f85d0000000803d9bcbe5f1000f85eb",
+      "functionBytes": 381,
+      "hotfixZeroRvas": [
+        "0x57286d9",
+        "0x57286a8",
+        "0x577ae8c"
+      ]
+    },
+    {
+      "rva": "0x1355dba0",
+      "head32": "4156565755534883ec304c89cb4d89c689d54889ce803d159a53f2000f84d001",
+      "functionBytes": 1212,
+      "hotfixZeroRvas": [
+        "0x56f49c0",
+        "0x572052a",
+        "0x56f4a35",
+        "0x5703090",
+        "0x56e91b1",
+        "0x570a3e1",
+        "0x56f4a53"
+      ]
+    },
+    {
+      "rva": "0x1293cb50",
+      "head32": "5657534883ec704c89c74889d34889ce803d58f015f3000f846301000048c744",
+      "functionBytes": 567,
+      "hotfixZeroRvas": [
+        "0x570ebcb",
+        "0x5756c35"
+      ]
+    },
+    {
+      "rva": "0x1355bab0",
+      "head32": "4156565755534883ec304589ce4489c389d54889cf803d7b8f19f2000f852501",
+      "functionBytes": 575,
+      "hotfixZeroRvas": [
+        "0x56f4a47",
+        "0x5730794",
+        "0x56fb435"
+      ]
+    },
+    {
+      "rva": "0x13564af0",
+      "head32": "41565657534883ec784889d64889cf803dd02b53f2000f8446020000803dddfe",
+      "functionBytes": 926,
+      "hotfixZeroRvas": [
+        "0x56f49f0",
+        "0x577c6fb",
+        "0x570ebb3",
+        "0x570ebcc"
+      ]
+    },
+    {
+      "rva": "0x13567f20",
+      "head32": "564883ec304d89c14189d04889ce803dccca18f2000f85ba0000004183f80175",
+      "functionBytes": 349,
+      "hotfixZeroRvas": [
+        "0x56f4a01",
+        "0x570ebcc"
+      ]
+    },
+    {
+      "rva": "0x13724770",
+      "head32": "564883ec304889ce48c744242000000000803d7d8101f20075674885f60f84f7",
+      "functionBytes": 935,
+      "hotfixZeroRvas": [
+        "0x573c905",
+        "0x573c8f1"
+      ]
+    },
+    {
+      "rva": "0x81bbe40",
+      "head32": "41565657534883ec284c89cf4d89c64889d34889ce803d5a378efd007463803d",
+      "functionBytes": 227,
+      "hotfixZeroRvas": [
+        "0x577aebd"
+      ]
+    },
+    {
+      "rva": "0xa2fd240",
+      "head32": "5541565657534881ec90000000488dac248000000048c74500feffffff4989d6",
+      "functionBytes": 1664,
+      "hotfixZeroRvas": [
+        "0x56f3277"
+      ]
+    },
+    {
+      "rva": "0x10f3a1a0",
+      "head32": "55415741565657534881ec18010000488dac248000000048c78588000000feff",
+      "functionBytes": 1883,
+      "hotfixZeroRvas": [
+        "0x577284c",
+        "0x577283a",
+        "0x577283c",
+        "0x575a487"
+      ]
+    },
+    {
+      "rva": "0x10f37f50",
+      "head32": "5657534881ecd000000089d34889ce8854245b803db6e2b5f4000f8444020000",
+      "functionBytes": 852,
+      "hotfixZeroRvas": [
+        "0x5772822",
+        "0x5772822"
+      ]
+    },
+    {
+      "rva": "0xad09ed0",
+      "head32": "41565657534883ec584c89ce4c89c74989d689cb803d9882dafa000f84270100",
+      "functionBytes": 591,
+      "hotfixZeroRvas": [
+        "0x56fa61c",
+        "0x572052a"
+      ]
+    },
+    {
+      "rva": "0xf071740",
+      "head32": "41574156415541545657534883ec5089d34889ce803d7688a3f6000f84e20200",
+      "functionBytes": 1443,
+      "hotfixZeroRvas": [
+        "0x572ffd9",
+        "0x572052a",
+        "0x572052a",
+        "0x572052a",
+        "0x572052a"
+      ]
+    },
+    {
+      "rva": "0x8d16e90",
+      "head32": "4883ec28803d6695a1fc00488b0546cfa6fc7553488b8830a400004885c97440",
+      "functionBytes": 170,
+      "hotfixZeroRvas": [
+        "0x57307bf"
+      ]
+    },
+    {
+      "rva": "0x10e6fe20",
+      "head32": "56574883ec284889ca803d79098cf4000f85c7000000488b42304885c00f84e3",
+      "functionBytes": 411,
+      "hotfixZeroRvas": [
+        "0x57307a9",
+        "0x5730774"
+      ]
+    },
+    {
+      "rva": "0xb2acb20",
+      "head32": "41565657534883ec38803d37f07efa000f84b5020000c644242c00c644242f00",
+      "functionBytes": 1165,
+      "hotfixZeroRvas": [
+        "0x573c988",
+        "0x573c987",
+        "0x573c919"
+      ]
+    },
+    {
+      "rva": "0xb2ab690",
+      "head32": "5541565657534883ec50488d6c245048c745f0feffffff803d91047ffa000f84",
+      "functionBytes": 861,
+      "hotfixZeroRvas": [
+        "0x573c983"
+      ]
+    },
+    {
+      "rva": "0x19c9b820",
+      "head32": "e98b767be766662e0f1f840000000000e9eb767be766662e0f1f840000000000",
+      "functionBytes": 32,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x142948d0",
+      "head32": "41565657534883ec284883b998000000000f84910100004989d64889cb488b42",
+      "functionBytes": 445,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x17347250",
+      "head32": "4157415641554154565755534883ec584c8944244848895424304885d20f8412",
+      "functionBytes": 1093,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x19d141e0",
+      "name": "ScreenCapture.CaptureScreenshotAsTexture",
+      "head32": "e9dbaac5e6ccccccccccccccccccccccc36666666666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x96ecc0",
+      "name": "capture managed wrapper",
+      "head32": "4883ec28e857c32400488bd0488d4c2438e84aa0b500488b004883c428c3cccc"
+    },
+    {
+      "rva": "0xbbb020",
+      "name": "capture Texture2D allocation",
+      "head32": "40574883ec50e895080000488bf84885c0753c884424404c8d0508d4eb024889"
+    },
+    {
+      "rva": "0xbbb8c0",
+      "name": "game backbuffer readback; superSize1 excludes rerender branch",
+      "head32": "405553565741564157488d6c24d14881ecf80000000f29b424d00000004863f1"
+    },
+    {
+      "rva": "0x19cd3610",
+      "name": "ImageConversion.EncodeToPNG",
+      "head32": "e9eb3e08e766662e0f1f840000000000e96b4008e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0xd57500",
+      "name": "PNG encoder owned-array return",
+      "head32": "40534883ec4048894c2450488bd94885c90f8435010000e8a4386f004885c00f"
+    },
+    {
+      "rva": "0x19cb2dd0",
+      "name": "Object.DestroyImmediate",
+      "head32": "e9cb5a78e766662e0f1f84000000000031d2e9b95a78e7660f1f840000000000"
+    },
+    {
+      "rva": "0x14388a0",
+      "name": "DestroyImmediate native wrapper",
+      "head32": "40534883ec200fb6da4885c9751333c084d28bc80f95c24883c4205be9affb08"
+    },
+    {
+      "rva": "0x19cae530",
+      "name": "Texture.width",
+      "head32": "e99bc378e766662e0f1f8400000000004883ec28803ded99ddeb00743d488b0d"
+    },
+    {
+      "rva": "0x19cae5a0",
+      "name": "Texture.height",
+      "head32": "e96bc378e766662e0f1f8400000000004883ec28803d7f99ddeb00743d488b0d"
+    },
+    {
+      "rva": "0x19c9de20",
+      "name": "Time.frameCount",
+      "head32": "e9fb8d79e766662e0f1f840000000000e90b8e79e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19c9de30",
+      "name": "Time.renderedFrameCount",
+      "head32": "e90b8e79e766662e0f1f840000000000e91b8e79e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19cc2fd0",
+      "name": "Screen.width",
+      "head32": "e9dba8cbe666662e0f1f840000000000e9eba8cbe666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19cc2fe0",
+      "name": "Screen.height",
+      "head32": "e9eba8cbe666662e0f1f840000000000e9fba8cbe666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x18e06d30",
+      "name": "UInt32 object dictionary enumerator; count38 version3c entries28",
+      "head32": "564883ec20488b014885c00f849e0000008b51083b503c0f859c000000448b40"
+    },
+    {
+      "rva": "0x13560870",
+      "name": "editor trial task getter +90",
+      "head32": "4883ec284889ca803d504119f200750c488b82900000004883c428c3488b0555"
+    },
+    {
+      "rva": "0x81c0ed0",
+      "name": "SetCurLevelData +68; guid38 version34 isTrial30",
+      "head32": "41565657534883ec584889d64989ce803dd5e38dfd000f84d8000000803dbb9f"
+    },
+    {
+      "rva": "0x9a7acd0",
+      "name": "Entity transform world position",
+      "head32": "56574883ec680f297c24500f297424404889d74889ce803df771c8fb000f85e8"
+    },
+    {
+      "rva": "0x9a84cd0",
+      "name": "Entity GameObject +38",
+      "head32": "488b4138c366662e0f1f84000000000041565657534883ec284889ce803d4fd2"
+    },
+    {
+      "rva": "0x9a96970",
+      "name": "Entity transform +1e8",
+      "head32": "488b81e8010000c30f1f840000000000564883ec204889ce803d55b6c6fb0075"
+    },
+    {
+      "rva": "0x173770b0",
+      "name": "UInt32 dictionary lookup",
+      "head32": "4157415641554154565755534883ec4889542424488b71204885f6747d4c8b61"
+    },
+    {
+      "rva": "0xe96b300",
+      "name": "EntityManager EntityMap diagnostic +1e8",
+      "head32": "555657534883ec78488d6c247048c745f8feffffff4889ce803ddf8012f7000f"
+    },
+    {
+      "rva": "0xe987ec0",
+      "name": "EntityMap runtime ID match +3a8",
+      "head32": "565755534883ec784489c54889d64889cf803da9b610f7000f84b2010000803d"
+    },
+    {
+      "rva": "0x9a9c0c0",
+      "name": "BaseEntity runtimeID/configID/tickable/ready/type/loaded diagnostic",
+      "head32": "41565657534883ec284889ce803dee5800fc000f8436020000803db360c6fb00"
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x56e91b1",
+    "0x56f3277",
+    "0x56f49c0",
+    "0x56f49f0",
+    "0x56f4a01",
+    "0x56f4a35",
+    "0x56f4a47",
+    "0x56f4a53",
+    "0x56fa61c",
+    "0x56fb435",
+    "0x5703090",
+    "0x570a3e1",
+    "0x570ebb3",
+    "0x570ebcb",
+    "0x570ebcc",
+    "0x571bd0d",
+    "0x572052a",
+    "0x57286a8",
+    "0x57286d9",
+    "0x572ffd9",
+    "0x5730774",
+    "0x5730794",
+    "0x57307a9",
+    "0x57307bf",
+    "0x573c8ee",
+    "0x573c8f1",
+    "0x573c901",
+    "0x573c905",
+    "0x573c919",
+    "0x573c91e",
+    "0x573c983",
+    "0x573c987",
+    "0x573c988",
+    "0x574f8f8",
+    "0x5756c35",
+    "0x575a487",
+    "0x5772822",
+    "0x577283a",
+    "0x577283c",
+    "0x577284c",
+    "0x577ae8c",
+    "0x577aebd",
+    "0x577c6fb"
+  ],
+  "evidence": "Current installed image code and metadata; static extraction, not live acceptance"
+}

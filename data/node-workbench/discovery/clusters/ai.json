@@ -1,0 +1,836 @@
+{
+  "id": "ai",
+  "name": "造物、仇恨与战术",
+  "purpose": "造物目标、仇恨、预设状态与 AI 战术。",
+  "aliases": [
+    "AI",
+    "敌人",
+    "怪物",
+    "行为",
+    "决策",
+    "仇恨",
+    "目标",
+    "战术",
+    "宠物"
+  ],
+  "nativeLeaves": [
+    "造物",
+    "自定义仇恨",
+    "战术",
+    "造物预设状态"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:374",
+      "definitionId": 374,
+      "graphKind": 20000,
+      "name": "造物入战时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "造物"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 374 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:375",
+      "definitionId": 375,
+      "graphKind": 20000,
+      "name": "造物脱战时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "造物"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 375 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:376",
+      "definitionId": 376,
+      "graphKind": 20000,
+      "name": "获取造物当前目标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "造物"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 376 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:381",
+      "definitionId": 381,
+      "graphKind": 20000,
+      "name": "获取造物属性",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "造物"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 381 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:599",
+      "definitionId": 599,
+      "graphKind": 20000,
+      "name": "设置指定实体的仇恨值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 599 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:600",
+      "definitionId": 600,
+      "graphKind": 20000,
+      "name": "将目标实体移除出仇恨列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 600 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:601",
+      "definitionId": 601,
+      "graphKind": 20000,
+      "name": "清空指定目标的仇恨列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 601 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:602",
+      "definitionId": 602,
+      "graphKind": 20000,
+      "name": "嘲讽目标",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 602 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:603",
+      "definitionId": 603,
+      "graphKind": 20000,
+      "name": "查询指定实体的仇恨值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 603 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:604",
+      "definitionId": 604,
+      "graphKind": 20000,
+      "name": "查询指定实体的仇恨倍率",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 604 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:605",
+      "definitionId": 605,
+      "graphKind": 20000,
+      "name": "查询全局仇恨转移倍率",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 605 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:606",
+      "definitionId": 606,
+      "graphKind": 20000,
+      "name": "获取指定实体的仇恨目标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 606 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:607",
+      "definitionId": 607,
+      "graphKind": 20000,
+      "name": "获取目标所在仇恨列表的拥有者列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 607 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:608",
+      "definitionId": 608,
+      "graphKind": 20000,
+      "name": "获取以目标为仇恨目标的拥有者列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 608 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:609",
+      "definitionId": 609,
+      "graphKind": 20000,
+      "name": "获取指定实体的仇恨列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 609 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:610",
+      "definitionId": 610,
+      "graphKind": 20000,
+      "name": "查询指定实体是否已入战",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 610 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:611",
+      "definitionId": 611,
+      "graphKind": 20000,
+      "name": "仇恨目标变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 611 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:612",
+      "definitionId": 612,
+      "graphKind": 20000,
+      "name": "自身入战时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 612 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:613",
+      "definitionId": 613,
+      "graphKind": 20000,
+      "name": "自身脱战时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 613 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:758",
+      "definitionId": 758,
+      "graphKind": 20000,
+      "name": "获取默认模式的造物仇恨列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "造物"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 758 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:797",
+      "definitionId": 797,
+      "graphKind": 20000,
+      "name": "获取复杂造物的预设状态值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "造物预设状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 797 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:798",
+      "definitionId": 798,
+      "graphKind": 20000,
+      "name": "设置复杂造物的预设状态值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "造物预设状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 798 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:799",
+      "definitionId": 799,
+      "graphKind": 20000,
+      "name": "复杂造物预设状态变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "造物预设状态"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 799 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20002:22000:0:200083",
+      "definitionId": 200083,
+      "graphKind": 20002,
+      "name": "设置指定实体的仇恨值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200083 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200084",
+      "definitionId": 200084,
+      "graphKind": 20002,
+      "name": "增加指定实体的仇恨值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200084 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200085",
+      "definitionId": 200085,
+      "graphKind": 20002,
+      "name": "按比例设置指定实体的仇恨值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200085 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200086",
+      "definitionId": 200086,
+      "graphKind": 20002,
+      "name": "按比例转移指定实体的仇恨值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200086 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200087",
+      "definitionId": 200087,
+      "graphKind": 20002,
+      "name": "清空指定实体的仇恨列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200087 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200088",
+      "definitionId": 200088,
+      "graphKind": 20002,
+      "name": "将目标实体移除出仇恨列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200088 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200089",
+      "definitionId": 200089,
+      "graphKind": 20002,
+      "name": "嘲讽目标",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200089 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200090",
+      "definitionId": 200090,
+      "graphKind": 20002,
+      "name": "获取指定实体的仇恨目标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200090 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200091",
+      "definitionId": 200091,
+      "graphKind": 20002,
+      "name": "获取指定实体的仇恨列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200091 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200092",
+      "definitionId": 200092,
+      "graphKind": 20002,
+      "name": "查询指定实体是否入战",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "自定义仇恨"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200092 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20007:22000:0:200130",
+      "definitionId": 200130,
+      "graphKind": 20007,
+      "name": "战术：地面闲逛",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200130 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200131",
+      "definitionId": 200131,
+      "graphKind": 20007,
+      "name": "战术：地面追击",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200131 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200133",
+      "definitionId": 200133,
+      "graphKind": 20007,
+      "name": "战术：静止不动",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200133 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200134",
+      "definitionId": 200134,
+      "graphKind": 20007,
+      "name": "战术：移动到目标点",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200134 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200135",
+      "definitionId": 200135,
+      "graphKind": 20007,
+      "name": "战术：移动到目标实体",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200135 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200136",
+      "definitionId": 200136,
+      "graphKind": 20007,
+      "name": "战术：旋转到指定朝向",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200136 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200137",
+      "definitionId": 200137,
+      "graphKind": 20007,
+      "name": "战术：旋转指定角度",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200137 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200138",
+      "definitionId": 200138,
+      "graphKind": 20007,
+      "name": "战术：地面逃跑",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200138 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200139",
+      "definitionId": 200139,
+      "graphKind": 20007,
+      "name": "战术：脱战后返回出生点",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200139 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200140",
+      "definitionId": 200140,
+      "graphKind": 20007,
+      "name": "战术：地面对峙",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200140 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200141",
+      "definitionId": 200141,
+      "graphKind": 20007,
+      "name": "战术：执行巡逻",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200141 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200246",
+      "definitionId": 200246,
+      "graphKind": 20007,
+      "name": "战术：旋转朝向目标实体",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200246 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200303",
+      "definitionId": 200303,
+      "graphKind": 20007,
+      "name": "战术：空中降落",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200303 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200308",
+      "definitionId": 200308,
+      "graphKind": 20007,
+      "name": "战术：空中追击",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200308 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200309",
+      "definitionId": 200309,
+      "graphKind": 20007,
+      "name": "战术：空中逃跑",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200309 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200310",
+      "definitionId": 200310,
+      "graphKind": 20007,
+      "name": "战术：空中对峙",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200310 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200311",
+      "definitionId": 200311,
+      "graphKind": 20007,
+      "name": "战术：空中闲逛",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ai"
+      ],
+      "nativeLeaves": [
+        "战术"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200311 --graph-kind 20007"
+    }
+  ],
+  "count": 50,
+  "byFamily": {
+    "事件节点": 6,
+    "查询节点": 15,
+    "执行节点": 29
+  },
+  "byGraphKind": {
+    "20000": 23,
+    "20002": 10,
+    "20007": 17
+  },
+  "runtimeVerified": false
+}

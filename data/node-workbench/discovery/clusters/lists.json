@@ -1,0 +1,593 @@
+{
+  "id": "lists",
+  "name": "列表与集合处理",
+  "purpose": "构造、查询和修改列表。",
+  "aliases": [
+    "数组",
+    "列表",
+    "遍历",
+    "排序",
+    "去重",
+    "索引",
+    "集合"
+  ],
+  "nativeLeaves": [
+    "列表",
+    "列表相关"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:100",
+      "definitionId": 100,
+      "graphKind": 20000,
+      "name": "拼接列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 100 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:107",
+      "definitionId": 107,
+      "graphKind": 20000,
+      "name": "清除列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 107 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:114",
+      "definitionId": 114,
+      "graphKind": 20000,
+      "name": "列表是否包含该值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 114 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:121",
+      "definitionId": 121,
+      "graphKind": 20000,
+      "name": "查找列表并返回值的序号",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 121 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:128",
+      "definitionId": 128,
+      "graphKind": 20000,
+      "name": "获取列表对应值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 128 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:135",
+      "definitionId": 135,
+      "graphKind": 20000,
+      "name": "对列表插入值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 135 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:142",
+      "definitionId": 142,
+      "graphKind": 20000,
+      "name": "获取列表长度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 142 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:149",
+      "definitionId": 149,
+      "graphKind": 20000,
+      "name": "获取列表最大值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 149 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:151",
+      "definitionId": 151,
+      "graphKind": 20000,
+      "name": "获取列表最小值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 151 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:153",
+      "definitionId": 153,
+      "graphKind": 20000,
+      "name": "对列表移除值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 153 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:160",
+      "definitionId": 160,
+      "graphKind": 20000,
+      "name": "对列表设置值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 160 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:167",
+      "definitionId": 167,
+      "graphKind": 20000,
+      "name": "列表排序",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 167 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:509",
+      "definitionId": 509,
+      "graphKind": 20000,
+      "name": "列表迭代循环",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 509 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200017",
+      "definitionId": 200017,
+      "graphKind": 20001,
+      "name": "获取列表对应值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200017 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200018",
+      "definitionId": 200018,
+      "graphKind": 20001,
+      "name": "获取列表长度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200018 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200019",
+      "definitionId": 200019,
+      "graphKind": 20001,
+      "name": "列表是否包含该值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200019 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200020",
+      "definitionId": 200020,
+      "graphKind": 20001,
+      "name": "获取列表最大值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200020 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200021",
+      "definitionId": 200021,
+      "graphKind": 20001,
+      "name": "获取列表最小值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200021 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200049",
+      "definitionId": 200049,
+      "graphKind": 20001,
+      "name": "拼装列表",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200049 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200050",
+      "definitionId": 200050,
+      "graphKind": 20001,
+      "name": "获取实体类型列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200050 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200110",
+      "definitionId": 200110,
+      "graphKind": 20001,
+      "name": "获取射线筛选类型列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200110 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200017",
+      "definitionId": 200017,
+      "graphKind": 20002,
+      "name": "获取列表对应值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200017 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200018",
+      "definitionId": 200018,
+      "graphKind": 20002,
+      "name": "获取列表长度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200018 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200019",
+      "definitionId": 200019,
+      "graphKind": 20002,
+      "name": "列表是否包含该值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200019 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200020",
+      "definitionId": 200020,
+      "graphKind": 20002,
+      "name": "获取列表最大值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200020 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200021",
+      "definitionId": 200021,
+      "graphKind": 20002,
+      "name": "获取列表最小值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200021 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200049",
+      "definitionId": 200049,
+      "graphKind": 20002,
+      "name": "拼装列表",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200049 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200050",
+      "definitionId": 200050,
+      "graphKind": 20002,
+      "name": "获取实体类型列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200050 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200110",
+      "definitionId": 200110,
+      "graphKind": 20002,
+      "name": "获取射线筛选类型列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200110 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20007:22000:0:200222",
+      "definitionId": 200222,
+      "graphKind": 20007,
+      "name": "获取列表对应值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200222 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200223",
+      "definitionId": 200223,
+      "graphKind": 20007,
+      "name": "获取列表长度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200223 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200224",
+      "definitionId": 200224,
+      "graphKind": 20007,
+      "name": "列表是否包含该值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200224 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200225",
+      "definitionId": 200225,
+      "graphKind": 20007,
+      "name": "获取列表最大值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200225 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200226",
+      "definitionId": 200226,
+      "graphKind": 20007,
+      "name": "获取列表最小值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200226 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200312",
+      "definitionId": 200312,
+      "graphKind": 20007,
+      "name": "获取实体类型列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "lists"
+      ],
+      "nativeLeaves": [
+        "列表相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200312 --graph-kind 20007"
+    }
+  ],
+  "count": 35,
+  "byFamily": {
+    "执行节点": 7,
+    "查询节点": 26,
+    "运算节点": 2
+  },
+  "byGraphKind": {
+    "20000": 13,
+    "20001": 8,
+    "20002": 8,
+    "20007": 6
+  },
+  "runtimeVerified": false
+}

@@ -1,0 +1,1354 @@
+{
+  "id": "players",
+  "name": "玩家、角色与阵营",
+  "purpose": "转换玩家/角色身份，处理出生、离开、复活和队伍。",
+  "aliases": [
+    "多人",
+    "玩家实体",
+    "角色实体",
+    "所属",
+    "玩家编号",
+    "复活",
+    "传送",
+    "队伍"
+  ],
+  "nativeLeaves": [
+    "玩家与角色相关",
+    "阵营相关"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:248",
+      "definitionId": 248,
+      "graphKind": 20000,
+      "name": "获取在场玩家实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 248 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:249",
+      "definitionId": 249,
+      "graphKind": 20000,
+      "name": "查询实体阵营",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 249 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:250",
+      "definitionId": 250,
+      "graphKind": 20000,
+      "name": "设置实体阵营",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 250 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:251",
+      "definitionId": 251,
+      "graphKind": 20000,
+      "name": "实体阵营变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 251 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:258",
+      "definitionId": 258,
+      "graphKind": 20000,
+      "name": "获取指定玩家所有角色实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 258 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:259",
+      "definitionId": 259,
+      "graphKind": 20000,
+      "name": "获取角色归属的玩家实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 259 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:272",
+      "definitionId": 272,
+      "graphKind": 20000,
+      "name": "激活复苏点",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 272 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:273",
+      "definitionId": 273,
+      "graphKind": 20000,
+      "name": "注销复苏点",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 273 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:274",
+      "definitionId": 274,
+      "graphKind": 20000,
+      "name": "允许/禁止玩家复苏",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 274 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:275",
+      "definitionId": 275,
+      "graphKind": 20000,
+      "name": "获取玩家剩余复苏次数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 275 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:276",
+      "definitionId": 276,
+      "graphKind": 20000,
+      "name": "设置玩家剩余复苏次数",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 276 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:277",
+      "definitionId": 277,
+      "graphKind": 20000,
+      "name": "获取玩家复苏耗时",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 277 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:278",
+      "definitionId": 278,
+      "graphKind": 20000,
+      "name": "设置玩家复苏耗时",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 278 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:279",
+      "definitionId": 279,
+      "graphKind": 20000,
+      "name": "复苏角色",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 279 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:280",
+      "definitionId": 280,
+      "graphKind": 20000,
+      "name": "角色倒下时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 280 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:281",
+      "definitionId": 281,
+      "graphKind": 20000,
+      "name": "角色复苏时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 281 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:282",
+      "definitionId": 282,
+      "graphKind": 20000,
+      "name": "击倒玩家所有角色",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 282 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:283",
+      "definitionId": 283,
+      "graphKind": 20000,
+      "name": "复苏玩家所有角色",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 283 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:284",
+      "definitionId": 284,
+      "graphKind": 20000,
+      "name": "玩家所有角色倒下时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 284 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:285",
+      "definitionId": 285,
+      "graphKind": 20000,
+      "name": "玩家异常倒下并复苏时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 285 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:286",
+      "definitionId": 286,
+      "graphKind": 20000,
+      "name": "玩家所有角色复苏时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 286 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:287",
+      "definitionId": 287,
+      "graphKind": 20000,
+      "name": "查询玩家角色是否全部倒下",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 287 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:288",
+      "definitionId": 288,
+      "graphKind": 20000,
+      "name": "传送玩家(超限)",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 288 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:289",
+      "definitionId": 289,
+      "graphKind": 20000,
+      "name": "玩家传送完成时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 289 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:614",
+      "definitionId": 614,
+      "graphKind": 20000,
+      "name": "查询阵营是否敌对",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 614 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:750",
+      "definitionId": 750,
+      "graphKind": 20000,
+      "name": "根据玩家序号获取玩家GUID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 750 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:751",
+      "definitionId": 751,
+      "graphKind": 20000,
+      "name": "根据玩家GUID获取玩家序号",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 751 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:763",
+      "definitionId": 763,
+      "graphKind": 20000,
+      "name": "设置环境配置",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 763 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:767",
+      "definitionId": 767,
+      "graphKind": 20000,
+      "name": "获取玩家昵称",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 767 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:768",
+      "definitionId": 768,
+      "graphKind": 20000,
+      "name": "获得玩家客户端输入设备类型",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 768 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:793",
+      "definitionId": 793,
+      "graphKind": 20000,
+      "name": "查询经典模式角色编号",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 793 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:794",
+      "definitionId": 794,
+      "graphKind": 20000,
+      "name": "前台角色变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 794 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:795",
+      "definitionId": 795,
+      "graphKind": 20000,
+      "name": "设置角色元素能量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 795 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:796",
+      "definitionId": 796,
+      "graphKind": 20000,
+      "name": "增加角色元素能量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 796 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:803",
+      "definitionId": 803,
+      "graphKind": 20000,
+      "name": "复苏当前场上角色",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 803 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:804",
+      "definitionId": 804,
+      "graphKind": 20000,
+      "name": "获取指定玩家的前台角色",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 804 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:805",
+      "definitionId": 805,
+      "graphKind": 20000,
+      "name": "传送玩家(经典)",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 805 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200024",
+      "definitionId": 200024,
+      "graphKind": 20001,
+      "name": "获取指定玩家的角色实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200024 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200025",
+      "definitionId": 200025,
+      "graphKind": 20001,
+      "name": "获取角色归属的玩家实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200025 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200026",
+      "definitionId": 200026,
+      "graphKind": 20001,
+      "name": "获取在场玩家实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200026 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200027",
+      "definitionId": 200027,
+      "graphKind": 20001,
+      "name": "以实体查询GUID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200027 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200029",
+      "definitionId": 200029,
+      "graphKind": 20001,
+      "name": "查询实体阵营",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200029 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200037",
+      "definitionId": 200037,
+      "graphKind": 20001,
+      "name": "查询自身是否已入战",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200037 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200076",
+      "definitionId": 200076,
+      "graphKind": 20001,
+      "name": "获取当前角色",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200076 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200093",
+      "definitionId": 200093,
+      "graphKind": 20001,
+      "name": "查询阵营是否敌对",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200093 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200123",
+      "definitionId": 200123,
+      "graphKind": 20001,
+      "name": "获得玩家客户端输入设备类型",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200123 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200242",
+      "definitionId": 200242,
+      "graphKind": 20001,
+      "name": "获取玩家的角色列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200242 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200251",
+      "definitionId": 200251,
+      "graphKind": 20001,
+      "name": "获取指定玩家的前台角色",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200251 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200254",
+      "definitionId": 200254,
+      "graphKind": 20001,
+      "name": "查询经典模式角色编号",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200254 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200255",
+      "definitionId": 200255,
+      "graphKind": 20001,
+      "name": "获取玩家移动输入",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200255 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200259",
+      "definitionId": 200259,
+      "graphKind": 20001,
+      "name": "查询技能变量对应值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200259 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200267",
+      "definitionId": 200267,
+      "graphKind": 20001,
+      "name": "获取当前关键行为",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200267 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200268",
+      "definitionId": 200268,
+      "graphKind": 20001,
+      "name": "获取当前关键行为（高精度）",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200268 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200269",
+      "definitionId": 200269,
+      "graphKind": 20001,
+      "name": "获取当前客户端时间",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200269 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200270",
+      "definitionId": 200270,
+      "graphKind": 20001,
+      "name": "获取当前客户端时间（高精度）",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200270 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200271",
+      "definitionId": 200271,
+      "graphKind": 20001,
+      "name": "查询玩家是否正在语音聊天",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200271 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200272",
+      "definitionId": 200272,
+      "graphKind": 20001,
+      "name": "根据技能实例ID获取技能配置ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200272 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200273",
+      "definitionId": 200273,
+      "graphKind": 20001,
+      "name": "查询指定槽位的技能实例列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200273 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200274",
+      "definitionId": 200274,
+      "graphKind": 20001,
+      "name": "查询指定槽位当前生效的技能实例",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200274 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200275",
+      "definitionId": 200275,
+      "graphKind": 20001,
+      "name": "以技能槽位和技能配置ID查询技能实例ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200275 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200024",
+      "definitionId": 200024,
+      "graphKind": 20002,
+      "name": "获取指定玩家的角色实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200024 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200025",
+      "definitionId": 200025,
+      "graphKind": 20002,
+      "name": "获取角色归属的玩家实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities",
+        "players"
+      ],
+      "nativeLeaves": [
+        "实体相关",
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200025 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200026",
+      "definitionId": 200026,
+      "graphKind": 20002,
+      "name": "获取在场玩家实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities",
+        "players"
+      ],
+      "nativeLeaves": [
+        "实体相关",
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200026 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200027",
+      "definitionId": 200027,
+      "graphKind": 20002,
+      "name": "以实体查询GUID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities",
+        "players"
+      ],
+      "nativeLeaves": [
+        "实体相关",
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200027 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200029",
+      "definitionId": 200029,
+      "graphKind": 20002,
+      "name": "查询实体阵营",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200029 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200037",
+      "definitionId": 200037,
+      "graphKind": 20002,
+      "name": "查询自身是否已入战",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200037 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200076",
+      "definitionId": 200076,
+      "graphKind": 20002,
+      "name": "获取当前角色",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200076 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200093",
+      "definitionId": 200093,
+      "graphKind": 20002,
+      "name": "查询阵营是否敌对",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200093 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200123",
+      "definitionId": 200123,
+      "graphKind": 20002,
+      "name": "获得玩家客户端输入设备类型",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200123 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200255",
+      "definitionId": 200255,
+      "graphKind": 20002,
+      "name": "获取玩家移动输入",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200255 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200259",
+      "definitionId": 200259,
+      "graphKind": 20002,
+      "name": "查询技能变量对应值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players",
+        "skills"
+      ],
+      "nativeLeaves": [
+        "技能",
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200259 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200267",
+      "definitionId": 200267,
+      "graphKind": 20002,
+      "name": "获取当前关键行为",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200267 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200268",
+      "definitionId": 200268,
+      "graphKind": 20002,
+      "name": "获取当前关键行为（高精度）",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200268 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200269",
+      "definitionId": 200269,
+      "graphKind": 20002,
+      "name": "获取当前客户端时间",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200269 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200270",
+      "definitionId": 200270,
+      "graphKind": 20002,
+      "name": "获取当前客户端时间（高精度）",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200270 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200271",
+      "definitionId": 200271,
+      "graphKind": 20002,
+      "name": "查询玩家是否正在语音聊天",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200271 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200272",
+      "definitionId": 200272,
+      "graphKind": 20002,
+      "name": "根据技能实例ID获取技能配置ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200272 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200273",
+      "definitionId": 200273,
+      "graphKind": 20002,
+      "name": "查询指定槽位的技能实例列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200273 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200274",
+      "definitionId": 200274,
+      "graphKind": 20002,
+      "name": "查询指定槽位当前生效的技能实例",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200274 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200275",
+      "definitionId": 200275,
+      "graphKind": 20002,
+      "name": "以技能槽位和技能配置ID查询技能实例ID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200275 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20007:22000:0:200171",
+      "definitionId": 200171,
+      "graphKind": 20007,
+      "name": "查询实体阵营",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200171 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200227",
+      "definitionId": 200227,
+      "graphKind": 20007,
+      "name": "查询阵营是否敌对",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "players"
+      ],
+      "nativeLeaves": [
+        "阵营相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200227 --graph-kind 20007"
+    }
+  ],
+  "count": 82,
+  "byFamily": {
+    "查询节点": 59,
+    "执行节点": 15,
+    "事件节点": 8
+  },
+  "byGraphKind": {
+    "20000": 37,
+    "20001": 23,
+    "20002": 20,
+    "20007": 2
+  },
+  "runtimeVerified": false
+}

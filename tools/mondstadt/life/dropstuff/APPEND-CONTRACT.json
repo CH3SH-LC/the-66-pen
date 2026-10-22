@@ -1,0 +1,127 @@
+{
+  "contractVersion": 1,
+  "module": "life-gameplay",
+  "purpose": "给交付 runner 的 field-15 append 字段契约（执行能力已有，缺的是字段映射）",
+  "generatedFrom": "data/mondstadt/life/item-defs.json#appendRequest（已按 sha256 验收：63090e243325f1b9dfa998fa140cce10b97dad857185369f3c903114e711415d）",
+
+  "call": {
+    "api": "tools/beyond-save/field15_edit.py:append_record",
+    "signature": "append_record(blob: bytes, record_id: int, f2: int | None = None, payload: bytes = b'', *, component_kind=None, name=None, payload_field=None, blocks=(), entry: bytes | None = None) -> Field15Edit",
+    "usageForThisRequest": "append_record(blob=当前关卡文件字节, record_id=<writePlan[i].recordId>, entry=<bytes.fromhex(writePlan[i].bodyHex)>)",
+    "howManyCalls": 7,
+    "callOrder": "严格按 writePlan[].order（0..6）：先 2 条 copy-verbatim（供体），再 5 条 clone-rename（新道具）",
+    "returnType": "Field15Edit（dataclass）；**新字节是 edit.blob**（纯函数，blob 进 / bytes 出，绝不落盘）",
+    "purity": "纯函数：内部只做内存编辑；落盘由调用方（root）决定",
+    "guards": [
+      "template_edit.add_template：重复 id 具名拒绝 'template id <id> already present -- refusing to duplicate'（唯一守卫，不复制其逻辑）",
+      "body 的 field 1 必须等于 record_id，否则拒绝",
+      "追加后**重读结果**并要求该 id 恰好出现一次（outcome 兜底）"
+    ],
+    "indexSemantics": "**没有 index 入参**：记录总是追加到 root field 15 的重复 field-1 列表**尾部**；不动既有记录、不加/移根字段，只重算外层长度 varint。writePlan[].expectedTableIndex 只是**预期位置**（2..8），供写后核对，不用作入参",
+    "errorCodes": {
+      "noRootField15": "关卡载荷没有 root field 15 ⇒ 本请求不可执行（本工程无「凭空创建 field 15」原语）",
+      "duplicateId": "template_edit 的重复 id 拒绝（= reuse.policy 冲突：默认具名拒绝；显式 on_conflict='renumber' 会改号并给 ledgerUpdateRequired）"
+    }
+  },
+
+  "payloadFieldMapping": {
+    "note": "writePlan 每条 11 个字段；**写盘只需要 2 个**：recordId 与 bodyHex",
+    "record_id": "writePlan[i].recordId            // int，定义 id",
+    "entry_bytes": "bytes.fromhex(writePlan[i].bodyHex)   // 记录体（含 field1=id、名字块、其余逐字节）",
+    "verifyAfterDecode": "sha256(entry_bytes) == writePlan[i].bodySha256  &&  len == writePlan[i].bodyBytes",
+    "informational": ["order", "mode(copy-verbatim|clone-rename)", "idRef", "band(item|currency)", "f2(9=道具, 11=货币)", "expectedTableIndex", "appendedAt"],
+    "notInputs": ["f2 不作为入参传入（entry 自带）；仅当**从零构造**记录时才用 f2/payload/blocks 那组参数，本请求不用"]
+  },
+
+  "target": {
+    "levelId": 1073741843,
+    "levelName": "自定义页签_5_存档_1",
+    "observedFile": {
+      "path": ".runtime/game-executor/scene-cli/20261017-020047-save-db4b70a6/after-1073741843.gil",
+      "bytes": 962917,
+      "sha256": "cc9a2a66cb0a5442737f73cf168fef8799f3df064298ed43810cfe452c79dcca"
+    },
+    "rule": "关卡 id 是存档的函数 —— root 必须在**当次会话重新读回**并用它，不得照抄上面的 1073741843"
+  },
+
+  "prepareCardRoot": {
+    "note": "写之前需要的产物（路径均相对工程根）",
+    "artifacts": [
+      "data/mondstadt/life/item-defs.json  // 本请求；sha256 63090e243325f1b9dfa998fa140cce10b97dad857185369f3c903114e711415d",
+      "tools/beyond-save/field15_edit.py   // append_record 实现（执行器，勿复制逻辑）",
+      "tools/beyond-save/template_edit.py  // 重复 id 守卫（被 field15_edit 复用）",
+      "tools/beyond-save/gil_container.py  // 容器解码/编码（前两者依赖它）",
+      "<target>.gil                        // 当次会话读回的目标关卡文件"
+    ],
+    "prerequisites": [
+      "① 当次会话重读目标关卡并把它的 field 15 既有 id 集合与 request.preconditions 里的 existingRecordIds 对齐",
+      "② 核对 observedFile.sha256；不一致 ⇒ **重跑生成器**重算请求（搬运冲突按 reuse.policy 重判、新道具按避让规则改号），不要照抄 recordId",
+      "③ 逐字节备份目标 .gil（rollback=文件级：preBackup / restore 都是 Copy-Item）",
+      "④ 目标必须**已有** root field 15（1843 已实测有 2 条记录）；没有就停，不要试图创建"
+    ]
+  },
+
+  "verificationAfterWrite": [
+    "field15_edit.read_records(new_blob)：记录数 2 → **9**",
+    "7 个新 id 每个**恰好出现一次**",
+    "既有 2 条记录的 sha256（field15_edit.record_digests）**不变**",
+    "每条新记录的 body 与 writePlan[i].bodyHex **逐字节相同**",
+    "item_defs.self_sufficiency(new_blob) ⇒ **true**（写前为 false：缺 7 条）",
+    "不预测整份存档字节数（field 46 规则未定）；只核对 field 15 的记录集合与字节"
+  ],
+
+  "observedFileGuard": {
+    "why": "2026-10-17 lead 报回：runner 读 `appendRequest.observedFile`，而该键此前为 null ⇒ 写前 sha256 守卫**静默跳过**。已修：生成器现在**顶层镜像**一份（需重跑生成器后出现在 JSON 里）。",
+    "authority": "appendRequest.target.observedFile（权威）；appendRequest.observedFile（镜像）",
+    "immediateWorkaround": "若顶层 observedFile 仍为 null（未重跑生成器），请读 appendRequest.target.observedFile —— 它的值一直存在（path/bytes/sha256）",
+    "valueAtGeneration": {
+      "path": ".runtime/game-executor/scene-cli/20261017-020047-save-db4b70a6/after-1073741843.gil",
+      "bytes": 962917,
+      "sha256": "cc9a2a66cb0a5442737f73cf168fef8799f3df064298ed43810cfe452c79dcca"
+    },
+    "currentReality": {
+      "observedBy": "lead 2026-10-17",
+      "realLevelBytes": 963088,
+      "note": "真实关卡现为 963,088 B（**02:09:01 由游戏侧保存**，非项目侧），与生成时的 962,917 B 不一致"
+    },
+    "rule": "sha256/bytes 不一致 ⇒ **必须重新观测后再写**（重跑生成器重算整个请求，含 recordId 与避让规则），不得照抄 recordId；这正是 OBSERVED_SHA_MISMATCH 要拦的情况"
+  },
+
+  "indexFormat": {
+    "path": ".runtime/mondstadt/rework-20261017/shared-source/official-prefab-index.json",
+    "format": "**NDJSON**（2,027,853 B / 2729 行，每行一条 JSON）⇒ 逐行 json.loads；整体 json.loads 会报 `Extra data: line 2 column 1`",
+    "source_root": "指向安装目录（**只读引用，不得改写**）",
+    "sharedDecodedDir": ".runtime/mondstadt/rework-20261017/shared-source/official-prefab/（2729 份 *.mihoyobin.json + _provenance.json；source_set_sha256=1349dabd210ed9d7b3c9e84532af19fde07c6f16de22a4ee561ab3dc49bd712c）"
+  },
+
+  "rollback": {
+    "kind": "file-level（没有记录级删除原语）",
+    "preBackup": "Copy-Item <target>.gil <backup>",
+    "restore": "Copy-Item <backup> <target>.gil",
+    "noReplay": "未知结果不重放"
+  },
+
+  "dependencySourceTree": {
+    "lifeNativeDropStuff": [
+      "tools/mondstadt/life/dropstuff/ABI-DROPSTUFF.md      // ABI 依据：kind=37 主源、kind+10=config、官方集实测（含撤回）",
+      "tools/mondstadt/life/dropstuff/drop_stuff_attach.py // 挂载规格生成器（46 项封闭枚举 + 3 条 fail-closed）"
+    ],
+    "lifeItemDefs": [
+      "tools/mondstadt/life/item_defs.py",
+      "data/mondstadt/life/item-defs.json",
+      "docs/mondstadt/life/item-defs.md"
+    ],
+    "readOnlyProbes": [
+      ".runtime/mondstadt/life/rework/scan_official_kinds.py   // 官方预制定义 kind 扫描（精确 root2.f2 行规则）",
+      ".runtime/mondstadt/life/rework/dump_prefab_tree.py      // 单文件原始层级打印"
+    ],
+    "lifeLedgerAndAggregate": [
+      "tools/mondstadt/life/life_ids.py    // 台账（v17 existsInTargetLevel）",
+      "tools/mondstadt/life/build_all.py   // --rework / --rework --manifest"
+    ],
+    "docsForRoot": [
+      "docs/mondstadt/life/REWORK-HANDOFF.md            // §2 依赖顺序、§3 代跑命令、§5 统一验收执行清单",
+      "docs/mondstadt/life/SUPERSEDED-OLD-CANDIDATES.md // 旧产物作废清单（统一测试别一把 discover）"
+    ]
+  }
+}

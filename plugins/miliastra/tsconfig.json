@@ -1,0 +1,40 @@
+{
+  // Build project: compiles src/ to lib/ (JS + declarations, one tsc pass).
+  //
+  // Deliberately does NOT extend the pinned checkout's tsconfig.base.json: that
+  // base maps every `@deepseek-ai/*` specifier to the checkout's *source* through
+  // `paths` plus composite project references, which only works inside that
+  // workspace's rootDir. This package lives outside it, so it type-checks against
+  // the pinned packages' published surface (their `exports` types) instead — the
+  // same surface a profile installs.
+  "compilerOptions": {
+    "target": "es2024",
+    "lib": ["es2024"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "types": ["node"],
+    "rootDir": "src",
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    // Source imports carry `.ts` (the Node-native, type-strippable form); the
+    // build rewrites them to `.js` in the emitted output, matching the vendor
+    // convention and `src/composition.ts`'s own specifier derivation.
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    // Guarantees the source stays loadable by Node's own type stripping (no
+    // enums, namespaces, or parameter properties), which is what lets the test
+    // suite run the real thing without a build step.
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

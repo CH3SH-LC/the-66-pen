@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "kind": "static-il2cpp-research-provenance-v2",
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "transcriptionSources": [
+    {
+      "path": ".runtime/scratch/overnight-features-20261013/task-k/current_metadata.py",
+      "sha256": "bf5e15c1e6f196014ccce9206960537e6924f8430d17e996a26ac9392ab1789b"
+    },
+    {
+      "path": ".runtime/scratch/overnight-features-20261013/task-k/offline_pe.py",
+      "sha256": "e7d62fa24846a5100ac8c89e7317c71e916b318680abb16bafb60ac84f3ad2b1"
+    },
+    {
+      "path": ".runtime/scratch/overnight-features-20261013/task-y/shop_config_probe.py",
+      "sha256": "1044e1332f2da27096df9109f8fcf458707ebd2000963c5edce271aa4904011a"
+    },
+    {
+      "path": ".runtime/scratch/overnight-features-20261013/task-bd/signatures.py",
+      "sha256": "d5ae51a714f2660e9dca00a98d2405b7b69102dead4a8b2a70eb226656f0b2a6"
+    }
+  ],
+  "importsLegacyHelpers": false,
+  "newDecoders": {
+    "methodAttributes": {
+      "nativeFunction": "0x5153f0",
+      "formula": "(metadata word +0x12 - method mix - 0x7269) & 0xffff",
+      "writeRva": "0x515753",
+      "nativeOffset": "MethodInfo+0x28",
+      "staticBit": "0x10; native test at 0x53f255 and multiple consumers",
+      "declaringType": "Existing 0x51e11e decoder; TypeDefinitionIndex, not runtime component kind",
+      "controls": "method-flag-formula-research.json: Renderer.get_sharedMaterials instance, Time.get_frameCount static, class19411 .ctor instance"
+    },
+    "methodSlot": {
+      "formula": "(metadata word +0x16 - method mix + 0x4d9f) & 0xffff",
+      "constantRva": "0x3909610",
+      "constantHex": "9f4d81aa000000000000000000000000",
+      "nativeOffset": "MethodInfo+0x2a",
+      "consumer": "0x517518..0x517559 indexes the declaring class vtable; 0x517619..0x517623 indexes runtime vtable",
+      "absentValue": "0xffff",
+      "rowDistinction": "Class39022 table rows4/15 both reference method242205, whose MethodInfo slot is15; class row is not definition slot, runtime/interface adjustments remain unresolved",
+      "adjacentWord": "MethodInfo+0x2c decoded from metadata+0x14 with +0xaa81; semantic name intentionally unverified"
+    },
+    "fields": {
+      "nativeFunction": "0x5135b0",
+      "fieldCount": "class record +0x30 word XOR 0x9a6b",
+      "fieldBegin": "class record +0x00 dword XOR 0x72628007",
+      "fieldTable": "header+0x4c + 0xe5d249bf",
+      "offsetClassMap": "header+0x198 XOR 0x5303f399",
+      "layoutTable": "header+0x1a4 XOR 0x0d8c5d0a; 12-byte record +8 = offset begin",
+      "offsetTable": "header+0x1e4 XOR 0x67102427; raw dword per field",
+      "specialFlag": "raw bit 0x01000000 handled separately by native; no ordinary offset claim"
+    },
+    "properties": {
+      "nativeFunction": "0x515fc0",
+      "count": "class record byte +0x43 XOR 0x86",
+      "begin": "class record dword +0x24 + 0xce2141cc",
+      "table": "header+0x158 + 0xe2aba334; 10-byte records",
+      "accessors": "decoded 16-bit class-relative method ordinals; 0xffff absent"
+    }
+  },
+  "businessSemanticsAdded": false,
+  "gameConnected": false,
+  "nativeCalled": false,
+  "outputPolicy": "All API methods return data, only explicit write_result or CLI --out emits artifacts inside project, no overwrite"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "unbound-not-encoded-not-game-verified",
+  "deploymentAllowed": false,
+  "graphId": null,
+  "graphMode": null,
+  "goalEntityGuid": null,
+  "triggerId": null,
+  "requiredConditions": [
+    "Single player only",
+    "Graph attached to the intended goal entity only",
+    "Exactly the intended top-area trigger emits this event to this graph",
+    "Trigger filters entering entities to characters only",
+    "Entering character belongs to the current player",
+    "Character collision source is configured and matches the goal trigger",
+    "Stage settlement configuration and current game version are verified"
+  ],
+  "conditionEvidence": "missing",
+  "runtimeTypeGuardImplemented": false,
+  "triggerIdGuardImplemented": false,
+  "repeatEntryGuardImplemented": false,
+  "upstreamDefaultServerGraphId": 1073741825
+}

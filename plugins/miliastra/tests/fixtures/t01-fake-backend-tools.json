@@ -1,0 +1,8 @@
+{
+  "comment": "T01 fixture: the MCP tool list a fake backend declares. Shaped after a tools/list result, without being any real backend's list: the composition spec asserts the namespace rule (mcp__<serverName>__<rawName>), never a fixed tool count.",
+  "tools": [
+    { "name": "level_discover", "description": "fixture: discover the current level" },
+    { "name": "entity_read", "description": "fixture: read one entity" },
+    { "name": "entity_create", "description": "fixture: create one entity" }
+  ]
+}

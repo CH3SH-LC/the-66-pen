@@ -1,0 +1,27 @@
+{
+  "id": "composite",
+  "name": "复合节点",
+  "purpose": "封装和复用节点逻辑",
+  "builtin": false,
+  "clusters": [],
+  "count": 0,
+  "mechanism": {
+    "status": "native-source-located-no-authoring-adapter-or-runtime-acceptance",
+    "official": "https://act-webstatic.hoyoverse.com/ugc-tutorial/knowledge/sea/zh-cn/mhty17iqeht0/content.html",
+    "constructor": {
+      "path": "local-evidence-not-distributed",
+      "line": 7409,
+      "sha256": "3a2436a983b820904b45617d2e574b8ed41b4a2bb9c82a600c31859765d5fcec",
+      "symbol": "internal static O6Xe5UXWOepEMsrsi0jb C2cXojsMIKF"
+    },
+    "steps": [
+      "按资源上下文分配 definition handle",
+      "复制 kernel handle",
+      "生成唯一名称和节点分类",
+      "初始化关联子图 n4CXWiMUQ7t",
+      "按参数决定注册 xAGPvIqDKrj"
+    ],
+    "constraint": "官方文档：仅服务器节点图。必须同时构造子图和对外虚拟引脚，不能只增加一个内置 definitionId。"
+  },
+  "limitation": "不是内置节点定义；自动创建/导入尚未完成，不能虚构 definitionId。"
+}

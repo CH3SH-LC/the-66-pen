@@ -1,0 +1,233 @@
+{
+  "id": "timers",
+  "name": "定时、延时与全局计时",
+  "purpose": "启动、停止定时器，接收到期事件和读取计时。",
+  "aliases": [
+    "等待",
+    "延迟",
+    "倒计时",
+    "周期",
+    "冷却",
+    "十秒",
+    "成熟"
+  ],
+  "nativeLeaves": [
+    "定时器",
+    "全局计时器"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:79",
+      "definitionId": 79,
+      "graphKind": 20000,
+      "name": "启动定时器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "定时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 79 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:80",
+      "definitionId": 80,
+      "graphKind": 20000,
+      "name": "暂停定时器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "定时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 80 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:81",
+      "definitionId": 81,
+      "graphKind": 20000,
+      "name": "恢复定时器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "定时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 81 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:82",
+      "definitionId": 82,
+      "graphKind": 20000,
+      "name": "终止定时器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "定时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 82 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:83",
+      "definitionId": 83,
+      "graphKind": 20000,
+      "name": "定时器触发时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "定时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 83 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:309",
+      "definitionId": 309,
+      "graphKind": 20000,
+      "name": "暂停全局计时器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "全局计时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 309 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:310",
+      "definitionId": 310,
+      "graphKind": 20000,
+      "name": "获取全局计时器当前时间",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "全局计时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 310 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:311",
+      "definitionId": 311,
+      "graphKind": 20000,
+      "name": "启动全局计时器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "全局计时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 311 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:312",
+      "definitionId": 312,
+      "graphKind": 20000,
+      "name": "恢复全局计时器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "全局计时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 312 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:313",
+      "definitionId": 313,
+      "graphKind": 20000,
+      "name": "终止全局计时器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "全局计时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 313 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:314",
+      "definitionId": 314,
+      "graphKind": 20000,
+      "name": "增加全局计时器的值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "全局计时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 314 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:315",
+      "definitionId": 315,
+      "graphKind": 20000,
+      "name": "全局计时器触发时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "timers"
+      ],
+      "nativeLeaves": [
+        "全局计时器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 315 --graph-kind 20000"
+    }
+  ],
+  "sequence": [
+    "79 启动宿主定时器",
+    "83 定时器触发时 → 核对宿主与定时器名",
+    "改变状态并切换模型/选项"
+  ],
+  "pitfalls": [
+    "循环标志是枚举槽，不是随意写 bool；定时器宿主必须与事件宿主一致。"
+  ],
+  "code": [
+    "tools/gameplan/modules/farm_interaction.py"
+  ],
+  "count": 12,
+  "byFamily": {
+    "执行节点": 9,
+    "事件节点": 2,
+    "查询节点": 1
+  },
+  "byGraphKind": {
+    "20000": 12
+  },
+  "runtimeVerified": false
+}

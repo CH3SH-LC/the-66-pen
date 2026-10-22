@@ -1,0 +1,22 @@
+{
+  "schema": "terrain-material-calibration-cli-contract-v1",
+  "entry": "tools/map-terrain/terrain_cli.py",
+  "transport": {"tool": "terrain", "action": 14, "catalogReceiptVersion": 27, "writeReceiptVersion": 18, "geometryReceiptVersion": 20, "preparedRoot": ".runtime/map-foundation-20261015/terrain/prepared"},
+  "commands": {
+    "prepare": {"newOptional": {"--catalog-probe": "boolean; implies inspect-only; mutually exclusive with runtime/refresh"}, "requiredForCatalog": ["--baseline", "--terrain-id"]},
+    "catalog": {"required": {"--run": "successful catalog-probe run"}},
+    "calibrate": {"required": {"--run": "successful catalog-probe run"}, "optional": {"--points": "JSON array of {worldTop:[x,y,z],material:integer-or-exact-native-label}", "--quantization": "exact (default) or nearest", "--output": "new project .runtime JSON result path; result.edits is the ordinary edits array"}},
+    "plan": {"newOptional": {"--catalog-run": "successful catalog-probe run; binds native IDs and world matrix to write"}},
+    "batch-create": {"newOptional": {"--catalog-run": "successful catalog-probe run; binds every card to native IDs and world matrix"}},
+    "compile-check": {"newOptional": {"--catalog-probe": "boolean, expired read-only fixture", "--catalog-guard": "boolean, expired write fixture with source guard"}}
+  },
+  "workflow": [
+    "Fresh ordinary scene baseline -> prepare --baseline A --terrain-id ID --catalog-probe -> execute through existing terrain queue.",
+    "catalog --run C resolves actual loaded category2 record IDs through the captured native codec table, native loaded render-style dictionary, and exact installed CHS TextMap hash matches. No label is invented.",
+    "calibrate --run C returns actual matrix, origin and grid/height basis. With --points, result.edits is ready for plan/batch-create after extracting the array; map planning remains the consumer's responsibility.",
+    "plan or batch-create --catalog-run C binds C to every write. Fresh complete cells and scene are still required. Native callback compares entire material source and world matrix before opening a transaction.",
+    "Existing execute, accept, native-save and verify-save/batch-verify-save contracts remain mandatory. Matrix/catalog drift rejects before mutation; do not replay old cards."
+  ],
+  "pythonConsumer": {"catalog": "terrain_catalog.catalog(run)", "selectMaterial": "terrain_catalog.resolve_material(catalog, exactLabelOrId)", "worldEdits": "terrain_calibration.world_edits(catalog, points, quantization='exact')", "cellToWorld": "terrain_calibration.cell_to_world(catalog['materialSource'], x, z, height)", "worldToCell": "terrain_calibration.world_to_cell(catalog['materialSource'], point, quantization='exact')"},
+  "boundaries": ["No assumption that material 0 means grass", "Saved/local position is not a world matrix", "Integer codes only; non-grid heights reject unless nearest explicitly selected and residuals retained", "No origin setter, terrain planning, game loading, desktop control or direct GIL writing", "Catalog/matrix reads do not prove pixels, surface contacts or 11017-cell runtime performance"]
+}

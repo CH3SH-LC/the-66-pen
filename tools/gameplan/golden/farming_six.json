@@ -1,0 +1,420 @@
+{
+  "consts": [
+    {
+      "alias": "print_entry",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "六号图入口已触发"
+    },
+    {
+      "alias": "grow",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 10
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "bonus",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1115684864
+    },
+    {
+      "alias": "bonus",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 10
+    },
+    {
+      "alias": "craft_enough_read",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "craft_enough",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "cap_gate",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 20
+    },
+    {
+      "alias": "print_low_cap",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "背包容量偏低"
+    },
+    {
+      "alias": "print_ok",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "收获完成"
+    },
+    {
+      "alias": "coin_enough_read",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1115684864
+    },
+    {
+      "alias": "coin_enough",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 100
+    },
+    {
+      "alias": "print_rich",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "作物不足但货币充足"
+    },
+    {
+      "alias": "print_short",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "作物不足"
+    }
+  ],
+  "edges": [
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_entry",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "print_entry",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "grow",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "grow",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "grow",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "harvest",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "bonus",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "bonus",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "craft_enough_read",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "craft_enough_read",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "craft_enough",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "bonus",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "gate_item",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "craft_enough",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "gate_item",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "cap_gate_cap",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "cap_gate_cap",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "cap_gate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate_item",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "gate_cap",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "cap_gate",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "gate_cap",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate_cap",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_low_cap",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "gate_cap",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "print_ok",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "coin_enough_read",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "coin_enough_read",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "coin_enough",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate_item",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "gate_money",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "coin_enough",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "gate_money",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "gate_money",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "print_rich",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "gate_money",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "print_short",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "all_items",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "on_create",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "all_currencies",
+      "toIndex": 0,
+      "toKind": 3
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_DEMO_SIX",
+  "nodes": [
+    {
+      "alias": "on_create",
+      "definitionId": 71,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_entry",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "grow",
+      "definitionId": 685,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "harvest",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "bonus",
+      "definitionId": 688,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "craft_enough_read",
+      "definitionId": 690,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "craft_enough",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "gate_item",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "cap_gate_cap",
+      "definitionId": 689,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "cap_gate",
+      "definitionId": 230,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "gate_cap",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_low_cap",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_ok",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "coin_enough_read",
+      "definitionId": 691,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "coin_enough",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "gate_money",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_rich",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "print_short",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "all_items",
+      "definitionId": 721,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "all_currencies",
+      "definitionId": 722,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

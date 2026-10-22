@@ -1,0 +1,1227 @@
+{
+  "id": "entities",
+  "name": "实体创建、查询与布设",
+  "purpose": "寻找、创建、布设和管理实体；区分实体实例与模板。",
+  "aliases": [
+    "生成",
+    "删除",
+    "销毁",
+    "物体",
+    "场景",
+    "实例",
+    "模型",
+    "可见性",
+    "位置",
+    "挂点"
+  ],
+  "nativeLeaves": [
+    "实体相关",
+    "实体布设组",
+    "预设点",
+    "挂接点"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:69",
+      "definitionId": 69,
+      "graphKind": 20000,
+      "name": "销毁实体",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 69 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:70",
+      "definitionId": 70,
+      "graphKind": 20000,
+      "name": "创建实体",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 70 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:71",
+      "definitionId": 71,
+      "graphKind": 20000,
+      "name": "实体创建时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 71 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:72",
+      "definitionId": 72,
+      "graphKind": 20000,
+      "name": "实体移除/销毁时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 72 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:73",
+      "definitionId": 73,
+      "graphKind": 20000,
+      "name": "获取自身实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 73 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:75",
+      "definitionId": 75,
+      "graphKind": 20000,
+      "name": "以GUID查询实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 75 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:76",
+      "definitionId": 76,
+      "graphKind": 20000,
+      "name": "以实体查询GUID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 76 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:99",
+      "definitionId": 99,
+      "graphKind": 20000,
+      "name": "获取实体位置与旋转",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 99 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:178",
+      "definitionId": 178,
+      "graphKind": 20000,
+      "name": "激活/关闭实体布设组",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体布设组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 178 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:179",
+      "definitionId": 179,
+      "graphKind": 20000,
+      "name": "查询当前激活的实体布设组列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体布设组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 179 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:252",
+      "definitionId": 252,
+      "graphKind": 20000,
+      "name": "创建元件",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 252 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:260",
+      "definitionId": 260,
+      "graphKind": 20000,
+      "name": "获取实体类型",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 260 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:270",
+      "definitionId": 270,
+      "graphKind": 20000,
+      "name": "查询预设点位置旋转",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "预设点"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 270 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:271",
+      "definitionId": 271,
+      "graphKind": 20000,
+      "name": "以单位标签获取预设点位列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "预设点"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 271 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:308",
+      "definitionId": 308,
+      "graphKind": 20000,
+      "name": "激活/关闭模型显示",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 308 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:318",
+      "definitionId": 318,
+      "graphKind": 20000,
+      "name": "获取场上所有实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 318 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:319",
+      "definitionId": 319,
+      "graphKind": 20000,
+      "name": "获取场上指定类型实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 319 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:320",
+      "definitionId": 320,
+      "graphKind": 20000,
+      "name": "获取场上指定元件ID的实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 320 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:372",
+      "definitionId": 372,
+      "graphKind": 20000,
+      "name": "移除实体",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 372 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:373",
+      "definitionId": 373,
+      "graphKind": 20000,
+      "name": "实体销毁时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 373 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:377",
+      "definitionId": 377,
+      "graphKind": 20000,
+      "name": "获取指定类型的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 377 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:378",
+      "definitionId": 378,
+      "graphKind": 20000,
+      "name": "获取指定元件ID的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 378 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:379",
+      "definitionId": 379,
+      "graphKind": 20000,
+      "name": "获取指定阵营的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 379 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:380",
+      "definitionId": 380,
+      "graphKind": 20000,
+      "name": "获取指定范围的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 380 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:507",
+      "definitionId": 507,
+      "graphKind": 20000,
+      "name": "查询实体是否在场",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 507 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:516",
+      "definitionId": 516,
+      "graphKind": 20000,
+      "name": "获取实体向前向量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 516 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:517",
+      "definitionId": 517,
+      "graphKind": 20000,
+      "name": "获取实体向右向量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 517 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:518",
+      "definitionId": 518,
+      "graphKind": 20000,
+      "name": "获取实体向上向量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 518 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:580",
+      "definitionId": 580,
+      "graphKind": 20000,
+      "name": "获取物件属性",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 580 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:670",
+      "definitionId": 670,
+      "graphKind": 20000,
+      "name": "获取实体进阶属性",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 670 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:671",
+      "definitionId": 671,
+      "graphKind": 20000,
+      "name": "获取实体元素属性",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 671 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:738",
+      "definitionId": 738,
+      "graphKind": 20000,
+      "name": "获取角色属性",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 738 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:744",
+      "definitionId": 744,
+      "graphKind": 20000,
+      "name": "获取拥有者实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 744 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:745",
+      "definitionId": 745,
+      "graphKind": 20000,
+      "name": "获取实体拥有的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 745 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:757",
+      "definitionId": 757,
+      "graphKind": 20000,
+      "name": "创建元件组",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 757 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:788",
+      "definitionId": 788,
+      "graphKind": 20000,
+      "name": "查询实体的元素附着状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 788 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:835",
+      "definitionId": 835,
+      "graphKind": 20000,
+      "name": "修改模型颜色和材质",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 835 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:836",
+      "definitionId": 836,
+      "graphKind": 20000,
+      "name": "获取模型颜色和材质",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 836 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:946",
+      "definitionId": 946,
+      "graphKind": 20000,
+      "name": "角色移动速度达到条件时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 946 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:947",
+      "definitionId": 947,
+      "graphKind": 20000,
+      "name": "查询角色当前移动速度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 947 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200023",
+      "definitionId": 200023,
+      "graphKind": 20001,
+      "name": "以GUID查询实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200023 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200030",
+      "definitionId": 200030,
+      "graphKind": 20001,
+      "name": "获取实体位置",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200030 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200031",
+      "definitionId": 200031,
+      "graphKind": 20001,
+      "name": "获取实体旋转",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200031 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200033",
+      "definitionId": 200033,
+      "graphKind": 20001,
+      "name": "获取自身实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200033 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200034",
+      "definitionId": 200034,
+      "graphKind": 20001,
+      "name": "获取目标实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200034 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200035",
+      "definitionId": 200035,
+      "graphKind": 20001,
+      "name": "获取单位攻击目标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200035 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200043",
+      "definitionId": 200043,
+      "graphKind": 20001,
+      "name": "筛选球体范围内的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200043 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200044",
+      "definitionId": 200044,
+      "graphKind": 20001,
+      "name": "筛选方形范围内的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200044 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200045",
+      "definitionId": 200045,
+      "graphKind": 20001,
+      "name": "获取实体的类型",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200045 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200047",
+      "definitionId": 200047,
+      "graphKind": 20001,
+      "name": "获取目标挂接点位置",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200047 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200048",
+      "definitionId": 200048,
+      "graphKind": 20001,
+      "name": "获取目标挂接点旋转",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "挂接点"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200048 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200103",
+      "definitionId": 200103,
+      "graphKind": 20001,
+      "name": "查询实体是否在场",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200103 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200244",
+      "definitionId": 200244,
+      "graphKind": 20001,
+      "name": "查询复杂造物的预设状态值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200244 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200023",
+      "definitionId": 200023,
+      "graphKind": 20002,
+      "name": "以GUID查询实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200023 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200025",
+      "definitionId": 200025,
+      "graphKind": 20002,
+      "name": "获取角色归属的玩家实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities",
+        "players"
+      ],
+      "nativeLeaves": [
+        "实体相关",
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200025 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200026",
+      "definitionId": 200026,
+      "graphKind": 20002,
+      "name": "获取在场玩家实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities",
+        "players"
+      ],
+      "nativeLeaves": [
+        "实体相关",
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200026 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200027",
+      "definitionId": 200027,
+      "graphKind": 20002,
+      "name": "以实体查询GUID",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities",
+        "players"
+      ],
+      "nativeLeaves": [
+        "实体相关",
+        "玩家与角色相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200027 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200030",
+      "definitionId": 200030,
+      "graphKind": 20002,
+      "name": "获取实体位置",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200030 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200031",
+      "definitionId": 200031,
+      "graphKind": 20002,
+      "name": "获取实体旋转",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200031 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200033",
+      "definitionId": 200033,
+      "graphKind": 20002,
+      "name": "获取自身实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200033 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200034",
+      "definitionId": 200034,
+      "graphKind": 20002,
+      "name": "获取目标实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200034 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200035",
+      "definitionId": 200035,
+      "graphKind": 20002,
+      "name": "获取单位攻击目标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200035 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200043",
+      "definitionId": 200043,
+      "graphKind": 20002,
+      "name": "筛选球体范围内的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200043 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200044",
+      "definitionId": 200044,
+      "graphKind": 20002,
+      "name": "筛选方形范围内的实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200044 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200045",
+      "definitionId": 200045,
+      "graphKind": 20002,
+      "name": "获取实体的类型",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200045 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200047",
+      "definitionId": 200047,
+      "graphKind": 20002,
+      "name": "获取目标挂接点位置",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200047 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200048",
+      "definitionId": 200048,
+      "graphKind": 20002,
+      "name": "获取目标挂接点旋转",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200048 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200103",
+      "definitionId": 200103,
+      "graphKind": 20002,
+      "name": "查询实体是否在场",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200103 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200214",
+      "definitionId": 200214,
+      "graphKind": 20002,
+      "name": "获取子实体列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200214 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200221",
+      "definitionId": 200221,
+      "graphKind": 20002,
+      "name": "获取造物当前目标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200221 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200242",
+      "definitionId": 200242,
+      "graphKind": 20002,
+      "name": "获取玩家的角色列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200242 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200244",
+      "definitionId": 200244,
+      "graphKind": 20002,
+      "name": "查询复杂造物的预设状态值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200244 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200251",
+      "definitionId": 200251,
+      "graphKind": 20002,
+      "name": "获取指定玩家的前台角色",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200251 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200254",
+      "definitionId": 200254,
+      "graphKind": 20002,
+      "name": "查询经典模式角色编号",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "entities"
+      ],
+      "nativeLeaves": [
+        "实体相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200254 --graph-kind 20002"
+    }
+  ],
+  "count": 74,
+  "byFamily": {
+    "执行节点": 8,
+    "事件节点": 4,
+    "查询节点": 62
+  },
+  "byGraphKind": {
+    "20000": 40,
+    "20001": 13,
+    "20002": 21
+  },
+  "runtimeVerified": false
+}

@@ -1,0 +1,1100 @@
+{
+  "id": "flow",
+  "name": "执行流与通用控制",
+  "purpose": "选择执行分支、输出调试信息、控制图开始和结束。",
+  "aliases": [
+    "分支",
+    "条件",
+    "判断",
+    "循环",
+    "顺序",
+    "调试",
+    "打印",
+    "开始",
+    "结束"
+  ],
+  "nativeLeaves": [
+    "通用"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:1",
+      "definitionId": 1,
+      "graphKind": 20000,
+      "name": "打印字符串",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 1 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:2",
+      "definitionId": 2,
+      "graphKind": 20000,
+      "name": "双分支",
+      "family": "流程控制节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 2 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:3",
+      "definitionId": 3,
+      "graphKind": 20000,
+      "name": "多分支",
+      "family": "流程控制节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 3 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:5",
+      "definitionId": 5,
+      "graphKind": 20000,
+      "name": "有限循环",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 5 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:6",
+      "definitionId": 6,
+      "graphKind": 20000,
+      "name": "跳出循环",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 6 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:14",
+      "definitionId": 14,
+      "graphKind": 20000,
+      "name": "是否相等",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 14 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:18",
+      "definitionId": 18,
+      "graphKind": 20000,
+      "name": "获取局部变量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 18 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:19",
+      "definitionId": 19,
+      "graphKind": 20000,
+      "name": "设置局部变量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 19 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:169",
+      "definitionId": 169,
+      "graphKind": 20000,
+      "name": "拼装列表",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 169 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:180",
+      "definitionId": 180,
+      "graphKind": 20000,
+      "name": "数据类型转换",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 180 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:190",
+      "definitionId": 190,
+      "graphKind": 20000,
+      "name": "转发事件",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 190 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:475",
+      "definitionId": 475,
+      "graphKind": 20000,
+      "name": "枚举是否相等",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 475 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:766",
+      "definitionId": 766,
+      "graphKind": 20000,
+      "name": "查询对局游玩方式及人数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 766 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200000",
+      "definitionId": 200000,
+      "graphKind": 20001,
+      "name": "节点图结束(布尔型)",
+      "family": "流程控制节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200000 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200005",
+      "definitionId": 200005,
+      "graphKind": 20001,
+      "name": "枚举匹配",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200005 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200006",
+      "definitionId": 200006,
+      "graphKind": 20001,
+      "name": "是否相等",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200006 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200022",
+      "definitionId": 200022,
+      "graphKind": 20001,
+      "name": "数据类型转换",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200022 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200104",
+      "definitionId": 200104,
+      "graphKind": 20001,
+      "name": "节点图结束",
+      "family": "流程控制节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200104 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200122",
+      "definitionId": 200122,
+      "graphKind": 20001,
+      "name": "节点图结束(整数)",
+      "family": "流程控制节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200122 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200005",
+      "definitionId": 200005,
+      "graphKind": 20002,
+      "name": "枚举匹配",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200005 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200006",
+      "definitionId": 200006,
+      "graphKind": 20002,
+      "name": "是否相等",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200006 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200022",
+      "definitionId": 200022,
+      "graphKind": 20002,
+      "name": "数据类型转换",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200022 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200039",
+      "definitionId": 200039,
+      "graphKind": 20002,
+      "name": "通知服务器节点图",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow",
+        "skills"
+      ],
+      "nativeLeaves": [
+        "角色技能",
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200039 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200042",
+      "definitionId": 200042,
+      "graphKind": 20002,
+      "name": "节点图开始",
+      "family": "事件节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200042 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200056",
+      "definitionId": 200056,
+      "graphKind": 20002,
+      "name": "双分支",
+      "family": "流程控制节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200056 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200079",
+      "definitionId": 200079,
+      "graphKind": 20002,
+      "name": "有限循环",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200079 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200080",
+      "definitionId": 200080,
+      "graphKind": 20002,
+      "name": "跳出循环",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200080 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200081",
+      "definitionId": 200081,
+      "graphKind": 20002,
+      "name": "设置局部变量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200081 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200082",
+      "definitionId": 200082,
+      "graphKind": 20002,
+      "name": "获取局部变量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200082 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200264",
+      "definitionId": 200264,
+      "graphKind": 20002,
+      "name": "多分支",
+      "family": "流程控制节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200264 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20007:22000:0:200125",
+      "definitionId": 200125,
+      "graphKind": 20007,
+      "name": "双分支",
+      "family": "流程控制节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200125 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200126",
+      "definitionId": 200126,
+      "graphKind": 20007,
+      "name": "按顺序唯一执行",
+      "family": "事件节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200126 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200127",
+      "definitionId": 200127,
+      "graphKind": 20007,
+      "name": "多分支",
+      "family": "流程控制节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200127 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200128",
+      "definitionId": 200128,
+      "graphKind": 20007,
+      "name": "切换自身执行状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200128 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200129",
+      "definitionId": 200129,
+      "graphKind": 20007,
+      "name": "执行技能",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200129 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200142",
+      "definitionId": 200142,
+      "graphKind": 20007,
+      "name": "获取自身当前执行状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200142 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200143",
+      "definitionId": 200143,
+      "graphKind": 20007,
+      "name": "查询自身距离目标的水平角度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200143 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200144",
+      "definitionId": 200144,
+      "graphKind": 20007,
+      "name": "查询自身距离目标的垂直角度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200144 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200145",
+      "definitionId": 200145,
+      "graphKind": 20007,
+      "name": "查询自身距离目标的水平距离",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200145 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200146",
+      "definitionId": 200146,
+      "graphKind": 20007,
+      "name": "查询自身距离目标的垂直距离",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200146 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200147",
+      "definitionId": 200147,
+      "graphKind": 20007,
+      "name": "查询自身距离目标的距离",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200147 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200148",
+      "definitionId": 200148,
+      "graphKind": 20007,
+      "name": "查询目标点是否寻路可达",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200148 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200149",
+      "definitionId": 200149,
+      "graphKind": 20007,
+      "name": "查询自身是否正在释放技能",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200149 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200150",
+      "definitionId": 200150,
+      "graphKind": 20007,
+      "name": "查询自身是否处于交战中",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200150 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200151",
+      "definitionId": 200151,
+      "graphKind": 20007,
+      "name": "查询自身是否在领地中",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200151 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200162",
+      "definitionId": 200162,
+      "graphKind": 20007,
+      "name": "查询入战时的坐标点",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200162 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200163",
+      "definitionId": 200163,
+      "graphKind": 20007,
+      "name": "获取出生点位置信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200163 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200164",
+      "definitionId": 200164,
+      "graphKind": 20007,
+      "name": "获取自身实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200164 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200165",
+      "definitionId": 200165,
+      "graphKind": 20007,
+      "name": "获取目标实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200165 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200166",
+      "definitionId": 200166,
+      "graphKind": 20007,
+      "name": "获取关卡实体",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200166 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200167",
+      "definitionId": 200167,
+      "graphKind": 20007,
+      "name": "查询实体是否在场",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200167 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200168",
+      "definitionId": 200168,
+      "graphKind": 20007,
+      "name": "获取实体的类型",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200168 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200169",
+      "definitionId": 200169,
+      "graphKind": 20007,
+      "name": "获取实体位置",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200169 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200170",
+      "definitionId": 200170,
+      "graphKind": 20007,
+      "name": "获取实体旋转",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200170 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200172",
+      "definitionId": 200172,
+      "graphKind": 20007,
+      "name": "获取物件预设状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200172 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200173",
+      "definitionId": 200173,
+      "graphKind": 20007,
+      "name": "获取自定义变量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200173 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200178",
+      "definitionId": 200178,
+      "graphKind": 20007,
+      "name": "枚举匹配",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200178 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200179",
+      "definitionId": 200179,
+      "graphKind": 20007,
+      "name": "是否相等",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200179 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200189",
+      "definitionId": 200189,
+      "graphKind": 20007,
+      "name": "数据类型转换",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200189 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200238",
+      "definitionId": 200238,
+      "graphKind": 20007,
+      "name": "获取目标生命值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200238 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200239",
+      "definitionId": 200239,
+      "graphKind": 20007,
+      "name": "获取目标等级",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200239 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200240",
+      "definitionId": 200240,
+      "graphKind": 20007,
+      "name": "获取目标攻击力",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200240 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200241",
+      "definitionId": 200241,
+      "graphKind": 20007,
+      "name": "获取自身预设状态值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200241 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200250",
+      "definitionId": 200250,
+      "graphKind": 20007,
+      "name": "获取前一帧执行状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200250 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200252",
+      "definitionId": 200252,
+      "graphKind": 20007,
+      "name": "获取前一帧执行战术",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200252 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200253",
+      "definitionId": 200253,
+      "graphKind": 20007,
+      "name": "继续执行前一帧行为",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200253 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200307",
+      "definitionId": 200307,
+      "graphKind": 20007,
+      "name": "实体是否携带指定单位状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "flow"
+      ],
+      "nativeLeaves": [
+        "通用"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200307 --graph-kind 20007"
+    }
+  ],
+  "count": 67,
+  "byFamily": {
+    "执行节点": 12,
+    "流程控制节点": 9,
+    "运算节点": 13,
+    "查询节点": 31,
+    "事件节点": 2
+  },
+  "byGraphKind": {
+    "20000": 13,
+    "20001": 6,
+    "20002": 11,
+    "20007": 37
+  },
+  "runtimeVerified": false
+}

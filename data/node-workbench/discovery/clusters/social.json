@@ -1,0 +1,204 @@
+{
+  "id": "social",
+  "name": "聊天、礼盒与订阅",
+  "purpose": "聊天频道、奇域礼盒及作者订阅状态。",
+  "aliases": [
+    "聊天",
+    "频道",
+    "礼盒",
+    "订阅",
+    "作者"
+  ],
+  "nativeLeaves": [
+    "聊天频道",
+    "奇域礼盒相关",
+    "作者订阅"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:769",
+      "definitionId": 769,
+      "graphKind": 20000,
+      "name": "设置聊天频道开关",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "聊天频道"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 769 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:770",
+      "definitionId": 770,
+      "graphKind": 20000,
+      "name": "设置玩家频道权限",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "聊天频道"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 770 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:771",
+      "definitionId": 771,
+      "graphKind": 20000,
+      "name": "设置玩家当前频道",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "聊天频道"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 771 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:772",
+      "definitionId": 772,
+      "graphKind": 20000,
+      "name": "消耗礼盒",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "奇域礼盒相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 772 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:773",
+      "definitionId": 773,
+      "graphKind": 20000,
+      "name": "查询对应礼盒数量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "奇域礼盒相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 773 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:774",
+      "definitionId": 774,
+      "graphKind": 20000,
+      "name": "查询对应华丽演绎礼盒消耗数量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "奇域礼盒相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 774 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:800",
+      "definitionId": 800,
+      "graphKind": 20000,
+      "name": "设置玩家聊天语音范围",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "聊天频道"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 800 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:801",
+      "definitionId": 801,
+      "graphKind": 20000,
+      "name": "设置玩家聊天文字权限",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "聊天频道"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 801 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:802",
+      "definitionId": 802,
+      "graphKind": 20000,
+      "name": "设置玩家聊天语音权限",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "聊天频道"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 802 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:855",
+      "definitionId": 855,
+      "graphKind": 20000,
+      "name": "查询玩家是否订阅",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "作者订阅"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 855 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:856",
+      "definitionId": 856,
+      "graphKind": 20000,
+      "name": "打开礼盒界面",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "social"
+      ],
+      "nativeLeaves": [
+        "奇域礼盒相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 856 --graph-kind 20000"
+    }
+  ],
+  "count": 11,
+  "byFamily": {
+    "执行节点": 8,
+    "查询节点": 3
+  },
+  "byGraphKind": {
+    "20000": 11
+  },
+  "runtimeVerified": false
+}

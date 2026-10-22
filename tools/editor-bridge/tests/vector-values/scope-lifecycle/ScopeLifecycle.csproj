@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF><AssemblyName>TestHost</AssemblyName><PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable><ImplicitUsings>disable</ImplicitUsings><EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+</Project>

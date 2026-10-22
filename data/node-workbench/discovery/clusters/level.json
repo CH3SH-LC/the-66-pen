@@ -1,0 +1,319 @@
+{
+  "id": "level",
+  "name": "关卡、任务与结算",
+  "purpose": "关卡运行、任务进度、结束判定和结算。",
+  "aliases": [
+    "关卡",
+    "任务",
+    "目标",
+    "胜利",
+    "失败",
+    "结束",
+    "结算",
+    "流程"
+  ],
+  "nativeLeaves": [
+    "关卡相关",
+    "关卡任务",
+    "关卡结算"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:77",
+      "definitionId": 77,
+      "graphKind": 20000,
+      "name": "结算关卡",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 77 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:290",
+      "definitionId": 290,
+      "graphKind": 20000,
+      "name": "查询游戏已进行时间",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 290 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:647",
+      "definitionId": 647,
+      "graphKind": 20000,
+      "name": "设置玩家结算计分板展示数据",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 647 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:650",
+      "definitionId": 650,
+      "graphKind": 20000,
+      "name": "设置玩家结算排名数值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 650 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:651",
+      "definitionId": 651,
+      "graphKind": 20000,
+      "name": "获取玩家结算排名数值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 651 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:652",
+      "definitionId": 652,
+      "graphKind": 20000,
+      "name": "设置玩家结算成功状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 652 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:653",
+      "definitionId": 653,
+      "graphKind": 20000,
+      "name": "获取玩家结算成功状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 653 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:654",
+      "definitionId": 654,
+      "graphKind": 20000,
+      "name": "设置阵营结算排名数值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 654 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:655",
+      "definitionId": 655,
+      "graphKind": 20000,
+      "name": "获取阵营结算排名数值",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 655 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:656",
+      "definitionId": 656,
+      "graphKind": 20000,
+      "name": "设置阵营结算成功状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 656 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:657",
+      "definitionId": 657,
+      "graphKind": 20000,
+      "name": "获取阵营结算成功状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡结算"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 657 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:664",
+      "definitionId": 664,
+      "graphKind": 20000,
+      "name": "查询当前环境时间",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 664 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:665",
+      "definitionId": 665,
+      "graphKind": 20000,
+      "name": "设置当前环境时间",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 665 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:666",
+      "definitionId": 666,
+      "graphKind": 20000,
+      "name": "设置环境时间流逝速度",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡相关"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 666 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:829",
+      "definitionId": 829,
+      "graphKind": 20000,
+      "name": "设置任务计数",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡任务"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 829 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:830",
+      "definitionId": 830,
+      "graphKind": 20000,
+      "name": "增加任务计数",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡任务"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 830 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:831",
+      "definitionId": 831,
+      "graphKind": 20000,
+      "name": "查询指定任务是否完成",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡任务"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 831 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:832",
+      "definitionId": 832,
+      "graphKind": 20000,
+      "name": "查询指定任务计数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "level"
+      ],
+      "nativeLeaves": [
+        "关卡任务"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 832 --graph-kind 20000"
+    }
+  ],
+  "count": 18,
+  "byFamily": {
+    "执行节点": 10,
+    "查询节点": 8
+  },
+  "byGraphKind": {
+    "20000": 18
+  },
+  "runtimeVerified": false
+}

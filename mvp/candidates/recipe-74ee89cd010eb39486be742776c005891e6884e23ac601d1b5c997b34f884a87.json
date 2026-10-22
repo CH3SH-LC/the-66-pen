@@ -1,0 +1,206 @@
+{
+  "constraints": {
+    "check": "相邻实体按 x 排序，上一样本右边缘到当前样本左边缘的水平间隙，以及两次顶面高度差",
+    "horizontal_gap_max": 1.5,
+    "horizontal_gap_min": 1.0,
+    "step_up_max": 0.5,
+    "step_up_min": 0.3,
+    "tolerance": 2e-05
+  },
+  "coordinate_system": {
+    "axis": "X=前进方向，Y=向上，Z=侧向",
+    "unit": "名义设计单位：模板size_units与scale相乘估计尺寸，实际边界/碰撞尚未实测"
+  },
+  "entities": [
+    {
+      "comment": "起点，尺寸稍大",
+      "index": 0,
+      "name": "MVP_StartPad",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "start",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        3.0,
+        0.5,
+        3.0
+      ],
+      "template_id": 20001875
+    },
+    {
+      "index": 1,
+      "name": "MVP_Platform_01",
+      "position": [
+        3.6,
+        0.38,
+        0.0
+      ],
+      "role": "platform",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        0.5,
+        2.0
+      ],
+      "template_id": 20001224
+    },
+    {
+      "index": 2,
+      "name": "MVP_Platform_02",
+      "position": [
+        6.7,
+        0.76,
+        0.0
+      ],
+      "role": "platform",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        0.5,
+        2.0
+      ],
+      "template_id": 20001876
+    },
+    {
+      "index": 3,
+      "name": "MVP_Platform_03",
+      "position": [
+        9.8,
+        1.14,
+        0.0
+      ],
+      "role": "platform",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        0.5,
+        2.0
+      ],
+      "template_id": 20001877
+    },
+    {
+      "index": 4,
+      "name": "MVP_Platform_04",
+      "position": [
+        12.9,
+        1.52,
+        0.0
+      ],
+      "role": "platform",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        0.5,
+        2.0
+      ],
+      "template_id": 20001224
+    },
+    {
+      "comment": "终点，名义顶面 y=2.15；胜利条件与实际碰撞待绑定和验收。",
+      "index": 5,
+      "name": "MVP_GoalPad",
+      "position": [
+        16.5,
+        1.9,
+        0.0
+      ],
+      "role": "goal",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        3.0,
+        0.5,
+        3.0
+      ],
+      "template_id": 20001878
+    }
+  ],
+  "entity_id_start": 1078000000,
+  "goal_rule": "设计意图：到达终点顶面（名义 y=2.15）；未绑定游戏结算，未验证通关。",
+  "layout_intent": {
+    "footprint_platform": [
+      2.0,
+      0.5,
+      2.0
+    ],
+    "footprint_start_and_goal": [
+      3.0,
+      0.5,
+      3.0
+    ],
+    "goal_surface_y": 2.15,
+    "horizontal_edge_gap": 1.1,
+    "note": "以下为设计意图说明，不是求值表达式。generator 用 entities 里的显式坐标做真源，并按 constraints 校验。",
+    "start_surface_y": 0.25,
+    "vertical_step": 0.38
+  },
+  "recipe": {
+    "boundsMeaning": "project design constraints, not measured jump ability",
+    "collision": null,
+    "materialEffect": null,
+    "parameters": {
+      "horizontal_gap": 1.1,
+      "vertical_step": 0.38
+    },
+    "physics": null,
+    "recipeVersion": "six-platforms/1",
+    "runtimeVerified": false,
+    "sourceBaselineSha256": "8b8c596089a7991bc7c744f67f0beef9d0db5c24e5bce5f7549f747c74630a8e"
+  },
+  "scene_id": "platformer-recipe-gap-1.1-step-0.38-unmeasured",
+  "schema": "miliastra-mvp-scene/1",
+  "templates": {
+    "20001224": {
+      "name": "木质箱子",
+      "size_units": 1.0,
+      "source": "UGC-File-Generate-Utils/config/block_config.py"
+    },
+    "20001875": {
+      "name": "通常立方体（奶黄）",
+      "size_units": 1.0,
+      "source": "UGC-File-Generate-Utils/config/block_config.py"
+    },
+    "20001876": {
+      "name": "坚固立方体（暗蓝）",
+      "size_units": 1.0,
+      "source": "UGC-File-Generate-Utils/config/block_config.py"
+    },
+    "20001877": {
+      "name": "冰质立方体",
+      "size_units": 1.0,
+      "source": "UGC-File-Generate-Utils/config/block_config.py"
+    },
+    "20001878": {
+      "name": "火质立方体",
+      "size_units": 1.0,
+      "source": "UGC-File-Generate-Utils/config/block_config.py"
+    }
+  },
+  "title": "六实体配方候选：间隙1.1，步长0.38（未实测）"
+}

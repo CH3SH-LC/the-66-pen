@@ -1,0 +1,228 @@
+{
+  "id": "ui",
+  "name": "界面控件与铭牌",
+  "purpose": "控制已配置的界面控件组/铭牌；创建控件和文字属于独立配置步骤。",
+  "aliases": [
+    "UI",
+    "HUD",
+    "按钮",
+    "按键",
+    "Z",
+    "操作说明",
+    "文字",
+    "提示",
+    "面板",
+    "显示",
+    "隐藏"
+  ],
+  "nativeLeaves": [
+    "界面控件组",
+    "铭牌"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:316",
+      "definitionId": 316,
+      "graphKind": 20000,
+      "name": "界面控件组触发时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 316 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:317",
+      "definitionId": 317,
+      "graphKind": 20000,
+      "name": "获取玩家当前界面布局",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 317 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:382",
+      "definitionId": 382,
+      "graphKind": 20000,
+      "name": "切换当前界面布局",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 382 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:383",
+      "definitionId": 383,
+      "graphKind": 20000,
+      "name": "激活控件组库内界面控件组",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 383 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:384",
+      "definitionId": 384,
+      "graphKind": 20000,
+      "name": "设置界面控件(组)状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 384 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:521",
+      "definitionId": 521,
+      "graphKind": 20000,
+      "name": "移除控件组库内界面控件组",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 521 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:615",
+      "definitionId": 615,
+      "graphKind": 20000,
+      "name": "添加实体生效铭牌",
+      "family": "执行节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 615 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:616",
+      "definitionId": 616,
+      "graphKind": 20000,
+      "name": "删除实体生效铭牌",
+      "family": "执行节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 616 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:617",
+      "definitionId": 617,
+      "graphKind": 20000,
+      "name": "设置实体生效铭牌",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "铭牌"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 617 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:827",
+      "definitionId": 827,
+      "graphKind": 20000,
+      "name": "播放界面动效控件",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 827 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:833",
+      "definitionId": 833,
+      "graphKind": 20000,
+      "name": "更新消息队列",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 833 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:300005",
+      "definitionId": 300005,
+      "graphKind": 20000,
+      "name": "发送客户端脚本信号",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "ui"
+      ],
+      "nativeLeaves": [
+        "界面控件组"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 300005 --graph-kind 20000"
+    }
+  ],
+  "pitfalls": [
+    "控件布局、父级激活、玩家归属、可见条件、按键绑定和文字配置必须存在。节点图引用成功不证明画面可见。"
+  ],
+  "code": [
+    "tools/game-executor/ui-interaction/skill_button.py"
+  ],
+  "count": 12,
+  "byFamily": {
+    "事件节点": 1,
+    "查询节点": 1,
+    "执行节点": 10
+  },
+  "byGraphKind": {
+    "20000": 12
+  },
+  "runtimeVerified": false
+}

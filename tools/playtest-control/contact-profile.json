@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0xf8483a0",
+      "head32": "4156565755534883ec304589ce4489c689d74889cb803daa78f3f5000f859501",
+      "functionBytes": 623,
+      "hotfixZeroRvas": [
+        "0x577fc66",
+        "0x577fcb5",
+        "0x577fc8b"
+      ]
+    },
+    {
+      "rva": "0xf855380",
+      "head32": "56574883ec2889d64889ca803d75a9f2f50075414889d1e87432ffff4885c074",
+      "functionBytes": 146,
+      "hotfixZeroRvas": [
+        "0x577fd07"
+      ]
+    },
+    {
+      "rva": "0xf847af0",
+      "head32": "56574883ec2889d64889ca803d9581f3f50075414889d1e8040b00004885c074",
+      "functionBytes": 146,
+      "hotfixZeroRvas": [
+        "0x577fc97"
+      ]
+    },
+    {
+      "rva": "0xf848610",
+      "head32": "56574883ec284889ce803d45f624f6000f849c000000803d4a76f3f5000f85ad",
+      "functionBytes": 259,
+      "hotfixZeroRvas": [
+        "0x577fc77"
+      ]
+    },
+    {
+      "rva": "0x16135450",
+      "head32": "4157415641554154565755534881ec88000000660f297424704189d54989cf89",
+      "functionBytes": 1274,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x178442e0",
+      "head32": "4157415641554154565755534881ec88000000660f297424704189d54989cf89",
+      "functionBytes": 1332,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0xf840f50",
+      "head32": "55415741565657534881ecd8000000488dac248000000048c74540feffffff4c",
+      "functionBytes": 1184,
+      "hotfixZeroRvas": [
+        "0x577fc30",
+        "0x577ae96"
+      ]
+    },
+    {
+      "rva": "0xe498430",
+      "head32": "564881ec700100004889ce803d8fc025f7000f85d00200004885f60f84f10200",
+      "functionBytes": 897,
+      "hotfixZeroRvas": [
+        "0x56f44d1",
+        "0x5721ebc"
+      ]
+    },
+    {
+      "rva": "0x1433ba70",
+      "head32": "56574883ec2889d64889cf498b4010488b48104885c9745c488b872001000048",
+      "functionBytes": 184,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x9f5ff10",
+      "head32": "4156565755534883ec404589c64889d64889cf48c744243800000000803d0139",
+      "functionBytes": 2790,
+      "hotfixZeroRvas": [
+        "0x5713834"
+      ]
+    },
+    {
+      "rva": "0x9f621a0",
+      "head32": "4157415641554154565755534883ec684889d74989ce803d49167bfb000f8558",
+      "functionBytes": 3124,
+      "hotfixZeroRvas": [
+        "0x5713806"
+      ]
+    },
+    {
+      "rva": "0x9f6a9c0",
+      "head32": "4157415641554154565755534883ec684889d34989ce803d498e7afb000f85b7",
+      "functionBytes": 5412,
+      "hotfixZeroRvas": [
+        "0x5713826",
+        "0x571382c"
+      ]
+    },
+    {
+      "rva": "0xe983110",
+      "head32": "565755534883ec284489c589d64889cf803da840dff6000f85b0000000488b9f",
+      "functionBytes": 274,
+      "hotfixZeroRvas": [
+        "0x57771cf"
+      ]
+    },
+    {
+      "rva": "0xea33bb0",
+      "head32": "41574156415541545657534883ec204c89c64989d74989ce803d492706f7000f",
+      "functionBytes": 647,
+      "hotfixZeroRvas": [
+        "0x571d424"
+      ]
+    },
+    {
+      "rva": "0x14058e50",
+      "head32": "4883ec28488b41104885c074134c8b4018488b5028488b48404883c42849ffe0",
+      "functionBytes": 38,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x1455060",
+      "head32": "40534883ec20488bd94885c97417e84d5dffff4885c0740d807849000f95c048",
+      "functionBytes": 46,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x19c9de20",
+      "head32": "e9fb8d79e766662e0f1f840000000000e90b8e79e766662e0f1f840000000000",
+      "functionBytes": 32,
+      "hotfixZeroRvas": []
+    },
+    {
+      "rva": "0x8167630",
+      "head32": "564883ec204989d04889ce803d68d75bfd000f85880000004d85c0743a4c8986",
+      "functionBytes": 297,
+      "hotfixZeroRvas": [
+        "0x5724daa",
+        "0x5710f2d",
+        "0x5710f2d"
+      ]
+    },
+    {
+      "rva": "0xac898b0",
+      "head32": "565755534881ecb80000000f29bc24a00000000f29b424900000004489cb4489",
+      "functionBytes": 1065,
+      "hotfixZeroRvas": [
+        "0x5724daa",
+        "0x5710f2d",
+        "0x5739f38",
+        "0x5739f3b"
+      ]
+    },
+    {
+      "rva": "0xd0e3920",
+      "head32": "415741565657534883ec600f297c24500f297424404489c04989d74889ce803d",
+      "functionBytes": 2324,
+      "hotfixZeroRvas": [
+        "0x5732378",
+        "0x5710f2d",
+        "0x5724da1",
+        "0x5710f31",
+        "0x5724da1",
+        "0x5710f31",
+        "0x5724da1",
+        "0x5710f31",
+        "0x5724da1",
+        "0x5710f31",
+        "0x5724daa",
+        "0x5710f2d"
+      ]
+    },
+    {
+      "rva": "0xd0e0f10",
+      "head32": "415741564154565755534881ec40030000440f29bc2430030000440f29b42420",
+      "functionBytes": 7661,
+      "hotfixZeroRvas": [
+        "0x5717601"
+      ]
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x56f44d1",
+    "0x5710f2d",
+    "0x5710f31",
+    "0x5713806",
+    "0x5713826",
+    "0x571382c",
+    "0x5713834",
+    "0x5717601",
+    "0x571d424",
+    "0x5721ebc",
+    "0x5724da1",
+    "0x5724daa",
+    "0x5732378",
+    "0x5739f38",
+    "0x5739f3b",
+    "0x57771cf",
+    "0x577ae96",
+    "0x577fc30",
+    "0x577fc66",
+    "0x577fc77",
+    "0x577fc8b",
+    "0x577fc97",
+    "0x577fcb5",
+    "0x577fd07"
+  ],
+  "evidence": "Installed PE static extraction; no live process or test execution"
+}

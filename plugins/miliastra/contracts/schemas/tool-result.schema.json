@@ -1,0 +1,405 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://miliastra.local/contracts/schemas/tool-result.schema.json",
+  "title": "Miliastra business tool result, contractVersion 1",
+  "description": "The single shape every Miliastra business tool call returns. enums here are the closed sets fixed by plugins/miliastra/contracts/contract.json and must not be widened locally. Extra keys are forbidden so that a drifting implementation fails loudly.",
+  "type": "object",
+  "required": [
+    "contractVersion",
+    "capabilityId",
+    "method",
+    "operationId",
+    "state",
+    "outcomeKnown",
+    "writeExecuted",
+    "targetHandle",
+    "objectIds",
+    "changed",
+    "failedItems",
+    "stages",
+    "error",
+    "nextAction",
+    "retryAttempted",
+    "replayed",
+    "ok"
+  ],
+  "properties": {
+    "contractVersion": {
+      "type": "string",
+      "const": "1",
+      "description": "String, not integer. Distinct from the integer schemaVersion on persisted records."
+    },
+    "capabilityId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(\\.[a-z][a-z0-9-]*)+$",
+      "description": "Stable business capability id, e.g. entity.create."
+    },
+    "method": {
+      "type": "string",
+      "description": "The raw tool method name as registered, e.g. mw.scene.createEntity."
+    },
+    "operationId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$",
+      "description": "Business idempotency key. Input alias: requestId."
+    },
+    "caseId": {
+      "type": ["string", "null"]
+    },
+    "targetHandle": {
+      "type": ["string", "null"],
+      "description": "Opaque token minted by mw.scene.discoverLevel. Null when the call did not need or could not resolve a target. Never a caller-built path."
+    },
+    "targetBinding": {
+      "$ref": "#/$defs/targetBinding"
+    },
+    "state": {
+      "enum": ["rejected", "pending", "unknown", "failed", "completed"],
+      "description": "The business verdict. Business projection of contract.json operationState."
+    },
+    "operationState": {
+      "enum": ["never-claimed", "claimed", "dispatched", "known-complete", "known-failed", "outcome-unknown"]
+    },
+    "reconcileState": {
+      "enum": ["never-claimed", "known-success", "known-failure", "unknown"]
+    },
+    "outcomeKnown": {
+      "type": "boolean",
+      "description": "False exactly when state is pending or unknown."
+    },
+    "writeExecuted": {
+      "type": ["boolean", "null"],
+      "description": "true only with observed evidence that a write reached the target; null when not established; false only when no dispatch evidence exists."
+    },
+    "created": {"type": ["boolean", "null"]},
+    "saved": {"type": ["boolean", "null"]},
+    "deleted": {"type": ["boolean", "null"]},
+    "objectIds": {
+      "type": "array",
+      "items": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+      "description": "Ids this call is responsible for, taken from its own receipts or its own read-back."
+    },
+    "changed": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/change"},
+      "description": "Per-object outcome. A non-empty changed[] with state completed is allowed only when every entry is a requested change."
+    },
+    "failedItems": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/change"},
+      "description": "Per-object failures. Partial success never collapses into a single top-level verdict."
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": {"type": ["integer", "null"]},
+      "description": "Counted observations only. Never a derived success ratio."
+    },
+    "stages": {"$ref": "#/$defs/stages"},
+    "error": {
+      "oneOf": [{"type": "null"}, {"$ref": "#/$defs/error"}]
+    },
+    "nextAction": {
+      "enum": ["none", "fix-input", "poll-same-operation", "reconcile", "report-and-repair", "await-human"]
+    },
+    "nextActionDetail": {
+      "type": ["string", "null"],
+      "description": "Human-readable guidance only. Free text is never parsed."
+    },
+    "retryAttempted": {
+      "type": "boolean",
+      "const": false,
+      "description": "Always false. No layer in this project retries automatically."
+    },
+    "replayed": {
+      "type": "boolean",
+      "description": "True when this result is the original receipt returned again for the same operationId and the same bound command, with nothing dispatched."
+    },
+    "ok": {
+      "type": "boolean",
+      "description": "Must equal (state === 'completed'). It is not the business verdict; state is."
+    },
+    "backendKind": {"type": "string"},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "$comment": "STATE-1: ok is derived from state, and isError is its complement.",
+      "if": {"properties": {"state": {"const": "completed"}}, "required": ["state"]},
+      "then": {"properties": {"ok": {"const": true}}},
+      "else": {"properties": {"ok": {"const": false}}}
+    },
+    {
+      "$comment": "outcomeKnown is false exactly for pending and unknown.",
+      "if": {"properties": {"state": {"enum": ["pending", "unknown"]}}, "required": ["state"]},
+      "then": {"properties": {"outcomeKnown": {"const": false}}},
+      "else": {"properties": {"outcomeKnown": {"const": true}}}
+    },
+    {
+      "$comment": "A rejected or version-gated result must prove that nothing was written.",
+      "if": {"properties": {"state": {"const": "rejected"}}, "required": ["state"]},
+      "then": {
+        "properties": {
+          "writeExecuted": {"const": false},
+          "targetHandle": {"type": ["string", "null"]},
+          "changed": {"maxItems": 0},
+          "failedItems": {"maxItems": 0}
+        }
+      }
+    },
+    {
+      "$comment": "A completed or failed result must name an error for failed and null for completed.",
+      "if": {"properties": {"state": {"const": "failed"}}, "required": ["state"]},
+      "then": {"properties": {"error": {"$ref": "#/$defs/error"}}}
+    },
+    {
+      "if": {"properties": {"state": {"const": "completed"}}, "required": ["state"]},
+      "then": {"properties": {"error": {"type": "null"}}}
+    },
+    {
+      "$comment": "A rejected result carries a pre-dispatch or version-gate error; it can never carry an unknown-outcome error.",
+      "if": {"properties": {"state": {"const": "rejected"}}, "required": ["state"]},
+      "then": {
+        "properties": {
+          "error": {
+            "properties": {
+              "disposition": {"enum": ["refusal-before-dispatch", "version-gate"]}
+            }
+          }
+        }
+      }
+    },
+    {
+      "$comment": "An unknown result carries an unknown-after-dispatch error.",
+      "if": {"properties": {"state": {"const": "unknown"}}, "required": ["state"]},
+      "then": {
+        "properties": {
+          "error": {"properties": {"disposition": {"const": "unknown-after-dispatch"}}}
+        }
+      }
+    },
+    {
+      "$comment": "Recovery guidance must match the state.",
+      "if": {"properties": {"state": {"const": "unknown"}}, "required": ["state"]},
+      "then": {"properties": {"nextAction": {"const": "reconcile"}}}
+    },
+    {
+      "if": {"properties": {"state": {"const": "pending"}}, "required": ["state"]},
+      "then": {"properties": {"nextAction": {"const": "poll-same-operation"}}}
+    },
+    {
+      "if": {"properties": {"state": {"const": "completed"}}, "required": ["state"]},
+      "then": {"properties": {"nextAction": {"const": "none"}}}
+    }
+  ],
+  "$defs": {
+    "stages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["liveReadback", "saveDiff", "reopen", "runtime", "cleanup"],
+      "properties": {
+        "liveReadback": {"$ref": "#/$defs/stage"},
+        "saveDiff": {"$ref": "#/$defs/stage"},
+        "reopen": {"$ref": "#/$defs/stage"},
+        "runtime": {"$ref": "#/$defs/stage"},
+        "cleanup": {"$ref": "#/$defs/stage"}
+      },
+      "description": "persistence is accepted as an input alias for saveDiff for one contract version and must never be emitted."
+    },
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "evidenceRef"],
+      "properties": {
+        "status": {"enum": ["not-run", "pass", "fail", "blocked", "unknown", "not-applicable"]},
+        "reason": {"type": ["string", "null"]},
+        "evidenceRef": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Project-relative paths of the raw evidence for THIS stage only."
+        },
+        "evidenceSha256": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "detail": {"type": ["object", "null"]}
+      },
+      "allOf": [
+        {
+          "$comment": "HONEST-3: a pass needs evidence.",
+          "if": {"properties": {"status": {"const": "pass"}}, "required": ["status"]},
+          "then": {"properties": {"evidenceRef": {"minItems": 1}}}
+        },
+        {
+          "$comment": "HONEST-3: everything that is not a pass needs a reason.",
+          "if": {"properties": {"status": {"not": {"const": "pass"}}}, "required": ["status"]},
+          "then": {"properties": {"reason": {"type": "string", "minLength": 1}}, "required": ["reason"]}
+        }
+      ]
+    },
+    "change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objectId", "result"],
+      "properties": {
+        "objectId": {"type": ["integer", "null"], "minimum": 1, "maximum": 4294967295},
+        "result": {
+          "enum": ["created", "changed", "deleted", "unchanged", "refused", "not-attempted", "not-attempted:prior-unknown-outcome", "dispatched", "dispatched:threw-native", "dispatched:path-mismatch", "not-dispatched:target-changed", "not-dispatched:list-refused", "unknown"]
+        },
+        "fields": {"type": ["object", "null"]},
+        "reason": {"type": ["string", "null"]},
+        "evidenceRef": {"type": ["string", "null"]}
+      }
+    },
+    "targetBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["levelId", "sessionProcessCreation", "sessionThreadCreation", "backendProfileId", "backendProfileSha256", "mintedUtc", "receiptSha256"],
+      "properties": {
+        "levelId": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "sessionProcessCreation": {"type": "integer"},
+        "sessionThreadCreation": {"type": "integer"},
+        "sessionPid": {"type": ["integer", "null"]},
+        "sessionImage": {"type": ["string", "null"]},
+        "backendProfileId": {"type": "string"},
+        "backendProfileSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "mintedUtc": {"type": "string", "format": "date-time"},
+        "receiptSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "revision": {"type": ["string", "null"], "description": "Opaque token echoed back as expectedRevision."}
+      }
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "disposition", "phase", "sideEffect", "message"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "REQUEST_ID_INVALID",
+            "REQUEST_ID_CONFLICT",
+            "REQUEST_INCOMPLETE_CLAIM",
+            "REQUEST_OUTCOME_UNKNOWN",
+            "NATIVE_WRITE_REVIEW_REQUIRED",
+            "CAPABILITY_NOT_ENABLED",
+            "CONTRACT_VERSION_UNSUPPORTED",
+            "INCOMPATIBLE_VERSION",
+            "TARGET_HANDLE_INVALID",
+            "TARGET_HANDLE_UNKNOWN",
+            "TARGET_HANDLE_RECEIPT_CHANGED",
+            "TARGET_HANDLE_UNVERIFIED",
+            "TARGET_STALE_REVISION",
+            "TEMPLATE_ID_NOT_AN_INTEGER",
+            "TEMPLATE_NOT_SUPPORTED",
+            "TRANSFORM_INVALID",
+            "SCALE_NOT_POSITIVE",
+            "LEVEL_AT_CAPACITY",
+            "EXECUTION_LAYER_UNAVAILABLE",
+            "EXECUTION_LAYER_BLOCKED",
+            "EXECUTION_LAYER_BUSY",
+            "EVIDENCE_INTEGRITY_FAILED",
+            "UPSTREAM_RECEIPT_UNREADABLE",
+            "UPSTREAM_PENDING",
+            "READBACK_FAILED",
+            "READBACK_WRONG_LEVEL",
+            "READBACK_NOT_ACCEPTED",
+            "CREATE_EFFECT_NOT_AS_REQUESTED",
+            "SAVE_STATUS_NOT_SUCCESS",
+            "SAVE_TOUCHED_PROTECTED_TARGET",
+            "CLEANUP_IDS_EMPTY",
+            "CLEANUP_IDS_OVER_LIMIT",
+            "CLEANUP_IDS_DUPLICATED",
+            "CLEANUP_IDS_NOT_UINT32",
+            "CLEANUP_REQUEST_NOT_COMPLETE",
+            "CLEANUP_REQUEST_NOT_A_CREATE",
+            "CLEANUP_ID_NOT_OWNED_BY_THIS_RUN",
+            "CLEANUP_BRIDGE_UNAVAILABLE",
+            "CANCELLED_BEFORE_DISPATCH",
+            "TOOL_UNAVAILABLE_IN_PROFILE"
+          ],
+          "description": "Closed set. Kept in sync with contract.json errorTaxonomy.codes by validate.py; an upstream code belongs in error.upstream.code, never here."
+        },
+        "disposition": {
+          "enum": ["refusal-before-dispatch", "version-gate", "failure-after-dispatch", "unknown-after-dispatch"]
+        },
+        "phase": {
+          "enum": ["before-dispatch", "after-dispatch"],
+          "description": "Position of the emitter relative to the dispatch boundary. A context-dependent code must have its phase supplied by the emitting call site."
+        },
+        "sideEffect": {"enum": ["none", "possible", "observed"]},
+        "message": {"type": "string"},
+        "target": {"type": ["string", "null"]},
+        "operationId": {"type": ["string", "null"]},
+        "reconcile": {
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["operationId", "ledgerRef"],
+              "properties": {
+                "operationId": {"type": "string"},
+                "ledgerRef": {"type": "string"},
+                "requestId": {"type": ["string", "null"]},
+                "journalRef": {"type": ["string", "null"]}
+              }
+            }
+          ]
+        },
+        "upstream": {
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["layer", "code"],
+              "properties": {
+                "layer": {"enum": ["business", "ledger", "queue-client", "queue-runner", "native-cli", "native-probe", "bridge"]},
+                "code": {"type": "string"},
+                "message": {"type": ["string", "null"]}
+              }
+            }
+          ]
+        },
+        "detail": {"type": ["object", "null"]}
+      },
+      "allOf": [
+        {
+          "$comment": "The disposition fixes the side effect; an emitter may not choose them independently.",
+          "if": {"properties": {"disposition": {"enum": ["refusal-before-dispatch", "version-gate"]}}, "required": ["disposition"]},
+          "then": {"properties": {"sideEffect": {"const": "none"}, "phase": {"const": "before-dispatch"}}}
+        },
+        {
+          "if": {"properties": {"disposition": {"const": "failure-after-dispatch"}}, "required": ["disposition"]},
+          "then": {"properties": {"sideEffect": {"const": "observed"}, "phase": {"const": "after-dispatch"}}}
+        },
+        {
+          "if": {"properties": {"disposition": {"const": "unknown-after-dispatch"}}, "required": ["disposition"]},
+          "then": {"properties": {"sideEffect": {"const": "possible"}, "phase": {"const": "after-dispatch"}}}
+        },
+        {
+          "$comment": "An unknown outcome must give the caller a reconciliation route, so that it is never re-sent blindly.",
+          "if": {"properties": {"disposition": {"const": "unknown-after-dispatch"}}, "required": ["disposition"]},
+          "then": {"required": ["reconcile"]}
+        },
+        {
+          "$comment": "Context-dependent codes are the only ones allowed to appear on both sides of the boundary; they are exactly the ones listed as context-dependent in contract.json.",
+          "if": {"properties": {"code": {"const": "REQUEST_OUTCOME_UNKNOWN"}}, "required": ["code"]},
+          "then": {"properties": {"disposition": {"const": "unknown-after-dispatch"}}}
+        },
+        {
+          "if": {"properties": {"code": {"const": "REQUEST_ID_CONFLICT"}}, "required": ["code"]},
+          "then": {"properties": {"disposition": {"const": "refusal-before-dispatch"}}}
+        },
+        {
+          "if": {"properties": {"code": {"const": "REQUEST_INCOMPLETE_CLAIM"}}, "required": ["code"]},
+          "then": {"properties": {"disposition": {"const": "refusal-before-dispatch"}}}
+        },
+        {
+          "if": {"properties": {"code": {"const": "NATIVE_WRITE_REVIEW_REQUIRED"}}, "required": ["code"]},
+          "then": {"properties": {"disposition": {"const": "refusal-before-dispatch"}}}
+        }
+      ]
+    }
+  }
+}

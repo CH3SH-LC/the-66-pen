@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>Miliastra.Bootstrap.Net8R301</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>
+

@@ -1,0 +1,1126 @@
+{
+  "documents": [
+    {
+      "source": "docs/research/7.1-experiment-plan/COVERAGE.md",
+      "sourceSha256": "b500f5f7bbffda378509941fe0f0c07477811ee36bcb3db15266a687416714c1",
+      "published": "docs/history/research/7.1-experiment-plan/COVERAGE.md",
+      "title": "实验阶段覆盖映射"
+    },
+    {
+      "source": "docs/research/7.1-experiment-plan/EXECUTION.md",
+      "sourceSha256": "9c8ec02d45501da0081a1039114fa6f6354a88120a166b2b8ef3dcec47e19e42",
+      "published": "docs/history/research/7.1-experiment-plan/EXECUTION.md",
+      "title": "全接口实验执行记录"
+    },
+    {
+      "source": "docs/research/7.1-experiment-plan/README.md",
+      "sourceSha256": "c604eae745aa326da183491bbb51fcfe52ff6995ed119de766f83a57185ef399",
+      "published": "docs/history/research/7.1-experiment-plan/README.md",
+      "title": "千星奇域 7.1 全接口探索实验计划"
+    },
+    {
+      "source": "docs/research/7.1-revalidation/COMMANDS.md",
+      "sourceSha256": "511cec1013c28c859b589f9ca63f0caa8cf846ec45ca1e9ca9dacdeb3129655f",
+      "published": "docs/history/research/7.1-revalidation/COMMANDS.md",
+      "title": "旧命令与7.1比较指令对应"
+    },
+    {
+      "source": "docs/research/7.1-revalidation/DOCUMENTS.md",
+      "sourceSha256": "fb25c84e9142f93d7236209ae03d639f422aeae9035e546ec685a919b7be2163",
+      "published": "docs/history/research/7.1-revalidation/DOCUMENTS.md",
+      "title": "文档覆盖与边界"
+    },
+    {
+      "source": "docs/research/7.1-revalidation/NODES.md",
+      "sourceSha256": "7d1be2acdc972d3814d454e798a196eebffe29194c05dcb4b0bd7b64396cb2f8",
+      "published": "docs/history/research/7.1-revalidation/NODES.md",
+      "title": "7.1节点差分"
+    },
+    {
+      "source": "docs/research/7.1-revalidation/README.md",
+      "sourceSha256": "285c83368d089d6fc23f5ea0d9eec76dfbd7a944c7cef39a5fb6ca75d2cdbdd1",
+      "published": "docs/history/research/7.1-revalidation/README.md",
+      "title": "7.1 旧研究文档复核与变化清单"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/00-总览.md",
+      "sourceSha256": "12bcd8cd795f22339d73145de522f12eff5fcfbc396451a8f575ac4cf91796f6",
+      "published": "docs/history/research/beyondeditor-backend/00-总览.md",
+      "title": "调研：千星编辑器后端（原神侧）功能面 —— 前端接口 → 后端实现的全量对应"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/01-方法论-哈希识别与全量扫描.md",
+      "sourceSha256": "276c9dedd41f75b8232d94b64bd925880deeb6b55aceba6213ebe7f212850ff7",
+      "published": "docs/history/research/beyondeditor-backend/01-方法论-哈希识别与全量扫描.md",
+      "title": "01 · 方法论：哈希识别与全量扫描"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/02-命令分发表-主表-0x914de40.md",
+      "sourceSha256": "636f2ef781beca97f0a94c22ddd0dd34f6c700d026986fd33833002996e618ff",
+      "published": "docs/history/research/beyondeditor-backend/02-命令分发表-主表-0x914de40.md",
+      "title": "02 · 命令分发表主表 `0x914de40` —— 25 条命令的后端实现"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/03-命令分发表-导出与调试-0x768d170.md",
+      "sourceSha256": "dfab4c04d76250e33ad3178edbea6c1635dc05bbe86b27ebf3400be464aef712",
+      "published": "docs/history/research/beyondeditor-backend/03-命令分发表-导出与调试-0x768d170.md",
+      "title": "03 · 命令分发表 `0x768d170` —— 导入导出与调试日志 7 条"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/04-服务路由层.md",
+      "sourceSha256": "7c6b2f6059558f8f10f446fd20ac8336b1dbfe237d5e1762bcc864fb5ebb4031",
+      "published": "docs/history/research/beyondeditor-backend/04-服务路由层.md",
+      "title": "04 · 服务路由层 —— 服务名怎么选中分发表"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/05-消息编号路由.md",
+      "sourceSha256": "fcedd0994e51b703798015168a296206c4c769fae08211dea68882b26238409f",
+      "published": "docs/history/research/beyondeditor-backend/05-消息编号路由.md",
+      "title": "05 · 消息编号路由 —— 1018 入站全链与全跳表"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/06-出站方向-游戏发给编辑器.md",
+      "sourceSha256": "b0f21e261838b601e54b76036fb3e63b1724c2180ce07b498ae2f0c719b3aa8d",
+      "published": "docs/history/research/beyondeditor-backend/06-出站方向-游戏发给编辑器.md",
+      "title": "06 · 出站方向 —— 游戏发给编辑器的消息"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/07-无落点命令的诚实结论.md",
+      "sourceSha256": "4b3be8b0a6b3480f82e561c05a31233ff93b05223ec2f05c4ef8676668c97335",
+      "published": "docs/history/research/beyondeditor-backend/07-无落点命令的诚实结论.md",
+      "title": "07 · 无落点命令的诚实结论 —— 6 条命令的去向"
+    },
+    {
+      "source": "docs/research/beyondeditor-backend/08-能力边界与缺口.md",
+      "sourceSha256": "de96666ab55c8d0e85e51447b5fb53c46215f507ea8762aabd5237984a57d3a6",
+      "published": "docs/history/research/beyondeditor-backend/08-能力边界与缺口.md",
+      "title": "08 · 能力边界与缺口"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/00-总览.md",
+      "sourceSha256": "15ff34bda8ce3c29da7e72cef169cfc865d27fef554b46a84e0aadbf42641422",
+      "published": "docs/history/research/beyondeditor-frontend/00-总览.md",
+      "title": "调研：千星编辑器前端（BeyondAssistEditor）功能面与对应代码"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/01-前端架构与程序集.md",
+      "sourceSha256": "2e32124c1516953dacae072c6f7e4eb4cc584829baab19f4fa72ee6a856e0839",
+      "published": "docs/history/research/beyondeditor-frontend/01-前端架构与程序集.md",
+      "title": "01 · 前端架构与程序集"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/00-总览.md",
+      "sourceSha256": "e23f94fa14cdd41e7d7bdc8684c01f3d4bb215071a64ba560eb87f088b692e37",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/00-总览.md",
+      "title": "02 · 界面功能面（子目录）"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01-界面文本总表.md",
+      "sourceSha256": "56f2d700ca3f1664a4eb42816769df4ef1cb077302fb3170631c76fbd6c48d5a",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01-界面文本总表.md",
+      "title": "02-01 · 界面文本总表"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/00-总览.md",
+      "sourceSha256": "c4639dd698ce70fa7ca0b29f0fead53ee837153a86b27c784dddde3ef4e14181",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/00-总览.md",
+      "title": "02-01a · 界面文本清单（UI 层）— 子目录"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/01-主窗口面板-DEFAULT.md",
+      "sourceSha256": "b5a2784971aee0ac22f4e7035208c6d705f965ef05f0e14ee11fbb561e762bd3",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/01-主窗口面板-DEFAULT.md",
+      "title": "02-01a · UI 层文本清单 · 主窗口面板"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/02-主窗口面板-SIGNAL.md",
+      "sourceSha256": "ef4855a802548f04db10bc4b921a1f0daea3881a3fb160499777cc75d3a64fe5",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/02-主窗口面板-SIGNAL.md",
+      "title": "02-01a · UI 层文本清单 · 主窗口面板"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/03-编辑器侧工具-VFXEDITOR.md",
+      "sourceSha256": "1138158bcc40595bacd0e5711ac555e386b965d370245f0394da28cbbbcb3ecb",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/03-编辑器侧工具-VFXEDITOR.md",
+      "title": "02-01a · UI 层文本清单 · 编辑器侧工具"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/04-编辑器侧工具-ESP.md",
+      "sourceSha256": "bfcfb3da4f6ae04d378ab48ef90c8d0cc472f7b23c3bce88ca6758287fae71ce",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/04-编辑器侧工具-ESP.md",
+      "title": "02-01a · UI 层文本清单 · 编辑器侧工具"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/05-编辑器侧工具-WPF.md",
+      "sourceSha256": "2ada7ea9d3811d85b2eba937cdb0d0e000df5ec2052366457f9d0539ca5957ca",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/05-编辑器侧工具-WPF.md",
+      "title": "02-01a · UI 层文本清单 · 编辑器侧工具"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/06-日志与通用.md",
+      "sourceSha256": "1e1585e7723e2de331c5bc52835759ef0370bc988a1a10c0aab06f35973c4bf9",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01a-界面文本清单-UI层/06-日志与通用.md",
+      "title": "02-01a · UI 层文本清单 · 日志与通用"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/00-总览.md",
+      "sourceSha256": "3f5d7e6126ed962060faa8d58586b8d25578877dfdca63f7ff6dbe628d1f338e",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/00-总览.md",
+      "title": "02-01b · 节点与配置层清单 — 子目录"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/01-节点指令层.md",
+      "sourceSha256": "4f4c0731ff92c5981bb1dc0dcb4ec7c0e9b1fcbd26c9db8c29228a001bc042b2",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/01-节点指令层.md",
+      "title": "02-01b · 节点与配置层 · 节点指令层（`BeyondEditorInstructionNodeConfig_*`，5667 条）"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/02-全局配置层.md",
+      "sourceSha256": "0faf17cc4e44638515e0887b0d4407bc2890c1bca44fde5872ff215a8ef9365b",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/02-全局配置层.md",
+      "title": "02-01b · 节点与配置层 · 全局配置层（`BeyondAssistantEditorConfigGlobal_*`，1082 条）"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/03-快捷键层.md",
+      "sourceSha256": "188971616de6597f347e2b5b4a76d584905d84ff68016d21c9573f0fa5983f92",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/03-快捷键层.md",
+      "title": "02-01b · 节点与配置层 · 快捷键层（`BEYOND_EDITOR_*`，59 条 = 快捷键 58 + 帮助标题 1）"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/04-全部 800 条节点显示名索引.md",
+      "sourceSha256": "0d79addbe8d5f4c199301e7f5a9802ec0af3eabecb0fc197a80a551e892c58b9",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/04-全部 800 条节点显示名索引.md",
+      "title": "02-01b · 节点与配置层 · 全部 800 条节点显示名索引（第 1 部分）"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/05-全部 800 条节点显示名索引.md",
+      "sourceSha256": "05f5b708dcf4eb9ebc5260ec0f70faf7114ad4f14926170d02b568f3b64d2441",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/05-全部 800 条节点显示名索引.md",
+      "title": "02-01b · 节点与配置层 · 全部 800 条节点显示名索引（第 2 部分）"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/06-全部 800 条节点显示名索引.md",
+      "sourceSha256": "05b31ece5f8317cdc4156cf591675e63acbbd1e0086591ab2da9032ba91e2831",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/01b-节点与配置层清单/06-全部 800 条节点显示名索引.md",
+      "title": "02-01b · 节点与配置层 · 全部 800 条节点显示名索引（第 3 部分）"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/02-图标与视觉资源.md",
+      "sourceSha256": "b330889aae58d5f4b3a1fbcef2fe9237e5b0611950bab4fc6dfb764b157db904",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/02-图标与视觉资源.md",
+      "title": "02-02 · 图标与视觉资源"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/02-界面功能面/03-菜单与面板结构.md",
+      "sourceSha256": "b659177d4d101eacc25bbdc2b676bbf5c925346f04b0c4788387dc03e0ff0246",
+      "published": "docs/history/research/beyondeditor-frontend/02-界面功能面/03-菜单与面板结构.md",
+      "title": "02-03 · 菜单与面板结构"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/03-快捷键与用户输入.md",
+      "sourceSha256": "b33edff85ec95796ed9770d6a07ce0255deee50ad16472d3c3201c0d769f3f39",
+      "published": "docs/history/research/beyondeditor-frontend/03-快捷键与用户输入.md",
+      "title": "03 · 快捷键与用户输入"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/04-操作名与命令绑定.md",
+      "sourceSha256": "d706df2ff8c72c19f88fceac4998d9bb54fb854cc8c0f96dd63c982d0d781657",
+      "published": "docs/history/research/beyondeditor-frontend/04-操作名与命令绑定.md",
+      "title": "04 · 操作名与命令绑定"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/05-前后端通信通道.md",
+      "sourceSha256": "4381979e681ec604ff3a412289a9ad694aabfdc20ce249e6f818ae059786defa",
+      "published": "docs/history/research/beyondeditor-frontend/05-前后端通信通道.md",
+      "title": "05 · 前后端通信通道"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/06-WPF代码可实现功能面.md",
+      "sourceSha256": "892478399cca78914bf41e124f8612b48df20cca662ee2e08d054b0f7c7d86bc",
+      "published": "docs/history/research/beyondeditor-frontend/06-WPF代码可实现功能面.md",
+      "title": "06 · WPF 代码可实现功能面"
+    },
+    {
+      "source": "docs/research/beyondeditor-frontend/07-能力边界与缺口.md",
+      "sourceSha256": "4975a97318bcfa0c40d1fd44ce2ee029a8a284b0eac4695e4bc66455f32115f0",
+      "published": "docs/history/research/beyondeditor-frontend/07-能力边界与缺口.md",
+      "title": "07 · 能力边界与缺口"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/00-总览.md",
+      "sourceSha256": "184e1a23cf6756eba7f09c1bb44b825ec3d62dd78c26148499a2375d8bf237e6",
+      "published": "docs/history/research/beyondeditor-user-operations/00-总览.md",
+      "title": "调研：千星编辑器「用户操作 → 后端能力」全表"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/01-方法论-界面怎么重建.md",
+      "sourceSha256": "c6d7537b435941293f2b7f5355c86c14e39e9c6cdae41fb7ad9f12b9b3be1cdb",
+      "published": "docs/history/research/beyondeditor-user-operations/01-方法论-界面怎么重建.md",
+      "title": "01 · 方法论：界面怎么重建（含一条对上一轮的重要更正）"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/02-界面骨架-窗口菜单与面板.md",
+      "sourceSha256": "0ea7785dbab7d89a5a5da9009c00ba63e9b4bab6eb522c4bc706b7fae0fb2b19",
+      "published": "docs/history/research/beyondeditor-user-operations/02-界面骨架-窗口菜单与面板.md",
+      "title": "02 · 界面骨架：窗口菜单与面板"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/03-用户操作-场景实体与资源.md",
+      "sourceSha256": "9c34ff28dbae7c6b50c02231e9c9ba1017945544e6385000c395b05a6b811d74",
+      "published": "docs/history/research/beyondeditor-user-operations/03-用户操作-场景实体与资源.md",
+      "title": "03 · 用户操作：场景实体与资源"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/04-用户操作-节点图与蓝图.md",
+      "sourceSha256": "5f1731a12e2b351e747936a81c13a83eeb879353fe655e7ae14b4f1d75548545",
+      "published": "docs/history/research/beyondeditor-user-operations/04-用户操作-节点图与蓝图.md",
+      "title": "04 · 用户操作：节点图与蓝图"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/05-用户操作-工具栏与调试负载.md",
+      "sourceSha256": "93a361a5e985e11a5b3f69b4114f5f4bb019425a62bcad465125d657e6dc7ebb",
+      "published": "docs/history/research/beyondeditor-user-operations/05-用户操作-工具栏与调试负载.md",
+      "title": "05 · 用户操作：工具栏、调试与负载检测"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/06-导入导出与对话框.md",
+      "sourceSha256": "c25b55415297f69c583e3a1e880daa4c5d248c41d81e58fd75c0da999bf2d457",
+      "published": "docs/history/research/beyondeditor-user-operations/06-导入导出与对话框.md",
+      "title": "06 · 导入导出与对话框"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/07-后端能力反查-界面上没有的.md",
+      "sourceSha256": "86bb4ea8ee69ee3d28873eb1f428b43f8554bc262ff5dc0aa2532a2b2e682768",
+      "published": "docs/history/research/beyondeditor-user-operations/07-后端能力反查-界面上没有的.md",
+      "title": "07 · 后端能力反查：界面上找不到入口的"
+    },
+    {
+      "source": "docs/research/beyondeditor-user-operations/08-能力边界与缺口.md",
+      "sourceSha256": "d3d8f2707c1d644f269a75bbf7a7013dcabe4c91fbd94e02f32065dc460117a9",
+      "published": "docs/history/research/beyondeditor-user-operations/08-能力边界与缺口.md",
+      "title": "08 · 能力边界与缺口"
+    },
+    {
+      "source": "docs/research/entity-create/ENTITY-NAME-RULE.md",
+      "sourceSha256": "266ec5ef9f9f7600b6a6f87879295327f674df36b8b5b5b775dbabd209820620",
+      "published": "docs/history/research/entity-create/ENTITY-NAME-RULE.md",
+      "title": "实体创建的名称规则：templateId → 保存后的实体名"
+    },
+    {
+      "source": "docs/research/game-b-systems-20261009/F1F2-variables-nodes.md",
+      "sourceSha256": "98e7ed44129d8eb829824e86bf03b1401081ea50e6db1a018dff28c4aa15c9f9",
+      "published": "docs/history/research/game-b-systems-20261009/F1F2-variables-nodes.md",
+      "title": "F1/F2 变量与节点地基：官方依据 & 我们的缺口"
+    },
+    {
+      "source": "docs/research/game-b-systems-20261009/F5-visible-feedback.md",
+      "sourceSha256": "e7c2f5199650366100a6bb4289de976533fc4fb023525d564cbe1578da84941f",
+      "published": "docs/history/research/game-b-systems-20261009/F5-visible-feedback.md",
+      "title": "F5 玩家可见反馈：官方手段 & 我们的覆盖"
+    },
+    {
+      "source": "docs/research/game-b-systems-20261009/M1-interaction.md",
+      "sourceSha256": "0627622db1d0b5f6c3dd7f80f3bebb012771eac176399c40db6efbff0dcb967a",
+      "published": "docs/history/research/game-b-systems-20261009/M1-interaction.md",
+      "title": "M1 交互点：官方系统 & 我们的覆盖"
+    },
+    {
+      "source": "docs/research/game-b-systems-20261009/M2M3-currency-item.md",
+      "sourceSha256": "a1771e949351b6a17ac012c7f1b0646a7139e0cc69c87cc2ecbfbbdecf4c316d",
+      "published": "docs/history/research/game-b-systems-20261009/M2M3-currency-item.md",
+      "title": "M2 货币 + M3 道具：官方系统 & 我们的覆盖"
+    },
+    {
+      "source": "docs/research/game-b-systems-20261009/M4M5-inventory-shop.md",
+      "sourceSha256": "855498c7dde6fb7087b9121a7e34a859e1fdb1e0ea525b639db355ebb573ea69",
+      "published": "docs/history/research/game-b-systems-20261009/M4M5-inventory-shop.md",
+      "title": "M4 背包 + M5 商店：官方系统 & 我们的覆盖"
+    },
+    {
+      "source": "docs/research/game-b-systems-20261009/M6a-level-terrain.md",
+      "sourceSha256": "3aa7273cbb767411ac97b293ae5e05142f4bd48b0c54b0093a0f502d641ec53a",
+      "published": "docs/history/research/game-b-systems-20261009/M6a-level-terrain.md",
+      "title": "M6a 建关卡 & 改地形：官方能力 & 我们的可编程路径"
+    },
+    {
+      "source": "docs/research/miliastra-survey.md",
+      "sourceSha256": "6da5c72b0fe00a6cf883c8a7398ee6eec88ad5571003801a14ef599877472a83",
+      "published": "docs/history/research/miliastra-survey.md",
+      "title": "千星沙箱前期调查"
+    },
+    {
+      "source": "docs/research/QUALITY-REVIEW-20260922.md",
+      "sourceSha256": "c4f8a1bb7cd36b8f0914501753c185849b28cdb73573ed13f9921fd8e4086a68",
+      "published": "docs/history/research/QUALITY-REVIEW-20260922.md",
+      "title": "DS 调研独立质量审查"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/71-ADD-COMPONENT.md",
+      "sourceSha256": "7b4354e6d850deaecbece79f0482088d45ff24317785ae67bd366f4aabeb9c71",
+      "published": "docs/history/research/reverse-eng-20261010/71-ADD-COMPONENT.md",
+      "title": "#4 再研 — 7.1 CODE 里到底有没有「加组件」这条路（add-component in the 7.1 corpus）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/71-CORPUS-UI-SEARCH.md",
+      "sourceSha256": "194ab7bec945e1aad8ae8783c81ace1fd1c3e4fdca71c3bb67aed10a3651472d",
+      "published": "docs/history/research/reverse-eng-20261010/71-CORPUS-UI-SEARCH.md",
+      "title": "71-CORPUS-UI-SEARCH — 把「背包与货币 / 商店模板管理」的键名拿去 7.1 语料里搜"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/71-CORPUS-USABLE.md",
+      "sourceSha256": "efd2f2240171b8e5d4b3495cbb3b67edf06c981323b32b7c294add1c8081ca4a",
+      "published": "docs/history/research/reverse-eng-20261010/71-CORPUS-USABLE.md",
+      "title": "71-CORPUS-USABLE —— 7.1 语料「能不能直接 grep」盘点，与缺失的 resolved 树构建"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/71-TEMPLATE-CREATE.md",
+      "sourceSha256": "d1de11685da520339871d630322393c7adf20e8b58c03b2960798c4c2461e380",
+      "published": "docs/history/research/reverse-eng-20261010/71-TEMPLATE-CREATE.md",
+      "title": "#9 第二块拼图 —— 「建模板」在 **7.1 语料**里到底有没有（TEMPLATE CREATE, 7.1 hunt）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/ADD-COMPONENT-TRACE.md",
+      "sourceSha256": "0bde9d4e8760fdee6fbeb85e0aaded52005633eac56b8a82701571d6dd03520d",
+      "published": "docs/history/research/reverse-eng-20261010/ADD-COMPONENT-TRACE.md",
+      "title": "#1 追 — 编辑器 UI「添加通用组件」那条路到底走不走得通"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/BRIDGE-CRASH-SAFETY.md",
+      "sourceSha256": "13b272794dd70de0653828a3d09d8683d504edc17bd4d23792122a35788fd166",
+      "published": "docs/history/research/reverse-eng-20261010/archive/BRIDGE-CRASH-SAFETY.md",
+      "title": "#7 挖 — 桥的中断安全：超时/挂起时会留下什么"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/BUILD-PLAN-LIMITS.md",
+      "sourceSha256": "5b56cecbf26967529b0752db9e7eed40b8bbac568a5e388379f92ae2671e0b22",
+      "published": "docs/history/research/reverse-eng-20261010/archive/BUILD-PLAN-LIMITS.md",
+      "title": "#8 挖 — build-plan 的硬边界：节点 / 边 / 常量各能到多少"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/GIA-EXPORT-MINE.md",
+      "sourceSha256": "98aaefc344eca685f7f4da3fe7711dac70440679a25d1785a47911d4c8353cb9",
+      "published": "docs/history/research/reverse-eng-20261010/archive/GIA-EXPORT-MINE.md",
+      "title": "GIA-EXPORT-MINE — 导出的 `.gia` 到底是什么（框架判定 / 节点表 / 边）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/GRAPH-DELETE-PROBE.md",
+      "sourceSha256": "24fb43a54b8816ad637735be19ba7f08f65c869f4081e465fb96fa7200771028",
+      "published": "docs/history/research/reverse-eng-20261010/archive/GRAPH-DELETE-PROBE.md",
+      "title": "GRAPH-DELETE-PROBE — 为什么 `delete-owned-graph-ids` 永远是 `modelMatched=0`"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/GRAPH-RUNTIME-VERIFY-MINE.md",
+      "sourceSha256": "999841ed8cae4b788174408949d1ea363e947fe39bfc2af6e57f2bb24df06e79",
+      "published": "docs/history/research/reverse-eng-20261010/archive/GRAPH-RUNTIME-VERIFY-MINE.md",
+      "title": "#3 挖 — 用图日志把 `runtimeVerified` 从 `false` 变成 `true` 的可能路径"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/GRAPH-VARIABLES-PROBE.md",
+      "sourceSha256": "5cfa259b75ee91185082d913a47b7e92c394a34128bc5f569bcfde4275533359",
+      "published": "docs/history/research/reverse-eng-20261010/archive/GRAPH-VARIABLES-PROBE.md",
+      "title": "F1 节点图变量（graph.variables）逆向探针"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/GRAPH-VARIABLES-VERDICT.md",
+      "sourceSha256": "8f8cc0d9901a00f971aca1b0103fd13367ee4b6d44303904e22664f911d1b297",
+      "published": "docs/history/research/reverse-eng-20261010/archive/GRAPH-VARIABLES-VERDICT.md",
+      "title": "节点图变量（graph.variables）写入能力 — 核实判决"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/MANIFEST.md",
+      "sourceSha256": "6df7e310269c5d86e3d592cc68d757855d9eab3512b0dd9a0c1782fb42cc5196",
+      "published": "docs/history/research/reverse-eng-20261010/archive/MANIFEST.md",
+      "title": "MANIFEST — `archive/` 移入记录"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/SAVE-WRITE-ATTRIBUTION.md",
+      "sourceSha256": "39b3bad303b2d60a6cd401f06d836cd7a23f41799521885686022af7a680a396",
+      "published": "docs/history/research/reverse-eng-20261010/archive/SAVE-WRITE-ATTRIBUTION.md",
+      "title": "谁在写这份存档，什么时候写 — 关卡 1073741842 目录段（root field 6）两次追加的归属"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/TAB-DIRECTORY-MINE.md",
+      "sourceSha256": "ecb313ffb67d43cccce67aece6fcff5b399172c014aea5b966c6ce17e7ce436a",
+      "published": "docs/history/research/reverse-eng-20261010/archive/TAB-DIRECTORY-MINE.md",
+      "title": "root field 6（页签目录）挖掘 — 到底「谁在追加」"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/UI-HUD-FINAL.md",
+      "sourceSha256": "4531133b22c2afe5a97fea83636cdcd47724cd5baead2957b068eb76deda7032",
+      "published": "docs/history/research/reverse-eng-20261010/archive/UI-HUD-FINAL.md",
+      "title": "UI-HUD-FINAL — `ui.hud` 的收口：编辑器里有没有任何东西能写进去让玩家看见？"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/archive/VISIBLE-NO-ASSET.md",
+      "sourceSha256": "0093321193cbb5ea1bff48e65bb59d0665c7173530af9c3ef06725c9a757937b",
+      "published": "docs/history/research/reverse-eng-20261010/archive/VISIBLE-NO-ASSET.md",
+      "title": "#4 挖 — 无新 UI 资产也能让玩家「看见」的通道（F5 实效问题）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/ASSET-MEASURE-MINE.md",
+      "sourceSha256": "95a547a2958eddaf44594f3a1a2a70048638990f3a8ad4c66d4ba95f1759d51a",
+      "published": "docs/history/research/reverse-eng-20261010/ASSET-MEASURE-MINE.md",
+      "title": "#4 挖 — 模板尺寸到底能从哪来（`asset.measure` 的路）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/BINDING-SYMBOL-AUDIT.md",
+      "sourceSha256": "b4b13fb72900c081e6e18ea346711e70336bfd0c196aa46429005754704ad1ca",
+      "published": "docs/history/research/reverse-eng-20261010/BINDING-SYMBOL-AUDIT.md",
+      "title": "BINDING-SYMBOL-AUDIT — 绑定档里还有什么没被用上"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/BUILD-INTERRUPT-HAZARD.md",
+      "sourceSha256": "8730c3931ef7015b572d88bd00c675497bcaa0226b1022f347fd1ca9b22fdf0a",
+      "published": "docs/history/research/reverse-eng-20261010/BUILD-INTERRUPT-HAZARD.md",
+      "title": "#6 挖 — build 中途死掉会留下什么：Spend/attempt 标记、派发闸、request-id 重放（终章）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/BUILD-PLAN-CEILING.md",
+      "sourceSha256": "bbb3b0d9e97f8c2fee1effc9d03f2d830f21e5b6ea48e45476ca2520fa87360d",
+      "published": "docs/history/research/reverse-eng-20261010/BUILD-PLAN-CEILING.md",
+      "title": "#9 — 批处理图（`build-plan`）的真实尺寸天花板：核实与延伸"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/CHANNEL-2001.md",
+      "sourceSha256": "c5b489d86729db4e5efe31913e9793ba4d2bccc1cadf42fdc047c4e1e0dc7635",
+      "published": "docs/history/research/reverse-eng-20261010/CHANNEL-2001.md",
+      "title": "通道 2001 — 组件字段消息：定义在、发送器死、接收器无"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/COLLISION-COMPONENT-ID.md",
+      "sourceSha256": "5f3211647e4c5623857896bb11550498875281ac4cb918ee8ef7323eac40c9ef",
+      "published": "docs/history/research/reverse-eng-20261010/COLLISION-COMPONENT-ID.md",
+      "title": "#3 挖 — 碰撞触发器组件的 **id 到底是哪个数**：从 `jaUof90C3Ncl5BAJri4x` 枚举到探针行"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/COLLISION-TRIGGER-MINE.md",
+      "sourceSha256": "abce5d097fc1a327e62d6f242d36c2823ffc9667c87878891d40a310e8c60782",
+      "published": "docs/history/research/reverse-eng-20261010/COLLISION-TRIGGER-MINE.md",
+      "title": "#4 挖 — 碰撞触发器组件：M1 场景半边唯一的候选"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/COMMAND-ROUTE-MAP.md",
+      "sourceSha256": "24152b2e7c3100c4bd7f52e3956fda365621ee6180698ed99abe5daf691747bb",
+      "published": "docs/history/research/reverse-eng-20261010/COMMAND-ROUTE-MAP.md",
+      "title": "#10 — 编辑器前端命令路由全表（前端命令 → 游戏侧落点 → 本工程是否调用）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/COMPONENT-OP-PROOF-PLAN.md",
+      "sourceSha256": "359c07e7727e092967ff318f2d7d5af956c2395e282c5066a726228c97497049",
+      "published": "docs/history/research/reverse-eng-20261010/COMPONENT-OP-PROOF-PLAN.md",
+      "title": "#2 造 — 组件 op 的真机取证计划（`EntityComponentProbe` / `EntityComponentDelete`）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/COMPONENT-READ-VALUE.md",
+      "sourceSha256": "18278f4a945d927a472ada383ee9888ec3860815cabdc13967770c7298d24270",
+      "published": "docs/history/research/reverse-eng-20261010/COMPONENT-READ-VALUE.md",
+      "title": "#2 挖 — 组件\"读\"这一侧到底解锁什么（`inspect-entity-components` 的价值论证）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/COMPONENT-SWEEP-PLAN.md",
+      "sourceSha256": "b226e71bceda922c704df92d851b70eaf9bc21db640a95fead7921b47b7c4603",
+      "published": "docs/history/research/reverse-eng-20261010/COMPONENT-SWEEP-PLAN.md",
+      "title": "#4 全关卡组件扫荡 —— 计划（PLAN，**不执行**）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/COMPONENT-WRITER-MINE.md",
+      "sourceSha256": "736ccef10d7c53f7d03cb281ea2eb9e8fdad02c41e0fab2d94b9d2138350cbda",
+      "published": "docs/history/research/reverse-eng-20261010/COMPONENT-WRITER-MINE.md",
+      "title": "#1 挖 — 给实体加组件的写入原语（M1 场景半边 + `entity.properties` 的总闸）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/CONFIG-ID-RESOLUTION-MINE.md",
+      "sourceSha256": "07ab95f11a96a6c02e1f9f23a7f0aeb6b77a0a4401e233c8c9f75c0aba423c27",
+      "published": "docs/history/research/reverse-eng-20261010/CONFIG-ID-RESOLUTION-MINE.md",
+      "title": "挖 #11：图里的「配置ID」到底指向什么，能不能在存档里找到"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/CORPUS-COVERAGE.md",
+      "sourceSha256": "13c71e571c389bb3aaeff474cbe35d19636905b0a85ee54d95d71efa5338ae3b",
+      "published": "docs/history/research/reverse-eng-20261010/CORPUS-COVERAGE.md",
+      "title": "反编译语料的覆盖边界 —— 它是「部分」还是「另一版」？"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/CORPUS-EXPANSION-FEASIBILITY.md",
+      "sourceSha256": "08353013c3b04d123ed4e05f00ff0d6ff6ebc5df89a0b3b8f3d28949a800bb7a",
+      "published": "docs/history/research/reverse-eng-20261010/CORPUS-EXPANSION-FEASIBILITY.md",
+      "title": "CORPUS-EXPANSION-FEASIBILITY — 语料能不能扩、拿什么扩、扩到哪一步就停"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/DICT-CONSTRUCT-SEARCH.md",
+      "sourceSha256": "4efe76e7fbc5fbb4eb3c9a6d579b48f996a2f961be48bad275a5971015f1fdd3",
+      "published": "docs/history/research/reverse-eng-20261010/DICT-CONSTRUCT-SEARCH.md",
+      "title": "构造字典的节点 — 两个 id 命名空间同步检索 (DICT-CONSTRUCT-SEARCH)"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/DICT-WIRE-FORMAT.md",
+      "sourceSha256": "17872c8fa96f8b485a97bf4c1dee2d4cc06f00075cb61b550f00e193bb2411c8",
+      "published": "docs/history/research/reverse-eng-20261010/DICT-WIRE-FORMAT.md",
+      "title": "字典在线上长什么样 — M5 出售货币字典的线格式 (DICT-WIRE-FORMAT)"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/DICT-WRITE-PROBE.md",
+      "sourceSha256": "d106f5c9ba571d3faae892f33d2fda164a18a0fc2c17e00a31281074f4d2be14",
+      "published": "docs/history/research/reverse-eng-20261010/DICT-WRITE-PROBE.md",
+      "title": "字典常量 — contract type 27 可写性探针 (DICT-WRITE-PROBE)"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/EDITOR-METHOD-CENSUS.md",
+      "sourceSha256": "1ee3a54fb3fffdcfbd11e855500e7adfbd220b41229b43ba8c93b47b2b85a772",
+      "published": "docs/history/research/reverse-eng-20261010/EDITOR-METHOD-CENSUS.md",
+      "title": "EDITOR-METHOD-CENSUS — task #2: the full method census of the editor assembly"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/EDITOR-REGISTRY-MINE.md",
+      "sourceSha256": "ccaadc9e44dcd6683b78190ff3f6a133556ee23a958542f9465ee2bdea116b7d",
+      "published": "docs/history/research/reverse-eng-20261010/EDITOR-REGISTRY-MINE.md",
+      "title": "编辑器注册表：节点之外还有什么可读（EDITOR-REGISTRY-MINE）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/EDITOR-STATE-MACHINE.md",
+      "sourceSha256": "d6f2be0b72255c4f579eededb3c49ca5e196e9e92f5d8a1646036e821b5abdb0",
+      "published": "docs/history/research/reverse-eng-20261010/EDITOR-STATE-MACHINE.md",
+      "title": "#4 挖 — 编辑器状态机（编辑态 / 运行态 / run）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/ENTITY-CREATE-FIELDS.md",
+      "sourceSha256": "3d81df3d833517da3da2cb88fac4fbafead5dbed545c09f5eacfb37d852065e8",
+      "published": "docs/history/research/reverse-eng-20261010/ENTITY-CREATE-FIELDS.md",
+      "title": "#5 挖 — `entity.create` 到底记录了什么（超出几何的部分）——ENTITY-CREATE-FIELDS"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/ENTITY-DUPLICATE-MINE.md",
+      "sourceSha256": "788a11bd8502ed96cb8f8f0b11eed2bdd9b9a5c8565a80e7ab6c5b9203a7f72b",
+      "published": "docs/history/research/reverse-eng-20261010/ENTITY-DUPLICATE-MINE.md",
+      "title": "#5 挖 — 有没有「复制 / 副本」这条带组件的路？（前端能不能 copy 一个实体）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/ENTITY-LIFECYCLE-MINE.md",
+      "sourceSha256": "f897385c7cb0e87cd37402983e3cd845a6729b9398a923640b34cf23348efd38",
+      "published": "docs/history/research/reverse-eng-20261010/ENTITY-LIFECYCLE-MINE.md",
+      "title": "#4 挖 — 实体生命周期：销毁/移除事件与 `entity.remove` 的边界"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/ENTITY-PROPERTIES-MINE.md",
+      "sourceSha256": "55ecdf2f3970142848fffff37b010fcba5fb5894bc3c9e0365def30a56d0bedf",
+      "published": "docs/history/research/reverse-eng-20261010/ENTITY-PROPERTIES-MINE.md",
+      "title": "#6 — `entity.properties`：实体字段 schema 到底挖到哪一步"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/ENTITY-READABLE-FIELDS.md",
+      "sourceSha256": "0b9863b52474d37886a30054aa90cb2634c880ad721fd661f1f53ff39919e699",
+      "published": "docs/history/research/reverse-eng-20261010/ENTITY-READABLE-FIELDS.md",
+      "title": "#9 — 实体模型上「我们能读到的字段」全量枚举 —— ENTITY-READABLE-FIELDS"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GAME-SIDE-TEMPLATE.md",
+      "sourceSha256": "7e2c8787ceaab500ee98ca97a73b2ce6cc48e857df66552dc7d9c488f98f0c1e",
+      "published": "docs/history/research/reverse-eng-20261010/GAME-SIDE-TEMPLATE.md",
+      "title": "游戏侧能不能建模板 —— 游戏进程（`YuanShen.exe`）这条路（GAME-SIDE-TEMPLATE）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GEOMETRY-THREE-WAYS.md",
+      "sourceSha256": "bedcd94db7553ead3ee7a62207de49b031a7dd2942c0c5c257da9fbf832a5e6c",
+      "published": "docs/history/research/reverse-eng-20261010/GEOMETRY-THREE-WAYS.md",
+      "title": "实体几何三路对照：`.gil` 离线 / 原生探针 / 编辑器模型"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GIA-TRUTH.md",
+      "sourceSha256": "b6b8d76bdb128f618171098b1ca5827bb9d0f1ac9549f39e64585536b20a4fca",
+      "published": "docs/history/research/reverse-eng-20261010/GIA-TRUTH.md",
+      "title": "GIA-TRUTH — settling the `.gia` claims"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GIL-FIELD-LEDGER.md",
+      "sourceSha256": "bc1e920cec95c24ff6bd8ef8266e6c7a5b905df2691bd33b50f5b3e19b6b3872",
+      "published": "docs/history/research/reverse-eng-20261010/GIL-FIELD-LEDGER.md",
+      "title": "#7 挖 — `.gil` 顶层字段台账（GIL-FIELD-LEDGER）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-ATTACH-CHAIN.md",
+      "sourceSha256": "65053b68fd000bd76ebe614432053cbbe8c0bccffdb86cfda06e1ea079a09c70",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-ATTACH-CHAIN.md",
+      "title": "#6 挖 — 图挂上实体之后，世界怎么知道去跑它：`MW_API_FARM_DEMO` 的挂载链"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-BINDING-RUNTIME.md",
+      "sourceSha256": "5bb3cbadc8372fde8f4879589386c412653f85e98923e8ee7b8571cf6ac79bf5",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-BINDING-RUNTIME.md",
+      "title": "#7 挖 — 一张「挂上了的图」在运行时**是凭什么被找到并跑起来的**（GRAPH-BINDING-RUNTIME）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-DELETE-FIX.md",
+      "sourceSha256": "886a2e0b08c80029d35b491342fb761cb3b9d05422b6c51fb4ed7eae94cd673a",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-DELETE-FIX.md",
+      "title": "GRAPH-DELETE-FIX —— `delete-owned-graph-ids` 为什么一次都没成功，以及什么能修"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-LOG-NEXT-STEP.md",
+      "sourceSha256": "8fd63704c4bb20169498e9cf146215d9261ec75159f3c7ac6ce5b88c302ff47a",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-LOG-NEXT-STEP.md",
+      "title": "#7 挖 — 图日志那条路：从 #3/#4 再往前一步，下一步该做哪个动作"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-LOG-REACHABILITY.md",
+      "sourceSha256": "3d65e2dd510e3ade1edc18dde4022396e68c49c20f4dfcf27806c8b14390af1a",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-LOG-REACHABILITY.md",
+      "title": "图日志 op 到不到得了队列（GRAPH-LOG-REACHABILITY）— 一次类级复核"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-LOG-SHAPE.md",
+      "sourceSha256": "2ecb77ca17ce8be7508d2fff60c2b6ef8024814a727f63003d90d5fd7b1fb5d6",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-LOG-SHAPE.md",
+      "title": "#4 挖 — 节点图日志的形状：能不能对上「哪个节点跑了」"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-RUNTIME-EVIDENCE.md",
+      "sourceSha256": "c6e3405524726fe378e0fe40012e73eefe59142b557c3ea7eecf29f6c3f924ca",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-RUNTIME-EVIDENCE.md",
+      "title": "#7 挖 — 什么证据才能证明「一条图的**边**在运行时被接受」"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-SIZE-LIMITS.md",
+      "sourceSha256": "5d04531ad344b409070741106078d9515a8b394750c59f03c9ce5dd73b86a6a2",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-SIZE-LIMITS.md",
+      "title": "#10 挖 — 一张节点图到底能装多大（AuthoringGraph 的每一条尺寸限制）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/GRAPH-VARIABLES-FINAL.md",
+      "sourceSha256": "bcf14a51bd172f0f0167c3d03f4d04702baa473338476bf2888990f90a51fb81",
+      "published": "docs/history/research/reverse-eng-20261010/GRAPH-VARIABLES-FINAL.md",
+      "title": "节点图变量（F1）— 最终判决"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/INDEX.md",
+      "sourceSha256": "6bac119c0f28bcfffcf99defc58e37b0c419d57bd365f455a2fd697bb5678063",
+      "published": "docs/history/research/reverse-eng-20261010/INDEX.md",
+      "title": "INDEX — `docs/research/reverse-eng-20261010/` 报告总索引"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/INSTALLED-TEXTMAP-KEYS.md",
+      "sourceSha256": "9f708e1cedf6a9b33aece84de74f60c1fda1858050109b6fec75b3fb12f4a70b",
+      "published": "docs/history/research/reverse-eng-20261010/INSTALLED-TEXTMAP-KEYS.md",
+      "title": "INSTALLED-TEXTMAP-KEYS"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/LEVEL-CREATE-MINE.md",
+      "sourceSha256": "77f81d96aeefa7e6b788757bd43cafb748e33b4ef52cde5918fd322fafae4caa",
+      "published": "docs/history/research/reverse-eng-20261010/LEVEL-CREATE-MINE.md",
+      "title": "M6a 第一坎 — 「建关卡到底有没有一条路」挖矿报告（LEVEL-CREATE-MINE）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/LIVE-REFLECTION-COMPONENTS.md",
+      "sourceSha256": "fc25046932c1d7caffdf9ab2d50c9c93246b1bbc6eae764880dc0c85f030926b",
+      "published": "docs/history/research/reverse-eng-20261010/LIVE-REFLECTION-COMPONENTS.md",
+      "title": "LIVE-REFLECTION-COMPONENTS — task #2: use the reflection probe against the live editor"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/LIVE-REFLECTION-TEMPLATES.md",
+      "sourceSha256": "0570b94975a487b0b50682a13e96f5dc3863b0dbe1d9c0966130fcb7b623a54a",
+      "published": "docs/history/research/reverse-eng-20261010/LIVE-REFLECTION-TEMPLATES.md",
+      "title": "LIVE-REFLECTION-TEMPLATES — does the LIVE editor assembly expose a template-create path?"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/MENU-STRING-HOME.md",
+      "sourceSha256": "20d6d2a35a255ea39f9182b1076ca79797e061a930bc0ea8137f2c095b1f42e6",
+      "published": "docs/history/research/reverse-eng-20261010/MENU-STRING-HOME.md",
+      "title": "MENU-STRING-HOME — 系统菜单文案（背包与货币 / 商店模板管理）到底住在哪个文件？"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/MINED-INTERFACES.md",
+      "sourceSha256": "d09d70bd8b7ac4f98fe0df5c203279592825a4ea03e42937b53f2649a5ce3fad",
+      "published": "docs/history/research/reverse-eng-20261010/MINED-INTERFACES.md",
+      "title": "MINED-INTERFACES — 逆向挖出的接口清单（可查证索引）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/NATIVE-ACTION-COST.md",
+      "sourceSha256": "c5edfb576db1523775ddfc7e150c8eabea2676d94619b865377b5b6c5067f164",
+      "published": "docs/history/research/reverse-eng-20261010/NATIVE-ACTION-COST.md",
+      "title": "#7 挖 — 加第 7 个原生动作要付什么代价，能解锁哪半边"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/NATIVE-ACTION-SET-MINE.md",
+      "sourceSha256": "30e1f57ba0ef3e8d6795035dc15906b79c73502d288284d5cee7db841f90a41d",
+      "published": "docs/history/research/reverse-eng-20261010/NATIVE-ACTION-SET-MINE.md",
+      "title": "#8 挖 — 原生 helper 的 6 个动作：封闭的设计，还是尚未填满的发现"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/NATIVE-ADD-COMPONENT.md",
+      "sourceSha256": "b5c9d0afc748cb181f6fd60540f300d613e7d6ac00e1bb61e9acd5a9e3ffc451",
+      "published": "docs/history/research/reverse-eng-20261010/NATIVE-ADD-COMPONENT.md",
+      "title": "#8 挖 — 组件「加」这条路在**原生代码**里有没有落点（NATIVE-ADD-COMPONENT）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/NATIVE-COMPONENT-CREATE.md",
+      "sourceSha256": "7024054eb8d2e65fb4f69a744d7c0c73fec48b7ae4fb3b5ee9c45ce756b8da02",
+      "published": "docs/history/research/reverse-eng-20261010/NATIVE-COMPONENT-CREATE.md",
+      "title": "#6 挖 — 原生侧：删除链旁边有没有一个「组件创建」函数（NATIVE-COMPONENT-CREATE）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/NATIVE-HALF-CAPABILITIES.md",
+      "sourceSha256": "8dca037dd1c4019a8efdb1854edf29161ed4fc38ff5cc136265ace6f5a59f3c8",
+      "published": "docs/history/research/reverse-eng-20261010/NATIVE-HALF-CAPABILITIES.md",
+      "title": "#3 挖 — 版本门绿灯的那一半：原生还能做什么"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/NATIVE-MEMORY-MAP.md",
+      "sourceSha256": "e331da890b9aff35b06d065efa66d51eee887a11d447ddd67faa4dec9ea03f82",
+      "published": "docs/history/research/reverse-eng-20261010/NATIVE-MEMORY-MAP.md",
+      "title": "原生内存地图 — NATIVE-MEMORY-MAP"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/NODE-PLACEABILITY.md",
+      "sourceSha256": "7fbcd2ce2d56822b6ab34ecf71b210ce53c13367ffe47e0e30d58ae2c65a6e0f",
+      "published": "docs/history/research/reverse-eng-20261010/NODE-PLACEABILITY.md",
+      "title": "#10 挖 — 500 条服务端节点里，真正「放得进图」的有多少"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/OFFICIAL-CHAPTERS-LEADS.md",
+      "sourceSha256": "468db6418d2b584117a8773c00d0852025d9f324ce12d113726ac0229c1226fa",
+      "published": "docs/history/research/reverse-eng-20261010/OFFICIAL-CHAPTERS-LEADS.md",
+      "title": "#9 挖 — 官方 218 章里我们还没用上的能力（能力线索清单）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/OFFICIAL-COMPONENT-CATALOG.md",
+      "sourceSha256": "045e51eb4a41d2454baf661e971050235d2067f1da3174943158af5618cd9987",
+      "published": "docs/history/research/reverse-eng-20261010/OFFICIAL-COMPONENT-CATALOG.md",
+      "title": "#7 挖 — 官方文档里的「组件」家族全目录（含未来 add-component 原语要写的字段 spec）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/OFFICIAL-PLAYTEST.md",
+      "sourceSha256": "e484ab8f43e6fabdc6bf791e190963ba71244d52bcacf5a51c81b467d33cc662",
+      "published": "docs/history/research/reverse-eng-20261010/OFFICIAL-PLAYTEST.md",
+      "title": "#7 挖 — 官方「试玩」章节逐字还原（OFFICIAL 侧）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PLAYER-VISIBLE-VERDICT.md",
+      "sourceSha256": "da6099d96a7edb36903b2cf8247d3aa7ba718447e23bca7529e9bd6f6ee76150",
+      "published": "docs/history/research/reverse-eng-20261010/PLAYER-VISIBLE-VERDICT.md",
+      "title": "PLAYER-VISIBLE-VERDICT — 没有任何新资产，能不让玩家「看见」？终审"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PLAYTEST-CONTROL-MINE.md",
+      "sourceSha256": "59c48144f4b44a56a5d1f18e3ceb4739c177595a902e6494fa6e250b8b59af87",
+      "published": "docs/history/research/reverse-eng-20261010/PLAYTEST-CONTROL-MINE.md",
+      "title": "#3 挖 — `playtest.control`：后台起停试玩（离线逆向）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PLAYTEST-VERDICT.md",
+      "sourceSha256": "c2a5e6b9e7a4e6e6cef1fc58e852995475e5319473696ad4184ae1014d5b4cf9",
+      "published": "docs/history/research/reverse-eng-20261010/PLAYTEST-VERDICT.md",
+      "title": "#8 判决 — `playtest.control`：试玩能不能被程序起停（收口）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PREFAB-COMPONENT-DEFAULTS.md",
+      "sourceSha256": "c98810a2acab84b3fb5ef5027084233fd0a437343644431b74d759622c481224",
+      "published": "docs/history/research/reverse-eng-20261010/PREFAB-COMPONENT-DEFAULTS.md",
+      "title": "#8 预制体默认组件 — 哪些「模板」自带组件（PREFAB-COMPONENT-DEFAULTS）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PREFAB-COMPONENT-PATH.md",
+      "sourceSha256": "f8520bc6bbc7c910203869d43ac6a8f37ba1ce13a3fd5ab09438169c52cd3e8f",
+      "published": "docs/history/research/reverse-eng-20261010/PREFAB-COMPONENT-PATH.md",
+      "title": "预制体组件路径 — PREFAB-COMPONENT-PATH"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PREFAB-COMPONENT-WRITE.md",
+      "sourceSha256": "1cd81d4aa623accf3d77e98e80355940df2c82bc95ac8bb2bbb9b9b9f42fe4f8",
+      "published": "docs/history/research/reverse-eng-20261010/PREFAB-COMPONENT-WRITE.md",
+      "title": "#5 挖 — 能不能给**预制体**加组件（prefab 命令族）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PREFAB-FIELDS-MINE.md",
+      "sourceSha256": "299454bfd6d864f4651c0fef49cc2fd9e4df8784dd36013be562c0e10c9d1225",
+      "published": "docs/history/research/reverse-eng-20261010/PREFAB-FIELDS-MINE.md",
+      "title": "#5 挖 — prefab-fields：桥已有的那个 op 能读到什么"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PREFAB-INSTANTIATE-MINE.md",
+      "sourceSha256": "fcaf45965f4a72e7a56a51e8db2f8e178070897b000c5650551807ac89091cf0",
+      "published": "docs/history/research/reverse-eng-20261010/PREFAB-INSTANTIATE-MINE.md",
+      "title": "#5 挖 — 预制体能不能被「实例化」？（除 `entity.create` 之外的第二条摆放路）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/PRIMITIVE-VERDICTS.md",
+      "sourceSha256": "e40d9fa2c1700b1efd6f635042d7f2aee67f3eb6322517b6d2dad5bb43eb25f5",
+      "published": "docs/history/research/reverse-eng-20261010/PRIMITIVE-VERDICTS.md",
+      "title": "PRIMITIVE-VERDICTS — 每个被挡原语一张判决表"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/REOPEN-VERIFICATION-MINE.md",
+      "sourceSha256": "8c45a4cb86e44d4627bac2dc0510635b176b02a85e1281ed886beedec6e33a66",
+      "published": "docs/history/research/reverse-eng-20261010/REOPEN-VERIFICATION-MINE.md",
+      "title": "#10 挖 — reopen verification：存档之后「重开」到底能证明什么（离线复核）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/REVISION-ECONOMY.md",
+      "sourceSha256": "34a29c78203c4f0ee00c339cb002b20c4802051ee18917ec1bf19bb06e37059d",
+      "published": "docs/history/research/reverse-eng-20261010/REVISION-ECONOMY.md",
+      "title": "#3 挖 — 修订号的代价：还有多少个 R 可用"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/SAVE-WRITER-FINAL.md",
+      "sourceSha256": "7695db7570eaed57ea2ff317e93b7c296d2b79d1fd7bfdeb9cf7cecf2b0ef759",
+      "published": "docs/history/research/reverse-eng-20261010/SAVE-WRITER-FINAL.md",
+      "title": "谁在写这个 `.gil` — 定案（mine #5 / SAVE-WRITER-FINAL）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/SEARCH-BOTH-CORPORA.md",
+      "sourceSha256": "6aede62f17f3fd70ed26cdfa2e780c309c27be6b44e65fe7cd0c6ca83366d6d2",
+      "published": "docs/history/research/reverse-eng-20261010/SEARCH-BOTH-CORPORA.md",
+      "title": "双语料检索纪律 —— 一个负面必须点名它搜过哪些语料"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/SETTER-SIGNATURE-SURVEY.md",
+      "sourceSha256": "3c5ddd34626c06e618dac8ad9c4a1949c5e20e1aa64fee71981d8c1deaf281e2",
+      "published": "docs/history/research/reverse-eng-20261010/SETTER-SIGNATURE-SURVEY.md",
+      "title": "SETTER-SIGNATURE-SURVEY — 绑定档里每个 setter 的调用点、配对与\"最便宜的下一笔写\""
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/SIGN-TEXT-MINE.md",
+      "sourceSha256": "25717bd9cd043db9ec6ef4e176697872a23d846c707569cfbe1549052a1032c8",
+      "published": "docs/history/research/reverse-eng-20261010/SIGN-TEXT-MINE.md",
+      "title": "#8 挖 — 提示牌 / 告示牌（sign）能不能当「玩家可见文本」通道"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/SIGN-TEXT-VERDICT.md",
+      "sourceSha256": "47c90760a117f6cec6d54d24aac472a64affec0d32f8c19c5b88f172fdbae886",
+      "published": "docs/history/research/reverse-eng-20261010/SIGN-TEXT-VERDICT.md",
+      "title": "判决 — 牌子/气泡文本通道（#6 capability）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/SKILL-ASSET-MINE.md",
+      "sourceSha256": "829a6f2fa991360b18fee58b0c03f499641c88b9ffa2c26f3ef6c7290aa6ae6e",
+      "published": "docs/history/research/reverse-eng-20261010/SKILL-ASSET-MINE.md",
+      "title": "#9 挖 — 技能 / 资产章（game A 的 blocker）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/SKILL-ASSET-VERDICT.md",
+      "sourceSha256": "519f2b97d48318d10e7793b7bacac0b30b86654edad236f358ca3e2bc20d25a8",
+      "published": "docs/history/research/reverse-eng-20261010/SKILL-ASSET-VERDICT.md",
+      "title": "技能资产判决 — 建模板那条原语是否一并解开 game A 技能"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/SYMBOL-MAP-71.md",
+      "sourceSha256": "7a8b4ca973e7fd6f4851a391a0a651e5b75f9749016c94fa6da1611890d83ec2",
+      "published": "docs/history/research/reverse-eng-20261010/SYMBOL-MAP-71.md",
+      "title": "SYMBOL-MAP-71 — 7.0 → 7.1 符号映射（离线，给定旧名 → 新名或 unknown）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TEMPLATE-CREATE-TRACE.md",
+      "sourceSha256": "c98a6e0b7d2e0ee135b0a26a0a8105fb3a611318cd6a9b92338b50b6871f7982",
+      "published": "docs/history/research/reverse-eng-20261010/TEMPLATE-CREATE-TRACE.md",
+      "title": "建模板（货币 / 道具 / 商店）的创建路径追踪 —— 编辑器 UI 里那个「新建」按钮走到哪"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TEMPLATE-CREATE-VERDICT.md",
+      "sourceSha256": "55f8c4b03a5676685cd2a173bd9c098b38a84d14ccf800a900c883f445f90b78",
+      "published": "docs/history/research/reverse-eng-20261010/TEMPLATE-CREATE-VERDICT.md",
+      "title": "建模板原语 · 命令表 / 消息层侧判决 —— 「建模板」在可读的命令面上到底有没有"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TEMPLATE-CREATION-MINE.md",
+      "sourceSha256": "afa11e0c923dfd976fab179752fa7d29c02ceece8f3c75696becd2765b173c5a",
+      "published": "docs/history/research/reverse-eng-20261010/TEMPLATE-CREATION-MINE.md",
+      "title": "#2 挖 — 建编辑器资产模板的原生调用（货币类型10 / 道具类型8 / 背包11 / 商店15）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TEMPLATE-SAVE-WRITE.md",
+      "sourceSha256": "d8619a8d4643e0b11e8ff5dc9f8fc834a808c3798681f7a19954d331f6a9fa18",
+      "published": "docs/history/research/reverse-eng-20261010/TEMPLATE-SAVE-WRITE.md",
+      "title": "能不能把一条模板「直接写进存档」—— 逐字段核对与写路径判决（TEMPLATE-SAVE-WRITE）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TEMPLATE-STORAGE.md",
+      "sourceSha256": "612c6200898e27602f8e23e9721b96c80a7189525d8f96eac8c29fc4ada9751a",
+      "published": "docs/history/research/reverse-eng-20261010/TEMPLATE-STORAGE.md",
+      "title": "模板存在哪 —— 一个货币/道具/商店模板落盘时会写进哪个容器（TEMPLATE-STORAGE）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TERRAIN-WRITE-RISK.md",
+      "sourceSha256": "c7b38731c264b99beb133c17ca3d6a6df1f01e1163fd2ecae4ed86f3074678e7",
+      "published": "docs/history/research/reverse-eng-20261010/TERRAIN-WRITE-RISK.md",
+      "title": "地形写回风险：游戏进程会不会覆盖我们写的字节（TERRAIN-WRITE-RISK）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TERRAIN-WRITEBACK-EXPERIMENT.md",
+      "sourceSha256": "90472951027ccd4185fbb5f4217a130dd6c9697bd6f5b3851fc7617d8044fadb",
+      "published": "docs/history/research/reverse-eng-20261010/TERRAIN-WRITEBACK-EXPERIMENT.md",
+      "title": "地形写回安全实验设计（TERRAIN-WRITEBACK-EXPERIMENT）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TEXT-BUBBLE-VERDICT.md",
+      "sourceSha256": "a7fbcac8e24fd8ef9498195aa2df4dab1ab6264ead1f5eb4d8c7f1b223083e4c",
+      "published": "docs/history/research/reverse-eng-20261010/TEXT-BUBBLE-VERDICT.md",
+      "title": "TEXT-BUBBLE-VERDICT — 文本气泡通道判决（#5 capability）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/TRANSFORM-VIA-RECREATE.md",
+      "sourceSha256": "c926ee1ca2788464950eb1f1401c4524b22b84e1256d058a8dc680d529afd664",
+      "published": "docs/history/research/reverse-eng-20261010/TRANSFORM-VIA-RECREATE.md",
+      "title": "#5 mine — 「动不了就删了重建」这条退路，到底走不走得通"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/UI-CONTROL-WRITE-MINE.md",
+      "sourceSha256": "56697da219f3e65371512b5f60e39a87fabf463cd049918376f901a5bc618c6d",
+      "published": "docs/history/research/reverse-eng-20261010/UI-CONTROL-WRITE-MINE.md",
+      "title": "#4 挖 — `ui.hud`：写路径在哪？（UI 控件写入挖掘）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/UNBOUND-SYMBOL-AUDIT.md",
+      "sourceSha256": "c2b12f7786db49775120acb906190fd65d795f01803efdd9e82ae7469f8cfc3d",
+      "published": "docs/history/research/reverse-eng-20261010/UNBOUND-SYMBOL-AUDIT.md",
+      "title": "UNBOUND-SYMBOL-AUDIT — 有多少 adapter 解析了「绑定档里没有」的符号"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/WAVE-SPAWN-PATH.md",
+      "sourceSha256": "fa29aa061dd652a3dfca421db3dd792cf02816e96ca736582ff5402b2f204c6a",
+      "published": "docs/history/research/reverse-eng-20261010/WAVE-SPAWN-PATH.md",
+      "title": "#6 挖 — 分波生成：实体布设组 + 178 激活（M6b 的另一条路）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261010/ZERO-COMPONENTS.md",
+      "sourceSha256": "61561857ff7d161c6ff82836a311f85c733c86fab43433c4619800602a26a1eb",
+      "published": "docs/history/research/reverse-eng-20261010/ZERO-COMPONENTS.md",
+      "title": "为什么「每一个实体」都读到 ZERO 个组件 —— ZERO-COMPONENTS"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261011/COMMAND-SURFACE-FNV.md",
+      "sourceSha256": "a29bd1ead31f503ecec29923012c1558c07edb42f30012a13baa4b94f3d38d89",
+      "published": "docs/history/research/reverse-eng-20261011/COMMAND-SURFACE-FNV.md",
+      "title": "The engine command surface, re-derived and hardened (FNV dispatcher ground truth)"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261011/COMMAND-SURFACE-FULL.md",
+      "sourceSha256": "87b451d0afd3496a5c8f38dabbc1df781f2932082ee56a2af4a1514b34beb6f0",
+      "published": "docs/history/research/reverse-eng-20261011/COMMAND-SURFACE-FULL.md",
+      "title": "COMMAND-SURFACE-FULL — the whole FNV command surface of `YuanShen.exe`, and the three answers"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261011/COMPONENT-AT-CREATE-DESIGN.md",
+      "sourceSha256": "9b718f42c9f85fc8b7530673253efcd2102c1258b89d27aad8571810b629531f",
+      "published": "docs/history/research/reverse-eng-20261011/COMPONENT-AT-CREATE-DESIGN.md",
+      "title": "组件随创建一起长出来 —— 安全设计（建时装配一个组件）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261011/COMPONENT-CONTAINER-RECONCILED.md",
+      "sourceSha256": "583e21d880491d500f99454b1371489a61eff152559318dc87b7c8bb894b6371",
+      "published": "docs/history/research/reverse-eng-20261011/COMPONENT-CONTAINER-RECONCILED.md",
+      "title": "组件容器对账 — `[entity+0x48]` vs `[entity+0x68]`（从**当前** `YuanShen.exe` 重新导出）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261011/NATIVE-COMMAND-SURFACE.md",
+      "sourceSha256": "e74c09e97297a55e139962145e41db79f9f5a731a8e333e84fc269eb4ee4609d",
+      "published": "docs/history/research/reverse-eng-20261011/NATIVE-COMMAND-SURFACE.md",
+      "title": "Native command surface of the editor command dispatcher (binary mine)"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261011/PREFAB-COMPONENT-CENSUS-V2.md",
+      "sourceSha256": "4e49ec635dd87de546b7fe26f875dbd0f337f9284e5c538f92e24a4dda4aaffa",
+      "published": "docs/history/research/reverse-eng-20261011/PREFAB-COMPONENT-CENSUS-V2.md",
+      "title": "预制体组件普查 V2 — 修复有损解码器后重做（PREFAB-COMPONENT-CENSUS-V2）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261012/COMPONENT-KIND-ANCHORS.md",
+      "sourceSha256": "dd901769a275a0760481c9830021f568f94e5a02bf757918b4cdca34badc3547",
+      "published": "docs/history/research/reverse-eng-20261012/COMPONENT-KIND-ANCHORS.md",
+      "title": "组件 kind 的经验锚点 — 从 19 个真实存档反查（COMPONENT-KIND-ANCHORS）"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261012/FIELD15-APPEND-PRIMITIVE.md",
+      "sourceSha256": "9a55e0f3601e50ec451122f96d636a2b50ec05ce0d60faf96fc7b4c7828ef1d8",
+      "published": "docs/history/research/reverse-eng-20261012/FIELD15-APPEND-PRIMITIVE.md",
+      "title": "field-15 append/replace primitive — reusable, tested, in-memory only"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261012/FIELD15-IS-THE-TEMPLATE-STORE.md",
+      "sourceSha256": "0d0311ee4d15109ab6b4d9df4aea0a293a03948144341702b7b6abe2e1b2c718",
+      "published": "docs/history/research/reverse-eng-20261012/FIELD15-IS-THE-TEMPLATE-STORE.md",
+      "title": "field 15 就是「模板库」——而且它的写入形状刚被一次真实编辑坐实"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261012/M2M5-REFRAME.md",
+      "sourceSha256": "be3a9bc58624093dccd93b79e7d7504f3dbb3836a76d10ff8a156d790ba95304",
+      "published": "docs/history/research/reverse-eng-20261012/M2M5-REFRAME.md",
+      "title": "M2–M5 重定框：店主说「商店/背包/货币是系统级、有专门接口、可由按键或 NPC 交互触发」"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261012/SAVE-FIELD15-CENSUS.md",
+      "sourceSha256": "739d48ebbffb9a714a0aa3f4de2916eeeb71100072e75c86681fe5a75f8b6b02",
+      "published": "docs/history/research/reverse-eng-20261012/SAVE-FIELD15-CENSUS.md",
+      "title": "SAVE `field 15` CENSUS — is it \"template records\" or \"环境配置\"?"
+    },
+    {
+      "source": "docs/research/reverse-eng-20261012/SHOP-TEMPLATE-SCHEMA.md",
+      "sourceSha256": "64efc0e99c52952352b23b13840417d6501a205606689ce19f45e6d2f8fa2ec6",
+      "published": "docs/history/research/reverse-eng-20261012/SHOP-TEMPLATE-SCHEMA.md",
+      "title": "SHOP TEMPLATE SCHEMA — 从真实手工样本 + 编辑器/节点语料反推商店模板的字节 schema"
+    },
+    {
+      "source": "docs/editor-catalog/CODE-SURFACE.md",
+      "sourceSha256": "0d96695f3668798913e2a100550967c2c13d5fe2905044fa0eeafe8cfd0d37f9",
+      "published": "docs/history/editor-catalog/CODE-SURFACE.md",
+      "title": "编辑器功能在代码上的体现"
+    },
+    {
+      "source": "docs/editor-catalog/COMMAND-CHANNEL.md",
+      "sourceSha256": "860a26241b81c065d7ba703dbd99adc614221db3d612c970a3acf93a443ddb09",
+      "published": "docs/history/editor-catalog/COMMAND-CHANNEL.md",
+      "title": "编辑器的具名命令通道（本轮最重要的接口发现）"
+    },
+    {
+      "source": "docs/editor-catalog/DEMO-AND-REGISTRATION.md",
+      "sourceSha256": "12a4830750ed42c3effa09291f6899c8f0eee3a580f540548466354738b9aca3",
+      "published": "docs/history/editor-catalog/DEMO-AND-REGISTRATION.md",
+      "title": "Demo 链路与项目注册：真实执行记录"
+    },
+    {
+      "source": "docs/editor-catalog/INTERFACE-INVENTORY.md",
+      "sourceSha256": "1a011eba3c0dd098c877310eb0a7715401305c4ac169781f4443faee22eec8e1",
+      "published": "docs/history/editor-catalog/INTERFACE-INVENTORY.md",
+      "title": "千星编辑器接口全量清单（编辑器 ↔ 游戏）"
+    },
+    {
+      "source": "docs/editor-catalog/INTERFACE-VERIFICATION.md",
+      "sourceSha256": "5c592404f4d668eaf49f60e00505bfd069ce0927cd82afa76a8cf6e63ef8ae21",
+      "published": "docs/history/editor-catalog/INTERFACE-VERIFICATION.md",
+      "title": "接口真机验证报告"
+    },
+    {
+      "source": "docs/editor-catalog/NODE-CATALOG.md",
+      "sourceSha256": "239361be5209583ae39cf6fb646981f41e0341d9b95d502667dac2358e913c75",
+      "published": "docs/history/editor-catalog/NODE-CATALOG.md",
+      "title": "千星编辑器官方节点全目录（799 节点）"
+    },
+    {
+      "source": "docs/editor-catalog/NODE-CATEGORY-TREE.md",
+      "sourceSha256": "5242eb413ec7c13002a913b0a214be4d5e685077347f8b3be3cbbcb8e685e959",
+      "published": "docs/history/editor-catalog/NODE-CATEGORY-TREE.md",
+      "title": "编辑器节点分类树（BeyondGlobal 还原）"
+    },
+    {
+      "source": "docs/editor-catalog/OFFICIAL-FUNCTION-INVENTORY.md",
+      "sourceSha256": "3538d65e0384262dfa2ddc4c20a43f9142b6cab76e5cbc42a3af7c1a8b3efa5c",
+      "published": "docs/history/editor-catalog/OFFICIAL-FUNCTION-INVENTORY.md",
+      "title": "千星编辑器官方功能清单"
+    },
+    {
+      "source": "docs/editor-catalog/README.md",
+      "sourceSha256": "9ecb7fde0168be671dd506bbd7510e3d4a773afda49ed6ea5f7eb0e4977d9f03",
+      "published": "docs/history/editor-catalog/README.md",
+      "title": "千星编辑器全量功能与接口调研"
+    },
+    {
+      "source": "docs/editor-catalog/UI-ASSET-INVENTORY.md",
+      "sourceSha256": "afc8106808f90adc449d840b721b4025e6d30d4b7f95e3e71d536fa0783620dd",
+      "published": "docs/history/editor-catalog/UI-ASSET-INVENTORY.md",
+      "title": "千星编辑器 UI 资产与界面清单（UI-ASSET-INVENTORY）"
+    },
+    {
+      "source": "docs/editor-catalog/UI-TEXT-INVENTORY.md",
+      "sourceSha256": "93f32170f07cfd271678f3549c7b29e49c883f0e9701d2b426170e215b581ad1",
+      "published": "docs/history/editor-catalog/UI-TEXT-INVENTORY.md",
+      "title": "千星编辑器（BeyondAssistEditor）用户可见功能面清单"
+    }
+  ]
+}

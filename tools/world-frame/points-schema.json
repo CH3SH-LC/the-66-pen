@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Provenance-bound source world points",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "coordinateSpace", "sources", "sourceToWorldContract", "points"],
+  "properties": {
+    "schema": {"const": "world-frame-points-v1"},
+    "coordinateSpace": {"const": "world-metres"},
+    "sources": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false, "required": ["artifactId", "path", "sha256"],
+      "properties": {"artifactId": {"type": "string", "minLength": 1}, "path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+    }},
+    "sourceToWorldContract": {"type": "object", "additionalProperties": false, "required": ["artifactId", "selector", "description"],
+      "properties": {"artifactId": {"type": "string", "minLength": 1}, "selector": {"type": "string", "minLength": 1}, "description": {"type": "string", "minLength": 1}}},
+    "points": {"type": "array", "minItems": 1, "maxItems": 131072, "items": {
+      "type": "object", "additionalProperties": false, "required": ["sourceId", "worldTop", "provenance"],
+      "properties": {
+        "sourceId": {"type": "string", "minLength": 1},
+        "worldTop": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+        "provenance": {"type": "object", "additionalProperties": false, "required": ["artifactId", "selector"], "properties": {"artifactId": {"type": "string", "minLength": 1}, "selector": {"type": "string", "minLength": 1}}},
+        "inputKind": {"enum": ["source-world", "native-grid-roundtrip"]},
+        "nativeGrid": {"type": "object", "additionalProperties": false, "required": ["cell", "matrixSha256", "catalogIdentitySha256"], "properties": {
+          "cell": {"type": "object", "additionalProperties": false, "required": ["x", "height", "z"], "properties": {"x": {"type": "integer", "minimum": 0}, "height": {"type": "integer", "minimum": 1}, "z": {"type": "integer", "minimum": 0}}},
+          "matrixSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "catalogIdentitySha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }}
+      },
+      "allOf": [{"if": {"required": ["inputKind"], "properties": {"inputKind": {"const": "native-grid-roundtrip"}}}, "then": {"required": ["nativeGrid"]}, "else": {"not": {"required": ["nativeGrid"]}}}]
+    }}
+  }
+}

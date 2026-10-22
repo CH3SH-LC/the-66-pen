@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 2,
+  "kind": "dropstuff-receipt-layout-v1",
+  "provenance": {
+    "measuredBy": "候选目录里 hook/dropstuff_receipt_layout.cpp（由 drop_stuff_attach.py 生成）的 ds_layout::Row / ComponentsSection / ConfigHead + dropstuff::Result/ConfigWritePlan/ConfigDump",
+    "toolchain": "MSVC 19.44.35226 (vcvars64.bat), cl /nologo /utf-8 /std:c++17 /EHsc /W4 /WX",
+    "command": "python -B tools/mondstadt/life/dropstuff/drop_stuff_attach.py --prepare --out <dir> && cmd /c <dir>/build/build.cmd <dir> && <dir>/build/dropstuff_layout.exe",
+    "rawStdout": "{\"action\":20,\"protocol\":25,\"kind\":37,\"kindString\":\"mondstadt-dropstuff-build-v1\",\"sizeof_Result\":40,\"offsetof_Result_code\":0,\"offsetof_Result_wrapper\":8,\"offsetof_Result_before_count\":16,\"offsetof_Result_after_count\":20,\"offsetof_Result_attach_called\":24,\"offsetof_Result_configField\":28,\"offsetof_Result_configWritten\":32,\"sizeof_ConfigWritePlan\":40,\"offsetof_ConfigWritePlan_field\":4,\"offsetof_ConfigWritePlan_fieldSource\":8,\"sizeof_ConfigDump\":96,\"sizeof_LedgerLine\":48,\"configDumpBytes\":64,\"sizeof_Row\":24,\"offsetof_Row_kind\":0,\"offsetof_Row_entityId\":4,\"offsetof_Row_itemId\":8,\"offsetof_Row_count\":16,\"offsetof_Row_trigger\":20,\"sizeof_ComponentsSection\":192,\"offsetof_ComponentsSection_before\":0,\"offsetof_ComponentsSection_after\":96,\"sizeof_ConfigHead\":24,\"offsetof_ConfigHead_kind\":0,\"offsetof_ConfigHead_entityId\":4,\"offsetof_ConfigHead_itemId\":8,\"offsetof_ConfigHead_count\":16,\"offsetof_ConfigHead_trigger\":20}",
+    "note": "probe 段全部为编译器实测；components/kind37Config 两段的行宽与字段偏移同为本轮编译器实测（见各自 measuredFrom），只有“回执负载中的绝对基址 / 运行期行数”属数据面，逐字段标注了取不到的原因。"
+  },
+  "probe": {
+    "action": 20,
+    "protocol": 25,
+    "kind": 37,
+    "kindString": "mondstadt-dropstuff-build-v1",
+    "sizeof_Result": 40,
+    "offsetof_Result_code": 0,
+    "offsetof_Result_wrapper": 8,
+    "offsetof_Result_before_count": 16,
+    "offsetof_Result_after_count": 20,
+    "offsetof_Result_attach_called": 24,
+    "offsetof_Result_configField": 28,
+    "offsetof_Result_configWritten": 32,
+    "sizeof_ConfigWritePlan": 40,
+    "offsetof_ConfigWritePlan_field": 4,
+    "offsetof_ConfigWritePlan_fieldSource": 8,
+    "sizeof_ConfigDump": 96,
+    "sizeof_LedgerLine": 48,
+    "configDumpBytes": 64,
+    "sizeof_Row": 24,
+    "offsetof_Row_kind": 0,
+    "offsetof_Row_entityId": 4,
+    "offsetof_Row_itemId": 8,
+    "offsetof_Row_count": 16,
+    "offsetof_Row_trigger": 20,
+    "sizeof_ComponentsSection": 192,
+    "offsetof_ComponentsSection_before": 0,
+    "offsetof_ComponentsSection_after": 96,
+    "sizeof_ConfigHead": 24,
+    "offsetof_ConfigHead_kind": 0,
+    "offsetof_ConfigHead_entityId": 4,
+    "offsetof_ConfigHead_itemId": 8,
+    "offsetof_ConfigHead_count": 16,
+    "offsetof_ConfigHead_trigger": 20
+  },
+  "receipt": {
+    "magic": 0,
+    "version": 4,
+    "nonce": 8,
+    "deadline": 16,
+    "measuredFrom": "hook_receipt_protocol.h:47-50 `DWORD magic, version; std::uint64_t nonce, deadline;`（magic 值 'GHR1' = 0x31524847，同文件 :17 的校验式）"
+  },
+  "snapshot": {
+    "offset": 64,
+    "length": 64,
+    "measuredFrom": "hook_receipt_protocol.h:73 `static_assert(offsetof(Receipt, context) == 64, \"receipt prefix ABI\")`；length=64 取该前缀边界（本 build 未由 probe 直接 sizeof Context，故不声称实测）"
+  },
+  "components": {
+    "measuredFrom": "dropstuff_receipt_layout.cpp 的 ds_layout::Row / ds_layout::ComponentsSection（实测：sizeof_Row=24；offsetof_Row_kind/entityId/itemId/count/trigger=0/4/8/16/20；sizeof_ComponentsSection=192；offsetof_ComponentsSection_before/after=0/96）",
+    "stride": 24,
+    "kind": 0,
+    "entityId": 4,
+    "itemId": 8,
+    "itemIdSize": 8,
+    "count": 16,
+    "trigger": 20,
+    "beforeRelativeOffset": 0,
+    "afterRelativeOffset": 96,
+    "beforeOffset": 128,
+    "afterOffset": 224,
+    "beforeRows": 2,
+    "afterRows": 3,
+    "perField": {
+      "stride": "实测 = sizeof_Row = 24",
+      "kind/entityId/itemId/count/trigger": "实测行内偏移 0/4/8/16/20（offsetof_Row_*）；itemId 宽 8 字节（std::uint64_t，由 sizeof_Row=24 印证）",
+      "beforeRelativeOffset/afterRelativeOffset": "实测段内相对偏移 0/96（offsetof_ComponentsSection_before/after）",
+      "beforeOffset/afterOffset": "取不到编译期值：128/224 = 运行期数据面基址 128 + 实测段内相对偏移 0/96；该基址由 HookReceipt 装载区决定，属运行期数据面，C++ 侧无对应静态结构",
+      "beforeRows/afterRows": "取不到编译期值：2/3 是运行期行数（采集当时的组件表长），不是静态布局属性"
+    }
+  },
+  "kind37Config": {
+    "measuredFrom": "dropstuff_receipt_layout.cpp 的 ds_layout::ConfigHead（实测：sizeof_ConfigHead=24；offsetof_ConfigHead_kind/entityId/itemId/count/trigger=0/4/8/16/20）",
+    "kind": 272,
+    "kindSize": 4,
+    "entityId": 276,
+    "entityIdSize": 4,
+    "itemId": 280,
+    "itemIdSize": 8,
+    "count": 288,
+    "countSize": 4,
+    "trigger": 292,
+    "triggerSize": 4,
+    "perField": {
+      "字段内偏移": "实测 0/4/8/16/20（offsetof_ConfigHead_*）",
+      "字段宽度": "实测 kind 4 / entityId 4 / itemId 8 / count 4 / trigger 4（itemId 宽 8，修正上一版 declared 的 4）",
+      "绝对偏移 272/276/280/288/292": "取不到编译期值：272 是运行期数据面的 config 头段基址（与 components 基址同源），绝对偏移 = 基址 + 实测段内偏移",
+      "kind37 自身的游戏侧 config 字段号": "仍未知：它由游戏侧序列化定义，不属编译期布局；2729 份官方预制 0 命中，metadata 追查工具在本会话写禁（ABI-DROPSTUFF.md §13.6）"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/luern0313/UGC-File-Generate-Utils",
+  "commit": "fba7c267a3752d3f0108b30020c46868d56acdd5",
+  "scope": "config/block_config.py only, read as AST, not executed",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,430 @@
+{
+  "consts": [
+    {
+      "alias": "start_clock",
+      "portIndex": 1,
+      "slot": "string",
+      "value": "autoloop"
+    },
+    {
+      "alias": "start_clock",
+      "portIndex": 2,
+      "slot": "enum",
+      "value": 1
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "harvest",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "craft_enough_read",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "craft_enough",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 2
+    },
+    {
+      "alias": "craft_take",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000001
+    },
+    {
+      "alias": "craft_take",
+      "portIndex": 2,
+      "slot": "int",
+      "value": -2
+    },
+    {
+      "alias": "craft_bake",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000002
+    },
+    {
+      "alias": "craft_bake",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "craft_short",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "材料不足"
+    },
+    {
+      "alias": "sell_enough_read",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000002
+    },
+    {
+      "alias": "sell_enough",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1
+    },
+    {
+      "alias": "sell_take",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1120000002
+    },
+    {
+      "alias": "sell_take",
+      "portIndex": 2,
+      "slot": "int",
+      "value": -1
+    },
+    {
+      "alias": "sell_pay",
+      "portIndex": 1,
+      "slot": "int",
+      "value": 1115684864
+    },
+    {
+      "alias": "sell_pay",
+      "portIndex": 2,
+      "slot": "int",
+      "value": 10
+    },
+    {
+      "alias": "sell_ok",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "售出"
+    },
+    {
+      "alias": "sell_empty",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "无货可卖"
+    },
+    {
+      "alias": "feedback",
+      "portIndex": 0,
+      "slot": "string",
+      "value": "自动循环一轮"
+    }
+  ],
+  "edges": [
+    {
+      "from": "arm",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "start_clock",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "arm",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "start_clock",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "harvest",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "craft_enough_read",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "craft_enough_read",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "craft_enough",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "craft_gate",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "craft_enough",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "craft_gate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "craft_gate",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "craft_take",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "craft_take",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "craft_take",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "craft_bake",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "craft_bake",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "craft_gate",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "craft_short",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_enough_read",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_enough_read",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_enough",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sell_gate",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "sell_enough",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_gate",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_gate",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sell_take",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_take",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_take",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sell_pay",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 4,
+      "to": "sell_pay",
+      "toIndex": 0,
+      "toKind": 3
+    },
+    {
+      "from": "sell_pay",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "sell_ok",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "sell_gate",
+      "fromIndex": 1,
+      "fromKind": 2,
+      "to": "sell_empty",
+      "toIndex": 0,
+      "toKind": 1
+    },
+    {
+      "from": "tick",
+      "fromIndex": 0,
+      "fromKind": 2,
+      "to": "feedback",
+      "toIndex": 0,
+      "toKind": 1
+    }
+  ],
+  "graphKind": 20000,
+  "name": "MW_API_FARM_AUTOLOOP",
+  "nodes": [
+    {
+      "alias": "arm",
+      "definitionId": 71,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "start_clock",
+      "definitionId": 79,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "tick",
+      "definitionId": 83,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "harvest",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "craft_enough_read",
+      "definitionId": 690,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "craft_enough",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "craft_gate",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "craft_take",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "craft_bake",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "craft_short",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_enough_read",
+      "definitionId": 690,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_enough",
+      "definitionId": 233,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_gate",
+      "definitionId": 2,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_take",
+      "definitionId": 686,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_pay",
+      "definitionId": 688,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_ok",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "sell_empty",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "alias": "feedback",
+      "definitionId": 1,
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

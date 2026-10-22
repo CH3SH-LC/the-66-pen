@@ -1,0 +1,46 @@
+{
+  "id": "compute",
+  "name": "运算节点",
+  "purpose": "计算并组合数据",
+  "builtin": true,
+  "clusters": [
+    {
+      "id": "farming",
+      "name": "种田经营闭环",
+      "count": 2,
+      "purpose": "从买种、播种、成长、收获到出售的一条完整制作路线。",
+      "crossClusterRecipe": true
+    },
+    {
+      "id": "flow",
+      "name": "执行流与通用控制",
+      "count": 13,
+      "purpose": "选择执行分支、输出调试信息、控制图开始和结束。"
+    },
+    {
+      "id": "math",
+      "name": "数值、逻辑与向量",
+      "count": 168,
+      "purpose": "数值运算、布尔判断、向量和空间计算。"
+    },
+    {
+      "id": "lists",
+      "name": "列表与集合处理",
+      "count": 2,
+      "purpose": "构造、查询和修改列表。"
+    },
+    {
+      "id": "dictionaries",
+      "name": "字典与键值对",
+      "count": 8,
+      "purpose": "字典构造和查改；泛型、键值结构与动态端口需要具体化。"
+    },
+    {
+      "id": "structs",
+      "name": "结构体与自定义数据",
+      "count": 8,
+      "purpose": "构造、拆分或修改具体结构体；需已有结构体资产。"
+    }
+  ],
+  "count": 199
+}

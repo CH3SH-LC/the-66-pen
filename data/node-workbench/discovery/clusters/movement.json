@@ -1,0 +1,607 @@
+{
+  "id": "movement",
+  "name": "运动、跟随与操控",
+  "purpose": "配置实体运动和操控，监听运动状态。",
+  "aliases": [
+    "移动",
+    "平台",
+    "跟随",
+    "位移",
+    "速度",
+    "操控",
+    "载具"
+  ],
+  "nativeLeaves": [
+    "运动器",
+    "跟随运动器",
+    "操控运动器",
+    "角色扰动装置"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:84",
+      "definitionId": 84,
+      "graphKind": 20000,
+      "name": "添加匀速直线型基础运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 84 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:85",
+      "definitionId": 85,
+      "graphKind": 20000,
+      "name": "添加匀速旋转型基础运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 85 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:86",
+      "definitionId": 86,
+      "graphKind": 20000,
+      "name": "停止并删除基础运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 86 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:87",
+      "definitionId": 87,
+      "graphKind": 20000,
+      "name": "暂停基础运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 87 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:88",
+      "definitionId": 88,
+      "graphKind": 20000,
+      "name": "恢复基础运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 88 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:89",
+      "definitionId": 89,
+      "graphKind": 20000,
+      "name": "基础运动器停止时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 89 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:177",
+      "definitionId": 177,
+      "graphKind": 20000,
+      "name": "路径到达路点时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 177 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:245",
+      "definitionId": 245,
+      "graphKind": 20000,
+      "name": "以GUID切换跟随运动器的目标",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "跟随运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 245 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:246",
+      "definitionId": 246,
+      "graphKind": 20000,
+      "name": "获取跟随运动器的目标",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "跟随运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 246 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:267",
+      "definitionId": 267,
+      "graphKind": 20000,
+      "name": "激活基础运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 267 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:302",
+      "definitionId": 302,
+      "graphKind": 20000,
+      "name": "设置角色扰动装置",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "角色扰动装置"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 302 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:365",
+      "definitionId": 365,
+      "graphKind": 20000,
+      "name": "激活/关闭跟随运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "跟随运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 365 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:366",
+      "definitionId": 366,
+      "graphKind": 20000,
+      "name": "激活/关闭角色扰动装置",
+      "family": "执行节点",
+      "menuVisibility": "registered-but-not-in-global-menu",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [],
+      "evidence": "explicit-name-routing; not-public-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 366 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:520",
+      "definitionId": 520,
+      "graphKind": 20000,
+      "name": "添加朝向目标旋转型基础运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 520 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:668",
+      "definitionId": 668,
+      "graphKind": 20000,
+      "name": "以实体切换跟随运动器的目标",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "跟随运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 668 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:775",
+      "definitionId": 775,
+      "graphKind": 20000,
+      "name": "开启定点运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 775 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:837",
+      "definitionId": 837,
+      "graphKind": 20000,
+      "name": "设置玩家跟随操控运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 837 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:838",
+      "definitionId": 838,
+      "graphKind": 20000,
+      "name": "设置玩家离开操控运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 838 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:839",
+      "definitionId": 839,
+      "graphKind": 20000,
+      "name": "设置玩家激活操控运动器",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 839 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:840",
+      "definitionId": 840,
+      "graphKind": 20000,
+      "name": "查询玩家当前激活操控运动器列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 840 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:841",
+      "definitionId": 841,
+      "graphKind": 20000,
+      "name": "查询玩家当前跟随操控运动器",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 841 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:842",
+      "definitionId": 842,
+      "graphKind": 20000,
+      "name": "玩家激活操控运动器列表变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 842 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:843",
+      "definitionId": 843,
+      "graphKind": 20000,
+      "name": "玩家跟随操控运动器时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 843 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:844",
+      "definitionId": 844,
+      "graphKind": 20000,
+      "name": "玩家离开操控运动器时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 844 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:845",
+      "definitionId": 845,
+      "graphKind": 20000,
+      "name": "查询操控运动器当前运动参数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 845 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20002:22000:0:200289",
+      "definitionId": 200289,
+      "graphKind": 20002,
+      "name": "添加临时运动参数值",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200289 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200294",
+      "definitionId": 200294,
+      "graphKind": 20002,
+      "name": "获取当前激活操控运动器列表",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200294 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200295",
+      "definitionId": 200295,
+      "graphKind": 20002,
+      "name": "获取当前跟随操控运动器",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200295 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200296",
+      "definitionId": 200296,
+      "graphKind": 20002,
+      "name": "获取操控运动器运动参数",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200296 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200297",
+      "definitionId": 200297,
+      "graphKind": 20002,
+      "name": "获取操控运动器当前速度",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200297 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200298",
+      "definitionId": 200298,
+      "graphKind": 20002,
+      "name": "获取操控运动器前向",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200298 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200299",
+      "definitionId": 200299,
+      "graphKind": 20002,
+      "name": "获取操控运动器目标转向方向",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200299 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200300",
+      "definitionId": 200300,
+      "graphKind": 20002,
+      "name": "获取操控运动器是否接地",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200300 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200304",
+      "definitionId": 200304,
+      "graphKind": 20002,
+      "name": "添加速度",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200304 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200305",
+      "definitionId": 200305,
+      "graphKind": 20002,
+      "name": "添加临时加速度",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200305 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200306",
+      "definitionId": 200306,
+      "graphKind": 20002,
+      "name": "使操控运动器转换至非接地状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "movement"
+      ],
+      "nativeLeaves": [
+        "操控运动器"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200306 --graph-kind 20002"
+    }
+  ],
+  "count": 36,
+  "byFamily": {
+    "执行节点": 20,
+    "事件节点": 5,
+    "查询节点": 11
+  },
+  "byGraphKind": {
+    "20000": 25,
+    "20002": 11
+  },
+  "runtimeVerified": false
+}

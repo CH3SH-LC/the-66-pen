@@ -1,0 +1,153 @@
+{
+  "id": "map",
+  "name": "小地图与标识",
+  "purpose": "配置地图标识及其可见性。",
+  "aliases": [
+    "小地图",
+    "图标",
+    "标识",
+    "导航标记"
+  ],
+  "nativeLeaves": [
+    "小地图标识组件"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:634",
+      "definitionId": 634,
+      "graphKind": 20000,
+      "name": "设置小地图缩放",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "map"
+      ],
+      "nativeLeaves": [
+        "小地图标识组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 634 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:635",
+      "definitionId": 635,
+      "graphKind": 20000,
+      "name": "设置小地图标识生效状态",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "map"
+      ],
+      "nativeLeaves": [
+        "小地图标识组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 635 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:636",
+      "definitionId": 636,
+      "graphKind": 20000,
+      "name": "设置可见小地图标识的玩家列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "map"
+      ],
+      "nativeLeaves": [
+        "小地图标识组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 636 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:637",
+      "definitionId": 637,
+      "graphKind": 20000,
+      "name": "设置追踪小地图标识的玩家列表",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "map"
+      ],
+      "nativeLeaves": [
+        "小地图标识组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 637 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:638",
+      "definitionId": 638,
+      "graphKind": 20000,
+      "name": "查询指定小地图标识信息",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "map"
+      ],
+      "nativeLeaves": [
+        "小地图标识组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 638 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:639",
+      "definitionId": 639,
+      "graphKind": 20000,
+      "name": "获取实体的小地图标识状态",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "map"
+      ],
+      "nativeLeaves": [
+        "小地图标识组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 639 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:640",
+      "definitionId": 640,
+      "graphKind": 20000,
+      "name": "设置小地图标识的玩家标记",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "map"
+      ],
+      "nativeLeaves": [
+        "小地图标识组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 640 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:834",
+      "definitionId": 834,
+      "graphKind": 20000,
+      "name": "切换自定义地图",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "map"
+      ],
+      "nativeLeaves": [
+        "小地图标识组件"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 834 --graph-kind 20000"
+    }
+  ],
+  "count": 8,
+  "byFamily": {
+    "执行节点": 6,
+    "查询节点": 2
+  },
+  "byGraphKind": {
+    "20000": 8
+  },
+  "runtimeVerified": false
+}

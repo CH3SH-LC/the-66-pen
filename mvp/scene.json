@@ -1,0 +1,93 @@
+{
+  "schema": "miliastra-mvp-scene/1",
+  "scene_id": "platformer-min-01",
+  "title": "最简平台跳跃挑战（离线资产包）",
+  "goal_rule": "站上最高的终点平台 GoalPad（最高表面 y=2.25）即视为通关；本轮不接入游戏内结算，若主智能体后续接入再补。",
+  "coordinate_system": {
+    "axis": "X=前进方向，Y=向上，Z=侧向",
+    "unit": "game-unit（千星沙箱内建方块：size_units 为 1.0 的方块在 scale=1.0 时恰好占据 1 单位）"
+  },
+  "entity_id_start": 1078000000,
+  "templates": {
+    "20001875": {"name": "通常立方体（奶黄）", "size_units": 1.0, "source": "UGC-File-Generate-Utils/config/block_config.py"},
+    "20001224": {"name": "木质箱子", "size_units": 1.0, "source": "UGC-File-Generate-Utils/config/block_config.py"},
+    "20001876": {"name": "坚固立方体（暗蓝）", "size_units": 1.0, "source": "UGC-File-Generate-Utils/config/block_config.py"},
+    "20001877": {"name": "冰质立方体", "size_units": 1.0, "source": "UGC-File-Generate-Utils/config/block_config.py"},
+    "20001878": {"name": "火质立方体", "size_units": 1.0, "source": "UGC-File-Generate-Utils/config/block_config.py"}
+  },
+  "layout_intent": {
+    "note": "以下为设计意图说明，不是求值表达式。generator 用 entities 里的显式坐标做真源，并按 constraints 校验。",
+    "footprint_platform": [2.0, 0.5, 2.0],
+    "footprint_start_and_goal": [3.0, 0.5, 3.0],
+    "horizontal_edge_gap": 1.2,
+    "vertical_step": 0.4,
+    "start_surface_y": 0.25,
+    "goal_surface_y": 2.25
+  },
+  "constraints": {
+    "horizontal_gap_min": 1.0,
+    "horizontal_gap_max": 1.5,
+    "step_up_min": 0.3,
+    "step_up_max": 0.5,
+    "check": "相邻实体按 x 排序，上一样本右边缘到当前样本左边缘的水平间隙，以及两次顶面高度差",
+    "tolerance": 0.00002
+  },
+  "entities": [
+    {
+      "index": 0,
+      "role": "start",
+      "name": "MVP_StartPad",
+      "template_id": 20001875,
+      "comment": "起点，尺寸稍大",
+      "position": [0.0, 0.0, 0.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [3.0, 0.5, 3.0]
+    },
+    {
+      "index": 1,
+      "role": "platform",
+      "name": "MVP_Platform_01",
+      "template_id": 20001224,
+      "position": [3.7, 0.4, 0.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [2.0, 0.5, 2.0]
+    },
+    {
+      "index": 2,
+      "role": "platform",
+      "name": "MVP_Platform_02",
+      "template_id": 20001876,
+      "position": [6.9, 0.8, 0.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [2.0, 0.5, 2.0]
+    },
+    {
+      "index": 3,
+      "role": "platform",
+      "name": "MVP_Platform_03",
+      "template_id": 20001877,
+      "position": [10.1, 1.2, 0.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [2.0, 0.5, 2.0]
+    },
+    {
+      "index": 4,
+      "role": "platform",
+      "name": "MVP_Platform_04",
+      "template_id": 20001224,
+      "position": [13.3, 1.6, 0.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [2.0, 0.5, 2.0]
+    },
+    {
+      "index": 5,
+      "role": "goal",
+      "name": "MVP_GoalPad",
+      "template_id": 20001878,
+      "comment": "终点，最高且尺寸稍大；胜利条件=到达此平台顶面",
+      "position": [17.0, 2.0, 0.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [3.0, 0.5, 3.0]
+    }
+  ]
+}

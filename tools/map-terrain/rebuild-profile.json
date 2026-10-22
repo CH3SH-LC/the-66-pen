@@ -1,0 +1,124 @@
+{
+  "schema": "native-terrain-rebuild-v1",
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "functions": [
+    {
+      "rva": "0xba50e20",
+      "head32": "5556574881ec90000000488dac248000000048c745f8feffffff4889ce803da0"
+    },
+    {
+      "rva": "0xafb89e0",
+      "head32": "5541574156415541545657534881ec88000000488dac2480000000660f7f75f0"
+    },
+    {
+      "rva": "0x10d64920",
+      "head32": "564883ec204889ce803d9781a0f4000f859a000000488b064889f131d2ff90f8"
+    },
+    {
+      "rva": "0x95209f0",
+      "head32": "564883ec204889ce803db7c024fc007559488b064889f131d2ff90f80000004c"
+    },
+    {
+      "rva": "0x119dfb20",
+      "head32": "4156565755534883ec304589c689d34889cf803d4f240bf4000f84e800000048"
+    },
+    {
+      "rva": "0x10d641a0",
+      "head32": "5657534883ec304489c789d34889ce803d1bc5d2f4000f849700000048c74424"
+    },
+    {
+      "rva": "0x9520490",
+      "head32": "565755534883ec384489c789d64889cb803d8a1757fc000f84da000000c74424"
+    },
+    {
+      "rva": "0x119df7a0",
+      "head32": "41565657534883ec484589c64889d74889cb803dca270bf4000f84f801000080"
+    },
+    {
+      "rva": "0x10d642e0",
+      "head32": "554157415641545657534881ecd0000000488dac2480000000440f294d40440f"
+    },
+    {
+      "rva": "0xf5c9800",
+      "head32": "564883ec204989d04889ce803d8f321af600752a4d85c0744c803d62331af600"
+    },
+    {
+      "rva": "0xf5c9000",
+      "head32": "4157415641554154565755534881ecb8000000440f298c24a0000000440f2984"
+    },
+    {
+      "rva": "0xfeafb00",
+      "head32": "565755534883ec284489cb4c89c789d54889ce803d33cebff5000f8497000000"
+    },
+    {
+      "rva": "0xe5f55d0",
+      "head32": "56574883ec284889d74889ce803df82317f70075514885ff7477488b4f204885"
+    },
+    {
+      "rva": "0xfeafc50",
+      "head32": "4883ec284189d04889ca803de10e86f5007515488b4a184885c9742f4489c248"
+    },
+    {
+      "rva": "0xe5f56b0",
+      "head32": "4883ec284189d04889ca803d1b2317f7007515488b4a184885c9742f4489c248"
+    },
+    {
+      "rva": "0x119df6a0",
+      "head32": "4883ec284589c14989d0803de2d3d8f300488b053047daf37538488b88908b01"
+    },
+    {
+      "rva": "0x10deeb0",
+      "head32": "48895c2408574883ec200fb6fa488bd94885c97427e8f6be36004885c0741d4c"
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x5710b41",
+    "0x5710b42",
+    "0x57679db",
+    "0x57679dc",
+    "0x576c72c",
+    "0x576c7d8",
+    "0x576c85d",
+    "0x576c86b",
+    "0x576c870",
+    "0x576ca93",
+    "0x576ca95",
+    "0x576ca96",
+    "0x576ca9c",
+    "0x576ca9f",
+    "0x576caa1",
+    "0x576cab0",
+    "0x576cab1",
+    "0x576cab4",
+    "0x576cab6",
+    "0x576cac2",
+    "0x576cac3",
+    "0x576cac4",
+    "0x576cac5",
+    "0x576cac6",
+    "0x576cb74",
+    "0x576cb82",
+    "0x576cb90",
+    "0x576cbb5"
+  ],
+  "initializationBooleanRvas": [
+    "0x5a906d1",
+    "0x5a906e0",
+    "0x5a91125",
+    "0x5a91c31",
+    "0x5a91ee4",
+    "0x5a91f83",
+    "0x5a91f88",
+    "0x5a935a0",
+    "0x5a935c4",
+    "0x5aac94d"
+  ],
+  "guardClassifier": "branch-body-v1",
+  "evidenceSha256": "0d6679719a4523890851a124d2b4f3126fb491eedcbac70d740ea23975475b84",
+  "flowEvidence": [
+    "function-13f12c00.asm:13f12d13 SetCell, 13f12d98 owner rebuild",
+    "function-13f112d0.asm:13f113a0 rebuild after load",
+    "function-13f191b0.asm:13f19905 explicit rebuild after batch",
+    "function-13f13bf0.asm:13f13c0a mode gate before automatic tick"
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "schema": "miliastra-mvp-manifest/1",
+  "scene_id": "platformer-min-01",
+  "artifact": {
+    "path": "platformer_min.gia",
+    "bytes": 790,
+    "sha256": "01e167b8058adde6f0f73b47ccb7cab73032c7732cc1d8493bbb74340b73c323"
+  },
+  "payload": {
+    "bytes": 766,
+    "sha256": "b309494b4a513212743717669f743fc153acfe25f242a5823b82aadcf47e3162"
+  },
+  "header": {
+    "bytes": 20,
+    "file_size_field": 786,
+    "version": 1,
+    "head_magic": "0x00000326",
+    "file_type": 3,
+    "content_length_field": 766,
+    "invariant": "file_size = total-4; content_length = total-24"
+  },
+  "sources": {
+    "scene_json_sha256": "8b8c596089a7991bc7c744f67f0beef9d0db5c24e5bce5f7549f747c74630a8e",
+    "generator_sha256": "9a704159bd87ef88dc2f1ead7fffda559ad29d33439f36c283f91aa5e2e11745"
+  },
+  "entity_count": 6,
+  "template_ids": [
+    20001224,
+    20001875,
+    20001876,
+    20001877,
+    20001878
+  ],
+  "entity_ids": [
+    1078000000,
+    1078000001,
+    1078000002,
+    1078000003,
+    1078000004,
+    1078000005
+  ],
+  "entities": [
+    {
+      "name": "MVP_StartPad",
+      "template_id": 20001875,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        3.0,
+        0.5,
+        3.0
+      ],
+      "entity_id": 1078000000
+    },
+    {
+      "name": "MVP_Platform_01",
+      "template_id": 20001224,
+      "position": [
+        3.7,
+        0.4,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        0.5,
+        2.0
+      ],
+      "entity_id": 1078000001
+    },
+    {
+      "name": "MVP_Platform_02",
+      "template_id": 20001876,
+      "position": [
+        6.9,
+        0.8,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        0.5,
+        2.0
+      ],
+      "entity_id": 1078000002
+    },
+    {
+      "name": "MVP_Platform_03",
+      "template_id": 20001877,
+      "position": [
+        10.1,
+        1.2,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        0.5,
+        2.0
+      ],
+      "entity_id": 1078000003
+    },
+    {
+      "name": "MVP_Platform_04",
+      "template_id": 20001224,
+      "position": [
+        13.3,
+        1.6,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.0,
+        0.5,
+        2.0
+      ],
+      "entity_id": 1078000004
+    },
+    {
+      "name": "MVP_GoalPad",
+      "template_id": 20001878,
+      "position": [
+        17.0,
+        2.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        3.0,
+        0.5,
+        3.0
+      ],
+      "entity_id": 1078000005
+    }
+  ],
+  "layout_checks": [
+    {
+      "from": "MVP_StartPad",
+      "to": "MVP_Platform_01",
+      "horizontal_gap": 1.2,
+      "vertical_step": 0.4,
+      "gap_ok": true,
+      "step_ok": true
+    },
+    {
+      "from": "MVP_Platform_01",
+      "to": "MVP_Platform_02",
+      "horizontal_gap": 1.2,
+      "vertical_step": 0.4,
+      "gap_ok": true,
+      "step_ok": true
+    },
+    {
+      "from": "MVP_Platform_02",
+      "to": "MVP_Platform_03",
+      "horizontal_gap": 1.2,
+      "vertical_step": 0.4,
+      "gap_ok": true,
+      "step_ok": true
+    },
+    {
+      "from": "MVP_Platform_03",
+      "to": "MVP_Platform_04",
+      "horizontal_gap": 1.2,
+      "vertical_step": 0.4,
+      "gap_ok": true,
+      "step_ok": true
+    },
+    {
+      "from": "MVP_Platform_04",
+      "to": "MVP_GoalPad",
+      "horizontal_gap": 1.2,
+      "vertical_step": 0.4,
+      "gap_ok": true,
+      "step_ok": true
+    }
+  ],
+  "notes": [
+    "坐标以 float32 写入，scene.json 中的十进制小数 (如 0.4/1.2/3.7) 在二进制下不精确，读回比较需容差。",
+    "本文件描述离线产物本身，不代表游戏已接受或已通关。"
+  ]
+}

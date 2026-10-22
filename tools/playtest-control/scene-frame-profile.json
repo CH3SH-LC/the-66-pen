@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x19d141e0",
+      "name": "ScreenCapture.CaptureScreenshotAsTexture",
+      "head32": "e9dbaac5e6ccccccccccccccccccccccc36666666666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x96ecc0",
+      "name": "capture managed wrapper",
+      "head32": "4883ec28e857c32400488bd0488d4c2438e84aa0b500488b004883c428c3cccc"
+    },
+    {
+      "rva": "0xbbb020",
+      "name": "capture Texture2D allocation",
+      "head32": "40574883ec50e895080000488bf84885c0753c884424404c8d0508d4eb024889"
+    },
+    {
+      "rva": "0xbbb8c0",
+      "name": "game backbuffer readback; superSize1 excludes rerender branch",
+      "head32": "405553565741564157488d6c24d14881ecf80000000f29b424d00000004863f1"
+    },
+    {
+      "rva": "0x19cd3610",
+      "name": "ImageConversion.EncodeToPNG",
+      "head32": "e9eb3e08e766662e0f1f840000000000e96b4008e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0xd57500",
+      "name": "PNG encoder owned-array return",
+      "head32": "40534883ec4048894c2450488bd94885c90f8435010000e8a4386f004885c00f"
+    },
+    {
+      "rva": "0x19cae530",
+      "name": "Texture.width",
+      "head32": "e99bc378e766662e0f1f8400000000004883ec28803ded99ddeb00743d488b0d"
+    },
+    {
+      "rva": "0x19cae5a0",
+      "name": "Texture.height",
+      "head32": "e96bc378e766662e0f1f8400000000004883ec28803d7f99ddeb00743d488b0d"
+    },
+    {
+      "rva": "0x19c9de20",
+      "name": "Time.frameCount",
+      "head32": "e9fb8d79e766662e0f1f840000000000e90b8e79e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19c9de30",
+      "name": "Time.renderedFrameCount",
+      "head32": "e90b8e79e766662e0f1f840000000000e91b8e79e766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19cc2fd0",
+      "name": "Screen.width",
+      "head32": "e9dba8cbe666662e0f1f840000000000e9eba8cbe666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19cc2fe0",
+      "name": "Screen.height",
+      "head32": "e9eba8cbe666662e0f1f840000000000e9fba8cbe666662e0f1f840000000000"
+    },
+    {
+      "rva": "0x19c9b820",
+      "name": "GameObject.activeInHierarchy",
+      "head32": "e98b767be766662e0f1f840000000000e9eb767be766662e0f1f840000000000"
+    },
+    {
+      "rva": "0x18e06d30",
+      "name": "UInt32 object dictionary enumerator; count38 version3c entries28",
+      "head32": "564883ec20488b014885c00f849e0000008b51083b503c0f859c000000448b40"
+    },
+    {
+      "rva": "0x13560870",
+      "name": "editor trial task getter +90",
+      "head32": "4883ec284889ca803d504119f200750c488b82900000004883c428c3488b0555"
+    },
+    {
+      "rva": "0x81c0ed0",
+      "name": "SetCurLevelData +68; guid38 version34 isTrial30",
+      "head32": "41565657534883ec584889d64989ce803dd5e38dfd000f84d8000000803dbb9f"
+    },
+    {
+      "rva": "0xa2fd240",
+      "name": "BeyondLevelManager global+a150 current level caller",
+      "head32": "5541565657534881ec90000000488dac248000000048c74500feffffff4989d6"
+    },
+    {
+      "rva": "0x9a7acd0",
+      "name": "Entity transform world position",
+      "head32": "56574883ec680f297c24500f297424404889d74889ce803df771c8fb000f85e8"
+    },
+    {
+      "rva": "0x9a84cd0",
+      "name": "Entity GameObject +38",
+      "head32": "488b4138c366662e0f1f84000000000041565657534883ec284889ce803d4fd2"
+    },
+    {
+      "rva": "0x9a96970",
+      "name": "Entity transform +1e8",
+      "head32": "488b81e8010000c30f1f840000000000564883ec204889ce803d55b6c6fb0075"
+    },
+    {
+      "rva": "0x173770b0",
+      "name": "UInt32 dictionary lookup",
+      "head32": "4157415641554154565755534883ec4889542424488b71204885f6747d4c8b61"
+    },
+    {
+      "rva": "0xe96b300",
+      "name": "EntityManager EntityMap diagnostic +1e8",
+      "head32": "555657534883ec78488d6c247048c745f8feffffff4889ce803ddf8012f7000f"
+    },
+    {
+      "rva": "0xe987ec0",
+      "name": "EntityMap runtime ID match +3a8",
+      "head32": "565755534883ec784489c54889d64889cf803da9b610f7000f84b2010000803d"
+    },
+    {
+      "rva": "0x9a9c0c0",
+      "name": "BaseEntity runtimeID/configID/tickable/ready/type/loaded diagnostic",
+      "head32": "41565657534883ec284889ce803dee5800fc000f8436020000803db360c6fb00"
+    },
+    {
+      "name": "Camera.main",
+      "rva": "0x19cac410",
+      "head32": "e91bbd7ae766662e0f1f840000000000e92bbd7ae766662e0f1f840000000000"
+    },
+    {
+      "name": "Camera.main target",
+      "rva": "0x1458130",
+      "head32": "4883ec28e817922600488bd0488d4c2430e8da0b0700488b004883c428c3cccc"
+    },
+    {
+      "name": "Camera.current",
+      "rva": "0x19cac420",
+      "head32": "e92bbd7ae766662e0f1f840000000000e97bbe7ae766662e0f1f840000000000"
+    },
+    {
+      "name": "Camera.current target",
+      "rva": "0x1458150",
+      "head32": "4883ec28e837f84900488bc8e85fe24900488bd0488d4c2430e8b20b0700488b"
+    },
+    {
+      "name": "Camera.Render",
+      "rva": "0x19cac540",
+      "head32": "e97bbe7ae766662e0f1f840000000000e9ebbe7ae766662e0f1f840000000000"
+    },
+    {
+      "name": "Camera.Render target",
+      "rva": "0x14583c0",
+      "head32": "48895c2408574883ec6033ffc74424504600000048897c2430488bd940887c24"
+    },
+    {
+      "name": "Component.transform",
+      "rva": "0x19cbc860",
+      "head32": "e9ab7379e766662e0f1f840000000000e99b7379e766662e0f1f840000000000"
+    },
+    {
+      "name": "Component.transform target",
+      "rva": "0x1453c10",
+      "head32": "40534883ec20488bd94885c97426e89d71ffff4885c0741c488b50404885d274"
+    },
+    {
+      "name": "Transform.position.get",
+      "rva": "0x19cb62b0",
+      "head32": "e94b0a78e766662e0f1f840000000000e98b0a78e766662e0f1f840000000000"
+    },
+    {
+      "name": "Transform.position.get target",
+      "rva": "0x1436d00",
+      "head32": "48895c2408574883ec30488bfa488bd94885c97430e8a64001004885c0742648"
+    },
+    {
+      "name": "Transform.position.set",
+      "rva": "0x19cb62d0",
+      "head32": "e97b0a78e766662e0f1f840000000000e9ab0a78e766662e0f1f840000000000"
+    },
+    {
+      "name": "Transform.position.set target",
+      "rva": "0x1436d50",
+      "head32": "48895c2408574883ec20488bfa488bd94885c9741fe8564001004885c0741548"
+    },
+    {
+      "name": "Transform.rotation.get",
+      "rva": "0x19cb6e50",
+      "head32": "e92b0078e766662e0f1f840000000000e92b0378e766662e0f1f840000000000"
+    },
+    {
+      "name": "Transform.rotation.get target",
+      "rva": "0x1436e80",
+      "head32": "48895c2408574883ec30488bfa488bd94885c97428e8263f01004885c0741e48"
+    },
+    {
+      "name": "Transform.rotation.set",
+      "rva": "0x19cb6e60",
+      "head32": "e92b0378e766662e0f1f840000000000e95b0078e766662e0f1f840000000000"
+    },
+    {
+      "name": "Transform.rotation.set target",
+      "rva": "0x1437190",
+      "head32": "48895c2408574883ec20488bfa488bd94885c9741fe8163c01004885c0741548"
+    },
+    {
+      "name": "Object.Destroy",
+      "rva": "0x19cb2d70",
+      "head32": "e9db5a78e766662e0f1f8400000000000f57c9e9c85a78e70f1f840000000000"
+    },
+    {
+      "name": "Object.Destroy target",
+      "rva": "0x1438850",
+      "head32": "4883ec380f297424200f28f1e82fee08000f28ce8bc80f287424204883c438e9"
+    },
+    {
+      "name": "GCHandle.Alloc(object)",
+      "rva": "0x195d3a90",
+      "head32": "554883ec30488d6c243048c745f8feffffff4989c8488d0dc43f50ecba020000"
+    },
+    {
+      "name": "GCHandle.GetTarget",
+      "rva": "0x195d38b0",
+      "head32": "89c8c1e81a48c1e010488d15e04150ec4801c289c8c1e80d25ff1f0000488b04"
+    },
+    {
+      "name": "GCHandle.FreeHandle",
+      "rva": "0x195d3b40",
+      "head32": "55564883ec28488d6c242048c74500feffffff89ce488d0dd43150ece80b416d"
+    },
+    {
+      "name": "GCHandle native allocator",
+      "rva": "0x5584f0",
+      "head32": "554157415641545657534883ec30488d6c243048c745f8feffffff4d89c64989"
+    },
+    {
+      "name": "Camera.fieldOfView",
+      "rva": "0x19cab280",
+      "head32": "e99b9e7ae766662e0f1f840000000000e9bb9e7ae766662e0f1f840000000000"
+    },
+    {
+      "name": "Camera.fieldOfView target",
+      "rva": "0x1455120",
+      "head32": "40534883ec20488bd94885c97417e88d5cffff4885c0740d488bc84883c4205b"
+    }
+  ],
+  "capture": {
+    "superSize": 1,
+    "maxDimension": 4096,
+    "maxEncodedBytes": 8388608,
+    "source": "Unity game backbuffer",
+    "freshFrameGuaranteed": false
+  },
+  "remainingPrimitives": [
+    "trial task enum and editor-data source binding at 1355dba0",
+    "positive playable scene phase with active level identity",
+    "exit destination and asynchronous completion contract",
+    "monster runtime class, health and AI field semantics"
+  ],
+  "purpose": "Deferred screenshot release with rooted texture; temporary fixed Mondstadt overview with same-callback camera restoration"
+}

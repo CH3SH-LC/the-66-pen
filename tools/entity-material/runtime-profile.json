@@ -1,0 +1,1003 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x524250",
+      "head32": "5541574156415541545657534883ec28488d6c242048c74500feffffff4c8b15",
+      "bodyBytes": 1126,
+      "bodySha256": "da447e743aa77eafca636b229b5d4dd55afe9608478fe0b583cdf0b1656a93a1",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x52aa00",
+      "head32": "5556574883ec30488d6c243048c745f8feffffff4889cef681c9000000207531",
+      "bodyBytes": 426,
+      "bodySha256": "4c1095159cc445cc8d1a2b15d20638fdd05e9a88e4d19a87ab5c91099624eec5",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x982be0",
+      "head32": "40534883ec20488bd94885c97459e8cd81ac004885c0744f488bc848897c2440",
+      "bodyBytes": 27,
+      "bodySha256": "3cc5480cc21f48e0c4f02cb711eac14a86702d935d6975f7e31bed83f01067e5",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x982c70",
+      "head32": "4053555641574883ec484533ff488bea488bd94885c90f84d7000000e82f81ac",
+      "bodyBytes": 45,
+      "bodySha256": "e5429b1c0e92b859a94cc54bacbf1121f417f91c07fbe164f8e7e95bf646547c",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x14374b0",
+      "head32": "40534883ec20488bd94885c97424e8fd3801004885c0741a488b90a000000048",
+      "bodyBytes": 59,
+      "bodySha256": "3020f99c9bfdbd76ac2882819b06f8cecdded73a6cfcf6392ae045f5aec07262",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x143d380",
+      "head32": "4883ec2848894c2438488d542438488d4c2430e8381828008b004883c428c3cc",
+      "bodyBytes": 31,
+      "bodySha256": "24c18f7cfd0456e4987df7da54e23a90cdbc870ae8be1f3d76629dc06c9d5433",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x143f340",
+      "head32": "48895c2410574883ec20488bda488bf94885d2743f488bcae863ba00004885c0",
+      "bodyBytes": 93,
+      "bodySha256": "7f0ec672249bb559b233a68f5971ab7ce9383fe37533180804425cbd50c7aa01",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x143f600",
+      "head32": "48895c2410574883ec50488bd94889542460488d542420488d4c2460e82f2808",
+      "bodyBytes": 127,
+      "bodySha256": "4e1d0e22160ff7ed4e73554f1bda8ff5b46049978740f83a482857a55b1ded1b",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x144cb40",
+      "head32": "48895c2408574883ec20488bfa488bd94885d2746d48837a100074664885c90f",
+      "bodyBytes": 174,
+      "bodySha256": "98c2ce9d2daff7e2273c680a699f74bb3de7c130b3ff9c92766ad545df4373ad",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x144d460",
+      "head32": "48895c24084889742410574883ec300f297424200f28f2410fb6f98bf2488bd9",
+      "bodyBytes": 96,
+      "bodySha256": "1fa5450f554480a57173296f9be49c231df1b5d3e2e75a2fc077c851567f1f01",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x144d4c0",
+      "head32": "48895c2408574883ec208bfa488bd94885c9741ee8e7d8ffff4885c074148bd7",
+      "bodyBytes": 59,
+      "bodySha256": "b94c1f18026ce96da37b04b9a9de847120092afd98096ed955d7135fff201952",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x144d740",
+      "head32": "48895c240848896c24104889742418574883ec30410fb6f9498bf08bea488bd9",
+      "bodyBytes": 103,
+      "bodySha256": "ba430a64404143a5eb200b5b254fea34f378d33f97247fda6a3cec655d59253a",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x144f1e0",
+      "head32": "48895c2408574883ec30498bd8488bf94885c97453488b49104885c9744a41b8",
+      "bodyBytes": 130,
+      "bodySha256": "c87061b70092c0fb1fd5ae131264273a8c50a865892dcdee41ed6a5ea3b6f288",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x1453c10",
+      "head32": "40534883ec20488bd94885c97426e89d71ffff4885c0741c488b50404885d274",
+      "bodyBytes": 74,
+      "bodySha256": "5ceb55918b4b243818e42656229c20447dd78fb7023de7b9de687e0b197d9dd6",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x1453c60",
+      "head32": "40534883ec20488bd94885c9744ae84d71ffff4885c0744048897c2438488b78",
+      "bodyBytes": 24,
+      "bodySha256": "feedbcb547ce1f617cd8fc4c31f5adbe68fee155115474768467155b917d669f",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x1607030",
+      "head32": "48895c240848896c2410488974241848897c242041544155415641574d63c04c",
+      "bodyBytes": 499,
+      "bodySha256": "ea4ff6b3aff01b21a051dd261b2010333db64a44928e96afb9846eabd16d75a5",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x1607290",
+      "head32": "40534883ec600f29742450488bda4d63c84c8b41500f297c2440440f29442430",
+      "bodyBytes": 181,
+      "bodySha256": "480d0a912ea7f7fbf5d0d32ee15c28bff883afc2da2a270fd637e3c8a2bf9a73",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x179a010",
+      "head32": "48895c241855415641574883ec300f29742420450fb6f10f28f2448bfa488be9",
+      "bodyBytes": 91,
+      "bodySha256": "086b6d1828617264c94bfeed4883f4566cb3deaae99c3a414a3aa500cfdb08f0",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x179a0e0",
+      "head32": "48895c2410564883ec208bf2e82f0e00004533c08bd6488bc8488bd8e82fcfe6",
+      "bodyBytes": 75,
+      "bodySha256": "f82f66de03897a4539c43c4182a897cd4df857d1a902ab9a395b8f5ad81abda9",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x179a3f0",
+      "head32": "48895c241048896c24185741544155415641574883ec20410fb6d94d8bf0448b",
+      "bodyBytes": 111,
+      "bodySha256": "e0fb89404f44154eede84d1b913473ad59d24033a1a581cc9b9d1ff3f3a39659",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x179af20",
+      "head32": "4889742420574883ec30488b812001000033f6488bf94885c00f84ad0000008b",
+      "bodyBytes": 56,
+      "bodySha256": "206498da888c3065bf427a91619112d138c07f719c42468d23ae8c1fb0c8374c",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x8678480",
+      "head32": "56574883ec2889d64889cf803df45443fd00745e803df91f09fd00756f488b7f",
+      "bodyBytes": 217,
+      "bodySha256": "9a231919ecf89fe9f25cd7576c54e85bad590ee878e1889e002d74ce9b364bd4",
+      "hotfixZero": [
+        "0x570a494"
+      ],
+      "usageGroups": [
+        "0x263c6"
+      ]
+    },
+    {
+      "rva": "0x867f250",
+      "head32": "56574883ec2889d64889cf803d98e842fd00745e803d86b208fd00756f488b7f",
+      "bodyBytes": 217,
+      "bodySha256": "1e4527be5f4eb24a10184d60a34781cc8e64f064944a15d867026bebeed322e6",
+      "hotfixZero": [
+        "0x570a4f1"
+      ],
+      "usageGroups": [
+        "0x2653a"
+      ]
+    },
+    {
+      "rva": "0x9c26c70",
+      "head32": "41565657534883ec284989d64889cf803ddfe5e7fb000f84bc000000803d5059",
+      "bodyBytes": 356,
+      "bodySha256": "74315face6feab3549cbd276dce1cc3b0a39bf1fd17b26009f16106d1024ed7d",
+      "hotfixZero": [
+        "0x574c5e3",
+        "0x5759371"
+      ],
+      "usageGroups": [
+        "0x1dca5"
+      ]
+    },
+    {
+      "rva": "0xc0e9830",
+      "head32": "41565657534883ec284989ce803d89929bf9000f8486000000803db0f560f900",
+      "bodyBytes": 238,
+      "bodySha256": "0649e41766dec4753bd118c7ab0bd1e739ae3a210366cbcc43176ef2d8c20139",
+      "hotfixZero": [
+        "0x56f8e00"
+      ],
+      "usageGroups": [
+        "0x1b50c"
+      ]
+    },
+    {
+      "rva": "0xc0e9920",
+      "head32": "56574883ec384889d74889ce803dcef460f900754a4885ff747f488b4f20e8ed",
+      "bodyBytes": 164,
+      "bodySha256": "f58f5f6facf731056441c6af58544ddac08854ba8951e2c79c712caa71ccb6b7",
+      "hotfixZero": [
+        "0x56f8e01"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xc7bab90",
+      "head32": "564883ec304889ce803d69aaf5f800488b054292fcf87560488b88d0ec000048",
+      "bodyBytes": 163,
+      "bodySha256": "0c9eb9823b3652c4d7d16dee738754530a34e0ea165c60f5a1727981f5a09071",
+      "hotfixZero": [
+        "0x5715608"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe5493b0",
+      "head32": "56574883ec384189d04889ce803d972e1df7007577803dcf2f21f7000f859600",
+      "bodyBytes": 335,
+      "bodySha256": "a12ef41197ec0576537a044e59f427c3d4b75d422102740b304c3585c1fbcf1a",
+      "hotfixZero": [
+        "0x571c25a",
+        "0x571c25b",
+        "0x571c25d",
+        "0x575c39b"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe549500",
+      "head32": "564883ec204889ce803d4c2d1df700751a8b4638803d422d1df700753525ffff",
+      "bodyBytes": 128,
+      "bodySha256": "bf01c5f33e37dc32fb9a877eb4ac01a05fdae13a918c20e9454068c09ff112b6",
+      "hotfixZero": [
+        "0x571c25b",
+        "0x571c25d"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe549580",
+      "head32": "41565657534883ec284989ce803d56a856f7000f84c5000000803dc42c1df700",
+      "bodyBytes": 381,
+      "bodySha256": "b10ada3220550b8e9cc0c0089c06a8388e06a71143e91918b8f3ea33ec35c132",
+      "hotfixZero": [
+        "0x571c264"
+      ],
+      "usageGroups": [
+        "0x26417",
+        "0x2c829"
+      ]
+    },
+    {
+      "rva": "0xe549700",
+      "head32": "4883ec2889c8803d502b1df700750a25ffffff004883c428c3488b0dc8a623f7",
+      "bodyBytes": 68,
+      "bodySha256": "b9b57b364cf37911de25a84cdf62939309d0764237f1483072fcaa18e23f3102",
+      "hotfixZero": [
+        "0x571c25d"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe549750",
+      "head32": "564883ec204889ce803dfd2a1df700752c803dccf51ff7007542803dea2a1df7",
+      "bodyBytes": 228,
+      "bodySha256": "aa716eafcd7e3b3a561c1186f22fd4b33c4df9866d3088e605caa85ad98e0718",
+      "hotfixZero": [
+        "0x571c25b",
+        "0x571c25c",
+        "0x571c25d",
+        "0x5748d34"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe549840",
+      "head32": "4157415641554154565755534881ec880000000f297424704989cd803d83a556",
+      "bodyBytes": 1158,
+      "bodySha256": "54464abd469b77625a0504987005c0839ed7a742b5f78c87f2f4f430e812dc23",
+      "hotfixZero": [
+        "0x56f8e01",
+        "0x571c25e",
+        "0x571c262"
+      ],
+      "usageGroups": [
+        "0x263ca",
+        "0x26417",
+        "0x2c825"
+      ]
+    },
+    {
+      "rva": "0xe549cd0",
+      "head32": "4883ec284889ca803d84251df700752a31c04885d27416488b8aa00000004885",
+      "bodyBytes": 99,
+      "bodySha256": "9c16eedfbd78cae18de8dd40e22f5c3f55fea4008a0a44b7216b7c32aa44b1a0",
+      "hotfixZero": [
+        "0x571c262"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe549d40",
+      "head32": "415741564154565755534883ec700f297424604989d64889cf803d88a056f700",
+      "bodyBytes": 791,
+      "bodySha256": "12d421792386b30cae77f3d9d6981032298983d9dbf60365f5e673bec562f5c4",
+      "hotfixZero": [
+        "0x56fd4d3",
+        "0x571c25f"
+      ],
+      "usageGroups": [
+        "0x263ca",
+        "0x2c828"
+      ]
+    },
+    {
+      "rva": "0xe54a060",
+      "head32": "c74138ffffffff48b8ffffffff0000c84248894140c3662e0f1f840000000000",
+      "bodyBytes": 128,
+      "bodySha256": "30e67fe8fc324b7158e57cffb9cc2af097d70a2338e112da276389bee1a565d1",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe54a080",
+      "head32": "b816000000c3662e0f1f840000000000564883ec204889ce803dc2211df70075",
+      "bodyBytes": 128,
+      "bodySha256": "b778408ec62f7b4d596d220f41d6220142f2ea82222aaea4897df9be0edeff31",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe54a090",
+      "head32": "564883ec204889ce803dc2211df700752c803d90ec1ff7007542803daa211df7",
+      "bodyBytes": 228,
+      "bodySha256": "996444ee50c9985457d6dad74241c97e1f5555e00d513f74daa61ef049285567",
+      "hotfixZero": [
+        "0x571c25b",
+        "0x571c25d",
+        "0x571c261",
+        "0x5748d38"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe54a180",
+      "head32": "564883ec204989d04889ce803dd1201df7007537803d052221f70075554c89c1",
+      "bodyBytes": 161,
+      "bodySha256": "003237bf1399774f685ecfc841649b5a0ae0b22051ac1a85003b38c2105586fd",
+      "hotfixZero": [
+        "0x571c263",
+        "0x575c3a0"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe54a230",
+      "head32": "56574883ec284889d74889ce803d22201df7007569803d197a55f7000f848700",
+      "bodyBytes": 249,
+      "bodySha256": "3350f8e61f74b31b8d9bd19e7ed0e5240619d80106bb38e8aa66ae1db5652443",
+      "hotfixZero": [
+        "0x571c265",
+        "0x575c397"
+      ],
+      "usageGroups": [
+        "0x1a6a5"
+      ]
+    },
+    {
+      "rva": "0xe54a330",
+      "head32": "564883ec204989d04889ce803d241f1df7007537803d4e2021f70075554c89c1",
+      "bodyBytes": 161,
+      "bodySha256": "68067cca3250659257ab5f3b6eaea4321552dfd798e72e66d1e270f585731e2a",
+      "hotfixZero": [
+        "0x571c266",
+        "0x575c399"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe54a3e0",
+      "head32": "564883ec204889ce803d781e1df700753f66c746360000c74638ffffffffc746",
+      "bodyBytes": 168,
+      "bodySha256": "4c2a536f16e4fac419a3ca3ba0f54469b3cd61bb844a0b71bc9de404d32e9100",
+      "hotfixZero": [
+        "0x571c25d",
+        "0x571c267"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xe54a490",
+      "head32": "56574883ec284889d74889ce803d4b9956f7007467803dbc1d1df70075784885",
+      "bodyBytes": 206,
+      "bodySha256": "c4185ca2fe71421714d7c84121755fe88dec5351b6dfba2872a0aae34ec1b0ac",
+      "hotfixZero": [
+        "0x571c268"
+      ],
+      "usageGroups": [
+        "0x2c82e"
+      ]
+    },
+    {
+      "rva": "0xe54a560",
+      "head32": "56574883ec284889d64889cf803d7e9856f7000f84a2000000803de91c1df700",
+      "bodyBytes": 266,
+      "bodySha256": "3f98c8912dd6d9a21f88cd165bc2f7bdfcfdf751a828bff4536bb6f386790813",
+      "hotfixZero": [
+        "0x571c269"
+      ],
+      "usageGroups": [
+        "0x2c831"
+      ]
+    },
+    {
+      "rva": "0xe827750",
+      "head32": "4156565755534883ec304489c589d34989ce803d119326f7000f84a500000048",
+      "bodyBytes": 373,
+      "bodySha256": "4b8643c5d52d6137ab58541b34ee045f20d08e78927355dfe9f0099484f27297",
+      "hotfixZero": [
+        "0x5715609",
+        "0x574c5db"
+      ],
+      "usageGroups": [
+        "0x94ba",
+        "0x1dc77"
+      ]
+    },
+    {
+      "rva": "0xea5e140",
+      "head32": "c36666666666662e0f1f84000000000056574883ec284889ce0fb641288d0c00",
+      "bodyBytes": 128,
+      "bodySha256": "e544f71624d5b01fa7a8bb75bb1e8b90dfeabb9f95dfa4923901748505bb928f",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0xea5e310",
+      "head32": "41565657534883ec284989ce803d0b7d03f7000f84d2000000488b1df092d7f6",
+      "bodyBytes": 388,
+      "bodySha256": "9c7f70805c622cab7db18d8aefe230c3dcda59f88918551b5ff12582409e7daf",
+      "hotfixZero": [],
+      "usageGroups": [
+        "0xea6e"
+      ]
+    },
+    {
+      "rva": "0xed54450",
+      "head32": "56574883ec284889d74889ce803d99b3d4f6000f84de000000803df1989af600",
+      "bodyBytes": 435,
+      "bodySha256": "25ce625a44cfe0e2e1abd63d8cafaab868ea04c35e2747f61cb867311845e8d8",
+      "hotfixZero": [
+        "0x56fdd61",
+        "0x571c25d",
+        "0x571c267"
+      ],
+      "usageGroups": [
+        "0x1823c"
+      ]
+    },
+    {
+      "rva": "0x102e08c0",
+      "head32": "4157415641554154565755534883ec484c89cb4d89c589d74889ce803d9a3b7b",
+      "bodyBytes": 1003,
+      "bodySha256": "7e36c8f154bf24f99401acb9f1d38b82adfe16a59dbc5baee709febb9271fa94",
+      "hotfixZero": [
+        "0x5776a94",
+        "0x5776a96",
+        "0x5776a99"
+      ],
+      "usageGroups": [
+        "0xcebc"
+      ]
+    },
+    {
+      "rva": "0x102e1020",
+      "head32": "4157415641554154565755534883ec484c89cb4d89c589d74889ce803d50347b",
+      "bodyBytes": 1003,
+      "bodySha256": "e7d3e7381cbd00b3ce3924bfcda0f4d665ffd2761e0b229796a33585b1e0e7a0",
+      "hotfixZero": [
+        "0x5776a96",
+        "0x5776a97",
+        "0x5776a99"
+      ],
+      "usageGroups": [
+        "0xced2"
+      ]
+    },
+    {
+      "rva": "0x107abdf0",
+      "head32": "565755534883ec284489c54889d74889ce803d01492ff5000f84dd000000803d",
+      "bodyBytes": 423,
+      "bodySha256": "54b1a2fa025f58b30b9a4ade7b4a15f4c914e8d274c1adf1261e718ba98b099e",
+      "hotfixZero": [
+        "0x575936f",
+        "0x5761932"
+      ],
+      "usageGroups": [
+        "0x19149"
+      ]
+    },
+    {
+      "rva": "0x123be370",
+      "head32": "41565657534883ec284d89c64889d789cb803d81156df3000f84b6010000803d",
+      "bodyBytes": 667,
+      "bodySha256": "d367e17edfd4fcdbfa6e3b65b808b52a7b2418da8b68c3d921c362291d4d3bf7",
+      "hotfixZero": [
+        "0x56f0603"
+      ],
+      "usageGroups": [
+        "0x8349"
+      ]
+    },
+    {
+      "rva": "0x123be610",
+      "head32": "4156565755534883ec204d89c64889d789cb803de5126df3000f841c01000080",
+      "bodyBytes": 478,
+      "bodySha256": "71764fe12485a5de53b499643fba67da2c34eee443555a7cef15b1d65f36fbb1",
+      "hotfixZero": [
+        "0x56f0604"
+      ],
+      "usageGroups": [
+        "0x834e"
+      ]
+    },
+    {
+      "rva": "0x123be980",
+      "head32": "4883ec284189c8803d791c33f300488b0553543cf3753b488b90701401004885",
+      "bodyBytes": 150,
+      "bodySha256": "404ef62a09f4c143297886bbbedb9975e1c53e15589a074e62f59d4529eccf73",
+      "hotfixZero": [
+        "0x56f0607",
+        "0x5776a8e"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x123beb10",
+      "head32": "4883ec284189c8803deb1a33f300488b05c3523cf37534488b90701401004885",
+      "bodyBytes": 145,
+      "bodySha256": "4f42a865aae2d8e0fd2cfabc7b348724758733f62e04c98e9929128997cecf46",
+      "hotfixZero": [
+        "0x56f0609",
+        "0x5776a90"
+      ],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x1282b3f0",
+      "head32": "56574883ec384889ce803d2cd126f3000f8432010000803d895bf5f2000f8543",
+      "bodyBytes": 485,
+      "bodySha256": "e0097408bb956e7e8fe5842822fa4e9c8332c95e838ec87ebde883b3c3b2d493",
+      "hotfixZero": [
+        "0x5780f96"
+      ],
+      "usageGroups": [
+        "0x10f6c"
+      ]
+    },
+    {
+      "rva": "0x1282b5e0",
+      "head32": "41565657534883ec284989ce803da5cf26f3000f8441010000803da559f5f200",
+      "bodyBytes": 435,
+      "bodySha256": "cd13ccf29e5233de7b1c83c9ffa74bf3fafd273718d5e4805a04bef4945b3b8a",
+      "hotfixZero": [
+        "0x5780fa5"
+      ],
+      "usageGroups": [
+        "0x10fd8"
+      ]
+    },
+    {
+      "rva": "0x1282b7a0",
+      "head32": "5541565657534883ec70488d6c247048c745f0feffffff4889d64889cf803dc5",
+      "bodyBytes": 980,
+      "bodySha256": "19806859e2bf9fa5797e02e61fd25a087f2fe57ed3af7125446518b2fc0e0038",
+      "hotfixZero": [
+        "0x5780fa2"
+      ],
+      "usageGroups": [
+        "0x10fc9"
+      ]
+    },
+    {
+      "rva": "0x1282bbb0",
+      "head32": "56574883ec584889d74889ce803d6bc926f3007442803dcb53f5f2007553488b",
+      "bodyBytes": 187,
+      "bodySha256": "b4698c8e6ea41db109be5936fd93e5f00996e9dfe8be9e9e995eba4420d64cf0",
+      "hotfixZero": [
+        "0x5780f97"
+      ],
+      "usageGroups": [
+        "0x10f6e"
+      ]
+    },
+    {
+      "rva": "0x1282bc70",
+      "head32": "41565657534881ec980000004d89c64889d64889cf803dc8c826f3000f844701",
+      "bodyBytes": 527,
+      "bodySha256": "7f951c1f41ba5072d8aeb21564f7ccb1fef8c1fb8bdc971af00841a4f35e623a",
+      "hotfixZero": [
+        "0x5780f9c"
+      ],
+      "usageGroups": [
+        "0x10f94"
+      ]
+    },
+    {
+      "rva": "0x1282be80",
+      "head32": "41574156565755534883ec384889d64989ce803d9ac626f3000f848301000080",
+      "bodyBytes": 508,
+      "bodySha256": "28beaa327c8e28a192fe3d0dd1ab1ebd5e347b8bb7d4047832b8e8d7f23e3a04",
+      "hotfixZero": [
+        "0x5780f98"
+      ],
+      "usageGroups": [
+        "0x10f73"
+      ]
+    },
+    {
+      "rva": "0x1282c080",
+      "head32": "554157415641545657534883ec70488d6c247048c745f0feffffff4889d74989",
+      "bodyBytes": 1187,
+      "bodySha256": "592db1c99e07355361ddbdbd2ebdbd1ed67afd16b89a9544430ad45e17b92a29",
+      "hotfixZero": [
+        "0x5780f99"
+      ],
+      "usageGroups": [
+        "0x10f7b"
+      ]
+    },
+    {
+      "rva": "0x1282c570",
+      "head32": "56574883ec28803dc3bf26f3000f8482000000488b0dde7b20f3e8f10dc1ee89",
+      "bodyBytes": 216,
+      "bodySha256": "3490974b797038686107602a2b1cba10d5328a06a13b3dd97d3c9e1fa2e30d4b",
+      "hotfixZero": [],
+      "usageGroups": [
+        "0x10f80"
+      ]
+    },
+    {
+      "rva": "0x1282c650",
+      "head32": "4883ec28803decbe26f3007461803d3649f5f2007572488b0d1b56faf280b9c7",
+      "bodyBytes": 283,
+      "bodySha256": "df24da03f176b3a0375c57eddbfe2a54bc1e4f7f17f2da6bd51a1f970f3e9f63",
+      "hotfixZero": [
+        "0x5780f9a"
+      ],
+      "usageGroups": [
+        "0x10f87"
+      ]
+    },
+    {
+      "rva": "0x1282c770",
+      "head32": "56574883ec284889d64889cf803df1bd26f3007469803d1448f5f200757a48c7",
+      "bodyBytes": 201,
+      "bodySha256": "1e7b3ca7eb10c2ad94571a090c8ed8ccbc35c51bfb1150f1ae4e1fc90b86b344",
+      "hotfixZero": [
+        "0x5780fa0"
+      ],
+      "usageGroups": [
+        "0x10fb4"
+      ]
+    },
+    {
+      "rva": "0x1282c840",
+      "head32": "5657534883ec304889ce803dfbbc26f3000f8452010000803d3d47f5f2000f85",
+      "bodyBytes": 612,
+      "bodySha256": "05be3dea03a9858f2c5de51ba801296c3775031dd4243cd795437f61d607887a",
+      "hotfixZero": [
+        "0x5780f9b"
+      ],
+      "usageGroups": [
+        "0xe2de",
+        "0x10f8c"
+      ]
+    },
+    {
+      "rva": "0x1282cab0",
+      "head32": "4157415641545657534883ec384989d64989cc803db7ba26f3000f845b020000",
+      "bodyBytes": 736,
+      "bodySha256": "c23325f2234f40f69705d92e7f3388259b07fe01721c0016c7bd2b4eb9a12481",
+      "hotfixZero": [
+        "0x5780fa1"
+      ],
+      "usageGroups": [
+        "0x10fc1"
+      ]
+    },
+    {
+      "rva": "0x1282cd90",
+      "head32": "41574156415541545657534881ec90000000440f298424800000000f297c2470",
+      "bodyBytes": 771,
+      "bodySha256": "36c73d81dae680eecea9adb4c95648aa8959c2effa93ca1d8c9b45d8ee97d6ea",
+      "hotfixZero": [
+        "0x57395dd",
+        "0x5780fa7"
+      ],
+      "usageGroups": [
+        "0x10fe3"
+      ]
+    },
+    {
+      "rva": "0x1282d0a0",
+      "head32": "4157415641554154565755534883ec584c894424304989d54889cb803ddcb426",
+      "bodyBytes": 1192,
+      "bodySha256": "8e5809cfaba4394b9792a773a2f4ff629bbb245c64c7b537b8f576b9024637b7",
+      "hotfixZero": [
+        "0x5780fa6"
+      ],
+      "usageGroups": [
+        "0x10fde"
+      ]
+    },
+    {
+      "rva": "0x1282d550",
+      "head32": "4883ec28803dffaf26f3007461803d393af5f2007572488b0d1b47faf280b9c7",
+      "bodyBytes": 283,
+      "bodySha256": "3bd0d943f10ef32b80eb1fc2e5a4ddb6ec114af258a323bedac97c77427185dd",
+      "hotfixZero": [
+        "0x5780f9d"
+      ],
+      "usageGroups": [
+        "0x10f9a"
+      ]
+    },
+    {
+      "rva": "0x1282d670",
+      "head32": "56574883ec2889d74889ce803de2ae26f3000f84ce010000803d0f39f5f2000f",
+      "bodyBytes": 652,
+      "bodySha256": "2d4a0e5ca6d3d9d049d2dd4b4583267a3cba5d4808234261e1525875eb38c907",
+      "hotfixZero": [
+        "0x5780f9e"
+      ],
+      "usageGroups": [
+        "0x10fa4"
+      ]
+    },
+    {
+      "rva": "0x1282d900",
+      "head32": "4883ec28803d83ac26f3007461803d8f36f5f2007572488b0d6b43faf280b9c7",
+      "bodyBytes": 283,
+      "bodySha256": "a9c0d4ef7b94454559731e1de1aeae976ac536c2e7c11c1de4456cc4c113a07d",
+      "hotfixZero": [
+        "0x5780fa3"
+      ],
+      "usageGroups": [
+        "0x10fce"
+      ]
+    },
+    {
+      "rva": "0x1282da20",
+      "head32": "4883ec28803d43ab26f3000f8445010000803d6735f5f2000f8556010000488b",
+      "bodyBytes": 546,
+      "bodySha256": "3d84c5be08acc2978382a4c41c29ff143a757ea4a7ac8333bfd96d9c6d415f5a",
+      "hotfixZero": [
+        "0x5780f9f"
+      ],
+      "usageGroups": [
+        "0x10fae"
+      ]
+    },
+    {
+      "rva": "0x1282dc50",
+      "head32": "555657534883ec68488d6c246048c745f8feffffff4889ce803d3aa926f3000f",
+      "bodyBytes": 394,
+      "bodySha256": "7c33886512d0659b37c7621d2e4015f3860b6b7f84b6381508f4165a0389404b",
+      "hotfixZero": [
+        "0x5780fa8"
+      ],
+      "usageGroups": [
+        "0x10fe9"
+      ]
+    },
+    {
+      "rva": "0x1282de10",
+      "head32": "4157415641554154565755534883ec780f297424604889d74889ce803d62a726",
+      "bodyBytes": 462,
+      "bodySha256": "26f3387282538fdabc9ff429e23c364c58710f650ac71a7863c2883e11f8893a",
+      "hotfixZero": [
+        "0x56f8e01",
+        "0x5780fa4"
+      ],
+      "usageGroups": [
+        "0x10fd4"
+      ]
+    },
+    {
+      "rva": "0x1282dfe0",
+      "head32": "56574883ec284889ce803dbba526f3000f84fe000000803dac2ff5f2000f850f",
+      "bodyBytes": 456,
+      "bodySha256": "798d752a30bd193f2ef686dddf93d941b4c49ba87b840a7233c5b68e08193b4e",
+      "hotfixZero": [
+        "0x5780fa9"
+      ],
+      "usageGroups": [
+        "0x10feb"
+      ]
+    },
+    {
+      "rva": "0x19c9b820",
+      "head32": "e98b767be766662e0f1f840000000000e9eb767be766662e0f1f840000000000",
+      "bodyBytes": 128,
+      "bodySha256": "9d3762bb1805edfa71eb63b002ba4caa489e0c5a7a97281dc822aadd675a129b",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x19cbcac0",
+      "head32": "56534883ec384489c34889d6e88f7179e74885c0742b885c242048c744243000",
+      "bodyBytes": 71,
+      "bodySha256": "ba8ed8692ff8e38befba91a959aa091083c8940b0d5a0918d919427dadd7beff",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x19cbdc00",
+      "head32": "e9fb1978e766662e0f1f840000000000e9eb1978e766662e0f1f840000000000",
+      "bodyBytes": 128,
+      "bodySha256": "04f4c059163b553ffdbec484e4df72419d8eec88cbdfd030442694f8dfbda5b8",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x19cd21e0",
+      "head32": "e9dbb277e766662e0f1f840000000000e90bb377e766662e0f1f840000000000",
+      "bodyBytes": 128,
+      "bodySha256": "7a5d0ccfa8a86fc9fe67dbefef685445016b728ec3fa373e334209eec5a66158",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x19cd26c0",
+      "head32": "e97b08cbe666662e0f1f840000000000e9bb08cbe666662e0f1f840000000000",
+      "bodyBytes": 128,
+      "bodySha256": "1f0ddf05f9b6e49d75d97881ccda86b89b3c2bef4a5f5a1bc478b8647d239fb9",
+      "hotfixZero": [],
+      "usageGroups": []
+    },
+    {
+      "rva": "0x19cd29e0",
+      "head32": "e9fb01cbe666662e0f1f840000000000564883ec204885d2740a4883c4205ee9",
+      "bodyBytes": 128,
+      "bodySha256": "d2a9ab61447d69078c3fb55043651cf8a6bd33ec8d3855bb6bd33790ff7b6a18",
+      "hotfixZero": [],
+      "usageGroups": []
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x56f0603",
+    "0x56f0604",
+    "0x56f0607",
+    "0x56f0609",
+    "0x56f8e00",
+    "0x56f8e01",
+    "0x56fd4d3",
+    "0x56fdd61",
+    "0x570a494",
+    "0x570a4f1",
+    "0x5715608",
+    "0x5715609",
+    "0x571c25a",
+    "0x571c25b",
+    "0x571c25c",
+    "0x571c25d",
+    "0x571c25e",
+    "0x571c25f",
+    "0x571c261",
+    "0x571c262",
+    "0x571c263",
+    "0x571c264",
+    "0x571c265",
+    "0x571c266",
+    "0x571c267",
+    "0x571c268",
+    "0x571c269",
+    "0x57395dd",
+    "0x5748d34",
+    "0x5748d38",
+    "0x574c5db",
+    "0x574c5e3",
+    "0x575936f",
+    "0x5759371",
+    "0x575c397",
+    "0x575c399",
+    "0x575c39b",
+    "0x575c3a0",
+    "0x5761932",
+    "0x5776a8e",
+    "0x5776a90",
+    "0x5776a94",
+    "0x5776a96",
+    "0x5776a97",
+    "0x5776a99",
+    "0x5780f96",
+    "0x5780f97",
+    "0x5780f98",
+    "0x5780f99",
+    "0x5780f9a",
+    "0x5780f9b",
+    "0x5780f9c",
+    "0x5780f9d",
+    "0x5780f9e",
+    "0x5780f9f",
+    "0x5780fa0",
+    "0x5780fa1",
+    "0x5780fa2",
+    "0x5780fa3",
+    "0x5780fa4",
+    "0x5780fa5",
+    "0x5780fa6",
+    "0x5780fa7",
+    "0x5780fa8",
+    "0x5780fa9"
+  ],
+  "usageGroups": [
+    "0x8349",
+    "0x834e",
+    "0x94ba",
+    "0xcebc",
+    "0xced2",
+    "0xe2de",
+    "0xea6e",
+    "0x10f6c",
+    "0x10f6e",
+    "0x10f73",
+    "0x10f7b",
+    "0x10f80",
+    "0x10f87",
+    "0x10f8c",
+    "0x10f94",
+    "0x10f9a",
+    "0x10fa4",
+    "0x10fae",
+    "0x10fb4",
+    "0x10fc1",
+    "0x10fc9",
+    "0x10fce",
+    "0x10fd4",
+    "0x10fd8",
+    "0x10fde",
+    "0x10fe3",
+    "0x10fe9",
+    "0x10feb",
+    "0x1823c",
+    "0x19149",
+    "0x1a6a5",
+    "0x1b50c",
+    "0x1dc77",
+    "0x1dca5",
+    "0x263c6",
+    "0x263ca",
+    "0x26417",
+    "0x2653a",
+    "0x2c825",
+    "0x2c828",
+    "0x2c829",
+    "0x2c82e",
+    "0x2c831",
+    "0x4c1b1"
+  ],
+  "typeSlots": {
+    "component": "0x57caca0",
+    "payload": "0x57d7620",
+    "renderer": "0x57a11e8"
+  },
+  "colorPacking": "0xAARRGGBB",
+  "materialEnums": {
+    "6710": "冰冻",
+    "6711": "石化"
+  },
+  "rendererReadback": "Renderer native custom block at engine+0x120; native 1607030 lookup / 1607290 color read; keyword getter on sharedMaterials",
+  "runtimeValidation": false,
+  "pixelValidation": false
+}

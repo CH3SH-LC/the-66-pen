@@ -1,0 +1,172 @@
+{
+  "id": "structs",
+  "name": "结构体与自定义数据",
+  "purpose": "构造、拆分或修改具体结构体；需已有结构体资产。",
+  "aliases": [
+    "结构体",
+    "数据结构",
+    "字段",
+    "struct"
+  ],
+  "nativeLeaves": [
+    "结构体"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:300002",
+      "definitionId": 300002,
+      "graphKind": 20000,
+      "name": "拼装结构体",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 300002 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:300003",
+      "definitionId": 300003,
+      "graphKind": 20000,
+      "name": "拆分结构体",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 300003 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:300004",
+      "definitionId": 300004,
+      "graphKind": 20000,
+      "name": "修改结构体",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 300004 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20001:22000:0:200160",
+      "definitionId": 200160,
+      "graphKind": 20001,
+      "name": "拼装结构体",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200160 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20001:22000:0:200161",
+      "definitionId": 200161,
+      "graphKind": 20001,
+      "name": "拆分结构体",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200161 --graph-kind 20001"
+    },
+    {
+      "key": "10001:20002:22000:0:200160",
+      "definitionId": 200160,
+      "graphKind": 20002,
+      "name": "拼装结构体",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200160 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20002:22000:0:200161",
+      "definitionId": 200161,
+      "graphKind": 20002,
+      "name": "拆分结构体",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200161 --graph-kind 20002"
+    },
+    {
+      "key": "10001:20007:22000:0:200236",
+      "definitionId": 200236,
+      "graphKind": 20007,
+      "name": "拼装结构体",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200236 --graph-kind 20007"
+    },
+    {
+      "key": "10001:20007:22000:0:200237",
+      "definitionId": 200237,
+      "graphKind": 20007,
+      "name": "拆分结构体",
+      "family": "运算节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "structs"
+      ],
+      "nativeLeaves": [
+        "结构体"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 200237 --graph-kind 20007"
+    }
+  ],
+  "count": 9,
+  "byFamily": {
+    "运算节点": 8,
+    "执行节点": 1
+  },
+  "byGraphKind": {
+    "20000": 3,
+    "20001": 2,
+    "20002": 2,
+    "20007": 2
+  },
+  "runtimeVerified": false
+}

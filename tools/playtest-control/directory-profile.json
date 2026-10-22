@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x7d5e570",
+      "head32": "56574883ec284889ce803dab33d3fd000f845e020000488b0d1b0ea7fde86ec4"
+    },
+    {
+      "rva": "0x1713dca0",
+      "head32": "41565657534883ec284889d74989ce488b0a488b8198000000488b58284885db"
+    },
+    {
+      "rva": "0x1713e080",
+      "head32": "5657534883ec204889ce488b5a100f57c00f1141200f1141100f1101498b0848"
+    },
+    {
+      "rva": "0x1886ba50",
+      "head32": "56574883ec284889ce80390074108b4614ffc08946143b46100f9cc0eb65488b"
+    }
+  ],
+  "hotfixZeroRvas": [],
+  "evidence": "Installed PE bytes; exact container constructor and both list enumerator producers; f840f50 remains pinned by contact-profile"
+}

@@ -1,0 +1,446 @@
+{
+  "id": "inventory",
+  "name": "道具、背包与货币数量",
+  "purpose": "读取与改变道具/货币数量，接收背包事件；交易价格另见 shop。",
+  "aliases": [
+    "物品",
+    "商品",
+    "种子",
+    "作物",
+    "背包",
+    "入包",
+    "扣除",
+    "奖励",
+    "货币",
+    "金币",
+    "容量"
+  ],
+  "nativeLeaves": [
+    "道具",
+    "道具与背包"
+  ],
+  "nodes": [
+    {
+      "key": "10001:20000:22000:0:681",
+      "definitionId": 681,
+      "graphKind": 20000,
+      "name": "背包道具新增时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 681 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:682",
+      "definitionId": 682,
+      "graphKind": 20000,
+      "name": "背包道具失去时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 682 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:683",
+      "definitionId": 683,
+      "graphKind": 20000,
+      "name": "背包道具数量变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 683 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:684",
+      "definitionId": 684,
+      "graphKind": 20000,
+      "name": "背包货币数量变化时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 684 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:685",
+      "definitionId": 685,
+      "graphKind": 20000,
+      "name": "增加背包最大容量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 685 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:686",
+      "definitionId": 686,
+      "graphKind": 20000,
+      "name": "增加背包道具数量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 686 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:687",
+      "definitionId": 687,
+      "graphKind": 20000,
+      "name": "设置背包掉落道具/货币数量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 687 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:688",
+      "definitionId": 688,
+      "graphKind": 20000,
+      "name": "增加背包货币数量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 688 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:689",
+      "definitionId": 689,
+      "graphKind": 20000,
+      "name": "获取背包容量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 689 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:690",
+      "definitionId": 690,
+      "graphKind": 20000,
+      "name": "获取背包道具数量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 690 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:691",
+      "definitionId": 691,
+      "graphKind": 20000,
+      "name": "获取背包货币数量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 691 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:720",
+      "definitionId": 720,
+      "graphKind": 20000,
+      "name": "设置背包道具掉落内容",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 720 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:721",
+      "definitionId": 721,
+      "graphKind": 20000,
+      "name": "获取背包所有基础道具",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 721 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:722",
+      "definitionId": 722,
+      "graphKind": 20000,
+      "name": "获取背包所有货币",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 722 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:723",
+      "definitionId": 723,
+      "graphKind": 20000,
+      "name": "获取背包所有装备",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 723 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:724",
+      "definitionId": 724,
+      "graphKind": 20000,
+      "name": "触发战利品掉落",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 724 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:725",
+      "definitionId": 725,
+      "graphKind": 20000,
+      "name": "设置战利品掉落内容",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 725 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:726",
+      "definitionId": 726,
+      "graphKind": 20000,
+      "name": "增加掉落物组件道具数量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 726 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:727",
+      "definitionId": 727,
+      "graphKind": 20000,
+      "name": "增加掉落物组件货币数量",
+      "family": "执行节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具与背包"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 727 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:728",
+      "definitionId": 728,
+      "graphKind": 20000,
+      "name": "获取掉落物组件道具数量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 728 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:729",
+      "definitionId": 729,
+      "graphKind": 20000,
+      "name": "获取掉落物组件货币数量",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 729 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:730",
+      "definitionId": 730,
+      "graphKind": 20000,
+      "name": "获取掉落物组件所有道具",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 730 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:731",
+      "definitionId": 731,
+      "graphKind": 20000,
+      "name": "获取掉落物组件所有货币",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 731 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:732",
+      "definitionId": 732,
+      "graphKind": 20000,
+      "name": "获取掉落物组件所有装备",
+      "family": "查询节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 732 --graph-kind 20000"
+    },
+    {
+      "key": "10001:20000:22000:0:733",
+      "definitionId": 733,
+      "graphKind": 20000,
+      "name": "背包内道具被使用时",
+      "family": "事件节点",
+      "menuVisibility": "listed",
+      "clusters": [
+        "inventory"
+      ],
+      "nativeLeaves": [
+        "道具"
+      ],
+      "evidence": "native-menu",
+      "recipeCommand": "python -B -m tools.node_workbench recipe 733 --graph-kind 20000"
+    }
+  ],
+  "sequence": [
+    "690 读取数量",
+    "686 改变普通道具数量",
+    "再次查询数量，确认扣种或入包成功后再改变田地状态"
+  ],
+  "pitfalls": [
+    "调用成功不等于物品成功入包；容量不足要保留可收获状态。",
+    "核对商品原文、选用语言与外显文本权限；主语言翻译为空不必然有错，运行读取有原文回退。苹果图标正常不证明名称能显示。"
+  ],
+  "code": [
+    "tools/gameplan/modules/farm_interaction.py"
+  ],
+  "count": 25,
+  "byFamily": {
+    "事件节点": 5,
+    "执行节点": 9,
+    "查询节点": 11
+  },
+  "byGraphKind": {
+    "20000": 25
+  },
+  "runtimeVerified": false
+}
