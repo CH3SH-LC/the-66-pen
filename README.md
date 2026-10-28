@@ -39,6 +39,30 @@ python -X utf8 -B pen.py catalog --static --limit 10
 
 ## 给 AI 使用
 
+从 v0.2.0 起提供完整 AI 工作台。首次克隆运行一次构建；日常查询直接使用索引：
+
+```powershell
+python -B -X utf8 pen.py ai build
+python -B -X utf8 pen.py ai status
+python -B -X utf8 pen.py ai route 拼接
+python -B -X utf8 pen.py ai search 喷泉
+python -B -X utf8 pen.py ai describe context.open
+python -m pip install "protobuf>=5,<8"  # 存档图解析与完整工作台验证需要
+python -B -X utf8 pen.py ai verify
+```
+
+[AI 总入口](AI-START-HERE.md) 包含素材、节点、操作、拼接、视觉、错误处理和迁移手册。
+工具参数均有 JSON Schema；`describe` 后通过 `call 工具名 --file 参数.json` 执行。
+跨存档操作显式绑定当前文件、关卡、选中对象和哈希；结果不明的写入不自动重试。
+原生执行仍需要当前版本、已配置的桥和用户对当前目标的授权；离线构建不会启动游戏或助手。
+
+新工作台 MCP：`python -B -X utf8 /你的路径/the-66-pen/ai.py serve`。
+它只展示 27 个路由入口，通过 `tool.describe` / `tool.call` 调用完整已登记工具。
+使用 `ai.py configure` 生成本机 MCP 配置后导入客户端。
+原始图标、模型、个人存档及场景记录不公开；`status` 明确显示缺少的素材库。
+
+以下原有只读 MCP 和 CLI 用法继续兼容：
+
 内置 MCP stdio 服务（无额外 Python 包）：`python -X utf8 -B /你的路径/the-66-pen/pen.py mcp`。
 提供 `pen_catalog`、`pen_nodes`、`pen_inspect`、`pen_doctor`。本机写入仍使用独立受控 CLI；见 [MCP 与工具调用](docs/USAGE.md)。
 

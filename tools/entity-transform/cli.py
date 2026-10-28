@@ -64,7 +64,7 @@ def uncertainty(run):
     claimed = any((path/n).exists() for n in ('map-queue-claim.json','dispatch.claim','launch.claim','attempt.used'))
     try:
         exit_result = read(path/'exit.json')
-        if exit_result.get('scope') in ('FIXED_ENTITY_TRANSFORM_ACTION','FIXED_ENTITY_PHYSICS_QUERY') and exit_result.get('executed') is False and not (path/'attempt.used').exists():
+        if exit_result.get('scope') in ('FIXED_ENTITY_TRANSFORM_ACTION','FIXED_ENTITY_PHYSICS_QUERY','FIXED_ENTITY_STATIC_CONVERSION','FIXED_ENTITY_ACCESSORY_ASSEMBLY','FIXED_EXISTING_ACCESSORY_REPARENT','FIXED_SEMANTIC_SCENERY_ASSEMBLY') and exit_result.get('executed') is False and not (path/'attempt.used').exists():
             return dict(called=False,nativeStarted=False,outcomeUncertain=False,cleanupVerified=True,safeToRelease=True,replayForbidden=True)
     except (OSError,ValueError,TypeError):
         pass
@@ -119,6 +119,21 @@ def main(argv=None):
         transport.add_argument('--elevated-queue',type=Path)
         item = sub.add_parser('physics-compile-check')
         item.add_argument('--large-scene',action='store_true')
+        for command in ('static-prepare','static-compile-check','assembly-prepare','assembly-compile-check',
+                        'reparent-prepare','reparent-compile-check',
+                        'semantic-assembly-prepare','semantic-assembly-compile-check'):
+            item = sub.add_parser(command)
+            item.add_argument('--mode',choices=('inspect','set'),required=True)
+            item.add_argument('--large-scene',action='store_true')
+            item.add_argument('--baseline',type=Path,required=command.endswith('-prepare'))
+            item.add_argument('--request',type=Path,required=command.endswith('-prepare'))
+            item.add_argument('--save',type=Path)
+            if command.startswith(('reparent-', 'semantic-assembly-')):
+                item.add_argument('--ownership',type=Path,
+                    help='Explicit save-bound ownership manifest for a portable level; omission retains legacy scope')
+                if command.endswith('-compile-check'):
+                    item.add_argument('--compile-level',type=int,
+                        help='Offline compile fixture level; never used for a launchable card')
         item = sub.add_parser('dispatch')
         item.add_argument('--run',type=Path,required=True)
         transport = item.add_mutually_exclusive_group(required=True)
@@ -130,7 +145,19 @@ def main(argv=None):
             if command == 'verify-save':
                 item.add_argument('--save-run',type=Path,required=True)
         args = parser.parse_args(argv)
-        if args.command in ('inspect','prepare','set','compile-check','physics-inspect','physics-compile-check'):
+        if args.command in ('reparent-prepare','reparent-compile-check'):
+            from reparent_build import prepare as prepare_reparent
+            result=prepare_reparent(args,compile_only=args.command=='reparent-compile-check')
+        elif args.command in ('semantic-assembly-prepare','semantic-assembly-compile-check'):
+            from semantic_assembly_build import prepare as prepare_semantic
+            result=prepare_semantic(args,compile_only=args.command=='semantic-assembly-compile-check')
+        elif args.command in ('assembly-prepare','assembly-compile-check'):
+            from assembly_build import prepare as prepare_assembly
+            result=prepare_assembly(args,compile_only=args.command=='assembly-compile-check')
+        elif args.command in ('static-prepare','static-compile-check'):
+            from static_build import prepare as prepare_static
+            result=prepare_static(args,compile_only=args.command=='static-compile-check')
+        elif args.command in ('inspect','prepare','set','compile-check','physics-inspect','physics-compile-check'):
             if args.command.startswith('physics-'):
                 from physics_build import prepare as prepare_physics
                 result = prepare_physics(args,compile_only=args.command=='physics-compile-check')

@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "variants": 929,
+  "source": "variants/server/bucket-public.json",
+  "runtimeVerifiedThisRelease": false,
+  "scope": "Typed recorded contracts, all graph kinds; directory name is legacy."
+}

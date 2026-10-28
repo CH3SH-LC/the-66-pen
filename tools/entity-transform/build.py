@@ -105,7 +105,7 @@ def emit_header(run, profile, runtime, session, raw, level, requests, mode, laun
     file.write_text(text,encoding='utf-8')
     return deadline,nonce
 
-def compile_card(run, *, startup_fixture=False, physics=False):
+def compile_card(run, *, startup_fixture=False, physics=False, static_type=False, assembly=False):
     vswhere = Path(os.environ['ProgramFiles(x86)'])/'Microsoft Visual Studio/Installer/vswhere.exe'
     vs = subprocess.check_output([str(vswhere),'-latest','-products','*','-requires','Microsoft.VisualStudio.Component.VC.Tools.x86.x64','-property','installationPath'],text=True).strip()
     vc = Path(vs)/'VC/Auxiliary/Build/vcvars64.bat'
@@ -115,6 +115,8 @@ def compile_card(run, *, startup_fixture=False, physics=False):
     objects = []
     sources=[('native','game_context_snapshot'),('entity-transform','native_transform')]
     if physics:sources.append(('entity-transform','native_physics'))
+    if static_type:sources.append(('entity-transform','native_static'))
+    if assembly:sources.append(('entity-transform','native_assembly'))
     for folder,name in sources:
         obj = run/(name+'.obj');objects.append(obj)
         lines += [common+f'/c "{run/"candidate-source"/folder/(name+".cpp")}" /Fo:"{obj}"','if errorlevel 1 exit /b 1']

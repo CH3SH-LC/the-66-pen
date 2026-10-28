@@ -14,7 +14,7 @@ import struct
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_PROFILE = Path(__file__).with_name('profiles') / 'genshin-cn-7.1.0-readonly.json'
-TARGET_IMAGE = Path(r'C:\Games\Genshin Impact Game\YuanShen.exe')
+TARGET_IMAGE = Path(os.environ.get("MILIASTRA_GAME_DIR", r"C:\Games\Genshin Impact Game")) / "YuanShen.exe"
 PROFILE_SHA256 = '63eb1c66ff63d637f8a0a61d06b8ec6f2407c63236238674472347154b23878a'
 ANCHOR_NAMES = ('CONTEXT', 'LEVEL', 'PLACE', 'SAVE')
 LAYOUT_NAMES = frozenset(('GS_GLOBAL_SLOT_RVA', 'GS_CONTEXT_MANAGER_OFFSET', 'GS_SAVE_MANAGER_OFFSET',

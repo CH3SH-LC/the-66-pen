@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "entry": "AI-START-HERE.md",
+  "cli": "python -B -X utf8 ai.py",
+  "mcp": "python -B -X utf8 ai.py serve",
+  "nativeWorkResumed": false,
+  "indexes": {
+    "coverage": "data/ai-workbench/coverage.json",
+    "knowledge": "data/ai-workbench/knowledge.sqlite",
+    "tools": "data/ai-workbench/tool-schemas.json",
+    "workflows": "data/ai-workbench/workflows.json",
+    "errors": "data/ai-workbench/errors.json",
+    "assets": "data/ai-workbench/asset-coverage.json",
+    "libraries": "data/ai-workbench/asset-libraries.json",
+    "nodes": "data/ai-workbench/node-coverage.json",
+    "scripts": "data/ai-workbench/script-coverage.json",
+    "validation": "data/ai-workbench/validation.json",
+    "distribution": "data/ai-workbench/distribution.json"
+  },
+  "examples": "data/ai-workbench/examples",
+  "currentLimits": [
+    "所有覆盖数字以列出的源集合为分母，不代表游戏内部全部素材或全部可操作功能。",
+    "未登记源码仅可查询，不被导入执行；固定场景脚本不能换档直接运行。",
+    "runtime 历史证据不代表当前游戏状态；本次构建没有游戏调用。",
+    "大文件保留位置、尺寸和时间，需按需工具验证内容；目录外运行记录未全量扫描。"
+  ]
+}

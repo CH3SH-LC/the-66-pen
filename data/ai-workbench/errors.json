@@ -1,0 +1,14 @@
+[
+  {"contains":["SOURCE_DRIFT","DEPENDENCY_DRIFT"],"action":"源文件已变更。结束在途操作后重新构建工具登记；不得在登记 helper 运行时改它绑定的生产文件。","retry":"rebuild-only-no-native-replay"},
+  {"contains":["FORMAL_STATE_DRIFT","CURRENT_SAVE_DRIFT","CONTEXT_SAVE_DRIFT","SAVE_OR_LEVEL_DRIFT"],"action":"context.readback 对比真实存档；保留旧哈希及历史回执。确认变化来源后新建上下文和清单，不篡改旧 state 以通过检查。","retry":"never-automatically"},
+  {"contains":["SESSION","PROCESS_IMAGE","NO_SCENE","LEVEL_MISMATCH","TARGET_LEVEL"],"action":"从操作系统重新发现进程身份，再读当前编辑场景；旧 PID、旧图 ID 和旧 level_id 不作当前事实。确认没有目标编辑场景才请用户重进。","retry":"fresh-observation-after-cause-known"},
+  {"contains":["TIMEOUT","UNCERTAIN","ALREADY_CLAIMED","WRITER_ACTIVE"],"action":"只读原操作目录、队列回执和正式存档。锁保留，禁止换 operation_id 重放，禁止新开第二写者。","retry":"forbidden-until-independent-reconciliation"},
+  {"contains":["BUDGET","CALLBACK"],"action":"只处理回执明确成功的前缀；原生保存并审计后才规划剩余部分。下批缩小件数，不提高硬预算。","retry":"saved-prefix-only"},
+  {"contains":["AMBIGUOUS","DUPLICATE"],"action":"返回候选 ID 与名称，由当前目标明确选取；禁止取第一个或最小 ID。","retry":"after-explicit-selection"},
+  {"contains":["OWNERSHIP","AUTHORED_ONLY"],"action":"用当前 context.instances 和实际附件父子关系重新明确选择；context.ownership 只生成清单，prepare 会检查所有对象。","retry":"after-correct-current-selection"},
+  {"contains":["MATERIAL_INHERITANCE","UNIFORM_HOST","CAPACITY","SPATIAL_ENVELOPE"],"action":"重新分组：材质一致、宿主均匀正缩放、容量内、空间范围内；不能删除防护或强制转换。","retry":"new-valid-plan"},
+  {"contains":["NODE_GRAPH_KIND","GRAPH_ENUM","SCHEMA_","INPUT_STORAGE","GENERIC"],"action":"tool.describe 读完整 schema；knowledge.node 按 graphKind+definitionId 查配方；动态端口和泛型读取当前实例 slots，unknown 不可猜。","retry":"correct-input-only"},
+  {"contains":["WINDOW_MINIMIZED","WINDOW_BLANK","PRINTWINDOW","SCENE_FRAME_INCOMPLETE"],"action":"窗口像素不可取与编辑场景断开分开判断。保留截图失败证据；引擎取图先确认清理完成及原摄像机恢复，不把离线图当截图。","retry":"never-loop-capture"},
+  {"contains":["EXPIRED","DEADLINE"],"action":"原授权期限不延长。停止新原生操作，保留回执；需要续期时按新明确授权新建上下文，不改旧期限。","retry":"after-new-valid-context"},
+  {"contains":["UAC","取消","502"],"action":"区分系统确认取消、自动审批服务故障和工具执行失败。记录命令是否真正启动；已有 UAC 等待时不再次弹窗。","retry":"no-blind-retry"}
+]

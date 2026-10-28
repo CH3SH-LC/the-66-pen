@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "edition": "public",
+  "omittedLibraries": [
+    "reference-pack",
+    "template-geometry",
+    "prefab-originals",
+    "native-icons",
+    "recent-reference"
+  ],
+  "excludes": [
+    "personal saves",
+    "session and helper queue",
+    "raw game resources",
+    "private scene plans",
+    "private original knowledge databases"
+  ],
+  "runtimeVerifiedThisRelease": false
+}

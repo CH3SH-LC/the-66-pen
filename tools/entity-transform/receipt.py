@@ -18,6 +18,18 @@ def manifest(run):
     run = guarded_run(run)
     built = read(run/'build-result.json')
     prepared = read(run/'prepared.json')
+    if prepared.get('kind') == 'entity-accessory-reparent-prepared-v1':
+        from reparent_receipt import manifest as reparent_manifest
+        return reparent_manifest(run)
+    if prepared.get('kind') == 'entity-semantic-assembly-prepared-v1':
+        from semantic_assembly_receipt import manifest as semantic_manifest
+        return semantic_manifest(run)
+    if prepared.get('kind') == 'entity-assembly-prepared-v1':
+        from assembly_receipt import manifest as assembly_manifest
+        return assembly_manifest(run)
+    if prepared.get('kind') == 'entity-static-prepared-v1':
+        from static_receipt import manifest as static_manifest
+        return static_manifest(run)
     if prepared.get('kind') == 'entity-physics-prepared-v1':
         from physics_receipt import manifest as physics_manifest
         return physics_manifest(run)
@@ -42,6 +54,18 @@ def same_scene(a,b):
 
 def decode(run):
     run,prepared,built = manifest(run)
+    if prepared.get('kind') == 'entity-accessory-reparent-prepared-v1':
+        from reparent_receipt import decode as reparent_decode
+        return reparent_decode(run)
+    if prepared.get('kind') == 'entity-semantic-assembly-prepared-v1':
+        from semantic_assembly_receipt import decode as semantic_decode
+        return semantic_decode(run)
+    if prepared.get('kind') == 'entity-assembly-prepared-v1':
+        from assembly_receipt import decode as assembly_decode
+        return assembly_decode(run)
+    if prepared.get('kind') == 'entity-static-prepared-v1':
+        from static_receipt import decode as static_decode
+        return static_decode(run)
     if prepared.get('kind') == 'entity-physics-prepared-v1':
         from physics_receipt import decode as physics_decode
         return physics_decode(run)

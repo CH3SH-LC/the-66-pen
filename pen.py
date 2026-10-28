@@ -15,7 +15,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 sys.path.insert(0, str(ROOT))
 TOOLS = {
     "author": ("tools/authoring/author.py", "图创建、连线、常量、导出、绑定；需本机桥"),
@@ -216,9 +216,14 @@ def serve():
 
 
 def main(argv=None):
+    arguments = list(sys.argv[1:] if argv is None else argv)
+    if arguments and arguments[0] == "ai":
+        return subprocess.call([sys.executable, "-B", "-X", "utf8", str(ROOT / "ai.py"), *arguments[1:]], cwd=ROOT)
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--version", action="version", version=VERSION)
     subs = parser.add_subparsers(dest="command", required=True)
+    ai = subs.add_parser("ai", help="AI 工作台：status/search/route/describe/call/serve/build/verify")
+    ai.add_argument("args", nargs=argparse.REMAINDER)
     c = subs.add_parser("catalog"); c.add_argument("query", nargs="?", default="")
     c.add_argument("--family"); c.add_argument("--static", action="store_true")
     c.add_argument("--offset", type=int, default=0); c.add_argument("--limit", type=int, default=30)

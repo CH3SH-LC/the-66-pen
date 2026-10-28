@@ -19,3 +19,20 @@ __pycache__/
 *.local.*
 .venv/
 config/save-content-interpreter.lock.json
+
+# Rebuildable AI databases and local validation/configuration
+data/ai-workbench/*.sqlite
+data/ai-workbench/inventory-cache.json
+data/ai-workbench/validation.json
+data/ai-workbench/package-*.json
+data/ai-workbench/mcp.local.json
+data/miliastra-toolkit/*.sqlite
+data/ai-workbench/coverage.json
+data/ai-workbench/asset-coverage.json
+data/ai-workbench/asset-libraries.json
+data/ai-workbench/node-coverage.json
+data/ai-workbench/script-coverage.json
+data/ai-workbench/tool-schemas.json
+data/miliastra-toolkit/tools.json
+data/miliastra-toolkit/manifest.json
+data/node-workbench/recipes.json

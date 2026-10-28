@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x97f7f90",
+      "head32": "554157415641545657534881ec00010000488dac2480000000440f295d70440f",
+      "byteCount": 3247,
+      "sha256": "6aacaef88b9dbddf855bbc78d45734abf69e8f2a65bab3fa1b0318df42d3d256",
+      "hotfixZero": [
+        "0x56f6e61",
+        "0x56f6e7a",
+        "0x56f6ea0",
+        "0x56fd4cd",
+        "0x570a4e0",
+        "0x572052a",
+        "0x572f850"
+      ]
+    },
+    {
+      "rva": "0x8362800",
+      "head32": "41574156565755534883ec484489cb4d89c789d54889ce803d590f74fd000f84",
+      "byteCount": 984,
+      "sha256": "abb43e1aa4e4d6005f8f8e250a304f1c0a3eb66a0dcf7a2bf4d08dea93e271a7",
+      "hotfixZero": [
+        "0x5703ba8",
+        "0x576f5d4"
+      ]
+    },
+    {
+      "rva": "0x14341a20",
+      "head32": "415741564154565755534881ec800000004589cc4d89c689d34189cf8954245c",
+      "byteCount": 723,
+      "sha256": "c85b28af36c7b7663a916dbbbc7dabf9d24c317a49ed8ca01d5534c31f31fbed",
+      "hotfixZero": [
+        "0x570a4aa",
+        "0x576f5e9"
+      ]
+    },
+    {
+      "rva": "0x835f6e0",
+      "head32": "5541574156415541545657534883ec48488d6c244048c745f8feffffff4589c4",
+      "byteCount": 713,
+      "sha256": "d199735357f91873490799dffe326296fc15d88f5417d072ddafa651ff52c42f",
+      "hotfixZero": [
+        "0x576f5c5"
+      ]
+    },
+    {
+      "rva": "0x97ec2a0",
+      "head32": "554157415641545657534883ec40488d6c244048c745f0feffffff4589c64989",
+      "byteCount": 1075,
+      "sha256": "2814f1a751d8135f8853e431dcf69ed792c001ad1a41c83ac662a55cb5a3c231",
+      "hotfixZero": [
+        "0x572f839"
+      ]
+    },
+    {
+      "rva": "0x8361570",
+      "head32": "41574156565755534883ec284589c64889d74989cf803d43e040fd000f856c01",
+      "byteCount": 686,
+      "sha256": "a0f35677bbaab3ebeef7922380008ca57e584e915b601005c411bfda6e2722bb",
+      "hotfixZero": [
+        "0x576f5cf"
+      ]
+    },
+    {
+      "rva": "0x8366580",
+      "head32": "555657534881eca8000000488dac248000000048c74518feffffff89d34889cf",
+      "byteCount": 1692,
+      "sha256": "9545cfb1d28eea58dcf7e7d1b9d793e6bd364300463b028bd6b818150b261366",
+      "hotfixZero": [
+        "0x572be4d",
+        "0x576f5ef"
+      ]
+    },
+    {
+      "rva": "0x107ac3f0",
+      "head32": "56574883ec284889d74889ce803d16432ff5000f84aa000000803d2755fbf400",
+      "byteCount": 359,
+      "sha256": "5d932b2eb8507337828417192d15e904f58b457db1f25b85ff50d85463884c03",
+      "hotfixZero": [
+        "0x57375cb",
+        "0x5761937"
+      ]
+    },
+    {
+      "rva": "0x8678480",
+      "head32": "56574883ec2889d64889cf803df45443fd00745e803df91f09fd00756f488b7f",
+      "byteCount": 217,
+      "sha256": "9a231919ecf89fe9f25cd7576c54e85bad590ee878e1889e002d74ce9b364bd4",
+      "hotfixZero": [
+        "0x570a494"
+      ]
+    },
+    {
+      "rva": "0x867f250",
+      "head32": "56574883ec2889d64889cf803d98e842fd00745e803d86b208fd00756f488b7f",
+      "byteCount": 217,
+      "sha256": "1e4527be5f4eb24a10184d60a34781cc8e64f064944a15d867026bebeed322e6",
+      "hotfixZero": [
+        "0x570a4f1"
+      ]
+    },
+    {
+      "rva": "0x74ec720",
+      "head32": "564883ec504989d04889ce803d29a720fe000f85f6000000498b48784885c90f",
+      "byteCount": 334,
+      "sha256": "08bb93b2d4a7692bc5d1ec33b9b00411d54e3c7cb090cf44cfe694f15e43753f",
+      "hotfixZero": [
+        "0x56f6e5b"
+      ]
+    },
+    {
+      "rva": "0x74f0610",
+      "head32": "564883ec304989d04889ce803d5b6820fe007565498b48784885c97424488379",
+      "byteCount": 196,
+      "sha256": "14cb023603abb40f80e3e4da45918adbc94b4b1902cf8ada096e0e8fdb44a400",
+      "hotfixZero": [
+        "0x56f6e7d",
+        "0x56f6ea0"
+      ]
+    },
+    {
+      "rva": "0x1436d00",
+      "head32": "48895c2408574883ec30488bfa488bd94885c97430e8a64001004885c0742648",
+      "byteCount": 78,
+      "sha256": "50e26dae9d4863e47ea206d00b2430b51abfbbe161d4f59bdb7926ed63e51926",
+      "hotfixZero": []
+    },
+    {
+      "rva": "0x74f1590",
+      "head32": "564883ec504889ce803dec5820fe000f858f000000488b4e784885c9745e4883",
+      "byteCount": 236,
+      "sha256": "1c706d658cad761b3ff7c7e45f7c105d7843c6eaab84ca5fe20246d92c9c2d4b",
+      "hotfixZero": [
+        "0x56f6e8b"
+      ]
+    },
+    {
+      "rva": "0x74ed750",
+      "head32": "56574881ec980000004889ce803d059720fe000f851e010000f30f104208f30f",
+      "byteCount": 383,
+      "sha256": "85e1a9862053933f7042328256ce38e8de8092c898ffa6ce2d8239b925ba1dd8",
+      "hotfixZero": [
+        "0x56f6e68"
+      ]
+    },
+    {
+      "rva": "0x74ecfc0",
+      "head32": "5657534883ec404489c34889d74889ce803da99e20fe007572488b4e784885c9",
+      "byteCount": 204,
+      "sha256": "515ca227e98f3a4837a8b11913e2d37dc631e03a224838a7ca2c7fb9d7efa1c1",
+      "hotfixZero": [
+        "0x56f6e80"
+      ]
+    },
+    {
+      "rva": "0xe827750",
+      "head32": "4156565755534883ec304489c589d34989ce803d119326f7000f84a500000048",
+      "byteCount": 373,
+      "sha256": "4b8643c5d52d6137ab58541b34ee045f20d08e78927355dfe9f0099484f27297",
+      "hotfixZero": [
+        "0x5715609",
+        "0x574c5db"
+      ]
+    },
+    {
+      "rva": "0xc7bab90",
+      "head32": "564883ec304889ce803d69aaf5f800488b054292fcf87560488b88d0ec000048",
+      "byteCount": 163,
+      "sha256": "0c9eb9823b3652c4d7d16dee738754530a34e0ea165c60f5a1727981f5a09071",
+      "hotfixZero": [
+        "0x5715608"
+      ]
+    },
+    {
+      "rva": "0x104c8ec0",
+      "head32": "4156565755534883ec304989ce803dd8e05cf5000f8411020000803df44523f5",
+      "byteCount": 650,
+      "sha256": "1eaccbc5870d794db06c6fe28f91ef6338225504defe4e237948c81e1347507e",
+      "hotfixZero": [
+        "0x56fd4d5"
+      ]
+    },
+    {
+      "rva": "0x104ca0b0",
+      "head32": "56574881ec8800000089d64889cf803d1ecf5cf5000f8496010000803d0c3423",
+      "byteCount": 535,
+      "sha256": "f9fe2fefced465d79ca412e1bc6a6110c697cd8fa8575d6d4810718429f5c3c2",
+      "hotfixZero": [
+        "0x56fd4de"
+      ]
+    },
+    {
+      "rva": "0x9c270a0",
+      "head32": "4157415641554154565755534881ec880000004c89cb4489c689d74989cd8954",
+      "byteCount": 2019,
+      "sha256": "d91939f159a3cae9840597ce93b939fbe4ffaf0d565fd8dfa963f5fb03fbdb2a",
+      "hotfixZero": [
+        "0x574c5d2",
+        "0x574c5d6",
+        "0x574c5e2",
+        "0x574c5e6",
+        "0x5769638"
+      ]
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x56f6e5b",
+    "0x56f6e61",
+    "0x56f6e68",
+    "0x56f6e7a",
+    "0x56f6e7d",
+    "0x56f6e80",
+    "0x56f6e8b",
+    "0x56f6ea0",
+    "0x56fd4cd",
+    "0x56fd4d5",
+    "0x56fd4de",
+    "0x5703ba8",
+    "0x570a494",
+    "0x570a4aa",
+    "0x570a4e0",
+    "0x570a4f1",
+    "0x5715608",
+    "0x5715609",
+    "0x572052a",
+    "0x572be4d",
+    "0x572f839",
+    "0x572f850",
+    "0x57375cb",
+    "0x574c5d2",
+    "0x574c5d6",
+    "0x574c5db",
+    "0x574c5e2",
+    "0x574c5e6",
+    "0x5761937",
+    "0x5769638",
+    "0x576f5c5",
+    "0x576f5cf",
+    "0x576f5d4",
+    "0x576f5e9",
+    "0x576f5ef"
+  ],
+  "usageGroups": [
+    "0x12c5b",
+    "0x12e2c",
+    "0x19159",
+    "0x1c14e",
+    "0x1c1b7",
+    "0x1c282",
+    "0x1dc77",
+    "0x1dcbe",
+    "0x24e19",
+    "0x263c6",
+    "0x263ca",
+    "0x26417",
+    "0x264a7",
+    "0x2653a",
+    "0x2fd36",
+    "0x94ba",
+    "0xf9ec",
+    "0xfa23"
+  ],
+  "nativeRoute": "97f7f90(source entity, host owner): select scene entity as model accessory",
+  "maxAccessories": 999
+}

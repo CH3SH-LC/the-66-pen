@@ -1,0 +1,7 @@
+{
+  "context":"00000000000000000000000000000000",
+  "entity_ids":[101,102],
+  "accessory_ids":[1001],
+  "reparent":[{"accessoryId":1001,"oldHostId":101,"hostId":102}],
+  "convert":[]
+}

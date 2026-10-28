@@ -1,4 +1,27 @@
-# v0.1.0 验证范围
+# 验证范围
+
+## v0.2.0 · 2026-10-28
+
+公开版从自身源码重建，未复制私人知识数据库。
+
+| 检查 | 结果 |
+|---|---|
+| 无第三方包虚拟环境：`ai.py build` | 通过；179 个生产工具、27 个路由入口，无 schema 捕获失败 |
+| `ai.py verify`（已安装 protobuf） | 43/43；包含两个不同关卡上下文、漂移/过期拒绝、所有权合同与真实 MCP 进程 |
+| 原公开 CLI/MCP 集成测试 | 8/8 |
+| `reparent-compile-check`，关卡 1073741901 | exit 0，compiled=true，launchable=false，called=false |
+| `semantic-assembly-compile-check`，关卡 1073741902 | exit 0，compiled=true，launchable=false，called=false |
+| 两个助手脚本的 PowerShell 语法解析 | 0 错误；没有启动助手 |
+
+机器记录见 `catalog/workbench-validation.json`。转挂与拼接编译使用本机显式安装目录，
+仅验证磁盘版本指纹和离线生成的原生卡；没有运行游戏动作。工作台测试的两个存档
+是原创空容器样本，超时测试使用明确的模拟传输，不属于真实保存验收。
+
+公开版 15 类预期素材库中 10 类有随包来源；原始图标、网格、私人参考包等 5 类明确不分发。
+929 个节点变体均有配方及合同，仍有未知字段，未宣称逐节点真机验收。
+无第三方包环境能构建、查询和提供 MCP；存档图解析及完整验证需要 protobuf。
+
+## v0.1.0 历史记录
 
 2026-10-22 在 Windows 本机进行了发布源码的离线验证。
 

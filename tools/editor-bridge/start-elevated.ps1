@@ -21,11 +21,17 @@ param(
   [switch]$Stop,
   [int]$WaitSeconds = 120,
   [string]$QueueDir = '',
-  [string]$ConfigPath = ''
+  [string]$ConfigPath = '',
+  [string]$DeadlineUtc = ''
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+if (-not [string]::IsNullOrWhiteSpace($DeadlineUtc)) {
+  $absoluteDeadline = [DateTimeOffset]::Parse($DeadlineUtc).UtcDateTime
+  if ($absoluteDeadline -le [DateTime]::UtcNow) { throw 'HELPER_ABSOLUTE_DEADLINE_EXPIRED' }
+  $DeadlineUtc = $absoluteDeadline.ToString('o')
+}
 
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
 $queueRoot = [IO.Path]::GetFullPath((Join-Path $projectRoot '.runtime/editor-bridge'))
@@ -132,6 +138,9 @@ $argumentList = @(
   '-QueueDir', ('"' + $queueDir + '"')
   '-ConfigPath', ('"' + $ConfigPath + '"')
 )
+if (-not [string]::IsNullOrWhiteSpace($DeadlineUtc)) {
+  $argumentList += @('-DeadlineUtc', ('"' + $DeadlineUtc + '"'))
+}
 
 if ($isAdmin) {
   # Already elevated -- this is the path "Run as administrator" takes, and it is

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "imageSha256": "7f89938da606c1281659607d464702cddb9a09a7d4320a196630f60a811ec38e",
+  "metadataSha256": "469eccd43aa48fe7a2df4e1caf66fa1268a17f5a4a03fa209e1427e467cb0161",
+  "functions": [
+    {
+      "rva": "0x97eb360",
+      "head32": "554157415641545657534881ece0000000488dac248000000048c74540feffff",
+      "hotfixZero": [
+        "0x5725794",
+        "0x572f838"
+      ]
+    },
+    {
+      "rva": "0x8678480",
+      "head32": "56574883ec2889d64889cf803df45443fd00745e803df91f09fd00756f488b7f",
+      "hotfixZero": [
+        "0x570a494"
+      ]
+    },
+    {
+      "rva": "0x107ac000",
+      "head32": "56574883ec284889d74889ce803d00472ff5000f8480000000803d1459fbf400",
+      "hotfixZero": [
+        "0x575030f",
+        "0x5761934"
+      ]
+    },
+    {
+      "rva": "0xc6aad10",
+      "head32": "5541565657534883ec40488d6c244048c745f0feffffff4889ce803d219c40f9",
+      "hotfixZero": [
+        "0x57268aa"
+      ]
+    },
+    {
+      "rva": "0x107abdf0",
+      "head32": "565755534883ec284489c54889d74889ce803d01492ff5000f84dd000000803d",
+      "hotfixZero": [
+        "0x575936f",
+        "0x5761932"
+      ]
+    },
+    {
+      "rva": "0x9c26c70",
+      "head32": "41565657534883ec284989d64889cf803ddfe5e7fb000f84bc000000803d5059",
+      "hotfixZero": [
+        "0x574c5e3",
+        "0x5759371"
+      ]
+    },
+    {
+      "rva": "0xe827750",
+      "head32": "4156565755534883ec304489c589d34989ce803d119326f7000f84a500000048",
+      "hotfixZero": [
+        "0x5715609",
+        "0x574c5db"
+      ]
+    },
+    {
+      "rva": "0xc7bab90",
+      "head32": "564883ec304889ce803d69aaf5f800488b054292fcf87560488b88d0ec000048",
+      "hotfixZero": [
+        "0x5715608"
+      ]
+    }
+  ],
+  "hotfixZeroRvas": [
+    "0x570a494",
+    "0x5715608",
+    "0x5715609",
+    "0x5725794",
+    "0x57268aa",
+    "0x572f838",
+    "0x574c5db",
+    "0x574c5e3",
+    "0x575030f",
+    "0x575936f",
+    "0x5759371",
+    "0x5761932",
+    "0x5761934"
+  ],
+  "usageGroups": [
+    "0x12c53",
+    "0x19149",
+    "0x19153",
+    "0x1dc77",
+    "0x1dca5",
+    "0x263a0",
+    "0x263c6",
+    "0x264a7",
+    "0x2d392",
+    "0x94ba"
+  ],
+  "basicComponentKind": 1,
+  "basicStaticOffset": 68,
+  "basicGenericClassSlot": "0x596c498",
+  "setter": "0x97eb360",
+  "scope": "game editor static conversion; native setter removes attached behavior components, preserving placement; verify persisted fields independently"
+}

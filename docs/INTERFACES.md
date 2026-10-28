@@ -1,7 +1,7 @@
 # 接口与工具目录
 
-当前源码入口与 MCP 工具。每条 `sourceSha256` 是发布后源文件哈希；`catalog/SOURCES.json` 的 sourceSha256 是原来源哈希。
-源码实现、可路由和实机验收分开标注；参数摘要不是完整 schema，请按工具帮助和实现检查。
+源码实现入口；完整参数用 `pen.py ai describe 工具名` 查询。
+入口计数不等于游戏功能数，静态候选和实机验收分开记录。
 
 | 接口 | 工具族 | 实现 |
 |---|---|---|
@@ -360,23 +360,69 @@
 | `mcp.mw_scene_cleanup_owned` | mcp-backend | [backend/entity_server.py](../backend/entity_server.py) |
 | `mcp.mw_scene_cleanup_residue` | mcp-backend | [backend/entity_server.py](../backend/entity_server.py) |
 | `mcp.mw_graph_observe` | mcp-backend | [backend/entity_server.py](../backend/entity_server.py) |
-| `mcp.mw_catalog_search` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
-| `mcp.mw_scene_build` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
-| `mcp.mw_asset_inspect` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
-| `mcp.mw_build_validate` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
-| `mcp.mw_resource_inventory` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
-| `mcp.mw_scene_create` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
-| `mcp.mw_backend_capabilities` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
 | `mcp.mw_catalog_search` | mcp-backend | [backend/server.py](../backend/server.py) |
 | `mcp.mw_scene_build` | mcp-backend | [backend/server.py](../backend/server.py) |
 | `mcp.mw_asset_inspect` | mcp-backend | [backend/server.py](../backend/server.py) |
 | `mcp.mw_build_validate` | mcp-backend | [backend/server.py](../backend/server.py) |
+| `mcp.mw_resource_inventory` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
+| `mcp.mw_scene_create` | mcp-backend | [backend/files_server.py](../backend/files_server.py) |
+| `mcp.mw_backend_capabilities` | mcp-backend | [backend/server.py](../backend/server.py) |
 | `mcp.mw_asset_stage` | mcp-backend | [backend/server.py](../backend/server.py) |
 | `mcp.mw_ipc_discover` | mcp-backend | [backend/server.py](../backend/server.py) |
-| `mcp.mw_backend_capabilities` | mcp-backend | [backend/server.py](../backend/server.py) |
 | `bridge-library.cli` | ipc-research | [bridge/cli.py](../bridge/cli.py) |
 | `bridge-library.ipc_discovery` | ipc-research | [bridge/ipc_discovery.py](../bridge/ipc_discovery.py) |
 | `bridge-library.ipc_frames` | ipc-research | [bridge/ipc_frames.py](../bridge/ipc_frames.py) |
 | `bridge-library.methods` | ipc-research | [bridge/methods.py](../bridge/methods.py) |
 | `bridge-library.resource_list` | ipc-research | [bridge/resource_list.py](../bridge/resource_list.py) |
 | `bridge-library.tag_sync` | ipc-research | [bridge/tag_sync.py](../bridge/tag_sync.py) |
+| `cli.game-executor.vendor.g02_savediff_gate` | game-executor | [tools/game-executor/vendor/g02_savediff_gate.py](../tools/game-executor/vendor/g02_savediff_gate.py) |
+| `cli.m2.node-capability.api.cli` | m2 | [tools/m2/node-capability/api/cli.py](../tools/m2/node-capability/api/cli.py) |
+| `cli.miliastra-toolkit.build` | miliastra-toolkit | [tools/miliastra-toolkit/build.py](../tools/miliastra-toolkit/build.py) |
+| `cli.miliastra-toolkit.build_knowledge` | miliastra-toolkit | [tools/miliastra-toolkit/build_knowledge.py](../tools/miliastra-toolkit/build_knowledge.py) |
+| `cli.miliastra-toolkit.helper_cli` | miliastra-toolkit | [tools/miliastra-toolkit/helper_cli.py](../tools/miliastra-toolkit/helper_cli.py) |
+| `cli.miliastra-toolkit.package_workbench` | miliastra-toolkit | [tools/miliastra-toolkit/package_workbench.py](../tools/miliastra-toolkit/package_workbench.py) |
+| `cli.miliastra-toolkit.saved` | miliastra-toolkit | [tools/miliastra-toolkit/saved.py](../tools/miliastra-toolkit/saved.py) |
+| `cli.miliastra-toolkit.toolkit` | miliastra-toolkit | [tools/miliastra-toolkit/toolkit.py](../tools/miliastra-toolkit/toolkit.py) |
+| `cli.miliastra-toolkit.window_capture` | miliastra-toolkit | [tools/miliastra-toolkit/window_capture.py](../tools/miliastra-toolkit/window_capture.py) |
+| `cli.mondstadt-reference.acquire_reference_batch` | mondstadt-reference | [tools/mondstadt-reference/acquire_reference_batch.py](../tools/mondstadt-reference/acquire_reference_batch.py) |
+| `cli.mondstadt-reference.acquire_reference_node` | mondstadt-reference | [tools/mondstadt-reference/acquire_reference_node.py](../tools/mondstadt-reference/acquire_reference_node.py) |
+| `cli.mondstadt-reference.asset_index_completion` | mondstadt-reference | [tools/mondstadt-reference/asset_index_completion.py](../tools/mondstadt-reference/asset_index_completion.py) |
+| `cli.mondstadt-reference.blb3_reference` | mondstadt-reference | [tools/mondstadt-reference/blb3_reference.py](../tools/mondstadt-reference/blb3_reference.py) |
+| `cli.mondstadt-reference.build_native_reference_package` | mondstadt-reference | [tools/mondstadt-reference/build_native_reference_package.py](../tools/mondstadt-reference/build_native_reference_package.py) |
+| `cli.mondstadt-reference.calibration_delivery` | mondstadt-reference | [tools/mondstadt-reference/calibration_delivery.py](../tools/mondstadt-reference/calibration_delivery.py) |
+| `cli.mondstadt-reference.city_source_correspondence` | mondstadt-reference | [tools/mondstadt-reference/city_source_correspondence.py](../tools/mondstadt-reference/city_source_correspondence.py) |
+| `cli.mondstadt-reference.full_region_reference` | mondstadt-reference | [tools/mondstadt-reference/full_region_reference.py](../tools/mondstadt-reference/full_region_reference.py) |
+| `cli.mondstadt-reference.ground_reference` | mondstadt-reference | [tools/mondstadt-reference/ground_reference.py](../tools/mondstadt-reference/ground_reference.py) |
+| `cli.mondstadt-reference.lake-fishing-source.capture_resource` | mondstadt-reference | [tools/mondstadt-reference/lake-fishing-source/capture_resource.py](../tools/mondstadt-reference/lake-fishing-source/capture_resource.py) |
+| `cli.mondstadt-reference.lake-fishing-source.consumer` | mondstadt-reference | [tools/mondstadt-reference/lake-fishing-source/consumer.py](../tools/mondstadt-reference/lake-fishing-source/consumer.py) |
+| `cli.mondstadt-reference.lake-fishing-source.inspect_source` | mondstadt-reference | [tools/mondstadt-reference/lake-fishing-source/inspect_source.py](../tools/mondstadt-reference/lake-fishing-source/inspect_source.py) |
+| `cli.mondstadt-reference.lake-fishing-source.research_source` | mondstadt-reference | [tools/mondstadt-reference/lake-fishing-source/research_source.py](../tools/mondstadt-reference/lake-fishing-source/research_source.py) |
+| `cli.mondstadt-reference.lake-fishing-source.rip_candidates` | mondstadt-reference | [tools/mondstadt-reference/lake-fishing-source/rip_candidates.py](../tools/mondstadt-reference/lake-fishing-source/rip_candidates.py) |
+| `cli.mondstadt-reference.local_asset_reference` | mondstadt-reference | [tools/mondstadt-reference/local_asset_reference.py](../tools/mondstadt-reference/local_asset_reference.py) |
+| `cli.mondstadt-reference.locate_reference_cabs` | mondstadt-reference | [tools/mondstadt-reference/locate_reference_cabs.py](../tools/mondstadt-reference/locate_reference_cabs.py) |
+| `cli.mondstadt-reference.native_frame_evidence` | mondstadt-reference | [tools/mondstadt-reference/native_frame_evidence.py](../tools/mondstadt-reference/native_frame_evidence.py) |
+| `cli.mondstadt-reference.native_ground_reference` | mondstadt-reference | [tools/mondstadt-reference/native_ground_reference.py](../tools/mondstadt-reference/native_ground_reference.py) |
+| `cli.mondstadt-reference.native_mesh_reference` | mondstadt-reference | [tools/mondstadt-reference/native_mesh_reference.py](../tools/mondstadt-reference/native_mesh_reference.py) |
+| `cli.mondstadt-reference.native_reference_assembly` | mondstadt-reference | [tools/mondstadt-reference/native_reference_assembly.py](../tools/mondstadt-reference/native_reference_assembly.py) |
+| `cli.mondstadt-reference.native_terrain_reference` | mondstadt-reference | [tools/mondstadt-reference/native_terrain_reference.py](../tools/mondstadt-reference/native_terrain_reference.py) |
+| `cli.mondstadt-reference.reference_catalog` | mondstadt-reference | [tools/mondstadt-reference/reference_catalog.py](../tools/mondstadt-reference/reference_catalog.py) |
+| `cli.mondstadt-reference.reference_cli` | mondstadt-reference | [tools/mondstadt-reference/reference_cli.py](../tools/mondstadt-reference/reference_cli.py) |
+| `cli.mondstadt-reference.regional_registration` | mondstadt-reference | [tools/mondstadt-reference/regional_registration.py](../tools/mondstadt-reference/regional_registration.py) |
+| `cli.mondstadt-reference.run_city_source_batch` | mondstadt-reference | [tools/mondstadt-reference/run_city_source_batch.py](../tools/mondstadt-reference/run_city_source_batch.py) |
+| `cli.mondstadt-reference.run_native_source_batch` | mondstadt-reference | [tools/mondstadt-reference/run_native_source_batch.py](../tools/mondstadt-reference/run_native_source_batch.py) |
+| `cli.mondstadt-reference.shoreline_registration` | mondstadt-reference | [tools/mondstadt-reference/shoreline_registration.py](../tools/mondstadt-reference/shoreline_registration.py) |
+| `cli.mondstadt-reference.source_chain_reference` | mondstadt-reference | [tools/mondstadt-reference/source_chain_reference.py](../tools/mondstadt-reference/source_chain_reference.py) |
+| `cli.mondstadt-reference.template_geometry.api` | mondstadt-reference | [tools/mondstadt-reference/template_geometry/api.py](../tools/mondstadt-reference/template_geometry/api.py) |
+| `cli.mondstadt-reference.template_geometry.research_source` | mondstadt-reference | [tools/mondstadt-reference/template_geometry/research_source.py](../tools/mondstadt-reference/template_geometry/research_source.py) |
+| `cli.mondstadt-reference.template_geometry.resource_index` | mondstadt-reference | [tools/mondstadt-reference/template_geometry/resource_index.py](../tools/mondstadt-reference/template_geometry/resource_index.py) |
+| `cli.mondstadt-reference.template_geometry.sources` | mondstadt-reference | [tools/mondstadt-reference/template_geometry/sources.py](../tools/mondstadt-reference/template_geometry/sources.py) |
+| `cli.npc-appearance.cli` | npc-appearance | [tools/npc-appearance/cli.py](../tools/npc-appearance/cli.py) |
+| `cli.npc-appearance.gadget_catalog` | npc-appearance | [tools/npc-appearance/gadget_catalog.py](../tools/npc-appearance/gadget_catalog.py) |
+| `cli.npc-appearance.gadget_models` | npc-appearance | [tools/npc-appearance/gadget_models.py](../tools/npc-appearance/gadget_models.py) |
+| `cli.npc-appearance.monster_catalog` | npc-appearance | [tools/npc-appearance/monster_catalog.py](../tools/npc-appearance/monster_catalog.py) |
+| `cli.npc-appearance.native_catalog` | npc-appearance | [tools/npc-appearance/native_catalog.py](../tools/npc-appearance/native_catalog.py) |
+| `cli.npc-appearance.npc_registry` | npc-appearance | [tools/npc-appearance/npc_registry.py](../tools/npc-appearance/npc_registry.py) |
+| `cli.npc-appearance.primary_index` | npc-appearance | [tools/npc-appearance/primary_index.py](../tools/npc-appearance/primary_index.py) |
+| `cli.npc-appearance.read_static_node` | npc-appearance | [tools/npc-appearance/read_static_node.py](../tools/npc-appearance/read_static_node.py) |
+| `cli.npc-appearance.research_read` | npc-appearance | [tools/npc-appearance/research_read.py](../tools/npc-appearance/research_read.py) |
+| `cli.npc-appearance.research_tables` | npc-appearance | [tools/npc-appearance/research_tables.py](../tools/npc-appearance/research_tables.py) |

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "routes": [
+    {
+      "id": "start",
+      "keywords": ["开始", "接手", "初始化", "start"],
+      "inputs": ["工程目录", "当前任务", "是否仅离线"],
+      "steps": ["knowledge.status 查看覆盖和缺项", "knowledge.route 按任务检索", "tool.describe 读取目标工具的完整参数", "从当前实际存档创建 context.open；默认 native_enabled=false"],
+      "stop": "结束过的制作任务、旧 helper、旧定时跟进不自动恢复。",
+      "document": "docs/ai-workbench/QUICKSTART.md"
+    },
+    {
+      "id": "assets",
+      "keywords": ["素材", "模型", "模板", "图标", "材质", "asset"],
+      "inputs": ["名称或明确模板 ID"],
+      "steps": ["knowledge.search kind=asset 查询", "catalog.resolve_entity 精确解析，重名必须选 ID", "catalog.get kind=entity 读取尺寸证据", "template/template_v2/icons/asset 工具按需检查，先 tool.describe", "尺寸未知时不能按名称猜包围盒"],
+      "document": "docs/ai-workbench/ASSETS.md"
+    },
+    {
+      "id": "nodes",
+      "keywords": ["节点", "连线", "参数", "枚举", "逻辑", "node"],
+      "inputs": ["graph_kind", "definition_id", "目标图实例"],
+      "steps": ["knowledge.node 获取唯一变体及完整配方", "node.edge 检查端口兼容性", "graph.compile 编译 nodes/edges/values", "author.graph.create/lookup 获得当前图 ID", "author.graph.slots 读取真实存储槽", "author.graph.build_plan 批量执行，失败不重放", "scene.save 后 saved.graphs 读回，试玩另行确认"],
+      "document": "docs/ai-workbench/NODES.md"
+    },
+    {
+      "id": "create",
+      "keywords": ["创建", "排布", "摆放", "建筑", "create"],
+      "inputs": ["当前正式存档", "level_id", "当前 session.json", "已运行 helper 队列", "placements"],
+      "steps": ["context.open 显式绑定本次目标；原生操作须 native_enabled=true", "scene.plan 离线验证排布", "scene.apply 自动检查、准备 review、创建、保存、逐实例读回", "回执中的 runtimeVerified/visualVerified/passageVerified 另行处理"],
+      "limits": ["最多 256 件一批", "每次新上下文重新读取当前存档，不改旧上下文哈希", "不得使用旧 PID 或跨存档实体 ID"],
+      "document": "docs/ai-workbench/OPERATIONS.md"
+    },
+    {
+      "id": "assembly",
+      "keywords": ["拼接", "转挂", "整栋", "城墙", "道路", "assembly"],
+      "inputs": ["context", "当前实体/装饰 ID", "明确 source-host 或 child-oldhost-host 对"],
+      "steps": ["context.instances 读取本档实体", "context.ownership 生成 saveSha256 绑定清单", "transform.reparent_prepare 或 transform.semantic_assembly_prepare，传 ownership、baseline、request、save", "transform.dispatch 经现有 helper 单次执行", "解码回执；只保存成功前缀；scene.save 后独立读回父子关系和世界姿态"],
+      "limits": ["最多 64 对/卡；先用小回调，保留 2000ms 回调预算", "静态无逻辑、材质继承一致、host 均匀正缩放、最多 999 个附件", "旧蒙德安装器是历史专用脚本，禁止换档重放"],
+      "document": "docs/ai-workbench/ASSEMBLY.md"
+    },
+    {
+      "id": "transform",
+      "keywords": ["移动模型", "缩放", "旋转", "变换", "transform"],
+      "inputs": ["baseline", "inspection", "当前对象的 expected 和 desired"],
+      "steps": ["scene.inspect 获取本次完整基线", "transform.inspect 获取实际姿态", "transform.prepare 绑定 expected 与 desired", "transform.dispatch 单次执行", "scene.save，再 transform.verify_save 与 context.readback"],
+      "document": "docs/ai-workbench/OPERATIONS.md"
+    },
+    {
+      "id": "environment",
+      "keywords": ["地形", "水面", "天气", "环境", "terrain", "water"],
+      "inputs": ["当前场景基线", "目标地形块/水面", "明确计划"],
+      "steps": ["knowledge.search 查询对应域", "terrain/water/native_tabs.prepare 先 describe", "读取本次块 ID、原值和权限；不复制历史块 ID", "准备→review→单次派发→原生保存", "saved.diff 对比原始字段；水面视觉、地形通行另行复查"],
+      "document": "docs/ai-workbench/OPERATIONS.md"
+    },
+    {
+      "id": "visual",
+      "keywords": ["截图", "视觉", "扫描", "参考", "visual"],
+      "inputs": ["当前操作系统 PID 与进程名称", "新输出目录"],
+      "steps": ["visual.window 使用 PrintWindow，既不聚焦也不发键鼠或读游戏内存", "密集采集显式设置 frames<=120、interval>=0.5", "最小化导致窗口截图不可用不代表编辑接口不可用", "需引擎图像时使用 playtest.prepare 的 scene-frame/render-frame，再单次 dispatch；保持原授权范围", "reference.extract/register 处理本地参考网格，离线渲染不算游戏截图"],
+      "document": "docs/ai-workbench/VISUAL.md"
+    },
+    {
+      "id": "gameplay",
+      "keywords": ["商店", "烹饪", "锻造", "钓鱼", "战斗", "玩法", "NPC"],
+      "inputs": ["目标玩法", "当前节点图", "当前实体/道具/玩家类型"],
+      "steps": ["knowledge.search 查询玩法方案与历史故障", "gameplan 工具构建方案", "knowledge.node 校验每个节点的 graphKind 与端口", "author 工具执行当前图实例操作；不得直接重放固定蒙德 activities 安装器", "保存后验证绑定和图；playtest 验证入口→交互→结算→退出"],
+      "document": "docs/ai-workbench/NODES.md"
+    },
+    {
+      "id": "recover",
+      "keywords": ["失败", "超时", "漂移", "恢复", "error", "recover"],
+      "inputs": ["原 operation_id", "原回执", "正式存档"],
+      "steps": ["knowledge.errors 输入精确错误码", "evidence.read 读取原回执，不重复派发", "context.readback 确认正式保存结果", "查明在途操作与 helper 身份；无明确结束证据时不新开写者", "只在需要恢复场景时请求用户重进；不以最小化本身判定断开"],
+      "document": "docs/ai-workbench/ERRORS.md"
+    }
+  ]
+}

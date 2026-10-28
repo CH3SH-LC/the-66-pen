@@ -8,8 +8,7 @@ import re
 import sys
 
 sys.dont_write_bytecode=True
-from catalog import ROOT,sha,decode_config,read_object,tables,find_textures,locate_config
-from texture import extract
+ROOT=Path(__file__).resolve().parents[3]
 
 CONFIG_SOURCE=ROOT/'.runtime/template-properties-20261017/icons/native-excel-catalog-source/catalog-00.json'
 CATALOG_OBJECT_SHA='4e9bd8e6074138fd81d49a4c7abce986eac41bfef9ea3f162f485dc9406a9a58'
@@ -129,6 +128,9 @@ def main():
     f=s.add_parser('find-textures');f.add_argument('--out',required=True);f.add_argument('--previous');f.add_argument('--config',default=str(CONFIG_SOURCE))
     q=s.add_parser('bind');q.add_argument('--catalog',required=True);q.add_argument('--request',required=True);q.add_argument('--review',required=True);q.add_argument('--roles',required=True);q.add_argument('--out',required=True)
     a=p.parse_args()
+    global sha,decode_config,read_object,tables,find_textures,locate_config,extract
+    from catalog import sha,decode_config,read_object,tables,find_textures,locate_config
+    from texture import extract
     if a.command=='build':result=build(a.out,a.locations,a.config)
     elif a.command=='locate-config':result=locate_config(a.out,a.indexed_source)
     elif a.command=='find-textures':

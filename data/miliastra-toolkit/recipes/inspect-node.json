@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "inspect-node",
+  "name": "Query a native node and its exact creation recipe",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "definition_id": {"type": "integer", "minimum": 1},
+      "graph_kind": {"type": "integer", "enum": [20000, 20001, 20002, 20007]}
+    },
+    "required": ["definition_id", "graph_kind"],
+    "additionalProperties": false
+  },
+  "steps": [
+    {"id": "explain", "tool": "node.explain", "arguments": {"definition_id": {"$input": "definition_id"}, "graph_kind": {"$input": "graph_kind"}}},
+    {"id": "recipe", "tool": "node.recipe", "arguments": {"definition_id": {"$input": "definition_id"}, "graph_kind": {"$input": "graph_kind"}}}
+  ]
+}

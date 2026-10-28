@@ -2,3 +2,6 @@
 mcp==1.27.0
 protobuf>=6.33.5,<8
 pydantic>=2.0,<3
+# Optional reference mesh tools / background window capture:
+numpy>=1.26,<3
+Pillow>=10,<13

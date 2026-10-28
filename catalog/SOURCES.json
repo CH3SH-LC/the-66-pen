@@ -837,7 +837,7 @@
     },
     {
       "source": "tools/editor-bridge/elevated-runner.ps1",
-      "sourceSha256": "73e942cabca98323c92fa7bd986daf180c07d0d56152ee0f1d5b7318c635badd",
+      "sourceSha256": "04120d43359bcef4739c7747118d89968545065fe735f551a17f646f51e474e3",
       "published": "tools/editor-bridge/elevated-runner.ps1",
       "adapted": true
     },
@@ -1233,9 +1233,9 @@
     },
     {
       "source": "tools/editor-bridge/start-elevated.ps1",
-      "sourceSha256": "841e24158b0ca1d4343f56f11ff593eb8c2dd641c9bfc9d98637939e2e3cd653",
+      "sourceSha256": "7f3906e1e5fee8be0aeff3a9fe6b3866518064e066fd2178a4aaa61926b143c0",
       "published": "tools/editor-bridge/start-elevated.ps1",
-      "adapted": false
+      "adapted": true
     },
     {
       "source": "tools/editor-bridge/start-session.ps1",
@@ -1845,15 +1845,15 @@
     },
     {
       "source": "tools/entity-transform/build.py",
-      "sourceSha256": "5fa1802dfcf56da297075deb1972236c7a73e053392c703d50c813620fcce39c",
+      "sourceSha256": "f739f326814e97c27dbd9f09a09b0b818fd720ff53c331ba001468759c338d2e",
       "published": "tools/entity-transform/build.py",
-      "adapted": false
+      "adapted": true
     },
     {
       "source": "tools/entity-transform/cli.py",
-      "sourceSha256": "ce15ca141cb721d95ad8010d1df9ac919c76930ccaf86d6d0f729903e830a508",
+      "sourceSha256": "7907ca8aecf8b03a0a0a6917c55d3c85fdf93d686112fadbec5bdcc4ddc6fb3c",
       "published": "tools/entity-transform/cli.py",
-      "adapted": false
+      "adapted": true
     },
     {
       "source": "tools/entity-transform/contract.py",
@@ -1911,9 +1911,9 @@
     },
     {
       "source": "tools/entity-transform/receipt.py",
-      "sourceSha256": "6130edcf8cb01b83f25646a415eeb33fd035110dd003725965af7215b5bea27e",
+      "sourceSha256": "482d12eed27c88d4e87803fa1edb20e3b7303901bb17bfb4910ed0f348a97828",
       "published": "tools/entity-transform/receipt.py",
-      "adapted": false
+      "adapted": true
     },
     {
       "source": "tools/entity-transform/recovery.py",
@@ -2271,7 +2271,7 @@
     },
     {
       "source": "tools/game-executor/decode_context_snapshot.py",
-      "sourceSha256": "b70dbd535a47689f7aca342fd96e6ca495283de3c8379f61d8b3cfbacaf741bb",
+      "sourceSha256": "d8ee476c9c17a5627b27252f84770878ee47765ecc5746c548b343d7d8ce67a5",
       "published": "tools/game-executor/decode_context_snapshot.py",
       "adapted": true
     },
@@ -2355,7 +2355,7 @@
     },
     {
       "source": "tools/game-executor/native/game_context_snapshot.h",
-      "sourceSha256": "506388c9f5f417ff54c11f7c82108faca6bea1bacaf7c2fba4f6e94198eacdd2",
+      "sourceSha256": "b844f28de1350d0b95d0db9dfa4026b5fa7859f1227a59ec7882096e3656914a",
       "published": "tools/game-executor/native/game_context_snapshot.h",
       "adapted": true
     },
@@ -6824,12 +6824,6 @@
       "adapted": false
     },
     {
-      "source": "tools/gameplan/__init__.py",
-      "sourceSha256": "34829e8644393b0c3861534aef62e1094f46d9897dd0c9dabc87a427cd46b78f",
-      "published": "tools/gameplan/__init__.py",
-      "adapted": false
-    },
-    {
       "source": "plugins/miliastra/cordis.patch.yml",
       "sourceSha256": "47026c9113c2d8f7aa77601e5a0aa1bc77c32f894d4e034f23f4f6db45037098",
       "published": "plugins/miliastra/cordis.patch.yml",
@@ -7361,6 +7355,822 @@
       "source": "docs/research/entity-create/creature-template-candidates.json",
       "sourceSha256": "4c8deab2d6472981d9ad02343854092ac94e2eed70b5e2f4af662294841d0c2e",
       "published": "docs/research/entity-create/creature-template-candidates.json",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/assembly-profile.json",
+      "sourceSha256": "e90a16aa6da9d4ee93ab083bf12469580dc5b87a4503512dd1c2818dec74e71e",
+      "published": "tools/entity-transform/assembly-profile.json",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/assembly_build.py",
+      "sourceSha256": "c9b69c8169c28db0c5d81ced82f66a0725bf5c1f70a1557ad2436f9a352ae604",
+      "published": "tools/entity-transform/assembly_build.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/assembly_receipt.py",
+      "sourceSha256": "7d10459cc47f63f653c3d9fb375f28c7045c83ab1ab95517c07f009732bb579e",
+      "published": "tools/entity-transform/assembly_receipt.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/native_assembly.cpp",
+      "sourceSha256": "03f249890cad72a9cfcaaf153d490f042bf5e598d152d0a9583ddc1773302bbd",
+      "published": "tools/entity-transform/native_assembly.cpp",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/native_assembly.h",
+      "sourceSha256": "581dd789ce1dc9164d0d68cd54509000527249b13ab9fae34c213d590b9b8491",
+      "published": "tools/entity-transform/native_assembly.h",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/native_reparent.cpp",
+      "sourceSha256": "b0bb35df0b87e5f734a90ec0b04a9ed923c0b406e2cf96cf538f8b93c01766fe",
+      "published": "tools/entity-transform/native_reparent.cpp",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/native_reparent.h",
+      "sourceSha256": "1bc764e44a9085cadc803c65a345736efac2b786bb8090ba23d080ad78018bcc",
+      "published": "tools/entity-transform/native_reparent.h",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/native_static.cpp",
+      "sourceSha256": "68498e56258c40a9d08fe7e546d4268a01536bde784e10a1effacbe7722660a6",
+      "published": "tools/entity-transform/native_static.cpp",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/native_static.h",
+      "sourceSha256": "45e599557630e461dd6acf2b2c0d68e0777ad1c26c54f91d4346519240cfb6a9",
+      "published": "tools/entity-transform/native_static.h",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/ownership_contract.py",
+      "sourceSha256": "c5e921ce619285bc76048da040aab4aba023ae6e227f0c6e07b09e111832ae68",
+      "published": "tools/entity-transform/ownership_contract.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/reparent-profile.json",
+      "sourceSha256": "09645420a89d84731d44a0cbae8eca6e0c6e1868995c0e954dbeb07d24502c8c",
+      "published": "tools/entity-transform/reparent-profile.json",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/reparent_build.py",
+      "sourceSha256": "fddfec5b277dee4072495dd2b6b9a5164039369e3560b0fa3e41bd4fd77376e4",
+      "published": "tools/entity-transform/reparent_build.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/reparent_callback_startup.cpp",
+      "sourceSha256": "baf885a5ec64eda467373722e423d85c71e72273ea0d179509803b753bb1094b",
+      "published": "tools/entity-transform/reparent_callback_startup.cpp",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/reparent_receipt.py",
+      "sourceSha256": "f5a05feb5712a3ff26d11274d8d8b27b5c73179822973e279b217e5dbd37873d",
+      "published": "tools/entity-transform/reparent_receipt.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/saved_assembly.py",
+      "sourceSha256": "9d5a67601aacabeb488b71e24cab38a95f8a27dab07efe0df1b5f8bcc67b9ed3",
+      "published": "tools/entity-transform/saved_assembly.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/semantic_assembly_build.py",
+      "sourceSha256": "75e1c10ddca3cad835cd9dea6182d36d46c5d59aba050b4c55f3c37ab802d9aa",
+      "published": "tools/entity-transform/semantic_assembly_build.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/semantic_assembly_receipt.py",
+      "sourceSha256": "d77fc5df5ca1c80f22a8adc7bd216fccdd201d3a67b593c95dd54c1ae36f77fb",
+      "published": "tools/entity-transform/semantic_assembly_receipt.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/semantic_source_contract.py",
+      "sourceSha256": "f31a1c92a50fea29a91a4562099df2daa01398ed5ad02842a9ec366457863fd7",
+      "published": "tools/entity-transform/semantic_source_contract.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/static-profile.json",
+      "sourceSha256": "e3c373bbf26d1a1ec04547a21167a45402ad16e4707ccedd05cc0aa6f6165fd8",
+      "published": "tools/entity-transform/static-profile.json",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/static_build.py",
+      "sourceSha256": "78fd54f24e0c62b61b6f26a056b95f8b246005ac2dccff833d4ce993b21b2579",
+      "published": "tools/entity-transform/static_build.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/static_receipt.py",
+      "sourceSha256": "b0784a64eedafe2c451eeba29889e414268d098de6e867cbe0ca0e6b66081971",
+      "published": "tools/entity-transform/static_receipt.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/tests/assembly_callback_startup.cpp",
+      "sourceSha256": "df051c2e6adc4b88c9302a573a67ea769a19a57f2b4c0263eb548a067b389192",
+      "published": "tools/entity-transform/tests/assembly_callback_startup.cpp",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/tests/static_callback_startup.cpp",
+      "sourceSha256": "9b70c4358a4e2f807b3babb3439a6cac2da81131138bd839e409a75d704e35af",
+      "published": "tools/entity-transform/tests/static_callback_startup.cpp",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/tests/test_assembly.py",
+      "sourceSha256": "d4e2a5579bc030ea10027e6aefdd93d4474fede7f167738bd4da991d04dba471",
+      "published": "tools/entity-transform/tests/test_assembly.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/tests/test_static.py",
+      "sourceSha256": "e4e50914080a61528708aad21c6e31d9b17649ba612fcfb388cda80cfbcbc3a2",
+      "published": "tools/entity-transform/tests/test_static.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/entity-transform/validate_ownership_contract.py",
+      "sourceSha256": "7ef66b2a96dc5bf148919913c412fec16293f0dfd254fd6972e7c2e9e1966e7b",
+      "published": "tools/entity-transform/validate_ownership_contract.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/game-executor/vendor/g02_savediff_gate.py",
+      "sourceSha256": "9075c4d68a6b049fe760c98c58aa96701f58d99744b69f72cf6e5091d2b536cd",
+      "published": "tools/game-executor/vendor/g02_savediff_gate.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/cli.py",
+      "sourceSha256": "7f2d619fcacc156b26e2a2bea75df310585e2522160f87384a85094b3170fe9c",
+      "published": "tools/npc-appearance/cli.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/gadget_catalog.py",
+      "sourceSha256": "02e5ea4b2418190957a8d91a299c9a1834449f5be9b57c4350d0d9c6db5f0c15",
+      "published": "tools/npc-appearance/gadget_catalog.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/gadget_models.py",
+      "sourceSha256": "c188e0f9e29d7d0bde485820d300c5c1a8f734fce744366f4f02006bc4f2063c",
+      "published": "tools/npc-appearance/gadget_models.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/monster_catalog.py",
+      "sourceSha256": "f65212042b8406051ddddb18f5cdd92ced1ed5a539f22194ad50dd66a06dface",
+      "published": "tools/npc-appearance/monster_catalog.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/native_catalog.py",
+      "sourceSha256": "4119d835d84c793436335030351955f836ce09d85722c48cb328a4137c0a4913",
+      "published": "tools/npc-appearance/native_catalog.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/npc_registry.py",
+      "sourceSha256": "498fde3c83850876d8c95acbabc8f7b8254bc750a748d6179ee3c02f4acc5f32",
+      "published": "tools/npc-appearance/npc_registry.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/official_models.py",
+      "sourceSha256": "8a979a3102012fba7db2975bd89d80dc430e9f813204c5d39cc72438f1ad0f75",
+      "published": "tools/npc-appearance/official_models.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/primary_index.py",
+      "sourceSha256": "fbb69613c5e56389fcc645c1780aab5e9b3e180f19180e3c42e1217df72bb334",
+      "published": "tools/npc-appearance/primary_index.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/read_static_node.py",
+      "sourceSha256": "05edde787cc79bae0ff50d61c1a4f34482ae4afda13e65613fe390e69d32bb34",
+      "published": "tools/npc-appearance/read_static_node.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/research_read.py",
+      "sourceSha256": "2b6998e3493428cd6ddcb28295e2981d4ea6bc005ace2f7f1ecbb733dd28e6e4",
+      "published": "tools/npc-appearance/research_read.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/research_tables.py",
+      "sourceSha256": "22880296c99ab0c9992da5eb086f7ff0e995a771a1f9b181a2f1cd0e75e987e5",
+      "published": "tools/npc-appearance/research_tables.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/saved_readback.py",
+      "sourceSha256": "0b03f51ad81f1ab6d7dec6b856417492ccfbea784d14cfd0562a5e8e3547ca36",
+      "published": "tools/npc-appearance/saved_readback.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/npc-appearance/test_sources.py",
+      "sourceSha256": "3be2d99f663178a25bc36a4bcc6d6e829b69d96642c96400bece359387d4fa2c",
+      "published": "tools/npc-appearance/test_sources.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/acquire_reference_batch.py",
+      "sourceSha256": "22f9d25156a89641f9a4e00bdb0d5cec7fbfc01f139fae250785211b140931ca",
+      "published": "tools/mondstadt-reference/acquire_reference_batch.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/acquire_reference_node.py",
+      "sourceSha256": "50b6832283382126b8bd4c713260ab9b41ac1e6766efbcf2e0eed7874d9297be",
+      "published": "tools/mondstadt-reference/acquire_reference_node.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/asset_index_completion.py",
+      "sourceSha256": "015f248da97759fc77579450156fbf0af8379036afd42341394d05691038ca38",
+      "published": "tools/mondstadt-reference/asset_index_completion.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/blb3_reference.py",
+      "sourceSha256": "2f214fca5c04d8161e7388b5338526169cfd0db131fb373b3e6535dedf77da94",
+      "published": "tools/mondstadt-reference/blb3_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/build_native_reference_package.py",
+      "sourceSha256": "9f93151ce492234b4d28b2069d2ff8a422e2c0edabe5ef44500f9a4a0fc46de5",
+      "published": "tools/mondstadt-reference/build_native_reference_package.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/build_reference_codec.py",
+      "sourceSha256": "2e0c31e6c368f6bf784d1f997b7b507c9073e56640e4c6fe31c06f97537b654e",
+      "published": "tools/mondstadt-reference/build_reference_codec.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/calibration_delivery.py",
+      "sourceSha256": "d4d2d62be2a58679bef7ba798a48ecd6e696a52bedeeb0a90f023be506ff826e",
+      "published": "tools/mondstadt-reference/calibration_delivery.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/city_source_correspondence.py",
+      "sourceSha256": "f35ed66db1fb528ec4ce327c2d4251517aaf9d61b1d27c096d14e8fe435afcc7",
+      "published": "tools/mondstadt-reference/city_source_correspondence.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/full_region_reference.py",
+      "sourceSha256": "f403f44d77053986cf729eae053fa1d44fe22018cf834933fc9cad1450c05888",
+      "published": "tools/mondstadt-reference/full_region_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/geometry.py",
+      "sourceSha256": "798648ca718df6857de746460107cd9a9f296185f331cfb98e78bb042788f96b",
+      "published": "tools/mondstadt-reference/geometry.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/ground_reference.py",
+      "sourceSha256": "46a1c2d51a6c958201f00b9abce61ad8c0bf5d2328e081d1844d95df2343a726",
+      "published": "tools/mondstadt-reference/ground_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/build_delivery.py",
+      "sourceSha256": "e442755c4f520650a9e5f90841b0949e23de6097beda75985472941cc9976d1b",
+      "published": "tools/mondstadt-reference/lake-fishing-source/build_delivery.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/capture_resource.py",
+      "sourceSha256": "12fe744132864f4c5f09dae3d932a8cfa29a56049bd527dba53fed9823ca7d56",
+      "published": "tools/mondstadt-reference/lake-fishing-source/capture_resource.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/common.py",
+      "sourceSha256": "d6ede036ec9b9ddf137f1436043fb33ab3fbb7ffb9e0aa84d8cce0f3ea5d8dbd",
+      "published": "tools/mondstadt-reference/lake-fishing-source/common.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/consumer.py",
+      "sourceSha256": "11dd9a0a9a00c8620a6421056cc0378cc75ce1d8518fbdc41e37805e9764c683",
+      "published": "tools/mondstadt-reference/lake-fishing-source/consumer.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/discover.py",
+      "sourceSha256": "555f7860c7fd7435c96ac1aaf4b9efca7b365c1f6d0d099c65681ea2abb9a1c4",
+      "published": "tools/mondstadt-reference/lake-fishing-source/discover.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/fishing.py",
+      "sourceSha256": "ed0377df6acd1729b4e44cc0c8a8a4e06032e9387a264b9039ece1f15f651664",
+      "published": "tools/mondstadt-reference/lake-fishing-source/fishing.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/geometry_extension.py",
+      "sourceSha256": "e956cc3d2288d535cf60291776870cc4ab3636e60ed4a1db522e3adacfe1eff5",
+      "published": "tools/mondstadt-reference/lake-fishing-source/geometry_extension.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/inspect_source.py",
+      "sourceSha256": "04347c4fef44becf77d5cdf4c3dbd48ad92ec46de8d4f16816375404ef1b7321",
+      "published": "tools/mondstadt-reference/lake-fishing-source/inspect_source.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/research_source.py",
+      "sourceSha256": "1f0ce472a004c9908eef0863839c7ce9756ee35660fff00315988e00aec581af",
+      "published": "tools/mondstadt-reference/lake-fishing-source/research_source.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/rip_candidates.py",
+      "sourceSha256": "b2ceafaa9771cb3fb4c776c8c068eb10a156407d630ec3a8f9b9a4c807ef65c4",
+      "published": "tools/mondstadt-reference/lake-fishing-source/rip_candidates.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/scene_placement.py",
+      "sourceSha256": "025b5b87c027cea943a8fa76d2e2be3726877e888c4bd194e12941dab816a4db",
+      "published": "tools/mondstadt-reference/lake-fishing-source/scene_placement.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/scene_resource_index.py",
+      "sourceSha256": "04ab1ac3241c2af020eeaaea083a8290aa46dc20e16904ca885d7d11b3c75a4d",
+      "published": "tools/mondstadt-reference/lake-fishing-source/scene_resource_index.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/validate_and_freeze.py",
+      "sourceSha256": "740da239242857b25a26dfbfbbce6c4ebf1f549679877cf627b87879edc01a26",
+      "published": "tools/mondstadt-reference/lake-fishing-source/validate_and_freeze.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/lake-fishing-source/water.py",
+      "sourceSha256": "8626b9bfe931f17128ceb7b8dd2b7789310e8eeac889f28ed9048a7d3f17af1f",
+      "published": "tools/mondstadt-reference/lake-fishing-source/water.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/landmark_reference.py",
+      "sourceSha256": "92732cd19a93d978247db4e46e4b71507d3be24652abe85593419d9ec3acfaf4",
+      "published": "tools/mondstadt-reference/landmark_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/local_asset_reference.py",
+      "sourceSha256": "546bcc185f91263a677771822deb6083d138e4707246eb6fcdaff8a2f2cc0243",
+      "published": "tools/mondstadt-reference/local_asset_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/locate_reference_cabs.py",
+      "sourceSha256": "9c8bba07949d5566d4408bc6e287f007a72a371cc0de549b139a2b43a2100f65",
+      "published": "tools/mondstadt-reference/locate_reference_cabs.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/native_frame_evidence.py",
+      "sourceSha256": "be524247abdd781b30d86063a9646b616d844e3a128f4a5e5d6b25b8e662f743",
+      "published": "tools/mondstadt-reference/native_frame_evidence.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/native_ground_reference.py",
+      "sourceSha256": "7a7d5e00a68a103a5d5b52cfdf1be5c9556d34ddd672a8606876fdca479376f5",
+      "published": "tools/mondstadt-reference/native_ground_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/native_mesh_reference.py",
+      "sourceSha256": "b60bd106fcf1b21dd10d035d50aa0866ab76cca88155b480d169075afdd9e3da",
+      "published": "tools/mondstadt-reference/native_mesh_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/native_mesh_surface.py",
+      "sourceSha256": "11e1a9a1f2d4b3aeb76b193ef9e8a0b970299883bb4e2e78572214c62043afad",
+      "published": "tools/mondstadt-reference/native_mesh_surface.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/native_product_frame.py",
+      "sourceSha256": "2ded7e440945247126459cd1bde03c113076b4ad5f5ace6b984c68b51119c751",
+      "published": "tools/mondstadt-reference/native_product_frame.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/native_reference_assembly.py",
+      "sourceSha256": "51efee94ee7ca32ca14e3547715ddfd3212214be984c04d27fc06ceb8b625c4a",
+      "published": "tools/mondstadt-reference/native_reference_assembly.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/native_terrain_binding.py",
+      "sourceSha256": "d3268fa6d2e0b1a5912e88388195db99f87394c553ce9800b515d84c39ecbeb8",
+      "published": "tools/mondstadt-reference/native_terrain_binding.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/native_terrain_reference.py",
+      "sourceSha256": "fdb7d16b38881714f76169540196e1c6e9bd570c708e18f4cfea146082b99fc5",
+      "published": "tools/mondstadt-reference/native_terrain_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/reference_catalog.py",
+      "sourceSha256": "09615a523c8661b0802d03d2e6caa9aa8740bf35e9b0a321048fb6afe6e6cafa",
+      "published": "tools/mondstadt-reference/reference_catalog.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/reference_cli.py",
+      "sourceSha256": "fcbf45a256f4049a3856f348260e0e603c6223753ca808d7a6f551fb9b2d7266",
+      "published": "tools/mondstadt-reference/reference_cli.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/regional_registration.py",
+      "sourceSha256": "7e658ff966bd017072390dd83be02031e336b7a0e6034e00fd9082150f10d0ac",
+      "published": "tools/mondstadt-reference/regional_registration.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/review_plot.py",
+      "sourceSha256": "fb0329fd8886018270b7d21a78ae394a4e75bbfaf58f7b074b9696afe44011c0",
+      "published": "tools/mondstadt-reference/review_plot.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/run_city_source_batch.py",
+      "sourceSha256": "8cdac9241e80657e6775b4364ee9d05c9f54a096e674721222d39482b3df2593",
+      "published": "tools/mondstadt-reference/run_city_source_batch.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/run_native_source_batch.py",
+      "sourceSha256": "0882f26422fe094ae8c7b2d0433028b11f5733bd2a110f36b071fd76df4529e0",
+      "published": "tools/mondstadt-reference/run_native_source_batch.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/semantic_review.py",
+      "sourceSha256": "3a70c74fa6d8094e7210ad368b7657c4ecb345910b67dd8c82d5309c0244a739",
+      "published": "tools/mondstadt-reference/semantic_review.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/serialized_reference.py",
+      "sourceSha256": "fbe782f86cf5dc4ccea86e585844f27df97d5791a3d2ae4bafa6fa91a3eb350c",
+      "published": "tools/mondstadt-reference/serialized_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/shoreline_registration.py",
+      "sourceSha256": "4a5f8f10c2ac358435ef0e29e15c59e6bc724714a9cab0f1aa105356714a41e7",
+      "published": "tools/mondstadt-reference/shoreline_registration.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/source_chain_reference.py",
+      "sourceSha256": "39c17f31a740e3dab49204b007b0c8797938b273cb6c5636798177a95eed76c7",
+      "published": "tools/mondstadt-reference/source_chain_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/api.py",
+      "sourceSha256": "daa8e9ddbddbe275c4a2d390fa891b7a22a5ee4bb3a7cc0ae5bc20239093c960",
+      "published": "tools/mondstadt-reference/template_geometry/api.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/geometry.py",
+      "sourceSha256": "8187274addb689344fbe6e38633a5fa688f54babb78492525f86b4c5535bf7b4",
+      "published": "tools/mondstadt-reference/template_geometry/geometry.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/offline_batch.py",
+      "sourceSha256": "f2466dc8694c07113acc9ab65ccb2889680eb2ef1a82b225bcb315d6c7b7f90c",
+      "published": "tools/mondstadt-reference/template_geometry/offline_batch.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/persistent_index.py",
+      "sourceSha256": "7b52a335d3eafebacf6ee119dd475b0f8f2ebafd866903cd8bdae8e01f3fdc8d",
+      "published": "tools/mondstadt-reference/template_geometry/persistent_index.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/projections.py",
+      "sourceSha256": "f9bdc2f05c62a2f5616152343eb5d027e8249b0fffbcbd97b1a4a86a79cf357e",
+      "published": "tools/mondstadt-reference/template_geometry/projections.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/research_source.py",
+      "sourceSha256": "c94256420419af0f92d54b8e37c834a96758f085d0de3992415db66784d4e499",
+      "published": "tools/mondstadt-reference/template_geometry/research_source.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/resource_index.py",
+      "sourceSha256": "f1e94680a70a9afe30a1b29d38066cbe9482f766f51f341cd153ce941f2a252b",
+      "published": "tools/mondstadt-reference/template_geometry/resource_index.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/selection.py",
+      "sourceSha256": "2e48f78dcd628fdcf02ae8fb62414185a87897ce8d3dd606f8746852babb810e",
+      "published": "tools/mondstadt-reference/template_geometry/selection.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/source_priority.py",
+      "sourceSha256": "c98bcef1b97406c3dbe9b607ab3e237da70f569d05b435ec5ae6a0a551dd92eb",
+      "published": "tools/mondstadt-reference/template_geometry/source_priority.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/template_geometry/sources.py",
+      "sourceSha256": "6b5f92afc6570ed1b1455f7e5bc7e8f608c69b4462876fa05e0395b3111b8f57",
+      "published": "tools/mondstadt-reference/template_geometry/sources.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/test_city_source_correspondence.py",
+      "sourceSha256": "d450dd600348b5fbd34d980a47c5dbba30d284c5b1f3ad94925ced2eca819275",
+      "published": "tools/mondstadt-reference/test_city_source_correspondence.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/test_full_region_reference.py",
+      "sourceSha256": "134f9b98c6ff7dbbc5b031592816c4a2746051075a247407384a6cb349bd9cfd",
+      "published": "tools/mondstadt-reference/test_full_region_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/test_native_frame_reference.py",
+      "sourceSha256": "a1cf039795b581f370ca1a116e5883adbc8761f46cd075ae9d2128fb779c2d2a",
+      "published": "tools/mondstadt-reference/test_native_frame_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/test_native_source_reference.py",
+      "sourceSha256": "60f19a3fbaff3180f3e6b8f47a4b40350f6d51d85b35b9413b918fdb000695fe",
+      "published": "tools/mondstadt-reference/test_native_source_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/test_reference.py",
+      "sourceSha256": "131bd765660352ce1e680e5ee7477a519c5f11a8505beee6dde608866ec920d0",
+      "published": "tools/mondstadt-reference/test_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/mondstadt-reference/test_regional_reference.py",
+      "sourceSha256": "39144b3ad7ab8816a898165377d86e6b7243c203bbabfc8f48cefa816e46d581",
+      "published": "tools/mondstadt-reference/test_regional_reference.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/m2/node-capability/api/check.py",
+      "sourceSha256": "48cdf28897a0fc04c84b5b2732ae78f0ded1f19a97a9d803c4230822ab9ce776",
+      "published": "tools/m2/node-capability/api/check.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/m2/node-capability/api/cli.py",
+      "sourceSha256": "8335bb8fd6b0c82b04305fad0bf6857002332389267083279e7b4549f612a423",
+      "published": "tools/m2/node-capability/api/cli.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/build.py",
+      "sourceSha256": "c6d5338c56b22f9d11180cc65978225537ff7bb685bfca98fcb5688f06ae9cba",
+      "published": "tools/miliastra-toolkit/build.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/build_knowledge.py",
+      "sourceSha256": "72a96cfa230c96d5a441004cdec587f74befda4544c9ae703d5f3b6d763bcadd",
+      "published": "tools/miliastra-toolkit/build_knowledge.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/compile_inputs.py",
+      "sourceSha256": "2ec4134e4315bfad5741805078ab9707ca5559779d27a5f6c1439cf3fccfe20d",
+      "published": "tools/miliastra-toolkit/compile_inputs.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/contexts.py",
+      "sourceSha256": "e2baf4d7afec65ecf8a682d541e6c122cfdc81d8e8922d79b588337bbfbe49ec",
+      "published": "tools/miliastra-toolkit/contexts.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/helper_cli.py",
+      "sourceSha256": "0967b0917abea08162b5b6c85700338efe9a4eb1078e88a21df740d69d04fe1a",
+      "published": "tools/miliastra-toolkit/helper_cli.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/knowledge.py",
+      "sourceSha256": "c5b2cb77fbcab7d39dc3e6ff360e473c4f7d3a4c7bad7417e457a76aff6e691e",
+      "published": "tools/miliastra-toolkit/knowledge.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/operations.py",
+      "sourceSha256": "1ac9d831cc41bf12910a6366ec23d7351623183531009190a5f855db47a2013d",
+      "published": "tools/miliastra-toolkit/operations.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/package_workbench.py",
+      "sourceSha256": "20f975208271cda72e616cedd85088fbe3fe2f4dec8a80a016c6274860e09424",
+      "published": "tools/miliastra-toolkit/package_workbench.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/saved.py",
+      "sourceSha256": "fab84e9f48df545a8ec94863c4d4b083cbfd249410a164e24794bf5d6268297a",
+      "published": "tools/miliastra-toolkit/saved.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/schema_capture.py",
+      "sourceSha256": "3914595aa0dc2be70959ae6e43d966aea263fb83651676b4f8a690e09106e2a1",
+      "published": "tools/miliastra-toolkit/schema_capture.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/toolkit.py",
+      "sourceSha256": "c6aa6dbbc7101d2e70405d25b4c050fc019cb753f03af0d3018c82aa7e147525",
+      "published": "tools/miliastra-toolkit/toolkit.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/validate_workbench.py",
+      "sourceSha256": "49a226d0b3bbf6d6f336598311dcb2698be514f9d8985f40d1a63966b10e48a3",
+      "published": "tools/miliastra-toolkit/validate_workbench.py",
+      "adapted": true
+    },
+    {
+      "source": "tools/miliastra-toolkit/window_capture.py",
+      "sourceSha256": "eff35bb288848c891f2fd4f670452afa071069fca5228501c40918052285a427",
+      "published": "tools/miliastra-toolkit/window_capture.py",
+      "adapted": true
+    },
+    {
+      "source": "ai.py",
+      "sourceSha256": "a1fd8e5cfde34fa192b3b922ba1bad20bc858f9026f4550f4122fbc81db87ee1",
+      "published": "ai.py",
+      "adapted": true
+    },
+    {
+      "source": "AI-START-HERE.md",
+      "sourceSha256": "c5fbf585484760b451ae64f06ad8e67377168f44d0517388b6046bf5d46269dd",
+      "published": "AI-START-HERE.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/ASSEMBLY.md",
+      "sourceSha256": "34859cbb0f6ee581a2cc51e2beefc58e7274bc456c6c8e0b3d5dac74641cc5de",
+      "published": "docs/ai-workbench/ASSEMBLY.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/ASSETS.md",
+      "sourceSha256": "2ba575765ed855e1fd2ffc7ee7c21c20a984247a434804997a13ce36d1c6d17b",
+      "published": "docs/ai-workbench/ASSETS.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/ERRORS.md",
+      "sourceSha256": "c039b2b985863db452f385dd174d769f352f0b3543a88c6b66628563c56e1698",
+      "published": "docs/ai-workbench/ERRORS.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/IMPLEMENTATION.md",
+      "sourceSha256": "4b93f47a8e880d2399f1453fdc270f71f6d96b7a8f23ca1d2cd8f6a3dc7164c0",
+      "published": "docs/ai-workbench/IMPLEMENTATION.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/MAINTENANCE.md",
+      "sourceSha256": "2915fffaae31ba1477bbdfa00b0bf01a1adf5a95b8fa81afbbe783f993cfba52",
+      "published": "docs/ai-workbench/MAINTENANCE.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/NODES.md",
+      "sourceSha256": "04b2e581b1c6631b495ee8307041b8e8214757703a86376491e279d62b53e8be",
+      "published": "docs/ai-workbench/NODES.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/OPERATIONS.md",
+      "sourceSha256": "59c3493e76a918bebc1201c423b4f162a86dfa52d91d72cfe606e0c7fc7f825c",
+      "published": "docs/ai-workbench/OPERATIONS.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/QUICKSTART.md",
+      "sourceSha256": "c208390d8d5813d751f36d05b998dcff4dc7f6452e079fb6598488871818af99",
+      "published": "docs/ai-workbench/QUICKSTART.md",
+      "adapted": true
+    },
+    {
+      "source": "docs/ai-workbench/VISUAL.md",
+      "sourceSha256": "e4f0f5b0c182a11faf1c995b4f6d200ba3639d06080e6953de0374487ad2db82",
+      "published": "docs/ai-workbench/VISUAL.md",
+      "adapted": true
+    },
+    {
+      "source": "data/ai-workbench/workflows.json",
+      "sourceSha256": "9253446bf4ba487af18cf76e7c84976dd76ed9e5e337a20665e6f0b054e08171",
+      "published": "data/ai-workbench/workflows.json",
+      "adapted": true
+    },
+    {
+      "source": "data/ai-workbench/errors.json",
+      "sourceSha256": "0e324814ae09b0c22a1c3e7a53377d42e87dc866ec38cb6e926545d77404c5b1",
+      "published": "data/ai-workbench/errors.json",
+      "adapted": true
+    },
+    {
+      "source": "data/ai-workbench/START.json",
+      "sourceSha256": "36b2b9f6d74002e2151499aad83c09e025af3419b89befdd3dadb9c83e71f6cd",
+      "published": "data/ai-workbench/START.json",
+      "adapted": true
+    },
+    {
+      "source": "data/ai-workbench/examples/context-open.template.json",
+      "sourceSha256": "7cbf20d029bd9c9491af282b42cc20ab149eea2d28791119b536f912cf5fbaa0",
+      "published": "data/ai-workbench/examples/context-open.template.json",
+      "adapted": true
+    },
+    {
+      "source": "data/ai-workbench/examples/graph-plan.json",
+      "sourceSha256": "81403a178e2a7c00bd5d0c6f105b67d08b1005a34af817eae7edbc93c6a12431",
+      "published": "data/ai-workbench/examples/graph-plan.json",
+      "adapted": true
+    },
+    {
+      "source": "data/ai-workbench/examples/ownership.template.json",
+      "sourceSha256": "c37bad63e1e045b37ae774294e1b346b9529614df74ec8d7b1bf0cbbcd8c4ccf",
+      "published": "data/ai-workbench/examples/ownership.template.json",
+      "adapted": true
+    },
+    {
+      "source": "data/ai-workbench/examples/scene-plan.json",
+      "sourceSha256": "c6bc1ea87a651660f5061f8e7ec547d77e0f69f2822f5d30320a21d549a872de",
+      "published": "data/ai-workbench/examples/scene-plan.json",
+      "adapted": true
+    },
+    {
+      "source": "data/miliastra-toolkit/recipes/inspect-node.json",
+      "sourceSha256": "db61fc4398d2496aad2726b28c0884ac5744f27ef30a74ba61cb650581f09b92",
+      "published": "data/miliastra-toolkit/recipes/inspect-node.json",
       "adapted": true
     }
   ],

@@ -82,7 +82,9 @@ constexpr std::uint32_t kMaxEntities = 4096;
 constexpr std::uint32_t kSnapshotVersion = 2;
 constexpr std::uint32_t kSnapshotReadBudget = 1024 * 1024;
 constexpr std::uint32_t kSnapshotReadCalls = 65536;
-constexpr std::uint32_t kSnapshotDictionaryCapacity = 8192;
+// Dictionary storage grows independently of the 4096 live-record ABI.
+// A 4059-entity scene crosses the prior 4049-slot allocation.
+constexpr std::uint32_t kSnapshotDictionaryCapacity = 16384;
 #else
 constexpr std::uint32_t kMaxEntities = 512;
 constexpr std::uint32_t kSnapshotVersion = 1;

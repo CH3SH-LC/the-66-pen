@@ -62,7 +62,8 @@
 param(
   [int]$LifetimeMinutes = 1440,
   [string]$QueueDir = '',
-  [string]$ConfigPath = ''
+  [string]$ConfigPath = '',
+  [string]$DeadlineUtc = ''
 )
 
 Set-StrictMode -Version Latest
@@ -143,6 +144,11 @@ $stopPath      = Join-Path $QueueDir 'STOP'
 # fixed in start-elevated.ps1's heartbeat check and missed here.
 $startedUtc    = [DateTime]::UtcNow
 $deadline      = $startedUtc.AddMinutes($LifetimeMinutes)
+if (-not [string]::IsNullOrWhiteSpace($DeadlineUtc)) {
+  $absoluteDeadline = [DateTimeOffset]::Parse($DeadlineUtc).UtcDateTime
+  if ($absoluteDeadline -le $startedUtc) { throw 'HELPER_ABSOLUTE_DEADLINE_EXPIRED' }
+  if ($absoluteDeadline -lt $deadline) { $deadline = $absoluteDeadline }
+}
 
 function Write-Log([string]$message) {
   $line = '{0} {1}' -f (Get-Date).ToUniversalTime().ToString('o'), $message
@@ -1092,6 +1098,7 @@ while ([DateTime]::UtcNow -lt $deadline) {
 
   $requests = @(Get-ChildItem -LiteralPath $QueueDir -Filter '*.request.json' -ErrorAction SilentlyContinue | Sort-Object Name)
   foreach ($req in $requests) {
+    if ([DateTime]::UtcNow -ge $deadline) { break }
     $base = $req.FullName -replace '\.request\.json$', ''
     $id   = [IO.Path]::GetFileName($base)
     $responsePath = "$base.response.json"

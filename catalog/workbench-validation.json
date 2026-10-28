@@ -1,0 +1,348 @@
+{
+  "ok": true,
+  "atUtc": "2026-10-28T02:19:50.227423+00:00",
+  "checks": [
+    {
+      "name": "knowledge_sqlite_integrity",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "every_recorded_node_variant_indexed",
+      "ok": true,
+      "detail": 929
+    },
+    {
+      "name": "public_library_omissions_are_explicit",
+      "ok": true,
+      "detail": [
+        "reference-pack",
+        "template-geometry",
+        "prefab-originals",
+        "native-icons",
+        "recent-reference"
+      ]
+    },
+    {
+      "name": "every_recorded_node_has_recipe_and_contract",
+      "ok": true,
+      "detail": {
+        "definitions": 810,
+        "variants": 929,
+        "recipes": 929,
+        "uniqueContracts": 929,
+        "unknownFields": 35735,
+        "runtimeVerified": 0
+      }
+    },
+    {
+      "name": "unknown_node_fields_are_not_marked_verified",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "production_schema_capture_complete",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "transform.reparent_prepare_portable_schema",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "transform.semantic_assembly_prepare_portable_schema",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "new_workflow_primitives_registered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "paged_chinese_search",
+      "ok": true,
+      "detail": 6
+    },
+    {
+      "name": "exact_record_retrieval",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "node_recipe_full",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "node_without_graph_kind_refused",
+      "ok": true,
+      "detail": "NODE_GRAPH_KIND_AND_DEFINITION_REQUIRED"
+    },
+    {
+      "name": "failure_recovery_route",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "workflow_routes_exist",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "executable_example_scene.plan",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "executable_example_graph.compile",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "schema_unknown_field",
+      "ok": true,
+      "detail": "SCHEMA_UNKNOWN_FIELDS:$:pid"
+    },
+    {
+      "name": "bool_is_not_integer",
+      "ok": true,
+      "detail": "SCHEMA_TYPE:$.definition_id:expected integer"
+    },
+    {
+      "name": "recursive_call",
+      "ok": true,
+      "detail": "RECURSIVE_TOOL_CALL"
+    },
+    {
+      "name": "context_actual_save_1073741901",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "context_instances_1073741901",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "context_independent_readback_1073741901",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "context_actual_save_1073741902",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "context_instances_1073741902",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "context_independent_readback_1073741902",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "cross_save_contexts_distinct",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "wrong_save_level_refused",
+      "ok": true,
+      "detail": "CONTEXT_MISSING_EMBEDDED_ID_REQUIRES_FORMAL_FILENAME"
+    },
+    {
+      "name": "portable_arguments_use_current_level",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "foreign_level_argument_refused",
+      "ok": true,
+      "detail": "CONTEXT_ARGUMENT_CONFLICT:level_id"
+    },
+    {
+      "name": "native_off_by_default",
+      "ok": true,
+      "detail": "CONTEXT_NATIVE_REQUIRES_ENABLED_SESSION_AND_QUEUE"
+    },
+    {
+      "name": "ownership_bound_to_actual_file",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "external_save_drift_blocks_writes",
+      "ok": true,
+      "detail": "CONTEXT_SAVE_DRIFT:use context.readback; do not rebase automatically"
+    },
+    {
+      "name": "expired_context_refused",
+      "ok": true,
+      "detail": "CONTEXT_EXPIRED"
+    },
+    {
+      "name": "simulated_timeout_stops_before_any_write",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "simulated_unknown_outcome_keeps_lock",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "simulated_same_operation_returns_receipt",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "portable_ownership_positive_and_negative_cases",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "checks": [
+          {
+            "name": "explicit_level_1073741901",
+            "ok": true
+          },
+          {
+            "name": "wrong_level_1073741901",
+            "ok": true,
+            "error": "OWNERSHIP_SAVE_OR_LEVEL_DRIFT"
+          },
+          {
+            "name": "wrong_save_1073741901",
+            "ok": true,
+            "error": "OWNERSHIP_SAVE_OR_LEVEL_DRIFT"
+          },
+          {
+            "name": "foreign_host_1073741901",
+            "ok": true,
+            "error": "OWNERSHIP_SELECTION"
+          },
+          {
+            "name": "foreign_child_1073741901",
+            "ok": true,
+            "error": "OWNERSHIP_SELECTION"
+          },
+          {
+            "name": "unselected_pair_1073741901",
+            "ok": true,
+            "error": "OWNERSHIP_PAIR_NOT_SELECTED"
+          },
+          {
+            "name": "protected_level_1073741901",
+            "ok": true,
+            "error": "OWNERSHIP_PROTECTED_OR_INVALID_LEVEL"
+          },
+          {
+            "name": "explicit_level_1073741902",
+            "ok": true
+          },
+          {
+            "name": "wrong_level_1073741902",
+            "ok": true,
+            "error": "OWNERSHIP_SAVE_OR_LEVEL_DRIFT"
+          },
+          {
+            "name": "wrong_save_1073741902",
+            "ok": true,
+            "error": "OWNERSHIP_SAVE_OR_LEVEL_DRIFT"
+          },
+          {
+            "name": "foreign_host_1073741902",
+            "ok": true,
+            "error": "OWNERSHIP_SELECTION"
+          },
+          {
+            "name": "foreign_child_1073741902",
+            "ok": true,
+            "error": "OWNERSHIP_SELECTION"
+          },
+          {
+            "name": "unselected_pair_1073741902",
+            "ok": true,
+            "error": "OWNERSHIP_PAIR_NOT_SELECTED"
+          },
+          {
+            "name": "protected_level_1073741902",
+            "ok": true,
+            "error": "OWNERSHIP_PROTECTED_OR_INVALID_LEVEL"
+          },
+          {
+            "name": "world_pose_keeps_rotation_scale_translation",
+            "ok": true
+          }
+        ],
+        "nativeCalled": false
+      }
+    },
+    {
+      "name": "helper_deadline_not_extended",
+      "ok": true,
+      "detail": "HELPER_DEADLINE_MUST_LEAVE_4_TO_1443_MINUTES"
+    },
+    {
+      "name": "implicit_transport_classified_native",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "mcp_stdio_real_process",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "compact_discovery_no_giant_registry",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "mcp_query_and_error",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "passed": 43,
+  "total": 43,
+  "command": "python -B -X utf8 tools/miliastra-toolkit/validate_workbench.py",
+  "exitCode": 0,
+  "nativeCalled": false,
+  "scope": "offline-context-index-schema-and-MCP",
+  "runtimeVerified": false,
+  "seconds": 1.712,
+  "version": "0.2.0",
+  "publicLegacyTests": {
+    "passed": 8,
+    "total": 8
+  },
+  "cleanStdlibBuild": {
+    "exitCode": 0,
+    "productionTools": 179,
+    "routingTools": 27
+  },
+  "powershellParserErrors": 0,
+  "nativeCompileChecks": [
+    {
+      "command": "reparent-compile-check --mode set --large-scene --compile-level 1073741901",
+      "exitCode": 0,
+      "compiled": true,
+      "launchable": false,
+      "called": false,
+      "preparedSha256": "a9345684b847c62fe893791e138f437114e685bf15c2ee38ff036aff15e570ac"
+    },
+    {
+      "command": "semantic-assembly-compile-check --mode set --large-scene --compile-level 1073741902",
+      "exitCode": 0,
+      "compiled": true,
+      "launchable": false,
+      "called": false,
+      "preparedSha256": "94351667c37284099f5ebe30fef6cd36529b66c4bf67c728ad61e9d2bff3662b"
+    }
+  ]
+}

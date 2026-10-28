@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "snapshotDate": "2026-10-22",
+  "snapshotDate": "2026-10-28",
   "description": "当前分发源码的实现入口，运行状态单独标注。",
   "interfaces": [
     {
@@ -5781,7 +5781,7 @@
       "args": [
         "--help"
       ],
-      "sourceSha256": "ce15ca141cb721d95ad8010d1df9ac919c76930ccaf86d6d0f729903e830a508",
+      "sourceSha256": "7907ca8aecf8b03a0a0a6917c55d3c85fdf93d686112fadbec5bdcc4ddc6fb3c",
       "callable": "source-entry-see-help-and-prerequisites"
     },
     {
@@ -6001,7 +6001,7 @@
       "args": [
         "--help"
       ],
-      "sourceSha256": "e306b72dbd19ca82e4ffc256644444e1c6ec2910bc01fe8de4b83f3d7bf94645",
+      "sourceSha256": "2030b5f401bbf0b73a25b3869a0fcccd09288a071d453662bfa55410df610d2d",
       "callable": "source-entry-see-help-and-prerequisites"
     },
     {
@@ -8109,7 +8109,7 @@
       "args": [
         "--help"
       ],
-      "sourceSha256": "954f03a8e88a5e13e98448b52b46934e22c689a580f3aa4decc592191a4cc646",
+      "sourceSha256": "6acfe0d31169fffba674ec340d9b1d4f44e9afb747101258bba0eb6ce6cfa41c",
       "callable": "source-entry-see-help-and-prerequisites"
     },
     {
@@ -8921,128 +8921,6 @@
       "id": "mcp.mw_catalog_search",
       "name": "mw_catalog_search",
       "family": "mcp-backend",
-      "source": "backend/files_server.py",
-      "tool": "backend/files_server.py",
-      "line": 44,
-      "args": [],
-      "transport": "stdio-mcp",
-      "evidence": "source-implemented",
-      "parameters": [
-        "query",
-        "templateId",
-        "category",
-        "limit",
-        "offset"
-      ],
-      "callable": "requires-optional-mcp-and-runtime-prerequisites",
-      "runtimeVerifiedThisRelease": false,
-      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
-    },
-    {
-      "id": "mcp.mw_scene_build",
-      "name": "mw_scene_build",
-      "family": "mcp-backend",
-      "source": "backend/files_server.py",
-      "tool": "backend/files_server.py",
-      "line": 53,
-      "args": [],
-      "transport": "stdio-mcp",
-      "evidence": "source-implemented",
-      "parameters": [
-        "scene",
-        "overwrite"
-      ],
-      "callable": "requires-optional-mcp-and-runtime-prerequisites",
-      "runtimeVerifiedThisRelease": false,
-      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
-    },
-    {
-      "id": "mcp.mw_asset_inspect",
-      "name": "mw_asset_inspect",
-      "family": "mcp-backend",
-      "source": "backend/files_server.py",
-      "tool": "backend/files_server.py",
-      "line": 63,
-      "args": [],
-      "transport": "stdio-mcp",
-      "evidence": "source-implemented",
-      "parameters": [
-        "buildId"
-      ],
-      "callable": "requires-optional-mcp-and-runtime-prerequisites",
-      "runtimeVerifiedThisRelease": false,
-      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
-    },
-    {
-      "id": "mcp.mw_build_validate",
-      "name": "mw_build_validate",
-      "family": "mcp-backend",
-      "source": "backend/files_server.py",
-      "tool": "backend/files_server.py",
-      "line": 68,
-      "args": [],
-      "transport": "stdio-mcp",
-      "evidence": "source-implemented",
-      "parameters": [
-        "buildId",
-        "scene"
-      ],
-      "callable": "requires-optional-mcp-and-runtime-prerequisites",
-      "runtimeVerifiedThisRelease": false,
-      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
-    },
-    {
-      "id": "mcp.mw_resource_inventory",
-      "name": "mw_resource_inventory",
-      "family": "mcp-backend",
-      "source": "backend/files_server.py",
-      "tool": "backend/files_server.py",
-      "line": 73,
-      "args": [],
-      "transport": "stdio-mcp",
-      "evidence": "source-implemented",
-      "parameters": [],
-      "callable": "requires-optional-mcp-and-runtime-prerequisites",
-      "runtimeVerifiedThisRelease": false,
-      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
-    },
-    {
-      "id": "mcp.mw_scene_create",
-      "name": "mw_scene_create",
-      "family": "mcp-backend",
-      "source": "backend/files_server.py",
-      "tool": "backend/files_server.py",
-      "line": 81,
-      "args": [],
-      "transport": "stdio-mcp",
-      "evidence": "source-implemented",
-      "parameters": [
-        "horizontal_gap",
-        "vertical_step"
-      ],
-      "callable": "requires-optional-mcp-and-runtime-prerequisites",
-      "runtimeVerifiedThisRelease": false,
-      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
-    },
-    {
-      "id": "mcp.mw_backend_capabilities",
-      "name": "mw_backend_capabilities",
-      "family": "mcp-backend",
-      "source": "backend/files_server.py",
-      "tool": "backend/files_server.py",
-      "line": 90,
-      "args": [],
-      "transport": "stdio-mcp",
-      "evidence": "source-implemented",
-      "parameters": [],
-      "callable": "requires-optional-mcp-and-runtime-prerequisites",
-      "runtimeVerifiedThisRelease": false,
-      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
-    },
-    {
-      "id": "mcp.mw_catalog_search",
-      "name": "mw_catalog_search",
-      "family": "mcp-backend",
       "source": "backend/server.py",
       "tool": "backend/server.py",
       "line": 152,
@@ -9114,6 +8992,54 @@
       "sourceSha256": "9b7bcb6b2dd2877556d243ceed59e58691345b51eb5e7ffe89cc9900c34eb47b"
     },
     {
+      "id": "mcp.mw_resource_inventory",
+      "name": "mw_resource_inventory",
+      "family": "mcp-backend",
+      "source": "backend/files_server.py",
+      "tool": "backend/files_server.py",
+      "line": 73,
+      "args": [],
+      "transport": "stdio-mcp",
+      "evidence": "source-implemented",
+      "parameters": [],
+      "callable": "requires-optional-mcp-and-runtime-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
+    },
+    {
+      "id": "mcp.mw_scene_create",
+      "name": "mw_scene_create",
+      "family": "mcp-backend",
+      "source": "backend/files_server.py",
+      "tool": "backend/files_server.py",
+      "line": 81,
+      "args": [],
+      "transport": "stdio-mcp",
+      "evidence": "source-implemented",
+      "parameters": [
+        "horizontal_gap",
+        "vertical_step"
+      ],
+      "callable": "requires-optional-mcp-and-runtime-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "ae3891f252482e338ed956bbd27d97eee43958ae58cfd0de248e0315cae9ba0a"
+    },
+    {
+      "id": "mcp.mw_backend_capabilities",
+      "name": "mw_backend_capabilities",
+      "family": "mcp-backend",
+      "source": "backend/server.py",
+      "tool": "backend/server.py",
+      "line": 270,
+      "args": [],
+      "transport": "stdio-mcp",
+      "evidence": "source-implemented",
+      "parameters": [],
+      "callable": "requires-optional-mcp-and-runtime-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "9b7bcb6b2dd2877556d243ceed59e58691345b51eb5e7ffe89cc9900c34eb47b"
+    },
+    {
       "id": "mcp.mw_asset_stage",
       "name": "mw_asset_stage",
       "family": "mcp-backend",
@@ -9138,21 +9064,6 @@
       "source": "backend/server.py",
       "tool": "backend/server.py",
       "line": 247,
-      "args": [],
-      "transport": "stdio-mcp",
-      "evidence": "source-implemented",
-      "parameters": [],
-      "callable": "requires-optional-mcp-and-runtime-prerequisites",
-      "runtimeVerifiedThisRelease": false,
-      "sourceSha256": "9b7bcb6b2dd2877556d243ceed59e58691345b51eb5e7ffe89cc9900c34eb47b"
-    },
-    {
-      "id": "mcp.mw_backend_capabilities",
-      "name": "mw_backend_capabilities",
-      "family": "mcp-backend",
-      "source": "backend/server.py",
-      "tool": "backend/server.py",
-      "line": 270,
       "args": [],
       "transport": "stdio-mcp",
       "evidence": "source-implemented",
@@ -9232,6 +9143,1106 @@
       "callable": "see-python-api-contract",
       "runtimeVerifiedThisRelease": false,
       "sourceSha256": "e28b889b631a6b35f0c0c3fb9da1a86e24ad83a8310da96e6e8cfc9d37ce9ced"
+    },
+    {
+      "id": "cli.game-executor.vendor.g02_savediff_gate",
+      "name": "g02_savediff_gate",
+      "family": "game-executor",
+      "source": "tools/game-executor/vendor/g02_savediff_gate.py",
+      "tool": "tools/game-executor/vendor/g02_savediff_gate.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--case",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "9075c4d68a6b049fe760c98c58aa96701f58d99744b69f72cf6e5091d2b536cd"
+    },
+    {
+      "id": "cli.m2.node-capability.api.cli",
+      "name": "cli",
+      "family": "m2",
+      "source": "tools/m2/node-capability/api/cli.py",
+      "tool": "tools/m2/node-capability/api/cli.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [
+        "cluster",
+        "enums",
+        "graph-built",
+        "ports",
+        "query",
+        "search",
+        "version"
+      ],
+      "arguments": [
+        "--definition-id",
+        "--enum-id",
+        "--graph-kind",
+        "--limit",
+        "--list",
+        "--query",
+        "cluster"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "8335bb8fd6b0c82b04305fad0bf6857002332389267083279e7b4549f612a423"
+    },
+    {
+      "id": "cli.miliastra-toolkit.build",
+      "name": "build",
+      "family": "miliastra-toolkit",
+      "source": "tools/miliastra-toolkit/build.py",
+      "tool": "tools/miliastra-toolkit/build.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--refresh-prefix"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "f532ead7bf5a481f50b5e5b72fddbdc1e1067b73d3b2017229d96a66c024fa0d"
+    },
+    {
+      "id": "cli.miliastra-toolkit.build_knowledge",
+      "name": "build_knowledge",
+      "family": "miliastra-toolkit",
+      "source": "tools/miliastra-toolkit/build_knowledge.py",
+      "tool": "tools/miliastra-toolkit/build_knowledge.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--force"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "49e3592674f840166daaffc1b3eb56a42895282513490130b1a4af83571c6adb"
+    },
+    {
+      "id": "cli.miliastra-toolkit.helper_cli",
+      "name": "helper_cli",
+      "family": "miliastra-toolkit",
+      "source": "tools/miliastra-toolkit/helper_cli.py",
+      "tool": "tools/miliastra-toolkit/helper_cli.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--config",
+        "--deadline-utc",
+        "--operation-id",
+        "--powershell",
+        "--queue"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "0967b0917abea08162b5b6c85700338efe9a4eb1078e88a21df740d69d04fe1a"
+    },
+    {
+      "id": "cli.miliastra-toolkit.package_workbench",
+      "name": "package_workbench",
+      "family": "miliastra-toolkit",
+      "source": "tools/miliastra-toolkit/package_workbench.py",
+      "tool": "tools/miliastra-toolkit/package_workbench.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "bb899b828ab2790d15fdf75d408a04d2e75d326e0b1f334fcebd85cb811bfad6"
+    },
+    {
+      "id": "cli.miliastra-toolkit.saved",
+      "name": "saved",
+      "family": "miliastra-toolkit",
+      "source": "tools/miliastra-toolkit/saved.py",
+      "tool": "tools/miliastra-toolkit/saved.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [
+        "diff",
+        "graphs",
+        "instances"
+      ],
+      "arguments": [
+        "--after",
+        "--before",
+        "--entity-id",
+        "--gil",
+        "--graph-id",
+        "--level-id",
+        "--limit",
+        "--observation",
+        "--offset",
+        "--template-id"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "4e3ccd9833626531efee23bf994888910f9996bb90477aee25fbb9cb64504db5"
+    },
+    {
+      "id": "cli.miliastra-toolkit.toolkit",
+      "name": "toolkit",
+      "family": "miliastra-toolkit",
+      "source": "tools/miliastra-toolkit/toolkit.py",
+      "tool": "tools/miliastra-toolkit/toolkit.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [
+        "describe",
+        "list",
+        "serve"
+      ],
+      "arguments": [
+        "--compact",
+        "--file",
+        "--json",
+        "tool"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "c6aa6dbbc7101d2e70405d25b4c050fc019cb753f03af0d3018c82aa7e147525"
+    },
+    {
+      "id": "cli.miliastra-toolkit.window_capture",
+      "name": "window_capture",
+      "family": "miliastra-toolkit",
+      "source": "tools/miliastra-toolkit/window_capture.py",
+      "tool": "tools/miliastra-toolkit/window_capture.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--expected-image",
+        "--frames",
+        "--interval",
+        "--out-dir",
+        "--pid"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "eff35bb288848c891f2fd4f670452afa071069fca5228501c40918052285a427"
+    },
+    {
+      "id": "cli.mondstadt-reference.acquire_reference_batch",
+      "name": "acquire_reference_batch",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/acquire_reference_batch.py",
+      "tool": "tools/mondstadt-reference/acquire_reference_batch.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out",
+        "--request"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "22f9d25156a89641f9a4e00bdb0d5cec7fbfc01f139fae250785211b140931ca"
+    },
+    {
+      "id": "cli.mondstadt-reference.acquire_reference_node",
+      "name": "acquire_reference_node",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/acquire_reference_node.py",
+      "tool": "tools/mondstadt-reference/acquire_reference_node.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out",
+        "--request"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "50b6832283382126b8bd4c713260ab9b41ac1e6766efbcf2e0eed7874d9297be"
+    },
+    {
+      "id": "cli.mondstadt-reference.asset_index_completion",
+      "name": "asset_index_completion",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/asset_index_completion.py",
+      "tool": "tools/mondstadt-reference/asset_index_completion.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--db",
+        "--index",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "015f248da97759fc77579450156fbf0af8379036afd42341394d05691038ca38"
+    },
+    {
+      "id": "cli.mondstadt-reference.blb3_reference",
+      "name": "blb3_reference",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/blb3_reference.py",
+      "tool": "tools/mondstadt-reference/blb3_reference.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--offset",
+        "--out",
+        "--payload",
+        "path"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "2f214fca5c04d8161e7388b5338526169cfd0db131fb373b3e6535dedf77da94"
+    },
+    {
+      "id": "cli.mondstadt-reference.build_native_reference_package",
+      "name": "build_native_reference_package",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/build_native_reference_package.py",
+      "tool": "tools/mondstadt-reference/build_native_reference_package.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--config",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "9f93151ce492234b4d28b2069d2ff8a422e2c0edabe5ef44500f9a4a0fc46de5"
+    },
+    {
+      "id": "cli.mondstadt-reference.calibration_delivery",
+      "name": "calibration_delivery",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/calibration_delivery.py",
+      "tool": "tools/mondstadt-reference/calibration_delivery.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "d4d2d62be2a58679bef7ba798a48ecd6e696a52bedeeb0a90f023be506ff826e"
+    },
+    {
+      "id": "cli.mondstadt-reference.city_source_correspondence",
+      "name": "city_source_correspondence",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/city_source_correspondence.py",
+      "tool": "tools/mondstadt-reference/city_source_correspondence.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--legacy-frame",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "f35ed66db1fb528ec4ce327c2d4251517aaf9d61b1d27c096d14e8fe435afcc7"
+    },
+    {
+      "id": "cli.mondstadt-reference.full_region_reference",
+      "name": "full_region_reference",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/full_region_reference.py",
+      "tool": "tools/mondstadt-reference/full_region_reference.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out",
+        "--spacing"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "f403f44d77053986cf729eae053fa1d44fe22018cf834933fc9cad1450c05888"
+    },
+    {
+      "id": "cli.mondstadt-reference.ground_reference",
+      "name": "ground_reference",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/ground_reference.py",
+      "tool": "tools/mondstadt-reference/ground_reference.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--bounds",
+        "--extracted",
+        "--native-cell-budget",
+        "--out",
+        "--registration",
+        "--selection",
+        "--spacing"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "46a1c2d51a6c958201f00b9abce61ad8c0bf5d2328e081d1844d95df2343a726"
+    },
+    {
+      "id": "cli.mondstadt-reference.lake-fishing-source.capture_resource",
+      "name": "capture_resource",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/lake-fishing-source/capture_resource.py",
+      "tool": "tools/mondstadt-reference/lake-fishing-source/capture_resource.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--path",
+        "--type"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "12fe744132864f4c5f09dae3d932a8cfa29a56049bd527dba53fed9823ca7d56"
+    },
+    {
+      "id": "cli.mondstadt-reference.lake-fishing-source.consumer",
+      "name": "consumer",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/lake-fishing-source/consumer.py",
+      "tool": "tools/mondstadt-reference/lake-fishing-source/consumer.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--template-id",
+        "--water-xz"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "11dd9a0a9a00c8620a6421056cc0378cc75ce1d8518fbdc41e37805e9764c683"
+    },
+    {
+      "id": "cli.mondstadt-reference.lake-fishing-source.inspect_source",
+      "name": "inspect_source",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/lake-fishing-source/inspect_source.py",
+      "tool": "tools/mondstadt-reference/lake-fishing-source/inspect_source.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "names"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "04347c4fef44becf77d5cdf4c3dbd48ad92ec46de8d4f16816375404ef1b7321"
+    },
+    {
+      "id": "cli.mondstadt-reference.lake-fishing-source.research_source",
+      "name": "research_source",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/lake-fishing-source/research_source.py",
+      "tool": "tools/mondstadt-reference/lake-fishing-source/research_source.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--callers",
+        "--class-info",
+        "--classes",
+        "--dump",
+        "--literal-xrefs",
+        "--literals",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "7842b14a94d6341b28d2dcb624ac9de396c5fe93bcb13c8958a1388879764aba"
+    },
+    {
+      "id": "cli.mondstadt-reference.lake-fishing-source.rip_candidates",
+      "name": "rip_candidates",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/lake-fishing-source/rip_candidates.py",
+      "tool": "tools/mondstadt-reference/lake-fishing-source/rip_candidates.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--folder",
+        "--targets"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "b2ceafaa9771cb3fb4c776c8c068eb10a156407d630ec3a8f9b9a4c807ef65c4"
+    },
+    {
+      "id": "cli.mondstadt-reference.local_asset_reference",
+      "name": "local_asset_reference",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/local_asset_reference.py",
+      "tool": "tools/mondstadt-reference/local_asset_reference.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--limit",
+        "--out",
+        "--source",
+        "--workers"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "546bcc185f91263a677771822deb6083d138e4707246eb6fcdaff8a2f2cc0243"
+    },
+    {
+      "id": "cli.mondstadt-reference.locate_reference_cabs",
+      "name": "locate_reference_cabs",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/locate_reference_cabs.py",
+      "tool": "tools/mondstadt-reference/locate_reference_cabs.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--index",
+        "--out",
+        "--request"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "9c8bba07949d5566d4408bc6e287f007a72a371cc0de549b139a2b43a2100f65"
+    },
+    {
+      "id": "cli.mondstadt-reference.native_frame_evidence",
+      "name": "native_frame_evidence",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/native_frame_evidence.py",
+      "tool": "tools/mondstadt-reference/native_frame_evidence.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "be524247abdd781b30d86063a9646b616d844e3a128f4a5e5d6b25b8e662f743"
+    },
+    {
+      "id": "cli.mondstadt-reference.native_ground_reference",
+      "name": "native_ground_reference",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/native_ground_reference.py",
+      "tool": "tools/mondstadt-reference/native_ground_reference.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--bounds",
+        "--index",
+        "--out",
+        "--step"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "7a7d5e00a68a103a5d5b52cfdf1be5c9556d34ddd672a8606876fdca479376f5"
+    },
+    {
+      "id": "cli.mondstadt-reference.native_mesh_reference",
+      "name": "native_mesh_reference",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/native_mesh_reference.py",
+      "tool": "tools/mondstadt-reference/native_mesh_reference.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--node-dir",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "b60bd106fcf1b21dd10d035d50aa0866ab76cca88155b480d169075afdd9e3da"
+    },
+    {
+      "id": "cli.mondstadt-reference.native_reference_assembly",
+      "name": "native_reference_assembly",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/native_reference_assembly.py",
+      "tool": "tools/mondstadt-reference/native_reference_assembly.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--batch",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "51efee94ee7ca32ca14e3547715ddfd3212214be984c04d27fc06ceb8b625c4a"
+    },
+    {
+      "id": "cli.mondstadt-reference.native_terrain_reference",
+      "name": "native_terrain_reference",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/native_terrain_reference.py",
+      "tool": "tools/mondstadt-reference/native_terrain_reference.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--node-dir",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "fdb7d16b38881714f76169540196e1c6e9bd570c708e18f4cfea146082b99fc5"
+    },
+    {
+      "id": "cli.mondstadt-reference.reference_catalog",
+      "name": "reference_catalog",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/reference_catalog.py",
+      "tool": "tools/mondstadt-reference/reference_catalog.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--db",
+        "--index"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "09615a523c8661b0802d03d2e6caa9aa8740bf35e9b0a321048fb6afe6e6cafa"
+    },
+    {
+      "id": "cli.mondstadt-reference.reference_cli",
+      "name": "reference_cli",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/reference_cli.py",
+      "tool": "tools/mondstadt-reference/reference_cli.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [
+        "acquire",
+        "extract",
+        "register"
+      ],
+      "arguments": [
+        "--allow-reflection",
+        "--anchors",
+        "--bounds",
+        "--frame",
+        "--lock",
+        "--max-residual",
+        "--max-total-mib",
+        "--out",
+        "--receipt",
+        "--spacing",
+        "--weld"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "cbc03b9ccc817efc68c01c1acba950a67f7db2e5fdfaadd303ecda5a1d7fe3b1"
+    },
+    {
+      "id": "cli.mondstadt-reference.regional_registration",
+      "name": "regional_registration",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/regional_registration.py",
+      "tool": "tools/mondstadt-reference/regional_registration.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--observations",
+        "--out",
+        "--proposals-name",
+        "--visible-top-only",
+        "--work",
+        "command"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "7e658ff966bd017072390dd83be02031e336b7a0e6034e00fd9082150f10d0ac"
+    },
+    {
+      "id": "cli.mondstadt-reference.run_city_source_batch",
+      "name": "run_city_source_batch",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/run_city_source_batch.py",
+      "tool": "tools/mondstadt-reference/run_city_source_batch.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--index-audit",
+        "--out",
+        "--package"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "8cdac9241e80657e6775b4364ee9d05c9f54a096e674721222d39482b3df2593"
+    },
+    {
+      "id": "cli.mondstadt-reference.run_native_source_batch",
+      "name": "run_native_source_batch",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/run_native_source_batch.py",
+      "tool": "tools/mondstadt-reference/run_native_source_batch.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out",
+        "--package"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "0882f26422fe094ae8c7b2d0433028b11f5733bd2a110f36b071fd76df4529e0"
+    },
+    {
+      "id": "cli.mondstadt-reference.shoreline_registration",
+      "name": "shoreline_registration",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/shoreline_registration.py",
+      "tool": "tools/mondstadt-reference/shoreline_registration.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--height",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "4a5f8f10c2ac358435ef0e29e15c59e6bc724714a9cab0f1aa105356714a41e7"
+    },
+    {
+      "id": "cli.mondstadt-reference.source_chain_reference",
+      "name": "source_chain_reference",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/source_chain_reference.py",
+      "tool": "tools/mondstadt-reference/source_chain_reference.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out",
+        "--request",
+        "command"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "39c17f31a740e3dab49204b007b0c8797938b273cb6c5636798177a95eed76c7"
+    },
+    {
+      "id": "cli.mondstadt-reference.template_geometry.api",
+      "name": "api",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/template_geometry/api.py",
+      "tool": "tools/mondstadt-reference/template_geometry/api.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--template-id"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "daa8e9ddbddbe275c4a2d390fa891b7a22a5ee4bb3a7cc0ae5bc20239093c960"
+    },
+    {
+      "id": "cli.mondstadt-reference.template_geometry.research_source",
+      "name": "research_source",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/template_geometry/research_source.py",
+      "tool": "tools/mondstadt-reference/template_geometry/research_source.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--callers",
+        "--class-info",
+        "--classes",
+        "--dump",
+        "--literal-xrefs",
+        "--literals",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "c94256420419af0f92d54b8e37c834a96758f085d0de3992415db66784d4e499"
+    },
+    {
+      "id": "cli.mondstadt-reference.template_geometry.resource_index",
+      "name": "resource_index",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/template_geometry/resource_index.py",
+      "tool": "tools/mondstadt-reference/template_geometry/resource_index.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--decode",
+        "--handle",
+        "--resolve"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "f1e94680a70a9afe30a1b29d38066cbe9482f766f51f341cd153ce941f2a252b"
+    },
+    {
+      "id": "cli.mondstadt-reference.template_geometry.sources",
+      "name": "sources",
+      "family": "mondstadt-reference",
+      "source": "tools/mondstadt-reference/template_geometry/sources.py",
+      "tool": "tools/mondstadt-reference/template_geometry/sources.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--cab"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "6b5f92afc6570ed1b1455f7e5bc7e8f608c69b4462876fa05e0395b3111b8f57"
+    },
+    {
+      "id": "cli.npc-appearance.cli",
+      "name": "cli",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/cli.py",
+      "tool": "tools/npc-appearance/cli.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [
+        "coverage",
+        "npc-records",
+        "resolve",
+        "saved-readback"
+      ],
+      "arguments": [
+        "--entity-id",
+        "--gil",
+        "--npc-id",
+        "--out",
+        "--sha256",
+        "--template-id"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "7f2d619fcacc156b26e2a2bea75df310585e2522160f87384a85094b3170fe9c"
+    },
+    {
+      "id": "cli.npc-appearance.gadget_catalog",
+      "name": "gadget_catalog",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/gadget_catalog.py",
+      "tool": "tools/npc-appearance/gadget_catalog.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "02e5ea4b2418190957a8d91a299c9a1834449f5be9b57c4350d0d9c6db5f0c15"
+    },
+    {
+      "id": "cli.npc-appearance.gadget_models",
+      "name": "gadget_models",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/gadget_models.py",
+      "tool": "tools/npc-appearance/gadget_models.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--index",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "c188e0f9e29d7d0bde485820d300c5c1a8f734fce744366f4f02006bc4f2063c"
+    },
+    {
+      "id": "cli.npc-appearance.monster_catalog",
+      "name": "monster_catalog",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/monster_catalog.py",
+      "tool": "tools/npc-appearance/monster_catalog.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out",
+        "--source"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "f65212042b8406051ddddb18f5cdd92ced1ed5a539f22194ad50dd66a06dface"
+    },
+    {
+      "id": "cli.npc-appearance.native_catalog",
+      "name": "native_catalog",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/native_catalog.py",
+      "tool": "tools/npc-appearance/native_catalog.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "4119d835d84c793436335030351955f836ce09d85722c48cb328a4137c0a4913"
+    },
+    {
+      "id": "cli.npc-appearance.npc_registry",
+      "name": "npc_registry",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/npc_registry.py",
+      "tool": "tools/npc-appearance/npc_registry.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "498fde3c83850876d8c95acbabc8f7b8254bc750a748d6179ee3c02f4acc5f32"
+    },
+    {
+      "id": "cli.npc-appearance.primary_index",
+      "name": "primary_index",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/primary_index.py",
+      "tool": "tools/npc-appearance/primary_index.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--beyond",
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "fbb69613c5e56389fcc645c1780aab5e9b3e180f19180e3c42e1217df72bb334"
+    },
+    {
+      "id": "cli.npc-appearance.read_static_node",
+      "name": "read_static_node",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/read_static_node.py",
+      "tool": "tools/npc-appearance/read_static_node.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--index",
+        "--out",
+        "--row"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "05edde787cc79bae0ff50d61c1a4f34482ae4afda13e65613fe390e69d32bb34"
+    },
+    {
+      "id": "cli.npc-appearance.research_read",
+      "name": "research_read",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/research_read.py",
+      "tool": "tools/npc-appearance/research_read.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--assets",
+        "--classes",
+        "--out",
+        "--slots"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "2b6998e3493428cd6ddcb28295e2981d4ea6bc005ace2f7f1ecbb733dd28e6e4"
+    },
+    {
+      "id": "cli.npc-appearance.research_tables",
+      "name": "research_tables",
+      "family": "npc-appearance",
+      "source": "tools/npc-appearance/research_tables.py",
+      "tool": "tools/npc-appearance/research_tables.py",
+      "line": 1,
+      "args": [
+        "--help"
+      ],
+      "subcommands": [],
+      "arguments": [
+        "--out"
+      ],
+      "evidence": "source-implemented",
+      "callable": "source-entry-see-help-and-prerequisites",
+      "runtimeVerifiedThisRelease": false,
+      "sourceSha256": "22880296c99ab0c9992da5eb086f7ff0e995a771a1f9b181a2f1cd0e75e987e5"
     }
   ]
 }
